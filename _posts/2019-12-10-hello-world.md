@@ -1,10 +1,10 @@
 ---
-title: "Hello WOrld"
+title: "Hello World"
 date: 2019-12-10 20:47:00 +0900
 categories: ethereum
 ---
 
-​```javascript
+​```js
 // The object 'Contracts' is injected here, which contains all data for all contracts, keyed on contract name:
 // Contracts['HelloWorld'] = {
 //  abi: [],
@@ -88,28 +88,30 @@ $(document).ready(function () {
 ​```
 
 
-​```solidity
-// The source code is for a Solidity version
-// greater than 0.5.10
-pragma solidity ^0.5.10;
+<pre>
+    <code>
+        // The source code is for a Solidity version
+        // greater than 0.5.10
+        pragma solidity ^0.5.10;
 
-contract HelloWorld {
-    // The keyword "public" makes variables
-    // accessible from thoer contracts
-    string public message;
+        contract HelloWorld {
+            // The keyword "public" makes variables
+            // accessible from thoer contracts
+            string public message;
 
-    // Constructor code is only run when the contract
-    // is created
-    constructor(string memory initMessage) public {
-        message = initMessage;
-    }
+            // Constructor code is only run when the contract
+            // is created
+            constructor(string memory initMessage) public {
+                message = initMessage;
+            }
 
-    // Updates message variable
-    function update(string memory newMessage) public {
-        message = newMessage;
-    }
-}
-​```
+            // Updates message variable
+            function update(string memory newMessage) public {
+                message = newMessage;
+            }
+        }
+    </code>
+</pre>
 
 [eth-studio] 
 
