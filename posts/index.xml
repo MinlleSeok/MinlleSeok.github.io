@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Happiness Development</title>
-    <link>https://minlleseok.github.io/</link>
-    <description>Recent content on Happiness Development</description>
+    <title>Posts on Happiness Development</title>
+    <link>https://minlleseok.github.io/posts/</link>
+    <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Dec 2019 21:34:00 +0900</lastBuildDate>
     
-	<atom:link href="https://minlleseok.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://minlleseok.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -25,15 +25,6 @@ tsc helloworld.ts 컴파일 명령어는 tsc이네용
  greeter.ts
 function greeter(person) { return &amp;quot;Hello, &amp;quot; + person; } let user = &amp;quot;Jane User&amp;quot;; // document.body.textContext = greeter(user); console.log(greeter(user)); 가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네용
 터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo; &amp;ldquo;node greeter.js&amp;rdquo; 와 같은 식으로 테스트 해볼 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://minlleseok.github.io/about/</link>
-      <pubDate>Wed, 18 Dec 2019 21:33:23 +0900</pubDate>
-      
-      <guid>https://minlleseok.github.io/about/</guid>
-      <description>const Introduce = () =&amp;gt; { return { name: &amp;quot;Jose Seok&amp;quot;, job: &amp;quot;Front-end Developer&amp;quot;, focus: &amp;quot;React&amp;quot; }; } </description>
     </item>
     
   </channel>
