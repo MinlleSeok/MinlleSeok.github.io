@@ -6,45 +6,9 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Dec 2019 21:10:08 +0900</lastBuildDate>
     
 	<atom:link href="https://minlleseok.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>DB 정규화</title>
-      <link>https://minlleseok.github.io/posts/db-normalization/</link>
-      <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
-      
-      <guid>https://minlleseok.github.io/posts/db-normalization/</guid>
-      <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
-제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!</description>
-    </item>
-    
-    <item>
-      <title>행복 기술 블로그 시작! TypeScript</title>
-      <link>https://minlleseok.github.io/posts/my-first-post/</link>
-      <pubDate>Wed, 18 Dec 2019 21:34:00 +0900</pubDate>
-      
-      <guid>https://minlleseok.github.io/posts/my-first-post/</guid>
-      <description>블로그 열심히 쓰겠습니다! Typescript 부터 출발합니다. [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
- Install
-npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.
- Compile
-tsc helloworld.ts 컴파일 명령어는 tsc 이네요.
- greeter.ts
-function greeter(person) { return &amp;quot;Hello, &amp;quot; + person; } let user = &amp;quot;Jane User&amp;quot;; // document.body.textContext = greeter(user); console.log(greeter(user)); 가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네요.
-터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo; &amp;ldquo;node greeter.js&amp;rdquo; 와 같은 식으로 테스트 해볼 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://minlleseok.github.io/about/</link>
-      <pubDate>Wed, 18 Dec 2019 21:33:23 +0900</pubDate>
-      
-      <guid>https://minlleseok.github.io/about/</guid>
-      <description>const Introduce = () =&amp;gt; { return { name: &amp;quot;Jose Seok&amp;quot;, job: &amp;quot;Front-end Developer&amp;quot;, focus: &amp;quot;React&amp;quot; }; } </description>
-    </item>
     
   </channel>
 </rss>
