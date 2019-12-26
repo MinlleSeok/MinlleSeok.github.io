@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://minlleseok.github.io/categories/</loc>
+    <lastmod>2019-12-26T21:52:28+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://minlleseok.github.io/</loc>
-    <lastmod>2019-12-23T21:24:34+09:00</lastmod>
+    <lastmod>2019-12-26T21:52:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minlleseok.github.io/categories/postgresql/</loc>
+    <lastmod>2019-12-26T21:52:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minlleseok.github.io/posts/sql/postgresql/</loc>
+    <lastmod>2019-12-26T21:52:28+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://minlleseok.github.io/posts/</loc>
-    <lastmod>2019-12-23T21:24:34+09:00</lastmod>
+    <lastmod>2019-12-26T21:52:28+09:00</lastmod>
   </url>
   
   <url>
@@ -18,7 +33,23 @@
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/categories/</loc>
+    <loc>https://minlleseok.github.io/categories/database/</loc>
+    <lastmod>2019-12-19T21:10:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minlleseok.github.io/posts/sql/db-normalization/</loc>
+    <lastmod>2019-12-19T21:10:08+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minlleseok.github.io/posts/my-first-post/</loc>
+    <lastmod>2019-12-18T21:34:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://minlleseok.github.io/about/</loc>
+    <lastmod>2019-12-18T21:33:23+09:00</lastmod>
   </url>
   
   <url>
