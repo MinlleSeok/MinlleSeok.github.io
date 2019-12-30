@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on Happiness Development</title>
+    <link>https://minlleseok.github.io/categories/database/</link>
+    <description>Recent content in database on Happiness Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Dec 2019 21:10:08 +0900</lastBuildDate>
+    
+	<atom:link href="https://minlleseok.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DB 정규화</title>
+      <link>https://minlleseok.github.io/posts/sql/db-normalization/</link>
+      <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/sql/db-normalization/</guid>
+      <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
+제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!</description>
+    </item>
+    
+  </channel>
+</rss>

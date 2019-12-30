@@ -6,10 +6,42 @@
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Dec 2019 21:24:34 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 22:37:32 +0900</lastBuildDate>
     
 	<atom:link href="https://minlleseok.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Submodule</title>
+      <link>https://minlleseok.github.io/posts/git/submodule/</link>
+      <pubDate>Mon, 30 Dec 2019 22:37:32 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/git/submodule/</guid>
+      <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git 1-2. submodule &amp;gt; git submodule update --init --recursive 2. git 2-1. git &amp;gt; git pull 2-2. submodule &amp;gt; git submodule update --recursive --remote 3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md  행복 코딩!</description>
+    </item>
+    
+    <item>
+      <title>First</title>
+      <link>https://minlleseok.github.io/posts/go/first/</link>
+      <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/go/first/</guid>
+      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://minlleseok.github.io/posts/sql/postgresql/</link>
+      <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/sql/postgresql/</guid>
+      <description>PostgreSQL Install on Mac https://formulae.brew.sh/formula/postgresql
+$ brew install postgresql Server start
+$ pg_ctl -D /usr/local/var/postgres start Server stop
+$ pg_ctl -D /usr/local/var/postgres stop status check
+$ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
+    </item>
     
     <item>
       <title>Python</title>
@@ -22,6 +54,42 @@
 % brew update % brew install pyenv 환경설정
 % echo &#39;export PYENV_ROOT=&amp;quot;$HOME/.pyenv&amp;quot;&#39; &amp;gt;&amp;gt; ~/.zshrc % echo &#39;export PATH=&amp;quot;$PYENV_ROOT/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;quot;$(pyenv init -)&amp;quot;\nfi&#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치
 % pyenv install [version_name] % pyenv global [version_name] % python --version </description>
+    </item>
+    
+    <item>
+      <title>Recursive</title>
+      <link>https://minlleseok.github.io/posts/recursive/</link>
+      <pubDate>Sun, 22 Dec 2019 23:50:01 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/recursive/</guid>
+      <description>[ Reference ] : https://youtu.be/tuzf1yLPgRI
+Recursive Thinking </description>
+    </item>
+    
+    <item>
+      <title>DB 정규화</title>
+      <link>https://minlleseok.github.io/posts/sql/db-normalization/</link>
+      <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/sql/db-normalization/</guid>
+      <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
+제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!</description>
+    </item>
+    
+    <item>
+      <title>행복 기술 블로그 시작! TypeScript</title>
+      <link>https://minlleseok.github.io/posts/my-first-post/</link>
+      <pubDate>Wed, 18 Dec 2019 21:34:00 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/my-first-post/</guid>
+      <description>블로그 열심히 쓰겠습니다! Typescript 부터 출발합니다. [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+ Install
+npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.
+ Compile
+tsc helloworld.ts 컴파일 명령어는 tsc 이네요.
+ greeter.ts
+function greeter(person) { return &amp;quot;Hello, &amp;quot; + person; } let user = &amp;quot;Jane User&amp;quot;; // document.body.textContext = greeter(user); console.log(greeter(user)); 가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네요.
+터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo; &amp;ldquo;node greeter.js&amp;rdquo; 와 같은 식으로 테스트 해볼 수 있습니다.</description>
     </item>
     
   </channel>
