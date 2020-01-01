@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.62.0" />
+	<meta name="generator" content="Hugo 0.61.0" />
     <meta charset="utf-8">
     <link crossorigin="anonymous" media="all"
         rel="stylesheet"
@@ -196,7 +196,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://minlleseok.github.io/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    7
+                    8
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://minlleseok.github.io/about/">
@@ -223,11 +223,37 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
+                                    <a href="https://minlleseok.github.io/posts/algorithm/designrecursion/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="Design Recursion">Design Recursion</span>
+                                    </a>
+                                </div>
+                                [ Reference ] : https://youtu.be/Vwfo_hrxuzg
+Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함   암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search) int search(int [] data, int n, int target) {for (int i=0; i&lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.
+                                <div class="f6 text-gray mt-2">
+                                    Updated <relative-time datetime="2020-01-01"
+                                        class="no-wrap" title="Modify at 2020/01/01">
+                                        January 1, 2020</relative-time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                        <div
+                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
+                            <div class="pinned-item-list-item-content" name="pinned-post">
+                                <div class="d-flex width-full flex-items-center position-relative">
+                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
+                                        version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
+                                    </svg>
                                     <a href="https://minlleseok.github.io/posts/git/submodule/" class="text-bold flex-auto min-width-0 ">
                                         <span class="repo js-pinnable-item" title="Submodule">Submodule</span>
                                     </a>
                                 </div>
-                                Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &gt; git clone https://github.com/[github-ID]/blog.git 1-2. submodule &gt; git submodule update --init --recursive 2. git 2-1. git &gt; git pull 2-2. submodule &gt; git submodule update --recursive --remote 3. hugo post &gt; hugo new posts/[category]/[post-name].md  행복 코딩!
+                                Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &gt; git clone https://github.com/[github-ID]/blog.git1-2. submodule &gt; git submodule update --init --recursive2. git 2-1. git &gt; git pull2-2. submodule &gt; git submodule update --recursive --remote3. hugo post &gt; hugo new posts/[category]/[post-name].md 행복 코딩!
                                 <div class="f6 text-gray mt-2">
                                     Updated <relative-time datetime="2019-12-30"
                                         class="no-wrap" title="Modify at 2019/12/30">
@@ -251,8 +277,8 @@ if (!doNotTrack) {
                                         <span class="repo js-pinnable-item" title="First">First</span>
                                     </a>
                                 </div>
-                                Go 언어 배우기 (Write in &ldquo;Go&rdquo;) 안녕, 고 (Hello, Go) package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, Go&#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &#34;fmt&#34; &#34;math/rand&#34; ) func main() { fmt.Println(&#34;My favorite number is&#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.
+                                Go 언어 배우기 (Write in &ldquo;Go&rdquo;) 안녕, 고 (Hello, Go) package mainimport &#34;fmt&#34;func main() {fmt.Println(&#34;Hello, Go&#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&#34;fmt&#34;&#34;math/rand&#34;)func main() {fmt.Println(&#34;My favorite number is&#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.
                                 <div class="f6 text-gray mt-2">
                                     Updated <relative-time datetime="2019-12-30"
                                         class="no-wrap" title="Modify at 2019/12/30">
@@ -328,41 +354,21 @@ $ export PGDATA='/usr/local/var/postgres' $ pg_ctl status
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://minlleseok.github.io/posts/recursive/" class="text-bold flex-auto min-width-0 ">
+                                    <a href="https://minlleseok.github.io/posts/algorithm/recursive/" class="text-bold flex-auto min-width-0 ">
                                         <span class="repo js-pinnable-item" title="Recursive">Recursive</span>
                                     </a>
                                 </div>
-                                [ Reference ] : https://youtu.be/tuzf1yLPgRI
-Recursive Thinking 
+                                modified: 2020-01-01T15:50:01+09:00
+[ Reference ] : https://youtu.be/tuzf1yLPgRI
+Recursive Thinking 문자열의 길이 계산 :: pesudo code?
+if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.java
+public static int length(String str) {if (str.equals(&#34;&#34;))return 0;elsereturn 1 + length(str.substring(1));}length(&ldquo;ace&rdquo;)
+return 1 + length(&ldquo;ce&rdquo;)
+return 1 + length(&ldquo;e&rdquo;) return 1 + length(&quot;&quot;)
                                 <div class="f6 text-gray mt-2">
                                     Updated <relative-time datetime="2019-12-22"
                                         class="no-wrap" title="Modify at 2019/12/22">
                                         December 22, 2019</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://minlleseok.github.io/posts/sql/db-normalization/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="DB 정규화">DB 정규화</span>
-                                    </a>
-                                </div>
-                                정규형 공부 [Reference] : https://mangkyu.tistory.com/28
-제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2019-12-19"
-                                        class="no-wrap" title="Modify at 2019/12/19">
-                                        December 19, 2019</relative-time>
                                 </div>
                             </div>
                         </div>

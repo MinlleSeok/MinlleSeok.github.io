@@ -198,7 +198,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://minlleseok.github.io/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    7
+                    8
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://minlleseok.github.io/about/">
@@ -215,12 +215,34 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
+                                <a href="https://minlleseok.github.io/posts/algorithm/designrecursion/">Design Recursion</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            [ Reference ] : https://youtu.be/Vwfo_hrxuzg
+Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함   암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search) int search(int [] data, int n, int target) {for (int i=0; i&lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-01-01" class="no-wrap"
+                                title="Modifyd at 2020/01/01">
+                                January 1, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
                                 <a href="https://minlleseok.github.io/posts/git/submodule/">Submodule</a>
                             </h3>
                         </div>
 
                         <div name="posts-post">
-                            Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &gt; git clone https://github.com/[github-ID]/blog.git 1-2. submodule &gt; git submodule update --init --recursive 2. git 2-1. git &gt; git pull 2-2. submodule &gt; git submodule update --recursive --remote 3. hugo post &gt; hugo new posts/[category]/[post-name].md  행복 코딩!
+                            Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &gt; git clone https://github.com/[github-ID]/blog.git1-2. submodule &gt; git submodule update --init --recursive2. git 2-1. git &gt; git pull2-2. submodule &gt; git submodule update --recursive --remote3. hugo post &gt; hugo new posts/[category]/[post-name].md 행복 코딩!
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -240,8 +262,8 @@ if (!doNotTrack) {
                         </div>
 
                         <div name="posts-post">
-                            Go 언어 배우기 (Write in &ldquo;Go&rdquo;) 안녕, 고 (Hello, Go) package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, Go&#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &#34;fmt&#34; &#34;math/rand&#34; ) func main() { fmt.Println(&#34;My favorite number is&#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.
+                            Go 언어 배우기 (Write in &ldquo;Go&rdquo;) 안녕, 고 (Hello, Go) package mainimport &#34;fmt&#34;func main() {fmt.Println(&#34;Hello, Go&#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&#34;fmt&#34;&#34;math/rand&#34;)func main() {fmt.Println(&#34;My favorite number is&#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -304,13 +326,18 @@ $ export PGDATA='/usr/local/var/postgres' $ pg_ctl status
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
-                                <a href="https://minlleseok.github.io/posts/recursive/">Recursive</a>
+                                <a href="https://minlleseok.github.io/posts/algorithm/recursive/">Recursive</a>
                             </h3>
                         </div>
 
                         <div name="posts-post">
-                            [ Reference ] : https://youtu.be/tuzf1yLPgRI
-Recursive Thinking 
+                            modified: 2020-01-01T15:50:01+09:00
+[ Reference ] : https://youtu.be/tuzf1yLPgRI
+Recursive Thinking 문자열의 길이 계산 :: pesudo code?
+if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.java
+public static int length(String str) {if (str.equals(&#34;&#34;))return 0;elsereturn 1 + length(str.substring(1));}length(&ldquo;ace&rdquo;)
+return 1 + length(&ldquo;ce&rdquo;)
+return 1 + length(&ldquo;e&rdquo;) return 1 + length(&quot;&quot;)
                         </div>
 
                         <div class="f6 text-gray mt-2">

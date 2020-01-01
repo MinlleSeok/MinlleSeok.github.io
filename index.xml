@@ -6,10 +6,21 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Dec 2019 22:37:32 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 15:54:01 +0900</lastBuildDate>
     
 	<atom:link href="https://minlleseok.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Design Recursion</title>
+      <link>https://minlleseok.github.io/posts/algorithm/designrecursion/</link>
+      <pubDate>Wed, 01 Jan 2020 15:54:01 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/algorithm/designrecursion/</guid>
+      <description>[ Reference ] : https://youtu.be/Vwfo_hrxuzg
+Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함   암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search) int search(int [] data, int n, int target) {for (int i=0; i&amp;lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
+    </item>
     
     <item>
       <title>Submodule</title>
@@ -17,7 +28,7 @@
       <pubDate>Mon, 30 Dec 2019 22:37:32 +0900</pubDate>
       
       <guid>https://minlleseok.github.io/posts/git/submodule/</guid>
-      <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git 1-2. submodule &amp;gt; git submodule update --init --recursive 2. git 2-1. git &amp;gt; git pull 2-2. submodule &amp;gt; git submodule update --recursive --remote 3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md  행복 코딩!</description>
+      <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git1-2. submodule &amp;gt; git submodule update --init --recursive2. git 2-1. git &amp;gt; git pull2-2. submodule &amp;gt; git submodule update --recursive --remote3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md 행복 코딩!</description>
     </item>
     
     <item>
@@ -26,8 +37,8 @@
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
       <guid>https://minlleseok.github.io/posts/go/first/</guid>
-      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
+      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package mainimport &amp;#34;fmt&amp;#34;func main() {fmt.Println(&amp;#34;Hello, Go&amp;#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;math/rand&amp;#34;)func main() {fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
@@ -58,12 +69,17 @@ $ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
     
     <item>
       <title>Recursive</title>
-      <link>https://minlleseok.github.io/posts/recursive/</link>
+      <link>https://minlleseok.github.io/posts/algorithm/recursive/</link>
       <pubDate>Sun, 22 Dec 2019 23:50:01 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/recursive/</guid>
-      <description>[ Reference ] : https://youtu.be/tuzf1yLPgRI
-Recursive Thinking </description>
+      <guid>https://minlleseok.github.io/posts/algorithm/recursive/</guid>
+      <description>modified: 2020-01-01T15:50:01+09:00
+[ Reference ] : https://youtu.be/tuzf1yLPgRI
+Recursive Thinking 문자열의 길이 계산 :: pesudo code?
+if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.java
+public static int length(String str) {if (str.equals(&amp;#34;&amp;#34;))return 0;elsereturn 1 + length(str.substring(1));}length(&amp;ldquo;ace&amp;rdquo;)
+return 1 + length(&amp;ldquo;ce&amp;rdquo;)
+return 1 + length(&amp;ldquo;e&amp;rdquo;) return 1 + length(&amp;quot;&amp;quot;)</description>
     </item>
     
     <item>
