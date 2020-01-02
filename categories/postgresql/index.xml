@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PostgreSQL on Happiness Development</title>
-    <link>https://minlleseok.github.io/categories/postgresql/</link>
+    <link>https://mj-seok.com/categories/postgresql/</link>
     <description>Recent content in PostgreSQL on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Dec 2019 21:52:28 +0900</lastBuildDate>
     
-	<atom:link href="https://minlleseok.github.io/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mj-seok.com/categories/postgresql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PostgreSQL</title>
-      <link>https://minlleseok.github.io/posts/sql/postgresql/</link>
+      <link>https://mj-seok.com/posts/sql/postgresql/</link>
       <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/sql/postgresql/</guid>
+      <guid>https://mj-seok.com/posts/sql/postgresql/</guid>
       <description>PostgreSQL Install on Mac https://formulae.brew.sh/formula/postgresql
 $ brew install postgresql Server start
 $ pg_ctl -D /usr/local/var/postgres start Server stop

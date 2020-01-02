@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Happiness Development</title>
-    <link>https://minlleseok.github.io/posts/</link>
+    <link>https://mj-seok.com/posts/</link>
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jan 2020 15:54:01 +0900</lastBuildDate>
     
-	<atom:link href="https://minlleseok.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mj-seok.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Design Recursion</title>
-      <link>https://minlleseok.github.io/posts/algorithm/designrecursion/</link>
+      <link>https://mj-seok.com/posts/algorithm/designrecursion/</link>
       <pubDate>Wed, 01 Jan 2020 15:54:01 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/algorithm/designrecursion/</guid>
+      <guid>https://mj-seok.com/posts/algorithm/designrecursion/</guid>
       <description>[ Reference ] : https://youtu.be/Vwfo_hrxuzg
 Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함   암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
- 순차 탐색 (Sequential Search) int search(int [] data, int n, int target) {for (int i=0; i&amp;lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
+ 순차 탐색 (Sequential Search) int search(int [] data, int n, int target) { for (int i=0; i&amp;lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
     </item>
     
     <item>
       <title>Submodule</title>
-      <link>https://minlleseok.github.io/posts/git/submodule/</link>
+      <link>https://mj-seok.com/posts/git/submodule/</link>
       <pubDate>Mon, 30 Dec 2019 22:37:32 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/git/submodule/</guid>
-      <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git1-2. submodule &amp;gt; git submodule update --init --recursive2. git 2-1. git &amp;gt; git pull2-2. submodule &amp;gt; git submodule update --recursive --remote3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md 행복 코딩!</description>
+      <guid>https://mj-seok.com/posts/git/submodule/</guid>
+      <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git 1-2. submodule &amp;gt; git submodule update --init --recursive 2. git 2-1. git &amp;gt; git pull 2-2. submodule &amp;gt; git submodule update --recursive --remote 3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md  행복 코딩!</description>
     </item>
     
     <item>
       <title>First</title>
-      <link>https://minlleseok.github.io/posts/go/first/</link>
+      <link>https://mj-seok.com/posts/go/first/</link>
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/go/first/</guid>
-      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package mainimport &amp;#34;fmt&amp;#34;func main() {fmt.Println(&amp;#34;Hello, Go&amp;#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;math/rand&amp;#34;)func main() {fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
+      <guid>https://mj-seok.com/posts/go/first/</guid>
+      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
       <title>PostgreSQL</title>
-      <link>https://minlleseok.github.io/posts/sql/postgresql/</link>
+      <link>https://mj-seok.com/posts/sql/postgresql/</link>
       <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/sql/postgresql/</guid>
+      <guid>https://mj-seok.com/posts/sql/postgresql/</guid>
       <description>PostgreSQL Install on Mac https://formulae.brew.sh/formula/postgresql
 $ brew install postgresql Server start
 $ pg_ctl -D /usr/local/var/postgres start Server stop
@@ -56,10 +56,10 @@ $ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
     
     <item>
       <title>Python</title>
-      <link>https://minlleseok.github.io/posts/python/</link>
+      <link>https://mj-seok.com/posts/python/</link>
       <pubDate>Mon, 23 Dec 2019 21:24:34 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/python/</guid>
+      <guid>https://mj-seok.com/posts/python/</guid>
       <description>Python 가상환경 관리 pyenv 설치 mac 기준, Homebrew를 사용해서 설치합니다.
 설치
 % brew update % brew install pyenv 환경설정
@@ -69,35 +69,35 @@ $ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
     
     <item>
       <title>Recursive</title>
-      <link>https://minlleseok.github.io/posts/algorithm/recursive/</link>
+      <link>https://mj-seok.com/posts/algorithm/recursive/</link>
       <pubDate>Sun, 22 Dec 2019 23:50:01 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/algorithm/recursive/</guid>
+      <guid>https://mj-seok.com/posts/algorithm/recursive/</guid>
       <description>modified: 2020-01-01T15:50:01+09:00
 [ Reference ] : https://youtu.be/tuzf1yLPgRI
 Recursive Thinking 문자열의 길이 계산 :: pesudo code?
-if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.java
-public static int length(String str) {if (str.equals(&amp;#34;&amp;#34;))return 0;elsereturn 1 + length(str.substring(1));}length(&amp;ldquo;ace&amp;rdquo;)
+if the string is empty return 0; else return 1 plus the length of the string that excludes the first character;  순환적인 문자열 길이 계산 알고리즘  :: length.java
+public static int length(String str) { if (str.equals(&amp;#34;&amp;#34;)) return 0; else return 1 + length(str.substring(1)); } length(&amp;ldquo;ace&amp;rdquo;)
 return 1 + length(&amp;ldquo;ce&amp;rdquo;)
 return 1 + length(&amp;ldquo;e&amp;rdquo;) return 1 + length(&amp;quot;&amp;quot;)</description>
     </item>
     
     <item>
       <title>DB 정규화</title>
-      <link>https://minlleseok.github.io/posts/sql/db-normalization/</link>
+      <link>https://mj-seok.com/posts/sql/db-normalization/</link>
       <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/sql/db-normalization/</guid>
+      <guid>https://mj-seok.com/posts/sql/db-normalization/</guid>
       <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
 제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!</description>
     </item>
     
     <item>
       <title>행복 기술 블로그 시작! TypeScript</title>
-      <link>https://minlleseok.github.io/posts/my-first-post/</link>
+      <link>https://mj-seok.com/posts/my-first-post/</link>
       <pubDate>Wed, 18 Dec 2019 21:34:00 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/my-first-post/</guid>
+      <guid>https://mj-seok.com/posts/my-first-post/</guid>
       <description>블로그 열심히 쓰겠습니다! Typescript 부터 출발합니다. [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
  Install
 npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.

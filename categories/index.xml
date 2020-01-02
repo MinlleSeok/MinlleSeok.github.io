@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Happiness Development</title>
-    <link>https://minlleseok.github.io/categories/</link>
+    <link>https://mj-seok.com/categories/</link>
     <description>Recent content in Categories on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Dec 2019 21:52:28 +0900</lastBuildDate>
     
-	<atom:link href="https://minlleseok.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mj-seok.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PostgreSQL</title>
-      <link>https://minlleseok.github.io/categories/postgresql/</link>
+      <link>https://mj-seok.com/categories/postgresql/</link>
       <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/categories/postgresql/</guid>
+      <guid>https://mj-seok.com/categories/postgresql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>database</title>
-      <link>https://minlleseok.github.io/categories/database/</link>
+      <link>https://mj-seok.com/categories/database/</link>
       <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/categories/database/</guid>
+      <guid>https://mj-seok.com/categories/database/</guid>
       <description></description>
     </item>
     
