@@ -3,87 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://minlleseok.github.io/</loc>
+    <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-01-06T23:50:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/hi/md/</loc>
+    <lastmod>2020-01-06T23:50:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/</loc>
+    <lastmod>2020-01-06T23:50:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/python/for/</loc>
     <lastmod>2020-01-01T17:51:58+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/</loc>
-    <lastmod>2020-01-01T17:51:58+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minlleseok.github.io/posts/python/for/</loc>
-    <lastmod>2020-01-01T17:51:58+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://minlleseok.github.io/posts/algorithm/linearalgebra/</loc>
+    <loc>https://mj-seok.com/posts/algorithm/linearalgebra/</loc>
     <lastmod>2020-01-01T17:22:01+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/algorithm/designrecursion/</loc>
+    <loc>https://mj-seok.com/posts/algorithm/designrecursion/</loc>
     <lastmod>2020-01-01T15:54:01+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/git/submodule/</loc>
+    <loc>https://mj-seok.com/posts/git/submodule/</loc>
     <lastmod>2019-12-30T22:37:32+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/go/first/</loc>
+    <loc>https://mj-seok.com/posts/go/first/</loc>
     <lastmod>2019-12-30T22:27:58+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/categories/</loc>
+    <loc>https://mj-seok.com/categories/</loc>
     <lastmod>2019-12-26T21:52:28+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/categories/postgresql/</loc>
+    <loc>https://mj-seok.com/categories/postgresql/</loc>
     <lastmod>2019-12-26T21:52:28+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/sql/postgresql/</loc>
+    <loc>https://mj-seok.com/posts/sql/postgresql/</loc>
     <lastmod>2019-12-26T21:52:28+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/python/</loc>
+    <loc>https://mj-seok.com/posts/python/</loc>
     <lastmod>2019-12-23T21:24:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/algorithm/recursive/</loc>
+    <loc>https://mj-seok.com/posts/algorithm/recursive/</loc>
     <lastmod>2019-12-22T23:50:01+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/categories/database/</loc>
+    <loc>https://mj-seok.com/categories/database/</loc>
     <lastmod>2019-12-19T21:10:08+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/sql/db-normalization/</loc>
+    <loc>https://mj-seok.com/posts/sql/db-normalization/</loc>
     <lastmod>2019-12-19T21:10:08+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/posts/my-first-post/</loc>
+    <loc>https://mj-seok.com/posts/my-first-post/</loc>
     <lastmod>2019-12-18T21:34:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/about/</loc>
+    <loc>https://mj-seok.com/about/</loc>
     <lastmod>2019-12-18T21:33:23+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://minlleseok.github.io/tags/</loc>
+    <loc>https://mj-seok.com/tags/</loc>
   </url>
   
 </urlset>

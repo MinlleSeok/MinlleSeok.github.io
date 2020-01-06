@@ -2,21 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Happiness Development</title>
-    <link>https://minlleseok.github.io/</link>
+    <link>https://mj-seok.com/</link>
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2020 17:51:58 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2020 23:50:45 +0900</lastBuildDate>
     
-	<atom:link href="https://minlleseok.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Javascript? ECMAScript? View Template Engine?</title>
+      <link>https://mj-seok.com/posts/hi/md/</link>
+      <pubDate>Mon, 06 Jan 2020 23:50:45 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/hi/md/</guid>
+      <description>궁금이 ECMAScript 와 JavaScript View Template Engine?! </description>
+    </item>
+    
+    <item>
       <title>Python - for</title>
-      <link>https://minlleseok.github.io/posts/python/for/</link>
+      <link>https://mj-seok.com/posts/python/for/</link>
       <pubDate>Wed, 01 Jan 2020 17:51:58 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/python/for/</guid>
+      <guid>https://mj-seok.com/posts/python/for/</guid>
       <description>python for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
 array, list, tuple, string 의 시퀀스를 출력
 days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &amp;#34;Wed&amp;#34;:breakelse:print(day)for letter in &amp;#34;Nicolas&amp;#34;:print(letter)</description>
@@ -24,10 +33,10 @@ days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &am
     
     <item>
       <title>Vector</title>
-      <link>https://minlleseok.github.io/posts/algorithm/linearalgebra/</link>
+      <link>https://mj-seok.com/posts/algorithm/linearalgebra/</link>
       <pubDate>Wed, 01 Jan 2020 17:22:01 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/algorithm/linearalgebra/</guid>
+      <guid>https://mj-seok.com/posts/algorithm/linearalgebra/</guid>
       <description>[ Reference ] : https://youtu.be/br7tS1t2SFE
 선형대수학 Linear Algebra 벡터 Vector  크기 magnitud 방향 direction  speed - 5mph (크기) : scalar
 velocity - 동쪽 (east) 5mph (크기) : vector
@@ -40,10 +49,10 @@ R^2
     
     <item>
       <title>Design Recursion</title>
-      <link>https://minlleseok.github.io/posts/algorithm/designrecursion/</link>
+      <link>https://mj-seok.com/posts/algorithm/designrecursion/</link>
       <pubDate>Wed, 01 Jan 2020 15:54:01 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/algorithm/designrecursion/</guid>
+      <guid>https://mj-seok.com/posts/algorithm/designrecursion/</guid>
       <description>[ Reference ] : https://youtu.be/Vwfo_hrxuzg
 Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함   암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
  순차 탐색 (Sequential Search) int search(int [] data, int n, int target) {for (int i=0; i&amp;lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
@@ -51,29 +60,29 @@ Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, �
     
     <item>
       <title>Submodule</title>
-      <link>https://minlleseok.github.io/posts/git/submodule/</link>
+      <link>https://mj-seok.com/posts/git/submodule/</link>
       <pubDate>Mon, 30 Dec 2019 22:37:32 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/git/submodule/</guid>
+      <guid>https://mj-seok.com/posts/git/submodule/</guid>
       <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git1-2. submodule &amp;gt; git submodule update --init --recursive2. git 2-1. git &amp;gt; git pull2-2. submodule &amp;gt; git submodule update --recursive --remote3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md 행복 코딩!</description>
     </item>
     
     <item>
       <title>First</title>
-      <link>https://minlleseok.github.io/posts/go/first/</link>
+      <link>https://mj-seok.com/posts/go/first/</link>
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/go/first/</guid>
+      <guid>https://mj-seok.com/posts/go/first/</guid>
       <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package mainimport &amp;#34;fmt&amp;#34;func main() {fmt.Println(&amp;#34;Hello, Go&amp;#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
 Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;math/rand&amp;#34;)func main() {fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
       <title>PostgreSQL</title>
-      <link>https://minlleseok.github.io/posts/sql/postgresql/</link>
+      <link>https://mj-seok.com/posts/sql/postgresql/</link>
       <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/sql/postgresql/</guid>
+      <guid>https://mj-seok.com/posts/sql/postgresql/</guid>
       <description>PostgreSQL Install on Mac https://formulae.brew.sh/formula/postgresql
 $ brew install postgresql Server start
 $ pg_ctl -D /usr/local/var/postgres start Server stop
@@ -83,10 +92,10 @@ $ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
     
     <item>
       <title>Python</title>
-      <link>https://minlleseok.github.io/posts/python/</link>
+      <link>https://mj-seok.com/posts/python/</link>
       <pubDate>Mon, 23 Dec 2019 21:24:34 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/python/</guid>
+      <guid>https://mj-seok.com/posts/python/</guid>
       <description>Python 가상환경 관리 pyenv 설치 mac 기준, Homebrew를 사용해서 설치합니다.
 설치
 % brew update % brew install pyenv 환경설정
@@ -96,10 +105,10 @@ $ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
     
     <item>
       <title>Recursive</title>
-      <link>https://minlleseok.github.io/posts/algorithm/recursive/</link>
+      <link>https://mj-seok.com/posts/algorithm/recursive/</link>
       <pubDate>Sun, 22 Dec 2019 23:50:01 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/algorithm/recursive/</guid>
+      <guid>https://mj-seok.com/posts/algorithm/recursive/</guid>
       <description>modified: 2020-01-01T15:50:01+09:00
 [ Reference ] : https://youtu.be/tuzf1yLPgRI
 Recursive Thinking 문자열의 길이 계산 :: pesudo code?
@@ -111,20 +120,20 @@ return 1 + length(&amp;ldquo;e&amp;rdquo;) return 1 + length(&amp;quot;&amp;quot
     
     <item>
       <title>DB 정규화</title>
-      <link>https://minlleseok.github.io/posts/sql/db-normalization/</link>
+      <link>https://mj-seok.com/posts/sql/db-normalization/</link>
       <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/sql/db-normalization/</guid>
+      <guid>https://mj-seok.com/posts/sql/db-normalization/</guid>
       <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
 제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!</description>
     </item>
     
     <item>
       <title>행복 기술 블로그 시작! TypeScript</title>
-      <link>https://minlleseok.github.io/posts/my-first-post/</link>
+      <link>https://mj-seok.com/posts/my-first-post/</link>
       <pubDate>Wed, 18 Dec 2019 21:34:00 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/posts/my-first-post/</guid>
+      <guid>https://mj-seok.com/posts/my-first-post/</guid>
       <description>블로그 열심히 쓰겠습니다! Typescript 부터 출발합니다. [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
  Install
 npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.
@@ -137,10 +146,10 @@ function greeter(person) { return &amp;quot;Hello, &amp;quot; + person; } let us
     
     <item>
       <title>About</title>
-      <link>https://minlleseok.github.io/about/</link>
+      <link>https://mj-seok.com/about/</link>
       <pubDate>Wed, 18 Dec 2019 21:33:23 +0900</pubDate>
       
-      <guid>https://minlleseok.github.io/about/</guid>
+      <guid>https://mj-seok.com/about/</guid>
       <description>const Introduce = () =&amp;gt; { return { name: &amp;quot;Jose Seok&amp;quot;, job: &amp;quot;Front-end Developer&amp;quot;, focus: &amp;quot;React&amp;quot; }; } </description>
     </item>
     
