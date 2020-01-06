@@ -6,10 +6,37 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jan 2020 15:54:01 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 17:51:58 +0900</lastBuildDate>
     
 	<atom:link href="https://minlleseok.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python - for</title>
+      <link>https://minlleseok.github.io/posts/python/for/</link>
+      <pubDate>Wed, 01 Jan 2020 17:51:58 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/python/for/</guid>
+      <description>python for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
+array, list, tuple, string 의 시퀀스를 출력
+days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &amp;#34;Wed&amp;#34;:breakelse:print(day)for letter in &amp;#34;Nicolas&amp;#34;:print(letter)</description>
+    </item>
+    
+    <item>
+      <title>Vector</title>
+      <link>https://minlleseok.github.io/posts/algorithm/linearalgebra/</link>
+      <pubDate>Wed, 01 Jan 2020 17:22:01 +0900</pubDate>
+      
+      <guid>https://minlleseok.github.io/posts/algorithm/linearalgebra/</guid>
+      <description>[ Reference ] : https://youtu.be/br7tS1t2SFE
+선형대수학 Linear Algebra 벡터 Vector  크기 magnitud 방향 direction  speed - 5mph (크기) : scalar
+velocity - 동쪽 (east) 5mph (크기) : vector
+→ v = (5, 0) = [5] [0] 길이 : 5
+→ v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2)
+튜플 Tuple |R
+R^2
+실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0]</description>
+    </item>
     
     <item>
       <title>Design Recursion</title>
