@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>database - Happiness Development</title>
+    <title>Posts - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -215,24 +215,42 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
-                                <a href="https://mj-seok.com/posts/sql/db-normalization/">DB 정규화</a>
+                                <a href="https://mj-seok.com/posts/my-first-post/">행복 기술 블로그 시작! TypeScript</a>
                             </h3>
                         </div>
 
                         <div name="posts-post">
-                            정규형 공부 [Reference] : https://mangkyu.tistory.com/28
-제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!
+                            블로그 열심히 쓰겠습니다! Typescript 부터 출발합니다. [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+ Install
+npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.
+ Compile
+tsc helloworld.ts 컴파일 명령어는 tsc 이네요.
+ greeter.ts
+function greeter(person) { return &quot;Hello, &quot; + person; } let user = &quot;Jane User&quot;; // document.body.textContext = greeter(user); console.log(greeter(user)); 가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네요.
+터미널 환경에서 &ldquo;tsc greeter.ts&rdquo; &ldquo;node greeter.js&rdquo; 와 같은 식으로 테스트 해볼 수 있습니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2019-12-19" class="no-wrap"
-                                title="Modifyd at 2019/12/19">
-                                December 19, 2019</relative-time>
+                            Updated <relative-time datetime="2019-12-18" class="no-wrap"
+                                title="Modifyd at 2019/12/18">
+                                December 18, 2019</relative-time>
                         </div>
                     </div>
                 </li>
                 
             </ul>
+            
+            <div class="paginate-container">
+                <div class="BtnGroup" data-test-selector="pagination">
+                    
+                    <a rel="nofollow" class="btn btn-outline BtnGroup-item"
+                        href="/posts/">Previous</a>
+                    
+                    
+                    <button class="btn btn-outline BtnGroup-item" disabled="disabled">Next</button>
+                    
+                </div>
+            </div>
             
         </div>
     </div>
