@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>Submodule - Happiness Development</title>
+    <title>Hugo로 개인 블로그 만들기 &#43; submodule - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,7 +98,7 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/posts/git/submodule/">Submodule</a></strong>
+                                    href="https://mj-seok.com/posts/git/submodule/">Hugo로 개인 블로그 만들기 &#43; submodule</a></strong>
 
                             <div class="d-block text-small text-gray">
                                 Created <time-ago datetime="2019-12-30" class="no-wrap"
@@ -122,33 +122,117 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                49 Words
+                                575 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
                             <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="hugo-blog">Hugo Blog</h1>
-<h2 id="1-githubio">1. github.io</h2>
+<blockquote>
+<p><a href="https://gohugo.io/">https://gohugo.io/</a></p>
+</blockquote>
 <ul>
-<li>[github-ID]/blog.git</li>
-<li>[github-ID]/[github-ID].github.io.git</li>
-<li>[github-ID]/[theme-name].git (Forked)</li>
-<li></li>
+<li>Hugo는 &ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&quot;라고 단언하는<br>
+오픈소스 기반 정적 사이트(static site) 제작 툴입니다.</li>
 </ul>
-<h3 id="1-1-git">1-1. git</h3>
+<ol>
+<li>Hugo 설치 (Install Hugo)</li>
+<li>git Command</li>
+<li>Hugo Post</li>
+</ol>
+<h2 id="1-hugo--install-hugo">1. Hugo 설치 (Install Hugo)</h2>
+<blockquote>
+<p><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></p>
+</blockquote>
+<p>MacOS 기준 (for MacOS)</p>
+<h3 id="hugo--install-hugo">Hugo 설치 (Install Hugo)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install hugo
+</code></pre></div><h3 id="hugo---check-hugos-version">Hugo 버전 확인 (check Hugo's version)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo version
+</code></pre></div><h3 id="hugo---create-a-new-hugo-site">Hugo 사이트 만들기 (Create a new Hugo site)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site quickstart
+</code></pre></div><h3 id="hugo---add-a-theme">Hugo 테마 추가하기 (Add a Theme)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd quickstart
+git init
+git submodule add https://github.com/<span style="color:#f92672">[</span>user-name<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>theme-repository<span style="color:#f92672">]</span>.git themes/<span style="color:#f92672">[</span>theme-name<span style="color:#f92672">]</span>
+</code></pre></div><h3 id="hugo---configure-a-theme">Hugo 테마 설정하기 (Configure a Theme)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#39;theme = &#34;[theme-name]&#34;&#39;</span> &gt;&gt; config.toml
+</code></pre></div><h3 id="hugo--add-some-content">Hugo 글쓰기 (Add Some Content)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md
+</code></pre></div><h3 id="hugo---start-a-hugo-server">Hugo 서버 실행하기 (Start a Hugo Server)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><ul>
+<li>-D : draft: true 되어있는 초안 게시물도 같이 보는 기능</li>
+</ul>
+<h3 id="hugo---customize-the-theme">Hugo 테마 꾸미기 (Customize the Theme)</h3>
+<p>:: /config.toml 수정</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://example.org/&#34;</span>
+<span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;New Hugo&#34;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;haha&#34;</span>
+</code></pre></div><h3 id="hugo---build-static-pages">Hugo 빌드 하기 (Build static pages)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -D
+</code></pre></div><h3 id="-----upload-to-my-github-remote-repository">자신의 원격 깃헙 저장소에 올리기 (Upload to my github remote repository)</h3>
+<ol>
+<li>github 에서 [blog] 저장소 만들기</li>
+<li>[user-name].github.io 저장소 만들기</li>
+<li>Hugo 전체 파일 관리 (2 중 택 1)
+<ol>
+<li><code>bash git clone [blog.git] &amp;&amp; cd [blog]</code></li>
+<li><code>bash git init &amp;&amp; git remote add origin [blog.git]</code></li>
+</ol>
+</li>
+<li>git [~.io] 저장소 submodule 등록<br>
+<code>bash git submodule add -b master git@github.com:[github-ID]/[user-name].github.io.git public</code></li>
+</ol>
+<p>:: /deploy.sh</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># If a command fails then the deploy stops</span>
+set -e
+
+printf <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+
+<span style="color:#75715e"># Build the project.</span>
+hugo <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span style="color:#75715e"># Go To Public folder</span>
+cd public
+
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">rebuilding site </span><span style="color:#66d9ef">$(</span>date<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+	msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$*<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+</code></pre></div><ul>
+<li>편리한 배포 쉘 스크립트 제공 (작동 안 되면, 권한 지정 <code>bash chmod +x deploy.sh</code>)</li>
+<li>[github-ID]/[blog].git : Hugo 전체 파일 관리 저장소</li>
+<li>[github-ID]/[user-name].github.io.git : Hugo 빌드한 정적 페이지(/public) 관리 저장소</li>
+<li>[github-ID]/[theme-name].git (Forked) : 테마 Fork하여 관리하는 저장소</li>
+<li>위와 같이 쓰면 좋다고 합니다.</li>
+</ul>
+<h2 id="2-----in-other-computer-environment">2. 다른 컴퓨터에서 블로그 작업 시(In other computer environment)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git clone https://github.com/<span style="color:#f92672">[</span>github-ID<span style="color:#f92672">]</span>/blog.git
-</code></pre></div><h3 id="1-2-submodule">1-2. submodule</h3>
+</code></pre></div><h3 id="submodule--re-init-submodule">submodule 재구성 (re init submodule)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git submodule update --init --recursive
-</code></pre></div><h2 id="2-git">2. git</h2>
-<h3 id="2-1-git">2-1. git</h3>
+</code></pre></div><h2 id="3--git-">3. 추가 Git 명령어</h2>
+<h3 id="git-">git 당겨오기</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git pull
-</code></pre></div><h3 id="2-2-submodule">2-2. submodule</h3>
+</code></pre></div><h3 id="submodule-">submodule 갱신하기</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; git submodule update --recursive --remote
-</code></pre></div><h2 id="3-hugo-post">3. hugo post</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; hugo new posts/<span style="color:#f92672">[</span>category<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>post-name<span style="color:#f92672">]</span>.md
 </code></pre></div><hr>
-<p>행복 코딩!</p>
+<blockquote>
+<p>행복 코딩<br>
+plus. 재밌는 애니메이션 : <a href="https://particleslider.com/">https://particleslider.com/</a></p>
+</blockquote>
 </article>
                         </div>
                     </div>

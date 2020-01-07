@@ -59,12 +59,16 @@ Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, �
     </item>
     
     <item>
-      <title>Submodule</title>
+      <title>Hugo로 개인 블로그 만들기 &#43; submodule</title>
       <link>https://mj-seok.com/posts/git/submodule/</link>
       <pubDate>Mon, 30 Dec 2019 22:37:32 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/git/submodule/</guid>
-      <description>Hugo Blog 1. github.io  [github-ID]/blog.git [github-ID]/[github-ID].github.io.git [github-ID]/[theme-name].git (Forked)   1-1. git &amp;gt; git clone https://github.com/[github-ID]/blog.git 1-2. submodule &amp;gt; git submodule update --init --recursive 2. git 2-1. git &amp;gt; git pull 2-2. submodule &amp;gt; git submodule update --recursive --remote 3. hugo post &amp;gt; hugo new posts/[category]/[post-name].md  행복 코딩!</description>
+      <description>Hugo Blog  https://gohugo.io/
+  Hugo는 &amp;ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&amp;quot;라고 단언하는
+오픈소스 기반 정적 사이트(static site) 제작 툴입니다.   Hugo 설치 (Install Hugo) git Command Hugo Post  1. Hugo 설치 (Install Hugo)  https://gohugo.io/getting-started/quick-start/
+ MacOS 기준 (for MacOS)
+Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo&#39;s version) hugo version Hugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstart Hugo 테마 추가하기 (Add a Theme) cd quickstart git init git submodule add https://github.</description>
     </item>
     
     <item>
