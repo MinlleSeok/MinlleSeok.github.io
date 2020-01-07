@@ -242,7 +242,7 @@ if (!doNotTrack) {
                         <div name="posts-post">
                             python for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
 array, list, tuple, string 의 시퀀스를 출력
-days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &#34;Wed&#34;: break else: print(day) for letter in &#34;Nicolas&#34;: print(letter) 
+days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &#34;Wed&#34;:breakelse:print(day)for letter in &#34;Nicolas&#34;:print(letter)
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -290,8 +290,8 @@ R^2
 
                         <div name="posts-post">
                             [ Reference ] : https://youtu.be/Vwfo_hrxuzg
-Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함   암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
- 순차 탐색 (Sequential Search) int search(int [] data, int n, int target) { for (int i=0; i&lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.
+Design Recursion  Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) { for (int i=0; i&lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -315,7 +315,7 @@ Design Recursion 순환적 알고리즘 설계  적어도 하나의 base case, �
   Hugo는 &ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&quot;라고 단언하는
 오픈소스 기반 정적 사이트(static site) 제작 툴입니다.   Hugo 설치 (Install Hugo) git Command Hugo Post  1. Hugo 설치 (Install Hugo)  https://gohugo.io/getting-started/quick-start/
  MacOS 기준 (for MacOS)
-Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo's version) hugo version Hugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstart Hugo 테마 추가하기 (Add a Theme) cd quickstart git init git submodule add https://github.
+Hugo 설치 (Install Hugo) brew install hugoHugo 버전 확인 (check Hugo's version) hugo versionHugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstartHugo 테마 추가하기 (Add a Theme) cd quickstartgit initgit submodule add https://github.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -335,8 +335,8 @@ Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo's ve
                         </div>
 
                         <div name="posts-post">
-                            Go 언어 배우기 (Write in &ldquo;Go&rdquo;) 안녕, 고 (Hello, Go) package main import &#34;fmt&#34; func main() { fmt.Println(&#34;Hello, Go&#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &#34;fmt&#34; &#34;math/rand&#34; ) func main() { fmt.Println(&#34;My favorite number is&#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.
+                            Go 언어 배우기 (Write in &ldquo;Go&rdquo;) 안녕, 고 (Hello, Go) package mainimport &#34;fmt&#34;func main() {fmt.Println(&#34;Hello, Go&#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&#34;fmt&#34;&#34;math/rand&#34;)func main() {fmt.Println(&#34;My favorite number is&#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -407,8 +407,8 @@ $ export PGDATA='/usr/local/var/postgres' $ pg_ctl status
                             modified: 2020-01-01T15:50:01+09:00
 [ Reference ] : https://youtu.be/tuzf1yLPgRI
 Recursive Thinking 문자열의 길이 계산 :: pesudo code?
-if the string is empty return 0; else return 1 plus the length of the string that excludes the first character;  순환적인 문자열 길이 계산 알고리즘  :: length.java
-public static int length(String str) { if (str.equals(&#34;&#34;)) return 0; else return 1 + length(str.substring(1)); } length(&ldquo;ace&rdquo;)
+if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.java
+public static int length(String str) {if (str.equals(&#34;&#34;))return 0;elsereturn 1 + length(str.substring(1));}length(&ldquo;ace&rdquo;)
 return 1 + length(&ldquo;ce&rdquo;)
 return 1 + length(&ldquo;e&rdquo;) return 1 + length(&quot;&quot;)
                         </div>
