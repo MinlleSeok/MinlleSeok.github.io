@@ -122,7 +122,7 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                575 Words
+                                571 Words
                                 
                             </div>
                         </div>
@@ -179,12 +179,12 @@ git submodule add https://github.com/<span style="color:#f92672">[</span>user-na
 <li>[user-name].github.io 저장소 만들기</li>
 <li>Hugo 전체 파일 관리 (2 중 택 1)
 <ol>
-<li><code>bash git clone [blog.git] &amp;&amp; cd [blog]</code></li>
-<li><code>bash git init &amp;&amp; git remote add origin [blog.git]</code></li>
+<li><code>git clone [blog.git] &amp;&amp; cd [blog]</code></li>
+<li><code>git init &amp;&amp; git remote add origin [blog.git]</code></li>
 </ol>
 </li>
 <li>git [~.io] 저장소 submodule 등록<br>
-<code>bash git submodule add -b master git@github.com:[github-ID]/[user-name].github.io.git public</code></li>
+<code>git submodule add -b master git@github.com:[github-ID]/[user-name].github.io.git public</code></li>
 </ol>
 <p>:: /deploy.sh</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/sh
@@ -213,7 +213,7 @@ git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6
 <span style="color:#75715e"># Push source and build repos.</span>
 git push origin master
 </code></pre></div><ul>
-<li>편리한 배포 쉘 스크립트 제공 (작동 안 되면, 권한 지정 <code>bash chmod +x deploy.sh</code>)</li>
+<li>편리한 배포 쉘 스크립트 제공 (작동 안 되면, 권한 지정 <code>chmod +x deploy.sh</code>)</li>
 <li>[github-ID]/[blog].git : Hugo 전체 파일 관리 저장소</li>
 <li>[github-ID]/[user-name].github.io.git : Hugo 빌드한 정적 페이지(/public) 관리 저장소</li>
 <li>[github-ID]/[theme-name].git (Forked) : 테마 Fork하여 관리하는 저장소</li>
