@@ -3,42 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-01-08T16:03:00+09:00</lastmod>
+    <loc>https://mj-seok.com/posts/ecma-ptc/</loc>
+    <lastmod>2020-01-08T18:46:45+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/ecmascript/md/</loc>
-    <lastmod>2020-01-08T16:03:00+09:00</lastmod>
+    <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-01-08T18:46:45+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mj-seok.com/posts/</loc>
+    <lastmod>2020-01-08T18:46:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/ecma-javascript/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/python/for/</loc>
+    <loc>https://mj-seok.com/posts/python-for/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/algorithm/linearalgebra/</loc>
+    <loc>https://mj-seok.com/posts/math-linearalgebra/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/algorithm/designrecursion/</loc>
+    <loc>https://mj-seok.com/posts/algo-designrecursion/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/git/submodule/</loc>
+    <loc>https://mj-seok.com/posts/git-submodule/</loc>
     <lastmod>2020-01-07T20:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/go/first/</loc>
+    <loc>https://mj-seok.com/posts/go-first/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
@@ -53,17 +58,17 @@
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/sql/postgresql/</loc>
+    <loc>https://mj-seok.com/posts/sql-postgresql/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/python/</loc>
+    <loc>https://mj-seok.com/posts/python-pyenv/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/algorithm/recursive/</loc>
+    <loc>https://mj-seok.com/posts/algo-recursive/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
@@ -73,12 +78,12 @@
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/sql/db-normalization/</loc>
+    <loc>https://mj-seok.com/posts/sql-db-normalization/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/my-first-post/</loc>
+    <loc>https://mj-seok.com/posts/typescript/</loc>
     <lastmod>2020-01-08T16:03:00+09:00</lastmod>
   </url>
   

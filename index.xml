@@ -6,61 +6,72 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jan 2020 23:50:45 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 18:46:45 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Javascript? ECMAScript? View Template Engine?</title>
-      <link>https://mj-seok.com/posts/ecmascript/md/</link>
+      <title>ES6 - 적절한 꼬리 호출(Proper Tail Calls)</title>
+      <link>https://mj-seok.com/posts/ecma-ptc/</link>
+      <pubDate>Wed, 08 Jan 2020 18:46:45 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/ecma-ptc/</guid>
+      <description>ECMAScript 6 - 적절한 꼬리 호출(Proper Tail Calls) https://webkit.org/blog/6240/ecmascript-6-proper-tail-calls-in-webkit/
+적절한 꼬리 호출?(Proper Tail Calls)  Proper Tail Calls(PTC)는 ECMAScript 6 언어의 새로운 특징입니다. recursive 프로그래밍 패턴을 수월하게 하고자 추가됬다고 합니다. stack overflow exception 를 발생시키는 코드도 실행할 수 있게 한다고 합니다.  부연 설명  일반적으로 함수 호출할 때, 함수 호출과 관련된 데이터에 스택 공간을 할당합니다. 이 데이터에는 반환 주소, 이전 스택 포인터, 함수에 대한 전달인자, 로컬 값에 대한 공간(스택 프레임)등 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Javascript와 ECMAScript - 알아보기</title>
+      <link>https://mj-seok.com/posts/ecma-javascript/</link>
       <pubDate>Mon, 06 Jan 2020 23:50:45 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/ecmascript/md/</guid>
-      <description>궁금이 ECMAScript 와 JavaScript JavaScript https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+      <guid>https://mj-seok.com/posts/ecma-javascript/</guid>
+      <description>Javascript와 ECMAScript - 알아보기 ECMAScript 와 JavaScript JavaScript https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
  복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.  기본 작성 형태 // HTML 요소 중 p태그를 선택 const para = document.querySelector(&amp;#39;p&amp;#39;); para.addEventListener(&amp;#39;click&amp;#39;, updateName); function updateName() { //&amp;#39;Enter a new name&amp;#39;과 입력란 출력하여 입력받은 값을 name에 저장  let name = prompt(&amp;#39;Enter a new name&amp;#39;); // para(p태그)에 새로운 문자열 저장  para.</description>
     </item>
     
     <item>
       <title>Python - for in 문법</title>
-      <link>https://mj-seok.com/posts/python/for/</link>
+      <link>https://mj-seok.com/posts/python-for/</link>
       <pubDate>Wed, 01 Jan 2020 17:51:58 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/python/for/</guid>
-      <description>python for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
- array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)  </description>
+      <guid>https://mj-seok.com/posts/python-for/</guid>
+      <description>Python - for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
+ array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)   행복 코딩
+ </description>
     </item>
     
     <item>
       <title>선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple)</title>
-      <link>https://mj-seok.com/posts/algorithm/linearalgebra/</link>
+      <link>https://mj-seok.com/posts/math-linearalgebra/</link>
       <pubDate>Wed, 01 Jan 2020 17:22:01 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/algorithm/linearalgebra/</guid>
-      <description>선형대수학 Linear Algebra [ Reference ] : https://youtu.be/br7tS1t2SFE
+      <guid>https://mj-seok.com/posts/math-linearalgebra/</guid>
+      <description>선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple) [ Reference ] : https://youtu.be/br7tS1t2SFE
  프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
 속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
 v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   </description>
     </item>
     
     <item>
-      <title>Design Recursion</title>
-      <link>https://mj-seok.com/posts/algorithm/designrecursion/</link>
+      <title>재귀 설계 - Design Recursion</title>
+      <link>https://mj-seok.com/posts/algo-designrecursion/</link>
       <pubDate>Wed, 01 Jan 2020 15:54:01 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/algorithm/designrecursion/</guid>
-      <description>Design Recursion [ Reference ] : https://youtu.be/Vwfo_hrxuzg
+      <guid>https://mj-seok.com/posts/algo-designrecursion/</guid>
+      <description>재귀 설계 - Design Recursion [ Reference ] : https://youtu.be/Vwfo_hrxuzg
  Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
  순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) { for (int i=0; i&amp;lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
     </item>
     
     <item>
-      <title>Hugo로 개인 블로그 만들기 &#43; submodule</title>
-      <link>https://mj-seok.com/posts/git/submodule/</link>
+      <title>Hugo로 개인 블로그 만들기 &#43; git submodule</title>
+      <link>https://mj-seok.com/posts/git-submodule/</link>
       <pubDate>Mon, 30 Dec 2019 22:37:32 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/git/submodule/</guid>
-      <description>Hugo Blog  https://gohugo.io/
+      <guid>https://mj-seok.com/posts/git-submodule/</guid>
+      <description>Hugo로 개인 블로그 만들기 + git submodule  https://gohugo.io/
   Hugo는 &amp;ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&amp;quot;라고 단언하는
 오픈소스 기반 정적 사이트(static site) 제작 툴입니다.   Hugo 설치 (Install Hugo) git Command Hugo Post  1. Hugo 설치 (Install Hugo)  https://gohugo.io/getting-started/quick-start/
  MacOS 기준 (for MacOS)
@@ -69,64 +80,66 @@ Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo&#39;
     
     <item>
       <title>고로 작성해봐요 - Write in Go</title>
-      <link>https://mj-seok.com/posts/go/first/</link>
+      <link>https://mj-seok.com/posts/go-first/</link>
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/go/first/</guid>
-      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
+      <guid>https://mj-seok.com/posts/go-first/</guid>
+      <description>고로 작성해봐요 - Write in Go 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
 Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
       <title>PostgreSQL - 명령어 정리(Command)</title>
-      <link>https://mj-seok.com/posts/sql/postgresql/</link>
+      <link>https://mj-seok.com/posts/sql-postgresql/</link>
       <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/sql/postgresql/</guid>
+      <guid>https://mj-seok.com/posts/sql-postgresql/</guid>
       <description>PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
 install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  </description>
     </item>
     
     <item>
       <title>Python 가상환경 - pyenv 설치</title>
-      <link>https://mj-seok.com/posts/python/</link>
+      <link>https://mj-seok.com/posts/python-pyenv/</link>
       <pubDate>Mon, 23 Dec 2019 21:24:34 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/python/</guid>
-      <description>Python 가상환경 관리 pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
- 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version  </description>
+      <guid>https://mj-seok.com/posts/python-pyenv/</guid>
+      <description>Python 가상환경 - pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
+ 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version   행복 개발
+ </description>
     </item>
     
     <item>
-      <title>Recursive</title>
-      <link>https://mj-seok.com/posts/algorithm/recursive/</link>
+      <title>재귀적 생각 - Recursive Thinking</title>
+      <link>https://mj-seok.com/posts/algo-recursive/</link>
       <pubDate>Sun, 22 Dec 2019 23:50:01 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/algorithm/recursive/</guid>
-      <description>Recursive Thinking [ Reference ] : https://youtu.be/tuzf1yLPgRI
+      <guid>https://mj-seok.com/posts/algo-recursive/</guid>
+      <description>재귀적 생각 - Recursive Thinking [ Reference ] : https://youtu.be/tuzf1yLPgRI
 절차적 언어 ? Procedure Language : 어떤 일을 하는 절차
 프로그래밍에서의 관점  객체 지향 : 객체들 간의 상호작용 Recursion : 순환적인 관점  Recursion은 수학함수 계산에만 유용한가  수학함수뿐 아니라 다른 많은 문제들을 recursion으로 해결할 수 있습니다.  문자열의 길이 계산 :: pesudo code
 if the string is empty return 0; else return 1 plus the length of the string that excludes the first character;  순환적인 문자열 길이 계산 알고리즘  :: length.</description>
     </item>
     
     <item>
-      <title>DB 정규화</title>
-      <link>https://mj-seok.com/posts/sql/db-normalization/</link>
+      <title>DB 정규화 - Database Normalization</title>
+      <link>https://mj-seok.com/posts/sql-db-normalization/</link>
       <pubDate>Thu, 19 Dec 2019 21:10:08 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/sql/db-normalization/</guid>
-      <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
-제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성  </description>
+      <guid>https://mj-seok.com/posts/sql-db-normalization/</guid>
+      <description>DB 정규화 - Database Normalization [Reference] : https://mangkyu.tistory.com/28
+제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성   행복 코딩
+ </description>
     </item>
     
     <item>
-      <title>타입스크립트 기초 - TypeScript basic</title>
-      <link>https://mj-seok.com/posts/my-first-post/</link>
+      <title>타입스크립트 기초 - TypeScript Basic</title>
+      <link>https://mj-seok.com/posts/typescript/</link>
       <pubDate>Wed, 18 Dec 2019 21:34:00 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/my-first-post/</guid>
-      <description>타입스크립트 기초 - TypeScript basic Typescript 부터 출발합니다 [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
-Install npm install -g typescript  node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.  Compile tsc helloworld.ts  컴파일 명령어는 tsc 입니다.  greeter.ts function greeter(person) { return &amp;#34;Hello, &amp;#34; + person; } let user = &amp;#34;Jane User&amp;#34;; // document.body.textContext = greeter(user); console.log(greeter(user));  가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍습니다.  터미널 환경에서 &amp;ldquo;tsc greeter.</description>
+      <guid>https://mj-seok.com/posts/typescript/</guid>
+      <description>타입스크립트 기초 - TypeScript Basic [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+Install npm install -g typescript  node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.  Compile tsc helloworld.ts  컴파일 명령어는 tsc 입니다.  greeter.ts function greeter(person) { return &amp;#34;Hello, &amp;#34; + person; } let user = &amp;#34;Jane User&amp;#34;; // document.body.textContext = greeter(user); console.log(greeter(user));  가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍습니다.  터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo;, &amp;ldquo;node greeter.</description>
     </item>
     
     <item>
@@ -135,7 +148,8 @@ Install npm install -g typescript  node.js가 설치되어 있는 환경에서 t
       <pubDate>Wed, 18 Dec 2019 21:33:23 +0900</pubDate>
       
       <guid>https://mj-seok.com/about/</guid>
-      <description>const Introduce = () =&amp;gt; { return { name: &amp;#34;Jose Seok&amp;#34;, job: &amp;#34;Front-end Developer&amp;#34;, focus: &amp;#34;React&amp;#34; }; }  </description>
+      <description>const Introduce = () =&amp;gt; { return { name: &amp;#34;Jose Seok&amp;#34;, job: &amp;#34;Front-end Developer&amp;#34;, focus: [&amp;#34;ECMAScript&amp;#34;, &amp;#34;React.js&amp;#34;, &amp;#34;Node.js&amp;#34;, &amp;#34;Algorithm&amp;#34;] }; }   행복 프로그래밍
+ </description>
     </item>
     
   </channel>
