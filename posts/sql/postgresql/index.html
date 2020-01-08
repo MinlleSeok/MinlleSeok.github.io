@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>PostgreSQL - Happiness Development</title>
+    <title>PostgreSQL - 명령어 정리(Command) - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/posts/sql/postgresql/">PostgreSQL</a></strong>
+                                    href="https://mj-seok.com/posts/sql/postgresql/">PostgreSQL - 명령어 정리(Command)</a></strong>
 
                             <div class="d-block text-small text-gray">
                                 Created <time-ago datetime="2019-12-26" class="no-wrap"
                                     title="Created at 2019/12/26">
                                     2019-12-26</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2019-12-26" class="no-wrap"
-                                    title="Modifyed  at 2019/12/26">
-                                    2019-12-26</time-ago>
+                                Modifyed <time-ago datetime="2020-01-08" class="no-wrap"
+                                    title="Modifyed  at 2020/01/08">
+                                    2020-01-08</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,24 +122,27 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                31 Words
+                                49 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="postgresql">PostgreSQL</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="postgresql----command">PostgreSQL - 명령어 정리(Command)</h1>
 <h2 id="install-on-mac">Install on Mac</h2>
 <p><a href="https://formulae.brew.sh/formula/postgresql">https://formulae.brew.sh/formula/postgresql</a></p>
-<pre><code>$ brew install postgresql
-</code></pre><p>Server start</p>
-<pre><code>$ pg_ctl -D /usr/local/var/postgres start
-</code></pre><p>Server stop</p>
-<pre><code>$ pg_ctl -D /usr/local/var/postgres stop
-</code></pre><p>status check</p>
-<pre><code>$ export PGDATA='/usr/local/var/postgres'
-$ pg_ctl status     
-</code></pre></article>
+<h3 id="install-command">install Command</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install postgresql
+</code></pre></div><h3 id="server-start">Server start</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_ctl -D /usr/local/var/postgres start
+</code></pre></div><h3 id="server-stop">Server stop</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_ctl -D /usr/local/var/postgres stop
+</code></pre></div><h3 id="status-check">status check</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export PGDATA<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/local/var/postgres&#39;</span>
+pg_ctl status
+</code></pre></div><hr>
+<p>$$행복코딩</p>
+</article>
                         </div>
                     </div>
                 </div>

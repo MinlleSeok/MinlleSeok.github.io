@@ -17,34 +17,29 @@
       <pubDate>Mon, 06 Jan 2020 23:50:45 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/hi/md/</guid>
-      <description>궁금이 ECMAScript 와 JavaScript View Template Engine?! </description>
+      <description>궁금이  작성 중  ECMAScript 와 JavaScript View Template Engine  $$행복 코딩</description>
     </item>
     
     <item>
-      <title>Python - for</title>
+      <title>Python - for in 문법</title>
       <link>https://mj-seok.com/posts/python/for/</link>
       <pubDate>Wed, 01 Jan 2020 17:51:58 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/python/for/</guid>
       <description>python for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
-array, list, tuple, string 의 시퀀스를 출력
-days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &amp;#34;Wed&amp;#34;:breakelse:print(day)for letter in &amp;#34;Nicolas&amp;#34;:print(letter)</description>
+ array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)  $$행복 코딩</description>
     </item>
     
     <item>
-      <title>Vector</title>
+      <title>선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple)</title>
       <link>https://mj-seok.com/posts/algorithm/linearalgebra/</link>
       <pubDate>Wed, 01 Jan 2020 17:22:01 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/algorithm/linearalgebra/</guid>
-      <description>[ Reference ] : https://youtu.be/br7tS1t2SFE
-선형대수학 Linear Algebra 벡터 Vector  크기 magnitud 방향 direction  speed - 5mph (크기) : scalar
-velocity - 동쪽 (east) 5mph (크기) : vector
-→ v = (5, 0) = [5] [0] 길이 : 5
-→ v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2)
-튜플 Tuple |R
-R^2
-실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0]</description>
+      <description>선형대수학 Linear Algebra [ Reference ] : https://youtu.be/br7tS1t2SFE
+ 프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
+속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
+v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space  </description>
     </item>
     
     <item>
@@ -53,8 +48,8 @@ R^2
       <pubDate>Wed, 01 Jan 2020 15:54:01 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/algorithm/designrecursion/</guid>
-      <description>[ Reference ] : https://youtu.be/Vwfo_hrxuzg
-Design Recursion  Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+      <description>Design Recursion [ Reference ] : https://youtu.be/Vwfo_hrxuzg
+ Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
  순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) { for (int i=0; i&amp;lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
     </item>
     
@@ -68,43 +63,37 @@ Design Recursion  Recursion을 어떻게 짜야할까?  순환적 알고리즘 �
   Hugo는 &amp;ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&amp;quot;라고 단언하는
 오픈소스 기반 정적 사이트(static site) 제작 툴입니다.   Hugo 설치 (Install Hugo) git Command Hugo Post  1. Hugo 설치 (Install Hugo)  https://gohugo.io/getting-started/quick-start/
  MacOS 기준 (for MacOS)
-Hugo 설치 (Install Hugo) brew install hugoHugo 버전 확인 (check Hugo&#39;s version) hugo versionHugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstartHugo 테마 추가하기 (Add a Theme) cd quickstartgit initgit submodule add https://github.</description>
+Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo&#39;s version) hugo version Hugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstart Hugo 테마 추가하기 (Add a Theme) cd quickstart git init git submodule add https://github.</description>
     </item>
     
     <item>
-      <title>First</title>
+      <title>고로 작성해봐요 - Write in Go</title>
       <link>https://mj-seok.com/posts/go/first/</link>
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/go/first/</guid>
-      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package mainimport &amp;#34;fmt&amp;#34;func main() {fmt.Println(&amp;#34;Hello, Go&amp;#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;math/rand&amp;#34;)func main() {fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
+      <description>Go 언어 배우기 (Write in &amp;ldquo;Go&amp;rdquo;) 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
-      <title>PostgreSQL</title>
+      <title>PostgreSQL - 명령어 정리(Command)</title>
       <link>https://mj-seok.com/posts/sql/postgresql/</link>
       <pubDate>Thu, 26 Dec 2019 21:52:28 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/sql/postgresql/</guid>
-      <description>PostgreSQL Install on Mac https://formulae.brew.sh/formula/postgresql
-$ brew install postgresql Server start
-$ pg_ctl -D /usr/local/var/postgres start Server stop
-$ pg_ctl -D /usr/local/var/postgres stop status check
-$ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
+      <description>PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
+install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  $$행복코딩</description>
     </item>
     
     <item>
-      <title>Python</title>
+      <title>Python 가상환경 - pyenv 설치</title>
       <link>https://mj-seok.com/posts/python/</link>
       <pubDate>Mon, 23 Dec 2019 21:24:34 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/python/</guid>
-      <description>Python 가상환경 관리 pyenv 설치 mac 기준, Homebrew를 사용해서 설치합니다.
-설치
-% brew update % brew install pyenv 환경설정
-% echo &#39;export PYENV_ROOT=&amp;quot;$HOME/.pyenv&amp;quot;&#39; &amp;gt;&amp;gt; ~/.zshrc % echo &#39;export PATH=&amp;quot;$PYENV_ROOT/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;quot;$(pyenv init -)&amp;quot;\nfi&#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치
-% pyenv install [version_name] % pyenv global [version_name] % python --version </description>
+      <description>Python 가상환경 관리 pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
+ 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version  $$행복 코딩</description>
     </item>
     
     <item>
@@ -113,13 +102,10 @@ $ export PGDATA=&#39;/usr/local/var/postgres&#39; $ pg_ctl status </description>
       <pubDate>Sun, 22 Dec 2019 23:50:01 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/algorithm/recursive/</guid>
-      <description>modified: 2020-01-01T15:50:01+09:00
-[ Reference ] : https://youtu.be/tuzf1yLPgRI
-Recursive Thinking 문자열의 길이 계산 :: pesudo code?
-if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.java
-public static int length(String str) {if (str.equals(&amp;#34;&amp;#34;))return 0;elsereturn 1 + length(str.substring(1));}length(&amp;ldquo;ace&amp;rdquo;)
-return 1 + length(&amp;ldquo;ce&amp;rdquo;)
-return 1 + length(&amp;ldquo;e&amp;rdquo;) return 1 + length(&amp;quot;&amp;quot;)</description>
+      <description>Recursive Thinking [ Reference ] : https://youtu.be/tuzf1yLPgRI
+절차적 언어 ? Procedure Language : 어떤 일을 하는 절차
+프로그래밍에서의 관점  객체 지향 : 객체들 간의 상호작용 Recursion : 순환적인 관점  Recursion은 수학함수 계산에만 유용한가  수학함수뿐 아니라 다른 많은 문제들을 recursion으로 해결할 수 있습니다.  문자열의 길이 계산 :: pesudo code
+if the string is empty return 0; else return 1 plus the length of the string that excludes the first character;  순환적인 문자열 길이 계산 알고리즘  :: length.</description>
     </item>
     
     <item>
@@ -129,23 +115,17 @@ return 1 + length(&amp;ldquo;e&amp;rdquo;) return 1 + length(&amp;quot;&amp;quot
       
       <guid>https://mj-seok.com/posts/sql/db-normalization/</guid>
       <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
-제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성 행복해요!</description>
+제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성  $$행복코딩</description>
     </item>
     
     <item>
-      <title>행복 기술 블로그 시작! TypeScript</title>
+      <title>타입스크립트 기초 - TypeScript basic</title>
       <link>https://mj-seok.com/posts/my-first-post/</link>
       <pubDate>Wed, 18 Dec 2019 21:34:00 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/my-first-post/</guid>
-      <description>블로그 열심히 쓰겠습니다! Typescript 부터 출발합니다. [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
- Install
-npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.
- Compile
-tsc helloworld.ts 컴파일 명령어는 tsc 이네요.
- greeter.ts
-function greeter(person) { return &amp;quot;Hello, &amp;quot; + person; } let user = &amp;quot;Jane User&amp;quot;; // document.body.textContext = greeter(user); console.log(greeter(user)); 가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네요.
-터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo; &amp;ldquo;node greeter.js&amp;rdquo; 와 같은 식으로 테스트 해볼 수 있습니다.</description>
+      <description>타입스크립트 기초 - TypeScript basic Typescript 부터 출발합니다 [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+Install npm install -g typescript  node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.  Compile tsc helloworld.ts  컴파일 명령어는 tsc 입니다.  greeter.ts function greeter(person) { return &amp;#34;Hello, &amp;#34; + person; } let user = &amp;#34;Jane User&amp;#34;; // document.body.textContext = greeter(user); console.log(greeter(user));  가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍습니다.  터미널 환경에서 &amp;ldquo;tsc greeter.</description>
     </item>
     
   </channel>

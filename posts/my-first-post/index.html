@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>행복 기술 블로그 시작! TypeScript - Happiness Development</title>
+    <title>타입스크립트 기초 - TypeScript basic - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/posts/my-first-post/">행복 기술 블로그 시작! TypeScript</a></strong>
+                                    href="https://mj-seok.com/posts/my-first-post/">타입스크립트 기초 - TypeScript basic</a></strong>
 
                             <div class="d-block text-small text-gray">
                                 Created <time-ago datetime="2019-12-18" class="no-wrap"
                                     title="Created at 2019/12/18">
                                     2019-12-18</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2019-12-18" class="no-wrap"
-                                    title="Modifyed  at 2019/12/18">
-                                    2019-12-18</time-ago>
+                                Modifyed <time-ago datetime="2020-01-08" class="no-wrap"
+                                    title="Modifyed  at 2020/01/08">
+                                    2020-01-08</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,124 +122,136 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                498 Words
+                                514 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><hr>
-<h2 id="--">블로그 열심히 쓰겠습니다!</h2>
-<h2 id="typescript--">Typescript 부터 출발합니다.</h2>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="----typescript-basic">타입스크립트 기초 - TypeScript basic</h1>
+<h2 id="typescript--">Typescript 부터 출발합니다</h2>
 <p>[Reference] : <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html</a></p>
-<hr>
-<p>Install</p>
-<pre><code>npm install -g typescript
-</code></pre><p>node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.</p>
-<hr>
-<p>Compile</p>
-<pre><code>tsc helloworld.ts
-</code></pre><p>컴파일 명령어는 tsc 이네요.</p>
-<hr>
-<p>greeter.ts</p>
-<pre><code>function greeter(person) {
-	return &quot;Hello, &quot; + person;
+<h2 id="install">Install</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -g typescript
+</code></pre></div><ul>
+<li>node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.</li>
+</ul>
+<h2 id="compile">Compile</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tsc helloworld.ts
+</code></pre></div><ul>
+<li>컴파일 명령어는 tsc 입니다.</li>
+</ul>
+<h2 id="greeterts">greeter.ts</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">person</span>) {
+	<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>;
 }
 
-let user = &quot;Jane User&quot;;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Jane User&#34;</span>;
 
-// document.body.textContext = greeter(user);
-console.log(greeter(user));
-</code></pre><p>가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍네요.</p>
-<p>터미널 환경에서 &ldquo;tsc greeter.ts&rdquo; &ldquo;node greeter.js&rdquo; 와 같은 식으로 테스트 해볼 수 있습니다.</p>
-<hr>
-<p>Type annotations</p>
-<pre><code>function greeter(person: string) {
-	return &quot;Hello, &quot; + person;
+<span style="color:#75715e">// document.body.textContext = greeter(user);
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">user</span>));
+</code></pre></div><ul>
+<li>가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍습니다.</li>
+</ul>
+<p>터미널 환경에서 &ldquo;tsc greeter.ts&rdquo;, &ldquo;node greeter.js&rdquo; 와 같은 방법으로 테스트 해볼 수 있습니다.</p>
+<h2 id="type-annotations">Type annotations</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">person</span>: <span style="color:#66d9ef">string</span>) {
+	<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>;
 }
 
-let user = [0, 1, 2];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
 
-console.log(greeter(user));
-</code></pre><p>: 뒤에 타입을 선언하네요, string 타입이 아니므로 컴파일 에러가 발생합니다.</p>
-<hr>
-<p>Interfaces</p>
-<pre><code>interface Person {
-	firstName: string;
-	lastName: string;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">user</span>));
+</code></pre></div><ul>
+<li>: 뒤에 타입을 선언하네요, string 타입이 아니므로 컴파일 에러가 발생합니다.</li>
+</ul>
+<h2 id="interfaces">Interfaces</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Person</span> {
+	<span style="color:#a6e22e">firstName</span>: <span style="color:#66d9ef">string</span>;
+	<span style="color:#a6e22e">lastName</span>: <span style="color:#66d9ef">string</span>;
 }
 
-function greeter(person: Person) {
-	return &quot;Hello, &quot; + person.firstName + &quot; &quot; + person.lastName;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">person</span>: <span style="color:#66d9ef">Person</span>) {
+	<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">lastName</span>;
 }
 
-let user = { firstName: &quot;Jane&quot;, lastName: &quot;User&quot; };
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Jane&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;User&#34;</span> };
 
-console.log(greeter(user));
-</code></pre><p>와우, 인터페이스도 구현할 수 있습니다!</p>
-<hr>
-<p>Classes</p>
-<pre><code>class Student {
-	fullName: string;
-	constructor(public firstName: string,
-		    public middleInitial: string,
-		    public lastName: string) {
-		this.fullName = firstName + &quot; &quot; +
-				middleInitial + &quot; &quot; +
-				lastName;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">user</span>));
+</code></pre></div><ul>
+<li>와우, 인터페이스를 구현할 수 있습니다!</li>
+</ul>
+<h2 id="classes">Classes</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> {
+	<span style="color:#a6e22e">fullName</span>: <span style="color:#66d9ef">string</span>;
+	<span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">firstName</span>: <span style="color:#66d9ef">string</span>,
+				<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">middleInitial</span>: <span style="color:#66d9ef">string</span>,
+				<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">lastName</span>: <span style="color:#66d9ef">string</span>) {
+					<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">fullName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span>
+									<span style="color:#a6e22e">middleInitial</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span>
+									<span style="color:#a6e22e">lastName</span>;
 	}
 }
 
-interface Person {
-	firstName: string;
-	lastName: string;
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Person</span> {
+	<span style="color:#a6e22e">firstName</span>: <span style="color:#66d9ef">string</span>;
+	<span style="color:#a6e22e">lastName</span>: <span style="color:#66d9ef">string</span>;
 }
 
-function greeter(person: Person) {
-	return &quot;Hello, &quot; + person.firstName + &quot; &quot; + person.lastName;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">person</span>: <span style="color:#66d9ef">Person</span>) {
+	<span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">lastName</span>;
 }
 
-let user = new Student(&quot;Jane&quot;, &quot;M.&quot;, &quot;User&quot;);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Jane&#34;</span>, <span style="color:#e6db74">&#34;M.&#34;</span>, <span style="color:#e6db74">&#34;User&#34;</span>);
 
-console.log(greeter(user));
-</code></pre><p>클래스로도 만들어집니다!</p>
-<hr>
-<p>greeter.html</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;title&gt;TypeScript Greeter&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;script src=&quot;greeter.js&quot;&gt;&lt;/script&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>Html 파일로 한 번 출력해볼까요.</p>
-<hr>
-<p>greeter.ts</p>
-<pre><code>interface Person {
-        firstName: string;
-        lastName: string;
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">user</span>));
+</code></pre></div><ul>
+<li>클래스로도 만들어집니다!</li>
+</ul>
+<h2 id="greeterhtml">greeter.html</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+	&lt;<span style="color:#f92672">head</span>&gt;
+		&lt;<span style="color:#f92672">title</span>&gt;TypeScript Greeter&lt;/<span style="color:#f92672">title</span>&gt;
+	&lt;/<span style="color:#f92672">head</span>&gt;
+	&lt;<span style="color:#f92672">body</span>&gt;
+		&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;greeter.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+	&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><ul>
+<li>Html 파일로 한 번 출력해볼까요.</li>
+</ul>
+<p>:: greeter.ts</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Person</span> {
+        <span style="color:#a6e22e">firstName</span>: <span style="color:#66d9ef">string</span>;
+        <span style="color:#a6e22e">lastName</span>: <span style="color:#66d9ef">string</span>;
 }
 
-class Student implements Person {
-        fullName: string;
-        constructor(public firstName: string, public middleInitial: string, public lastName: string) {
-        	this.fullName = firstName + &quot; &quot; + middleInitial + &quot; &quot; + lastName;
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Person</span> {
+        <span style="color:#a6e22e">fullName</span>: <span style="color:#66d9ef">string</span>;
+        <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">firstName</span>: <span style="color:#66d9ef">string</span>, 
+					<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">middleInitial</span>: <span style="color:#66d9ef">string</span>,
+					<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">lastName</span>: <span style="color:#66d9ef">string</span>) {
+        				<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">fullName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span>
+										<span style="color:#a6e22e">middleInitial</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span>
+										<span style="color:#a6e22e">lastName</span>;
         }
 }
 
-function greeter(person: Student) {
-        return &quot;Hello, &quot; + person.fullName;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">person</span>: <span style="color:#66d9ef">Student</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">fullName</span>;
 }
 
-let user = new Student(&quot;Jane&quot;, &quot;M.&quot;, &quot;User&quot;);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Student</span>(<span style="color:#e6db74">&#34;Jane&#34;</span>, <span style="color:#e6db74">&#34;M.&#34;</span>, <span style="color:#e6db74">&#34;User&#34;</span>);
 
-document.body.textContent = greeter(user);
-</code></pre><p>Student 클래스는 Person 인터페이스를 구현하고,</p>
-<p>greeter함수는 Student타입을 받아서 document에 출력합니다.</p>
+document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">greeter</span>(<span style="color:#a6e22e">user</span>);
+</code></pre></div><ul>
+<li>Student 클래스는 Person 인터페이스를 구현하고,<br>
+greeter함수는 Student타입을 받아서 document에 출력합니다.</li>
+<li><code>tsc greeter.ts</code> 컴파일해서 index.html 을 브라우저에 띄워보세요.</li>
+</ul>
 <hr>
-<p>읽어주셔서 행복합니다 :)</p>
+<p>$$행복 코딩</p>
 </article>
                         </div>
                     </div>
