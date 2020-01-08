@@ -13,11 +13,12 @@
     
     <item>
       <title>Javascript? ECMAScript? View Template Engine?</title>
-      <link>https://mj-seok.com/posts/hi/md/</link>
+      <link>https://mj-seok.com/posts/ecmascript/md/</link>
       <pubDate>Mon, 06 Jan 2020 23:50:45 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/hi/md/</guid>
-      <description>궁금이  작성 중  ECMAScript 와 JavaScript View Template Engine  $$행복 코딩</description>
+      <guid>https://mj-seok.com/posts/ecmascript/md/</guid>
+      <description>궁금이 ECMAScript 와 JavaScript JavaScript https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+ 복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.  기본 작성 형태 // HTML 요소 중 p태그를 선택 const para = document.querySelector(&amp;#39;p&amp;#39;); para.addEventListener(&amp;#39;click&amp;#39;, updateName); function updateName() { //&amp;#39;Enter a new name&amp;#39;과 입력란 출력하여 입력받은 값을 name에 저장  let name = prompt(&amp;#39;Enter a new name&amp;#39;); // para(p태그)에 새로운 문자열 저장  para.</description>
     </item>
     
     <item>
@@ -27,7 +28,7 @@
       
       <guid>https://mj-seok.com/posts/python/for/</guid>
       <description>python for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
- array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)  $$행복 코딩</description>
+ array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)  </description>
     </item>
     
     <item>
@@ -39,7 +40,7 @@
       <description>선형대수학 Linear Algebra [ Reference ] : https://youtu.be/br7tS1t2SFE
  프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
 속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
-v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space  </description>
+v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   </description>
     </item>
     
     <item>
@@ -83,7 +84,7 @@ Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get co
       
       <guid>https://mj-seok.com/posts/sql/postgresql/</guid>
       <description>PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
-install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  $$행복코딩</description>
+install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  </description>
     </item>
     
     <item>
@@ -93,7 +94,7 @@ install Command brew install postgresql Server start pg_ctl -D /usr/local/var/po
       
       <guid>https://mj-seok.com/posts/python/</guid>
       <description>Python 가상환경 관리 pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
- 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version  $$행복 코딩</description>
+ 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version  </description>
     </item>
     
     <item>
@@ -115,7 +116,7 @@ if the string is empty return 0; else return 1 plus the length of the string tha
       
       <guid>https://mj-seok.com/posts/sql/db-normalization/</guid>
       <description>정규형 공부 [Reference] : https://mangkyu.tistory.com/28
-제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성  $$행복코딩</description>
+제1정규형 - 원자값 제2정규형 - 기본키에 완전 함수 종속 제3정규형 - 기본키가 아닌 속성이 기본키에 비이행적으로 종속(직접 종속) 제4정규형 - BCNF (함수 종속성 X-&amp;gt;Y 성립할 때 모든 결정자 X가 후보키인 정규형 이상 현상을 없애려면 함수 종속성  </description>
     </item>
     
     <item>
@@ -134,7 +135,7 @@ Install npm install -g typescript  node.js가 설치되어 있는 환경에서 t
       <pubDate>Wed, 18 Dec 2019 21:33:23 +0900</pubDate>
       
       <guid>https://mj-seok.com/about/</guid>
-      <description>const Introduce = () =&amp;gt; { return { name: &amp;#34;Jose Seok&amp;#34;, job: &amp;#34;Front-end Developer&amp;#34;, focus: &amp;#34;React&amp;#34; }; } </description>
+      <description>const Introduce = () =&amp;gt; { return { name: &amp;#34;Jose Seok&amp;#34;, job: &amp;#34;Front-end Developer&amp;#34;, focus: &amp;#34;React&amp;#34; }; }  </description>
     </item>
     
   </channel>

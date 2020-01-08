@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>PostgreSQL - 명령어 정리(Command) - Happiness Development</title>
+    <title>Javascript? ECMAScript? View Template Engine? - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,12 +98,12 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/posts/sql/postgresql/">PostgreSQL - 명령어 정리(Command)</a></strong>
+                                    href="https://mj-seok.com/posts/ecmascript/md/">Javascript? ECMAScript? View Template Engine?</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2019-12-26" class="no-wrap"
-                                    title="Created at 2019/12/26">
-                                    2019-12-26</time-ago>
+                                Created <time-ago datetime="2020-01-06" class="no-wrap"
+                                    title="Created at 2020/01/06">
+                                    2020-01-06</time-ago>
                                 <span class="file-info-divider"></span>
                                 Modifyed <time-ago datetime="2020-01-08" class="no-wrap"
                                     title="Modifyed  at 2020/01/08">
@@ -122,26 +122,52 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                43 Words
+                                382 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="postgresql----command">PostgreSQL - 명령어 정리(Command)</h1>
-<h2 id="install-on-mac">Install on Mac</h2>
-<p><a href="https://formulae.brew.sh/formula/postgresql">https://formulae.brew.sh/formula/postgresql</a></p>
-<h3 id="install-command">install Command</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install postgresql
-</code></pre></div><h3 id="server-start">Server start</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_ctl -D /usr/local/var/postgres start
-</code></pre></div><h3 id="server-stop">Server stop</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pg_ctl -D /usr/local/var/postgres stop
-</code></pre></div><h3 id="status-check">status check</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export PGDATA<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/usr/local/var/postgres&#39;</span>
-pg_ctl status
-</code></pre></div><hr>
-<!-- raw HTML omitted -->
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="heading">궁금이</h1>
+<h2 id="ecmascript--javascript">ECMAScript 와 JavaScript</h2>
+<h3 id="javascript">JavaScript</h3>
+<p><a href="https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript">https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript</a></p>
+<ul>
+<li>복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.</li>
+</ul>
+<h4 id="--">기본 작성 형태</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// HTML 요소 중 p태그를 선택
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">para</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;p&#39;</span>);
+
+<span style="color:#a6e22e">para</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#a6e22e">updateName</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateName</span>() {
+    <span style="color:#75715e">//&#39;Enter a new name&#39;과 입력란 출력하여 입력받은 값을 name에 저장
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prompt</span>(<span style="color:#e6db74">&#39;Enter a new name&#39;</span>);
+
+    <span style="color:#75715e">// para(p태그)에 새로운 문자열 저장
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">para</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">Player 1: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+}
+</code></pre></div><h3 id="ecmascript">ECMAScript</h3>
+<ul>
+<li>자바스크립트(Netscape)와 JScript(Microsoft)를 원천 기술로 기반합니다.</li>
+<li>자바스크립트의 언어 명세 표준화 작업이라고 볼 수 있습니다.</li>
+</ul>
+<h4 id="es6ecmascript2015">ES6(ECMAScript2015)</h4>
+<ul>
+<li>모듈(modules)</li>
+<li>클래스 선언(class declarations)</li>
+<li>렉시컬 블록 스코핑(lexical block scoping)</li>
+<li>반복기 및 발생기(iterators and generators)</li>
+<li>비동기 프로그래밍을 위한 프로미스(promises for asynchronous programming)</li>
+<li>디스트럭쳐링 패턴(destructuring patterns)</li>
+<li>적절한 꼬리 호출(proper tail calls)</li>
+</ul>
+<h2 id="view-template-engine">View Template Engine</h2>
+<hr>
+<blockquote>
+<p>행복 코딩</p>
+</blockquote>
 </article>
                         </div>
                     </div>
