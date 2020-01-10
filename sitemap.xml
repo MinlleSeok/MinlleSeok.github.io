@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/posts/ecma-ptc/</loc>
-    <lastmod>2020-01-08T18:46:45+09:00</lastmod>
+    <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-01-10T22:06:14+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-01-08T18:46:45+09:00</lastmod>
+    <loc>https://mj-seok.com/posts/maze/</loc>
+    <lastmod>2020-01-10T22:06:14+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mj-seok.com/posts/</loc>
+    <lastmod>2020-01-10T22:06:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/ecma-ptc/</loc>
     <lastmod>2020-01-08T18:46:45+09:00</lastmod>
   </url>
   
