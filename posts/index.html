@@ -198,7 +198,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    13
+                    15
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -210,6 +210,49 @@ if (!doNotTrack) {
     <div class="position-relative">
         <div id="user-repositories-list">
             <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/posts/n-queens/">N-Queens Problem</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            N-Queens Problem  N x N 체스 보드 N = 8 동일한 행, 동일한 대각선, 동일한 열 빼놓고 말을 놓는 방법  4 x 4  하나의 행마다 정확히 하나의 말 서로 다른 경우의 수 : N의 N승 Backtracking : 최근에 내렸던 결정을 번복하고, 지나온 궤적을 되돌아 나간다.  상태 공간 트리  상태공간트리 : 찾는 해를 포함하는 트리. 즉, 해가 존재한다면 그것은 반드시 이 트리의 어떤 한 노드에 해당함 따라서 이 트리를 체계적으로 탐색하면 해를 구할 수 있음  상태 공간 트리의 모든 노드를 탐색해야 하는 것은 아님  (1,1) (2,1) -&gt; non-promising (1,1) (2,2) -&gt; infeasible: 꽝 (1,1) (2,3) -&gt; continue&hellip;  되추적 기법(Backtracking)  상태공간 트리를 깊이 우선 방식으로 탐색하여 해를 찾는 알고리즘  깊이 우선 탐색  recursion stack 자료구조 이용  Design Recursion // 매개변수는 내가 현재 트리의 어떤 노드에 있는지를 지정해야 한다.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-01-11" class="no-wrap"
+                                title="Modifyd at 2020/01/11">
+                                January 11, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/posts/countcell/">Counting Cells in a Blob</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
+ Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
+ N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
+ 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-01-11" class="no-wrap"
+                                title="Modifyd at 2020/01/11">
+                                January 11, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
                 
                 <li class="col-12 d-flex width-full py-4 border-bottom public fork">
                     <div class="col-12 col-lg-12 d-inline-block">
@@ -383,49 +426,6 @@ Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get co
                             Updated <relative-time datetime="2019-12-30" class="no-wrap"
                                 title="Modifyd at 2020/01/08">
                                 December 30, 2019</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/posts/sql-postgresql/">PostgreSQL - 명령어 정리(Command)</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
-install Command brew install postgresqlServer start pg_ctl -D /usr/local/var/postgres startServer stop pg_ctl -D /usr/local/var/postgres stopstatus check export PGDATA=&#39;/usr/local/var/postgres&#39;pg_ctl status 
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2019-12-26" class="no-wrap"
-                                title="Modifyd at 2020/01/08">
-                                December 26, 2019</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/posts/python-pyenv/">Python 가상환경 - pyenv 설치</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            Python 가상환경 - pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
- 설치 % brew update% brew install pyenv환경설정 % echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc% echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc% echo -e &#39;if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n eval &#34;$(pyenv init -)&#34;\nfi&#39; &gt;&gt; ~/.zshrcPython 원하는 버전 설치 % pyenv install [version_name]% pyenv global [version_name]% python --version  행복 개발
- 
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2019-12-23" class="no-wrap"
-                                title="Modifyd at 2020/01/08">
-                                December 23, 2019</relative-time>
                         </div>
                     </div>
                 </li>

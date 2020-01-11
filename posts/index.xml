@@ -6,10 +6,31 @@
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 22:06:14 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 14:24:45 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>N-Queens Problem</title>
+      <link>https://mj-seok.com/posts/n-queens/</link>
+      <pubDate>Sat, 11 Jan 2020 14:24:45 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/n-queens/</guid>
+      <description>N-Queens Problem  N x N 체스 보드 N = 8 동일한 행, 동일한 대각선, 동일한 열 빼놓고 말을 놓는 방법  4 x 4  하나의 행마다 정확히 하나의 말 서로 다른 경우의 수 : N의 N승 Backtracking : 최근에 내렸던 결정을 번복하고, 지나온 궤적을 되돌아 나간다.  상태 공간 트리  상태공간트리 : 찾는 해를 포함하는 트리. 즉, 해가 존재한다면 그것은 반드시 이 트리의 어떤 한 노드에 해당함 따라서 이 트리를 체계적으로 탐색하면 해를 구할 수 있음  상태 공간 트리의 모든 노드를 탐색해야 하는 것은 아님  (1,1) (2,1) -&amp;gt; non-promising (1,1) (2,2) -&amp;gt; infeasible: 꽝 (1,1) (2,3) -&amp;gt; continue&amp;hellip;  되추적 기법(Backtracking)  상태공간 트리를 깊이 우선 방식으로 탐색하여 해를 찾는 알고리즘  깊이 우선 탐색  recursion stack 자료구조 이용  Design Recursion // 매개변수는 내가 현재 트리의 어떤 노드에 있는지를 지정해야 한다.</description>
+    </item>
+    
+    <item>
+      <title>Counting Cells in a Blob</title>
+      <link>https://mj-seok.com/posts/countcell/</link>
+      <pubDate>Sat, 11 Jan 2020 13:42:06 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/countcell/</guid>
+      <description>Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
+ Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
+ N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
+ 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.</description>
+    </item>
     
     <item>
       <title>Maze</title>
