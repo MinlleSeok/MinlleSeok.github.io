@@ -3,17 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-01-11T14:24:45+09:00</lastmod>
+    <loc>https://mj-seok.com/posts/bubble-sort/</loc>
+    <lastmod>2020-01-12T14:57:37+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/n-queens/</loc>
-    <lastmod>2020-01-11T14:24:45+09:00</lastmod>
+    <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-01-12T14:57:37+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mj-seok.com/posts/</loc>
+    <lastmod>2020-01-12T14:57:37+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/selection-sort/</loc>
+    <lastmod>2020-01-12T14:07:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/algorithm/</loc>
+    <lastmod>2020-01-12T13:44:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/n-queens/</loc>
     <lastmod>2020-01-11T14:24:45+09:00</lastmod>
   </url>
   

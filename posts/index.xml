@@ -6,10 +6,39 @@
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jan 2020 14:24:45 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 14:57:37 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bubble Sort</title>
+      <link>https://mj-seok.com/posts/bubble-sort/</link>
+      <pubDate>Sun, 12 Jan 2020 14:57:37 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/bubble-sort/</guid>
+      <description>Bubble Sort  옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내면 어떨까? 구현하기는 제일 쉽지만 가장 비효율적인 알고리즘  손고리즘 1 10 5 8 7 6 4 3 2 9 1 ~ 10 1 ~ 9 1 ~ 8 1 10 10 5 1 5 10 8 7 6 4 3 2 9 1 5 8 10 7 6 4 3 2 9 1 5 8 7 10 6 4 3 2 9 1 5 8 7 6 10 4 3 2 9 1 5 8 7 6 4 10 3 2 9 1 5 8 7 6 4 3 10 2 9 1 5 8 7 6 4 3 2 10 9 1 5 8 7 6 4 3 2 9 10 1 5 7 8 6 4 3 2 9 10 1 5 7 6 8 4 3 2 9 10 1 5 7 6 4 8 3 2 9 10 1 5 7 6 4 3 8 2 9 10 1 5 7 6 4 3 2 8 9 10 .</description>
+    </item>
+    
+    <item>
+      <title>Selection Sort</title>
+      <link>https://mj-seok.com/posts/selection-sort/</link>
+      <pubDate>Sun, 12 Jan 2020 14:07:27 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/selection-sort/</guid>
+      <description>Selection Sort  정렬만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문입니다.  다음의 숫자들을 오름차순으로 정렬하는 프로그램  1 10 5 8 7 6 4 3 2 9 가장 작은 것을 선택해서 제일 앞으로 보내면 어떨까?  1 10 5 8 7 6 4 3 2 9 1 2 5 8 7 6 4 3 10 9 1 2 3 8 7 6 4 5 10 9 1 2 3 4 7 6 8 5 10 9 1 2 3 4 5 6 8 7 10 9 1 2 3 4 5 6 7 8 10 9 1 2 3 4 5 6 7 8 9 10 C #include &amp;lt;stdio.</description>
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://mj-seok.com/posts/algorithm/</link>
+      <pubDate>Sun, 12 Jan 2020 13:44:48 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algorithm/</guid>
+      <description>알고리즘 [ Reference ] : https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz
+알고리즘이란 &amp;lsquo;문제를 해결하는 절차&#39;입니다.  입력, 출력, 유한성, 명백성, 효과성을 만족해야 합니다. 분석을 통해 좋고 나쁨을 평가할 수 있습니다. 기초 프로그래밍과 자료구조를 공부한 이후에 배우면 좋습니다. 논리이며 수학이고, 실질적인 개발에 적용되는 기초적인 아이디어입니다.   점근적 분석법, 행렬? 버블정렬, 선택정렬 보다 퀵 정렬이 빠르게 수행됩니다.
+ 알고리즘은 &amp;lsquo;개발&#39;의 전체 과정에 사용됩니다.  실제 프로그램을 개발할 때 효율적인 알고리즘을 적용함으로써 원하는 결과를 도출해야 합니다. 스케줄 관리 프로그램 : 달력에서 특정한 달에 해당하는 일 수는 어떻게 구할까?</description>
+    </item>
     
     <item>
       <title>N-Queens Problem</title>
