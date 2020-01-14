@@ -198,7 +198,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    18
+                    17
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -215,12 +215,35 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
-                                <a href="https://mj-seok.com/posts/bubble-sort/">Bubble Sort</a>
+                                <a href="https://mj-seok.com/posts/algo-sort/">정렬 - Sort</a>
                             </h3>
                         </div>
 
                         <div name="posts-post">
-                            Bubble Sort  옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내면 어떨까? 구현하기는 제일 쉽지만 가장 비효율적인 알고리즘  손고리즘 1 10 5 8 7 6 4 3 2 9 1 ~ 10 1 ~ 9 1 ~ 8 1 10 10 5 1 5 10 8 7 6 4 3 2 9 1 5 8 10 7 6 4 3 2 9 1 5 8 7 10 6 4 3 2 9 1 5 8 7 6 10 4 3 2 9 1 5 8 7 6 4 10 3 2 9 1 5 8 7 6 4 3 10 2 9 1 5 8 7 6 4 3 2 10 9 1 5 8 7 6 4 3 2 9 10 1 5 7 8 6 4 3 2 9 10 1 5 7 6 8 4 3 2 9 10 1 5 7 6 4 8 3 2 9 10 1 5 7 6 4 3 8 2 9 10 1 5 7 6 4 3 2 8 9 10 .
+                            정렬 - Sort [ Reference ] : https://youtu.be/0dG7xTt5IfQ
+ 정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  기본적인 정렬 알고리즘 Selection Sort  initial array = [29, 10, 14, 37, 13]; 가장 큰 값을 맨 마지막 값과 바꿉니다. The largest item &lt;=&gt; Last index item  selectionSort(A[], n) { // 배열 A[1.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-01-14" class="no-wrap"
+                                title="Modifyd at 2020/01/14">
+                                January 14, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/posts/algorithm-desc/">알고리즘의 기본 - Algorithm Basic</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘의 기본 - Algorithm Basic [ Reference ] : https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz
+알고리즘이란 &lsquo;문제를 해결하는 절차'입니다  입력, 출력, 유한성, 명백성, 효과성을 만족해야 합니다. 분석을 통해 좋고 나쁨을 평가할 수 있습니다. 기초 프로그래밍과 자료구조를 공부한 이후에 배우면 좋습니다. 논리이며 수학이고, 실질적인 개발에 적용되는 기초적인 아이디어입니다.   점근적 분석법, 행렬? 버블정렬, 선택정렬 보다 퀵 정렬이 빠르게 수행됩니다.
+ 알고리즘은 &lsquo;개발'의 전체 과정에 사용됩니다  실제 프로그램을 개발할 때 효율적인 알고리즘을 적용함으로써 원하는 결과를 도출해야 합니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -235,54 +258,12 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
-                                <a href="https://mj-seok.com/posts/selection-sort/">Selection Sort</a>
+                                <a href="https://mj-seok.com/posts/algo-nqueens/">알고리즘 - N-Queens Problem</a>
                             </h3>
                         </div>
 
                         <div name="posts-post">
-                            Selection Sort  정렬만큼 알고리즘의 효율성 차이를 극명하게 보여주는 것이 없기 때문입니다.  다음의 숫자들을 오름차순으로 정렬하는 프로그램  1 10 5 8 7 6 4 3 2 9 가장 작은 것을 선택해서 제일 앞으로 보내면 어떨까?  1 10 5 8 7 6 4 3 2 9 1 2 5 8 7 6 4 3 10 9 1 2 3 8 7 6 4 5 10 9 1 2 3 4 7 6 8 5 10 9 1 2 3 4 5 6 8 7 10 9 1 2 3 4 5 6 7 8 10 9 1 2 3 4 5 6 7 8 9 10 C #include &lt;stdio.
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-12" class="no-wrap"
-                                title="Modifyd at 2020/01/12">
-                                January 12, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/posts/algorithm/">Algorithm</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            알고리즘 [ Reference ] : https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz
-알고리즘이란 &lsquo;문제를 해결하는 절차'입니다.  입력, 출력, 유한성, 명백성, 효과성을 만족해야 합니다. 분석을 통해 좋고 나쁨을 평가할 수 있습니다. 기초 프로그래밍과 자료구조를 공부한 이후에 배우면 좋습니다. 논리이며 수학이고, 실질적인 개발에 적용되는 기초적인 아이디어입니다.   점근적 분석법, 행렬? 버블정렬, 선택정렬 보다 퀵 정렬이 빠르게 수행됩니다.
- 알고리즘은 &lsquo;개발'의 전체 과정에 사용됩니다.  실제 프로그램을 개발할 때 효율적인 알고리즘을 적용함으로써 원하는 결과를 도출해야 합니다. 스케줄 관리 프로그램 : 달력에서 특정한 달에 해당하는 일 수는 어떻게 구할까?
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-12" class="no-wrap"
-                                title="Modifyd at 2020/01/12">
-                                January 12, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/posts/n-queens/">N-Queens Problem</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            N-Queens Problem  N x N 체스 보드 N = 8 동일한 행, 동일한 대각선, 동일한 열 빼놓고 말을 놓는 방법  4 x 4  하나의 행마다 정확히 하나의 말 서로 다른 경우의 수 : N의 N승 Backtracking : 최근에 내렸던 결정을 번복하고, 지나온 궤적을 되돌아 나간다.  상태 공간 트리  상태공간트리 : 찾는 해를 포함하는 트리. 즉, 해가 존재한다면 그것은 반드시 이 트리의 어떤 한 노드에 해당함 따라서 이 트리를 체계적으로 탐색하면 해를 구할 수 있음  상태 공간 트리의 모든 노드를 탐색해야 하는 것은 아님  (1,1) (2,1) -&gt; non-promising (1,1) (2,2) -&gt; infeasible: 꽝 (1,1) (2,3) -&gt; continue&hellip;  되추적 기법(Backtracking)  상태공간 트리를 깊이 우선 방식으로 탐색하여 해를 찾는 알고리즘  깊이 우선 탐색  recursion stack 자료구조 이용  Design Recursion // 매개변수는 내가 현재 트리의 어떤 노드에 있는지를 지정해야 한다.
+                            알고리즘 - N-Queens Problem  N x N 체스 보드 N = 8 동일한 행, 동일한 대각선, 동일한 열 빼놓고 말을 놓는 방법  4 x 4  하나의 행마다 정확히 하나의 말 서로 다른 경우의 수 : N의 N승 Backtracking : 최근에 내렸던 결정을 번복하고, 지나온 궤적을 되돌아 나간다.  상태 공간 트리  상태공간트리 : 찾는 해를 포함하는 트리. 즉, 해가 존재한다면 그것은 반드시 이 트리의 어떤 한 노드에 해당함 따라서 이 트리를 체계적으로 탐색하면 해를 구할 수 있음  상태 공간 트리의 모든 노드를 탐색해야 하는 것은 아님  (1,1) (2,1) -&gt; non-promising (1,1) (2,2) -&gt; infeasible: 꽝 (1,1) (2,3) -&gt; continue&hellip;  되추적 기법(Backtracking)  상태공간 트리를 깊이 우선 방식으로 탐색하여 해를 찾는 알고리즘  깊이 우선 탐색  recursion stack 자료구조 이용  Design Recursion // 매개변수는 내가 현재 트리의 어떤 노드에 있는지를 지정해야 한다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -320,14 +301,15 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
-                                <a href="https://mj-seok.com/posts/maze/">Maze</a>
+                                <a href="https://mj-seok.com/posts/algo-maze/">미로찾기 알고리즘 - Maze Algorithm</a>
                             </h3>
                         </div>
 
                         <div name="posts-post">
-                            미로찾기 - Recursive Thinking 현재 위치에서 출구까지 가는 경로가 있으려면
+                            미로찾기 알고리즘 - Maze Algorithm Recursive Thinking
+현재 위치에서 출구까지 가는 경로가 있으려면
  현재 위치가 출구이거나 혹은 이웃한 셀들 중 하나에서 현재 위치를 지나지 않고 출구까지 가능 경로가 있거나  aa
-미로찾기(Decision Problem - return yes or no) boolean findPath(x, y)if (x, y) is the exitreturn true;elsefor each neighbouring cell (x`, y`) of (x, y) doif (x`, y`) is on the pathwayif findPath(x`, y`)return true;return false; 인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.
+미로찾기(Decision Problem - return yes or no) boolean findPath(x, y) if (x, y) is the exit return true; else for each neighbouring cell (x`, y`) of (x, y) do if (x`, y`) is on the pathway if findPath(x`, y`) return true; return false;  인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -369,7 +351,7 @@ if (!doNotTrack) {
 
                         <div name="posts-post">
                             Javascript와 ECMAScript - 알아보기 ECMAScript 와 JavaScript JavaScript https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
- 복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.  기본 작성 형태 // HTML 요소 중 p태그를 선택const para = document.querySelector(&#39;p&#39;);para.addEventListener(&#39;click&#39;, updateName);function updateName() {//&#39;Enter a new name&#39;과 입력란 출력하여 입력받은 값을 name에 저장 let name = prompt(&#39;Enter a new name&#39;);// para(p태그)에 새로운 문자열 저장 para.
+ 복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.  기본 작성 형태 // HTML 요소 중 p태그를 선택 const para = document.querySelector(&#39;p&#39;); para.addEventListener(&#39;click&#39;, updateName); function updateName() { //&#39;Enter a new name&#39;과 입력란 출력하여 입력받은 값을 name에 저장  let name = prompt(&#39;Enter a new name&#39;); // para(p태그)에 새로운 문자열 저장  para.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -390,7 +372,7 @@ if (!doNotTrack) {
 
                         <div name="posts-post">
                             Python - for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
- array, list, tuple, string 의 시퀀스를 출력  days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &#34;Wed&#34;:breakelse:print(day)for letter in &#34;Nicolas&#34;:print(letter)  행복 코딩
+ array, list, tuple, string 의 시퀀스를 출력  days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &#34;Wed&#34;: break else: print(day) for letter in &#34;Nicolas&#34;: print(letter)   행복 코딩
  
                         </div>
 
@@ -414,7 +396,29 @@ if (!doNotTrack) {
                             선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple) [ Reference ] : https://youtu.be/br7tS1t2SFE
  프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
 속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
-v = (5, 0) = [5][0]길이 : 5v = (3, 4) = [3][4]길이 : 5 (피타고라스 3^2 + 4^2 = 5^2)튜플 Tuple |R R^2실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1] R^n : n - dimensional real coordinate space   
+v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-01-01" class="no-wrap"
+                                title="Modifyd at 2020/01/08">
+                                January 1, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/posts/algo-designrecursion/">재귀 설계 - Design Recursion</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            재귀 설계 - Design Recursion [ Reference ] : https://youtu.be/Vwfo_hrxuzg
+ Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) { for (int i=0; i&lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.
                         </div>
 
                         <div class="f6 text-gray mt-2">

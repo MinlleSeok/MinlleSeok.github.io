@@ -18,7 +18,7 @@
       
       <guid>https://mj-seok.com/posts/sql-postgresql/</guid>
       <description>PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
-install Command brew install postgresqlServer start pg_ctl -D /usr/local/var/postgres startServer stop pg_ctl -D /usr/local/var/postgres stopstatus check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39;pg_ctl status </description>
+install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  </description>
     </item>
     
   </channel>

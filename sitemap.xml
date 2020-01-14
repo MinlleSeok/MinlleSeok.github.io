@@ -3,32 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/posts/bubble-sort/</loc>
-    <lastmod>2020-01-12T14:57:37+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-01-12T14:57:37+09:00</lastmod>
+    <lastmod>2020-01-14T11:13:38+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mj-seok.com/posts/</loc>
-    <lastmod>2020-01-12T14:57:37+09:00</lastmod>
+    <lastmod>2020-01-14T11:13:38+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/selection-sort/</loc>
-    <lastmod>2020-01-12T14:07:27+09:00</lastmod>
+    <loc>https://mj-seok.com/posts/algo-sort/</loc>
+    <lastmod>2020-01-14T11:13:38+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/algorithm/</loc>
+    <loc>https://mj-seok.com/posts/algorithm-desc/</loc>
     <lastmod>2020-01-12T13:44:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/n-queens/</loc>
+    <loc>https://mj-seok.com/posts/algo-nqueens/</loc>
     <lastmod>2020-01-11T14:24:45+09:00</lastmod>
   </url>
   
@@ -38,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://mj-seok.com/posts/maze/</loc>
+    <loc>https://mj-seok.com/posts/algo-maze/</loc>
     <lastmod>2020-01-10T22:06:14+09:00</lastmod>
   </url>
   
