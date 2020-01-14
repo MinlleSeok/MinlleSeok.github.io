@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>정렬 알고리즘 2 - Sort Algorithm</title>
+      <link>https://mj-seok.com/posts/algo-sort-2/</link>
+      <pubDate>Tue, 14 Jan 2020 11:13:38 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-sort-2/</guid>
+      <description>정렬 알고리즘 - Sort Algorithm [ Reference ] : https://youtu.be/0dG7xTt5IfQ
+ 정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  힙 정렬 - Heap Sort  힙, 바이너리 힙 이진 힙 자료구조 정렬 최악의 경우 시간복잡도 O(nlog(2)n) Sorts in place - 추가 배열 불필요 이진 힙(binary heap) 자료구조를 사용  Heap의 정의  complete binary tree이면서, heap property 만족  Full vs Complete Binary Trees   full binary tree: 모든 레벨에 노드들이 꽉 차있는 형태</description>
+    </item>
+    
+    <item>
       <title>알고리즘의 기본 - Algorithm Basic</title>
       <link>https://mj-seok.com/posts/algorithm-desc/</link>
       <pubDate>Sun, 12 Jan 2020 13:44:48 +0900</pubDate>
