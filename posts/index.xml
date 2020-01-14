@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>정렬 - Sort</title>
+      <title>정렬 알고리즘 - Sort Algorithm</title>
       <link>https://mj-seok.com/posts/algo-sort/</link>
       <pubDate>Tue, 14 Jan 2020 11:13:38 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/algo-sort/</guid>
-      <description>정렬 - Sort [ Reference ] : https://youtu.be/0dG7xTt5IfQ
+      <description>정렬 알고리즘 - Sort Algorithm [ Reference ] : https://youtu.be/0dG7xTt5IfQ
  정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  기본적인 정렬 알고리즘 Selection Sort  initial array = [29, 10, 14, 37, 13]; 가장 큰 값을 맨 마지막 값과 바꿉니다. The largest item &amp;lt;=&amp;gt; Last index item  selectionSort(A[], n) { // 배열 A[1.</description>
     </item>
     
@@ -42,12 +42,12 @@
     </item>
     
     <item>
-      <title>Counting Cells in a Blob</title>
-      <link>https://mj-seok.com/posts/countcell/</link>
+      <title>블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob</title>
+      <link>https://mj-seok.com/posts/algo-countcell/</link>
       <pubDate>Sat, 11 Jan 2020 13:42:06 +0900</pubDate>
       
-      <guid>https://mj-seok.com/posts/countcell/</guid>
-      <description>Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
+      <guid>https://mj-seok.com/posts/algo-countcell/</guid>
+      <description>블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
  Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
  N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
  픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.</description>
