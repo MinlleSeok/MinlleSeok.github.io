@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.62.0" />
+	<meta name="generator" content="Hugo 0.61.0" />
     <meta charset="utf-8">
     <link crossorigin="anonymous" media="all"
         rel="stylesheet"
@@ -305,7 +305,7 @@ if (!doNotTrack) {
                                 블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
  Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
  N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
- 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.
+ 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면현재 픽셀이 image color가 아니라면 // base case0을 반환한다현재 픽셀이 image color라면먼저 현재 픽셀을 카운트한다 (count=1)현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.
                                 <div class="f6 text-gray mt-2">
                                     Updated <relative-time datetime="2020-01-11"
                                         class="no-wrap" title="Modify at 2020/01/11">
@@ -332,7 +332,7 @@ if (!doNotTrack) {
                                 미로찾기 알고리즘 - Maze Algorithm Recursive Thinking
 현재 위치에서 출구까지 가는 경로가 있으려면
  현재 위치가 출구이거나 혹은 이웃한 셀들 중 하나에서 현재 위치를 지나지 않고 출구까지 가능 경로가 있거나  aa
-미로찾기(Decision Problem - return yes or no) boolean findPath(x, y) if (x, y) is the exit return true; else for each neighbouring cell (x`, y`) of (x, y) do if (x`, y`) is on the pathway if findPath(x`, y`) return true; return false;  인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.
+미로찾기(Decision Problem - return yes or no) boolean findPath(x, y)if (x, y) is the exitreturn true;elsefor each neighbouring cell (x`, y`) of (x, y) doif (x`, y`) is on the pathwayif findPath(x`, y`)return true;return false; 인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.
                                 <div class="f6 text-gray mt-2">
                                     Updated <relative-time datetime="2020-01-10"
                                         class="no-wrap" title="Modify at 2020/01/10">
