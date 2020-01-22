@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Spring boot와 React.js의 만남 - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/posts/spring-react/">Spring boot와 React.js의 만남</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-01-22" class="no-wrap"
+                                    title="Created at 2020/01/22">
+                                    2020-01-22</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-01-22" class="no-wrap"
+                                    title="Modifyed  at 2020/01/22">
+                                    2020-01-22</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                1320 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="spring-boot-reactjs-">Spring boot(백엔드)와 React.js(프론트엔드)의 만남</h1>
+<p>[ Reference ] : <a href="https://spring.io/guides/tutorials/react-and-spring-data-rest/">https://spring.io/guides/tutorials/react-and-spring-data-rest/</a></p>
+<p>[ Spring Initializr ] : <a href="https://start.spring.io/">https://start.spring.io/</a></p>
+<h2 id="1-spring-initializr">1단계 Spring Initializr</h2>
+<p>아래의 Dependencies 를 추가해서 Generate 합니다.</p>
+<ul>
+<li>Rest Repositories</li>
+<li>Thymeleaf</li>
+<li>JPA</li>
+<li>H2</li>
+</ul>
+<p>만들어진 스프링 프로젝트를 압축해제 합니다.</p>
+<h2 id="2--java-">2단계 첫 java 파일</h2>
+<p>IDE로 스프링프로젝트를 엽니다.</p>
+<ul>
+<li>Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.</li>
+</ul>
+<h3 id="domain-">domain 선언</h3>
+<blockquote>
+<p>Employee.java</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.mjseok.springreact<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> java.util.Objects<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> javax.persistence.Entity<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.persistence.GeneratedValue<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.persistence.Id<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Entity</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">@Id</span> <span style="color:#a6e22e">@GeneratedValue</span> Long id<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String firstName<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String lastName<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String description<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Employee</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Employee</span><span style="color:#f92672">(</span>String firstName<span style="color:#f92672">,</span> String lastName<span style="color:#f92672">,</span> String description<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> firstName<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> lastName<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> description<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> o<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span><span style="color:#f92672">|</span> getClass<span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">!</span><span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+
+        Employee employee <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Employee<span style="color:#f92672">)</span> o<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">return</span> Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> employee<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span>
+               Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>firstName<span style="color:#f92672">,</span> employee<span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span>
+               Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>lastName<span style="color:#f92672">,</span> employee<span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span>
+               Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>description<span style="color:#f92672">,</span> employee<span style="color:#f92672">.</span><span style="color:#a6e22e">description</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> firstName<span style="color:#f92672">,</span> lastName<span style="color:#f92672">,</span> description<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> Long <span style="color:#a6e22e">getId</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Long id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getFirstName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> firstName<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setFirstName</span><span style="color:#f92672">(</span>String firstName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> firstName<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getLastName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> lastName<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setLastName</span><span style="color:#f92672">(</span>String lastName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> lastName<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getDescription</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> description<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setDescription</span><span style="color:#f92672">(</span>String description<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> description<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Employee{&#34;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;, firstName=&#39;&#34;</span> <span style="color:#f92672">+</span> firstName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;, lastName=&#39;&#34;</span> <span style="color:#f92672">+</span> lastName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#34;, description=&#39;&#34;</span> <span style="color:#f92672">+</span> description <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+               <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>@Entity : 관계형 테이블을 저장하기 위한 클래스 JPA 어노테이션</li>
+<li>@Id @GeneratedValue : 기본키(PK)를 자동적으로 생성하는 어노테이션</li>
+</ul>
+<h2 id="3---defining-the-repository">3단계 저장소 정의 (Defining the repository)</h2>
+<ul>
+<li>Spring Data REST에서는 해당하는 저장소의 정의를 작성하는 것이 포인트입니다.</li>
+</ul>
+<blockquote>
+<p>EmployeeRepository.java</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.springframework.data.repository.CrudRepository<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">EmployeeRepository</span> <span style="color:#66d9ef">extends</span> CrudRepository<span style="color:#f92672">&lt;</span>Employee<span style="color:#f92672">,</span> Long<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>저장소는 Spring 프레임워크의 Data Commons의 CrudRepository를 상속합니다.</li>
+<li>그 저장소는 방금 만든 도메인 객체와 기본키를 제네릭 타입으로 받습니다.</li>
+<li>이 것으로 전부입니다. 이미 메소드가 사전 정의되어있기 때문입니다.</li>
+</ul>
+<blockquote>
+<p>CrudRepository.class</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#75715e">// Failed to get sources. Instead, stub sources have been generated by the disassembler.
+</span><span style="color:#75715e"></span> <span style="color:#75715e">// Implementation of methods is unavailable.
+</span><span style="color:#75715e"></span><span style="color:#f92672">package</span> org.springframework.data.repository<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CrudRepository</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">,</span>ID<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">extends</span> org<span style="color:#f92672">.</span><span style="color:#a6e22e">springframework</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">.</span><span style="color:#a6e22e">repository</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Repository</span> <span style="color:#f92672">{</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#f92672">&lt;</span>S <span style="color:#66d9ef">extends</span> T<span style="color:#f92672">&gt;</span> S <span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>S arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#f92672">&lt;</span>S <span style="color:#66d9ef">extends</span> T<span style="color:#f92672">&gt;</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Iterable</span><span style="color:#f92672">&lt;</span>S<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">saveAll</span><span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Iterable</span><span style="color:#f92672">&lt;</span>S<span style="color:#f92672">&gt;</span> arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Optional</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findById</span><span style="color:#f92672">(</span>ID arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">existsById</span><span style="color:#f92672">(</span>ID arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Iterable</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Iterable</span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findAllById</span><span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Iterable</span><span style="color:#f92672">&lt;</span>ID<span style="color:#f92672">&gt;</span> arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">long</span> <span style="color:#a6e22e">count</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span>ID arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>T arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span>  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteAll</span><span style="color:#f92672">(</span>java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Iterable</span><span style="color:#f92672">&lt;</span><span style="color:#f92672">?</span> <span style="color:#66d9ef">extends</span> T<span style="color:#f92672">&gt;</span> arg0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteAll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="4--">4단계 더미 로딩하기</h2>
+<ul>
+<li>애플리케이션을 실행하기 위해 미리 더미 데이터를 집어 넣습니다.</li>
+</ul>
+<blockquote>
+<p>DatabaseLoader.java</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.mjseok.springreact<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Autowired<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.boot.CommandLineRunner<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.stereotype.Component<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DatabaseLoader</span> <span style="color:#66d9ef">implements</span> CommandLineRunner <span style="color:#f92672">{</span>
+    
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> EmployeeRepository repository<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DatabaseLoader</span><span style="color:#f92672">(</span>EmployeeRepository repository<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">repository</span> <span style="color:#f92672">=</span> repository<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>String<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span> strings<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">repository</span><span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Employee<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Frodo&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Baggins&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;ring bearer&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>@Component가 표기된 클래스는 자동으로 @SpringBootApplication에 의해 선택됩니다.</li>
+<li>CommandLineRunner를 구현하여 모든 beans을 생성 및 등록 후 실행하게 합니다.</li>
+<li>생성자 주입 및 AutoWiring을 통해 자동으로 EmployeeRepository를 가져옵니다.</li>
+<li>run() 메소드는 커맨드 명령과 같이 호출되며, 더미 데이터를 저장합니다.</li>
+</ul>
+<h3 id="spring-data--">Spring Data의 강력한 기능</h3>
+<ul>
+<li>JPA 쿼리를 작성해줍니다.</li>
+<li>개발 시간을 줄여줄 뿐만 아니라, 버그와 오류 위험도 줄여줍니다.</li>
+<li>Spring Data는 저장소 class가 상속받은 메소드로 CRUD 작업을 진행합니다.</li>
+<li>빈 인터페이스를 작성했지만, CRUD를 편하게 할 수 있습니다!</li>
+</ul>
+<h2 id="5-root-url--adjusting-the-root-uri">5단계 root URL 수정하기 (Adjusting the root URI)</h2>
+<ul>
+<li>기본 값으로 Spring Data REST는 <code>/</code> 를 바라보고 있기에</li>
+<li>그 곳은 프론트엔드(React)를 위해서 백엔드(Spring) 루트를 변경해줍니다.</li>
+</ul>
+<blockquote>
+<p>src/main/resources/application.properties</p>
+</blockquote>
+<pre><code class="language-properties" data-lang="properties">spring.data.rest.base-path=/api
+</code></pre><h2 id="6---">6단계 백엔드 서버 실행하기!</h2>
+<ul>
+<li>마지막 단계는 Spring Boot를 사용해 <code>public static void main</code>를 작성하는 것입니다.</li>
+</ul>
+<blockquote>
+<p>SpringReactApplication.java</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.mjseok.springreact<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.springframework.boot.SpringApplication<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.boot.autoconfigure.SpringBootApplication<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@SpringBootApplication</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringReactApplication</span> <span style="color:#f92672">{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>SpringReactApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>maven이 설치되어 있지 않다면 maven을 먼저 설치합시다.</li>
+</ul>
+<p>[ maven ] : <a href="https://maven.apache.org/">https://maven.apache.org/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mvn spring-boot:run
+</code></pre></div><ul>
+<li>감격스러운 백엔드 REST API가 완성되었습니다.</li>
+</ul>
+<p><a href="http://localhost:8080/api">http://localhost:8080/api</a></p>
+<ul>
+<li>root 에는 <code>_links</code> 로 묶인 컬렉션이 HAL-formatted JSON 형태로 보여집니다.</li>
+<li>HAL - Hypertext Application Language</li>
+<li>HAL은 API 내에서 리소스를 하이퍼링크해 일관되고 쉬운 방법을 제시합니다.</li>
+<li>아래 링크를 참고하시면 상세 내용을 읽을 수 있습니다.</li>
+</ul>
+<p><a href="http://stateless.co/hal_specification.html">http://stateless.co/hal_specification.html</a></p>
+<h3 id="-windows--post--">부록. Windows 환경 POST로 데이터 보내기</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$employee <span style="color:#f92672">=</span> @<span style="color:#f92672">{</span>
+    firstName<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;a&#39;</span>
+    lastName<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;b&#39;</span>
+    description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;c&#39;</span>
+<span style="color:#f92672">}</span>
+$json <span style="color:#f92672">=</span> $employee | ConvertTo-Json
+Invoke-RestMethod <span style="color:#e6db74">&#39;http://localhost:8080/api/employees&#39;</span> -Method Post -Body $json -ContentType <span style="color:#e6db74">&#39;application/json&#39;</span>
+</code></pre></div></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>

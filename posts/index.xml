@@ -6,10 +6,25 @@
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jan 2020 11:13:38 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 18:06:35 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring boot와 React.js의 만남</title>
+      <link>https://mj-seok.com/posts/spring-react/</link>
+      <pubDate>Wed, 22 Jan 2020 18:06:35 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/spring-react/</guid>
+      <description>Spring boot(백엔드)와 React.js(프론트엔드)의 만남 [ Reference ] : https://spring.io/guides/tutorials/react-and-spring-data-rest/
+[ Spring Initializr ] : https://start.spring.io/
+1단계 Spring Initializr 아래의 Dependencies 를 추가해서 Generate 합니다.
+ Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
+2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
+ Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
+ package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.</description>
+    </item>
     
     <item>
       <title>정렬 알고리즘 - Sort Algorithm</title>

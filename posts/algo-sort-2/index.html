@@ -122,7 +122,7 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                864 Words
+                                2176 Words
                                 
                             </div>
                         </div>
@@ -289,6 +289,157 @@ MAX<span style="color:#f92672">-</span><span style="color:#a6e22e">HEAPIFY</span
 <li>Complete binary tree</li>
 <li>노드 수 : n</li>
 <li>h = O(logn)</li>
+</ul>
+<h2 id="---">정렬할 배열을 힙으로 만들기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">BUILD<span style="color:#f92672">-</span>MAX<span style="color:#f92672">-</span><span style="color:#a6e22e">HEAP</span>(A)
+	heap<span style="color:#f92672">-</span>size[A] <span style="color:#f92672">&lt;-</span> length[A]		<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 힙의 저장된 노드의 개수 <span style="color:#f92672">&lt;-</span> 정렬할 데이터의 개수
+	for i <span style="color:#f92672">&lt;-</span> (length[A]<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>) downto <span style="color:#ae81ff">1</span>
+		do MAX<span style="color:#f92672">-</span><span style="color:#a6e22e">HEAPIFY</span>(A, i)
+</code></pre></div><ul>
+<li>일차원 배열  A [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]</li>
+<li>힙으로 변환</li>
+<li>[16, 14, 10, 8, 7, 9, 3, 2, 4, 1]</li>
+</ul>
+<h3 id="-----">힙 정렬 만드는 함수 시간 복잡도</h3>
+<ul>
+<li>힙을 만드는데 시간복잡도 : O(n)</li>
+<li>시작할 노드의 인덱스 : i / 2</li>
+<li>for 문 : n / 2</li>
+<li>MAX-HEAPIFY(A, i) = logn</li>
+<li>O(nlogn) -&gt; 많이 넉넉하게 잡았다 -&gt; O(n)</li>
+<li>전체 힙 정렬 알고리즘 시간복잡도 : O(nlogn)</li>
+</ul>
+<h2 id="-----heap-sort">힙 정렬 실행 - Heap Sort</h2>
+<ul>
+<li>주어진 배열을 힙으로 만듭니다.</li>
+<li>부모는 자식보다 큽니다. 데이터의 최대값은 항상 루트 인덱스 1번입니다.</li>
+<li>힙에서 최대값(루트)을 가장 마지막 값과 자리를 바꿉니다. (정렬했을 때 최대값 위치로 보냅니다)</li>
+<li>힙의 크기가 1 줄어든 것으로 간주합니다. 즉, 가장 마지막 값은 힙의 일부가 아닌 것으로 간주합니다.</li>
+<li>루트 노드에 대해서 Heapify()를 합니다.</li>
+<li>2 ~ 4 번을 반복합니다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">HEAPSORT</span>(A)
+	BUILD<span style="color:#f92672">-</span>MAX<span style="color:#f92672">-</span><span style="color:#a6e22e">HEAP</span>(A)					<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">O</span>(n)
+	for i <span style="color:#f92672">&lt;-</span> heap_size downto <span style="color:#ae81ff">2</span> do		<span style="color:#f92672">/</span><span style="color:#f92672">/</span> n<span style="color:#ae81ff">-1</span> times
+		exchange A[1] <span style="color:#f92672">&lt;-</span><span style="color:#f92672">&gt;</span> A[i]			<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">O</span>(<span style="color:#ae81ff">1</span>)
+		heap_size <span style="color:#f92672">&lt;-</span> heap_size <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>		<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">O</span>(<span style="color:#ae81ff">1</span>)
+		MAX<span style="color:#f92672">-</span><span style="color:#a6e22e">HEAPIFY</span>(A, <span style="color:#ae81ff">1</span>)				<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">O</span>(<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">2</span>)n)
+</code></pre></div><ul>
+<li>Total time : O(nlog(2)n)</li>
+</ul>
+<h2 id="----">힙의 응용 : 우선순위 큐</h2>
+<ul>
+<li>이진 힙은 힙 정렬 이외에도 중요한 용도를 가집니다.</li>
+<li>큐 : 선입선출(FIFO) QUEUE</li>
+<li>최대 우선순위 큐(maximum priority queue)는 다음의 두 가지 연산을 지원하는 자료구조</li>
+<li>INSERT(x) : 새로운 원소 x를 삽입</li>
+<li>EXTRACT_MAX() : 최대값을 삭제하고 반환</li>
+<li>최소 우선순위 큐(minimum priority queue)는 EXTRACT-MAX대신 EXTRACT-MIN을 지원하는 자료구조</li>
+<li>MAX HEAP(= 일차원 배열)을 이용하여 최대 우선순위 큐를 구현</li>
+</ul>
+<h3 id="insert">INSERT</h3>
+<ul>
+<li>Complete Binary Tree 이어야 합니다.</li>
+<li>Max Heap Property(부모는 자식보다 큽니다)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">MAX<span style="color:#f92672">-</span>HEAP<span style="color:#f92672">-</span><span style="color:#a6e22e">INSERT</span>(A, key) {
+	heap_size <span style="color:#f92672">=</span> heap_size <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;					<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 배열의 길이를 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+	A[heap_size] <span style="color:#f92672">=</span> key;							<span style="color:#f92672">/</span><span style="color:#f92672">/</span> insert
+	i <span style="color:#f92672">=</span> heap_size;								<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 문제 노드 인덱스
+	<span style="color:#a6e22e">while </span>(i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> and A<span style="color:#a6e22e">[PARENT</span>(i)] <span style="color:#f92672">&lt;</span> A[i]) {		<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 루트 노드가 아니고, 부모 노드값보다 큰 동안
+		exchange A[i] and A<span style="color:#a6e22e">[PARENT</span>(i)];			<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 문제 노드와 부모 노드 교체
+		i <span style="color:#f92672">=</span> <span style="color:#a6e22e">PARENT</span>(i);							<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 문제 노드 <span style="color:#f92672">&lt;=</span> 부모 노드
+	}
+}
+</code></pre></div><ul>
+<li>O(h), h = 높이</li>
+<li>시간복잡도 O(log(2)n)</li>
+</ul>
+<h3 id="extract-max">EXTRACT_MAX()</h3>
+<ul>
+<li>최대값을 삭제하고 반환해주는 연산</li>
+<li>Max Heap 최대값은 항상 루트에 존재합니다.</li>
+<li>노드 개수 - 1</li>
+<li>새로운 부모 지정</li>
+<li>마지막 노드와 루트 노드를 교체하고, Heapify를 합니다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">HEAP<span style="color:#f92672">-</span>EXTRACT<span style="color:#f92672">-</span><span style="color:#a6e22e">MAX</span>(A)
+	if heap<span style="color:#f92672">-</span>size[A] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>
+		then error <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">heap underflow&#34;</span>
+	max <span style="color:#f92672">&lt;-</span> A[1]
+	A[1] <span style="color:#f92672">&lt;-</span> A[heap<span style="color:#f92672">-</span>size[A]]
+	heap<span style="color:#f92672">-</span>size[A] <span style="color:#f92672">&lt;-</span> heap<span style="color:#f92672">-</span>size[A] <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+	MAX<span style="color:#f92672">-</span><span style="color:#a6e22e">HEAPIFY</span>(A, <span style="color:#ae81ff">1</span>)
+	return max
+</code></pre></div><ul>
+<li>시간복잡도 O(log(2)n)</li>
+</ul>
+<h2 id="-----comparison-sort">정렬 알고리즘 비교 - Comparison Sort</h2>
+<ul>
+<li>최악의 경우 O(n^2)
+<ul>
+<li>bubble</li>
+<li>selection</li>
+<li>insertion</li>
+<li>quicksort (average. O(nlogn))</li>
+</ul>
+</li>
+<li>최악의 경우 O(nlogn)
+<ul>
+<li>merge</li>
+<li>heap</li>
+</ul>
+</li>
+<li>O(nlogn) 보다 더 좋을 수 없을까? X</li>
+<li>정렬 알고리즘이 Comparison Sort인 경우에!</li>
+</ul>
+<h2 id="--">정렬 알고리즘의 유형</h2>
+<ul>
+<li>Comparison Sort
+<ul>
+<li>데이터들간의 상대적 크기관계만을 이용해서 정렬하는 알고리즘</li>
+<li>따라서 데이터들간의 크기 관계가 정의되어 있으면 어떤 데이터에든 적용가능(문자열, 알파벳, 사용자 정의 객체 등)</li>
+<li>버블정렬, 삽입정렬, 합병정렬, 퀵정렬, 힙정렬 등</li>
+</ul>
+</li>
+<li>Non-comparison Sort
+<ul>
+<li>정렬할 데이터에 대한 사전지식을 이용 - 적용에 제한</li>
+<li>Bucket Sort</li>
+<li>Radix Sort</li>
+</ul>
+</li>
+<li>시험성적을 정렬한다고 하면, 일반적으로 정렬하기 전에 분류를 먼저 합니다.</li>
+<li>90점대, 80점대, 70점대 &hellip; 정렬할 데이터가 2자리 정수라는 사실을 알고있기 때문입니다.</li>
+<li>정렬할 데이터를 먼저 분류하는 정렬 =&gt; Bucket Sort</li>
+<li>Radix Sort ?</li>
+</ul>
+<h2 id="---1">정렬 문제의 하한</h2>
+<blockquote>
+<p>Comparison Sort 결론 : 어떤 Comparison Sort 도 O(nlogn) 보다 더 빠를 수 없습니다.</p>
+</blockquote>
+<ul>
+<li>하한 (Lower Bound)
+<ul>
+<li>입력된 데이터를 한번씩 다 보기위해서 최소 O(n)의 시간복잡도 필요 (trivial lower bound)</li>
+<li>합병정렬과 힙정렬 알고리즘들의 시간복잡도는 O(nlog(2)n)</li>
+<li>어떤 comparison sort 알고리즘도 O(nlog(2)n)보다 나을 수 없습니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="decision-tree">Decision Tree</h2>
+<ul>
+<li>Abstraction of any comparison sort</li>
+</ul>
+<p>3개의 값을 정렬하는 삽입정렬 알고리즘에 대한 decision tree</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">		<span style="color:#f92672">&lt;=</span>	  <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>  <span style="color:#f92672">&gt;</span>
+		<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>			<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>
+ <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>   	<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span><span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span><span style="color:#f92672">&gt;</span>   <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><ul>
+<li>Leaf노드의 개수는 n!개, 왜냐하면 모든 순열(permutation)에 해당 하므로</li>
+<li>최악의 경우 시간복잡도는 트리의 높이</li>
+<li>트리의 높이 height &gt;= log(2)n! = O(nlog(2)n)</li>
 </ul>
 </article>
                         </div>

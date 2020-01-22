@@ -196,7 +196,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    18
+                    19
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -212,6 +212,36 @@ if (!doNotTrack) {
                 </h2>
 
                 <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
+                    
+                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                        <div
+                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
+                            <div class="pinned-item-list-item-content" name="pinned-post">
+                                <div class="d-flex width-full flex-items-center position-relative">
+                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
+                                        version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
+                                    </svg>
+                                    <a href="https://mj-seok.com/posts/spring-react/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="Spring boot와 React.js의 만남">Spring boot와 React.js의 만남</span>
+                                    </a>
+                                </div>
+                                Spring boot(백엔드)와 React.js(프론트엔드)의 만남 [ Reference ] : https://spring.io/guides/tutorials/react-and-spring-data-rest/
+[ Spring Initializr ] : https://start.spring.io/
+1단계 Spring Initializr 아래의 Dependencies 를 추가해서 Generate 합니다.
+ Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
+2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
+ Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
+ package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.
+                                <div class="f6 text-gray mt-2">
+                                    Updated <relative-time datetime="2020-01-22"
+                                        class="no-wrap" title="Modify at 2020/01/22">
+                                        January 22, 2020</relative-time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     
                     <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
                         <div
@@ -335,33 +365,6 @@ if (!doNotTrack) {
                                     Updated <relative-time datetime="2020-01-11"
                                         class="no-wrap" title="Modify at 2020/01/11">
                                         January 11, 2020</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://mj-seok.com/posts/algo-maze/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="미로찾기 알고리즘 - Maze Algorithm">미로찾기 알고리즘 - Maze Algorithm</span>
-                                    </a>
-                                </div>
-                                미로찾기 알고리즘 - Maze Algorithm Recursive Thinking
-현재 위치에서 출구까지 가는 경로가 있으려면
- 현재 위치가 출구이거나 혹은 이웃한 셀들 중 하나에서 현재 위치를 지나지 않고 출구까지 가능 경로가 있거나  aa
-미로찾기(Decision Problem - return yes or no) boolean findPath(x, y)if (x, y) is the exitreturn true;elsefor each neighbouring cell (x`, y`) of (x, y) doif (x`, y`) is on the pathwayif findPath(x`, y`)return true;return false; 인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-10"
-                                        class="no-wrap" title="Modify at 2020/01/10">
-                                        January 10, 2020</relative-time>
                                 </div>
                             </div>
                         </div>
