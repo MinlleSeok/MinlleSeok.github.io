@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.62.0" />
+	<meta name="generator" content="Hugo 0.61.0" />
     <meta charset="utf-8">
     <link crossorigin="anonymous" media="all"
         rel="stylesheet"
@@ -196,7 +196,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    19
+                    26
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -223,21 +223,15 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://mj-seok.com/posts/spring-react/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="Spring boot와 React.js의 만남 - 백엔드">Spring boot와 React.js의 만남 - 백엔드</span>
+                                    <a href="https://mj-seok.com/posts/algo-binary-search-tree/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - 이진검색트리(Binary Search Tree)">알고리즘 - 이진검색트리(Binary Search Tree)</span>
                                     </a>
                                 </div>
-                                Spring boot(백엔드)와 React.js(프론트엔드)의 만남 [ Reference ] : https://spring.io/guides/tutorials/react-and-spring-data-rest/
-[ Spring Initializr ] : https://start.spring.io/
-1단계 Spring Initializr 아래의 Dependencies 를 추가해서 Generate 합니다.
- Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
-2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
- Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
- package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.
+                                알고리즘 - 이진검색트리(Binary Search Tree)  이진트리 순회하는 알고리즘 트리라는 자료구조 조직도, 가계도  Dynamic Set  저장하는 데이터 자체가 계층 구조가 아닌 일종의 컨테이너(집합) 여러 개의 키(key)를 저장 다음과 같은 연산들을 지원하는 자료구조 INSERT - 새로운 키의 삽입 SEARCH - 키 탐색 DELETE - 키의 삭제 예 : 심볼 테이블 called Dynamic Set Dictionary Search Structure  시간 복잡도  정렬 안 된 배열 검색 : 순차검색 O(n) 정렬 안 된 배열 삽입 : 맨 뒤 O(1) 배열 복사 이동 고려 O(n) 정렬 안 된 배열 삭제 : 검색 고려하지 않고 마지막 데이터와 교체 O(1) 정렬된 배열 검색 : 이진검색 O(logn) 정렬된 배열 삽입 : 다른 값 위치 shift O(n) 정렬된 배열 삭제 : 다른 값 위치 shift O(n) 정렬 안 된 연결 리스트 검색 : O(n) 정렬 안 된 연결 리스트 삽입 : 맨 앞 O(1) 정렬 안 된 연결 리스트 삭제 : 검색 고려하지 않고 마지막 데이터와 교체 O(1) 정렬된 연결 리스트 검색 : n / 2 바로 탐색 불가 O(n) 정렬된 연결 리스트 삽입 : O(n) 정렬된 연결 리스트 삭제 : O(1)  다양한 방법들  정렬된 혹은 정렬되지 않은 배열 혹은 연결 리스트를 사용할 경우 INSERT, SEARCH, DELETE 중 적어도 하나는 O(n) 이진탐색트리(Binary Search Tree), 레드-블랙 트리, AVL-트리 등의 트리에 기반한 구조들 Direct Address Table, 해쉬 테이블 등  검색트리  Dynamic set을 트리의 형태로 구현 일반적으로 SEARCH, INSERT, DELETE 연산이 트리의 높이(height)에 비례하는 시간복잡도를 가짐 이진검색트리(Binary Search Tree), 레드-블랙 트리(red-black tree), B-트리 등  이진검색트리 (BST)  이진 트리이면서 각 노드에 하나의 키를 저장 각 노드 v에 대해서 그 노드의 왼쪽 부트리(subtree)에 있는 키들은 key[v]보다 작거나 같고, 오른쪽 부트리에 있는 값은 크거나 같습니다.
                                 <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-22"
-                                        class="no-wrap" title="Modify at 2020/01/22">
-                                        January 22, 2020</relative-time>
+                                    Updated <relative-time datetime="2020-01-30"
+                                        class="no-wrap" title="Modify at 2020/01/30">
+                                        January 30, 2020</relative-time>
                                 </div>
                             </div>
                         </div>
@@ -253,16 +247,15 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://mj-seok.com/posts/algo-sort/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="정렬 알고리즘 - Sort Algorithm">정렬 알고리즘 - Sort Algorithm</span>
+                                    <a href="https://mj-seok.com/posts/algo-tree/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - 트리와 이진트리">알고리즘 - 트리와 이진트리</span>
                                     </a>
                                 </div>
-                                정렬 알고리즘 - Sort Algorithm [ Reference ] : https://youtu.be/0dG7xTt5IfQ
- 정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  기본적인 정렬 알고리즘 선택 정렬 - Selection Sort  initial array = [29, 10, 14, 37, 13]; 가장 큰 값을 맨 마지막 값과 바꿉니다.
+                                알고리즘 - 트리와 이진트리  계층적인 구조를 표현 조직도 디렉토리와 서브디렉토리 구조 가계도  맨 위의 노드 : 루트(root)  트리는 노드(node)들과 노드들을 연결하는 링크(link)들로 구성됨 노드들을 연결하는 선을 &ldquo;link&rdquo;, &ldquo;edge&rdquo;, &ldquo;branch&quot;등으로 부름  부모-자식 관계  부모(parent) 노드 : animal 자식(child) 노드 : cat, fox, wolf  형제 관계  루트노드를 제외한 트리의 모든 노드들은 유일한 부모 노드를 가짐 부모가 동일한 노드들을 형제(sibling) 관계라고 부름  리프(leaf) 노드  리프노드가 아닌 노드들을 내부(internal)노드라고 부름 자식이 없는 노드들을 leaf노드라고 부름  조상 - 자손 관계  조상(ancestor) 노드 : animal 자손(descendant) 노드 : canine 부모 - 자식 관계를 확장한 것이 조상 - 자손 (ancestor - descendant) 관계입니다.
                                 <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-14"
-                                        class="no-wrap" title="Modify at 2020/01/14">
-                                        January 14, 2020</relative-time>
+                                    Updated <relative-time datetime="2020-01-30"
+                                        class="no-wrap" title="Modify at 2020/01/30">
+                                        January 30, 2020</relative-time>
                                 </div>
                             </div>
                         </div>
@@ -278,16 +271,15 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://mj-seok.com/posts/algo-sort-2/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="정렬 알고리즘 2 - Sort Algorithm">정렬 알고리즘 2 - Sort Algorithm</span>
+                                    <a href="https://mj-seok.com/posts/algo-java-sort/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="[알고리즘] Java에서의 정렬">[알고리즘] Java에서의 정렬</span>
                                     </a>
                                 </div>
-                                정렬 알고리즘 - Sort Algorithm [ Reference ] : https://youtu.be/0dG7xTt5IfQ
- 정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  힙 정렬 - Heap Sort  힙, 바이너리 힙 이진 힙 자료구조 정렬 최악의 경우 시간복잡도 O(nlog(2)n) Sorts in place - 추가 배열 불필요 이진 힙(binary heap) 자료구조를 사용  Heap의 정의  complete binary tree이면서, heap property 만족  Full vs Complete Binary Trees   full binary tree: 모든 레벨에 노드들이 꽉 차있는 형태
+                                [알고리즘] Java에서의 정렬  Arrays클래스가 primitive타입 데이터를 위한 정렬 메서드를 제공  int[] data = new int[capacity]; // data[0]에서 data[capacity - 1]까지 데이터가 꽉 // 차있는 경우에는 다음과 같이 정렬합니다. Arrays.sort(data); // 배열에 꽉 차있지 않고 data[0]에서 data[size - 1]까지 // size개의 데이터만 있다면 다음과 같이 합니다. Arrays.sort(data, 0, size);  int 이외의 다른 primitive 타입 데이터(double, char 등)에 대해서도 제공  객체의 정렬 : 문자열 String [] fruits = new String[] { &#34;Pineapple&#34;, &#34;Apple&#34;, &#34;Orange&#34;, &#34;Banana&#34; }; Arrays.
                                 <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-14"
-                                        class="no-wrap" title="Modify at 2020/01/14">
-                                        January 14, 2020</relative-time>
+                                    Updated <relative-time datetime="2020-01-29"
+                                        class="no-wrap" title="Modify at 2020/01/29">
+                                        January 29, 2020</relative-time>
                                 </div>
                             </div>
                         </div>
@@ -303,17 +295,15 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://mj-seok.com/posts/algorithm-desc/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="알고리즘의 기본 - Algorithm Basic">알고리즘의 기본 - Algorithm Basic</span>
+                                    <a href="https://mj-seok.com/posts/algo-radix-sort/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - Radix Sort">알고리즘 - Radix Sort</span>
                                     </a>
                                 </div>
-                                알고리즘의 기본 - Algorithm Basic [ Reference ] : https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz
-알고리즘이란 &lsquo;문제를 해결하는 절차'입니다  입력, 출력, 유한성, 명백성, 효과성을 만족해야 합니다. 분석을 통해 좋고 나쁨을 평가할 수 있습니다. 기초 프로그래밍과 자료구조를 공부한 이후에 배우면 좋습니다. 논리이며 수학이고, 실질적인 개발에 적용되는 기초적인 아이디어입니다.   점근적 분석법, 행렬? 버블정렬, 선택정렬 보다 퀵 정렬이 빠르게 수행됩니다.
- 알고리즘은 &lsquo;개발'의 전체 과정에 사용됩니다  실제 프로그램을 개발할 때 효율적인 알고리즘을 적용함으로써 원하는 결과를 도출해야 합니다.
+                                Radix Sort  n개의 d자리 정수들 가장 낮은 자리수부터 정렬  Stable Sort  동일한 데이터가 2개 이상 있다면 정렬 후에도 입력 순서가 출력 순서로 유지되야 합니다. Radix Sort 같은 경우는 반드시 Stable 해야 합니다.  RADIX-SORT(A, d) for i &lt;- 1 to d do use a stable sort to sort array A on digit i  시간 복잡도 O(d(n+k)) 10진수 (k = 10) 알파벳 (k = 26)  정렬 알고리즘들  Bubble sort : O(n^2) Insertion sort : O(n^2) Selection sort : O(n^2) Quick Sort : worst O(n^2) and average O(nlog2n) Merge sort : O(nlog2n) Heap sort : O(nlog2n) Counting sort : O(n+k) Radix sort : O(d(n+k))  
                                 <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-12"
-                                        class="no-wrap" title="Modify at 2020/01/12">
-                                        January 12, 2020</relative-time>
+                                    Updated <relative-time datetime="2020-01-29"
+                                        class="no-wrap" title="Modify at 2020/01/29">
+                                        January 29, 2020</relative-time>
                                 </div>
                             </div>
                         </div>
@@ -329,15 +319,15 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://mj-seok.com/posts/algo-nqueens/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="알고리즘 - N-Queens Problem">알고리즘 - N-Queens Problem</span>
+                                    <a href="https://mj-seok.com/posts/algo-sorting-linear/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - 선형 시간 정렬">알고리즘 - 선형 시간 정렬</span>
                                     </a>
                                 </div>
-                                알고리즘 - N-Queens Problem  N x N 체스 보드 N = 8 동일한 행, 동일한 대각선, 동일한 열 빼놓고 말을 놓는 방법  4 x 4  하나의 행마다 정확히 하나의 말 서로 다른 경우의 수 : N의 N승 Backtracking : 최근에 내렸던 결정을 번복하고, 지나온 궤적을 되돌아 나간다.  상태 공간 트리  상태공간트리 : 찾는 해를 포함하는 트리. 즉, 해가 존재한다면 그것은 반드시 이 트리의 어떤 한 노드에 해당함 따라서 이 트리를 체계적으로 탐색하면 해를 구할 수 있음  상태 공간 트리의 모든 노드를 탐색해야 하는 것은 아님  (1,1) (2,1) -&gt; non-promising (1,1) (2,2) -&gt; infeasible: 꽝 (1,1) (2,3) -&gt; continue&hellip;  되추적 기법(Backtracking)  상태공간 트리를 깊이 우선 방식으로 탐색하여 해를 찾는 알고리즘  깊이 우선 탐색  recursion stack 자료구조 이용  Design Recursion // 매개변수는 내가 현재 트리의 어떤 노드에 있는지를 지정해야 한다.
+                                선형 시간 정렬 Counting Sort  n개의 정수를 정렬하세요. 단 모든 정수는 0에서 k 사이의 정수입니다. 길이 k인 배열에 각 정수의 개수를 count합니다.  int A[n]; // 정렬할 데이터 0 ~ k int C[k] = {0, }; for ( int i=1; i&lt;=n; i++ ) C[A[i]]++; for ( int s=1, i=0; i&lt;=k; i++ ) { for ( int j=0; j&lt;C[i]; j++ ) { A[s++] = i; } } COUNTING-SORT(A, B, k) for i &lt;- 0 to k do C[i] &lt;- 0 for j &lt;- 1 to length[A] do C[A[j]] &lt;- C[A[j]] + 1 &gt; C[i] now contains the number of elements equal to i.
                                 <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-11"
-                                        class="no-wrap" title="Modify at 2020/01/11">
-                                        January 11, 2020</relative-time>
+                                    Updated <relative-time datetime="2020-01-29"
+                                        class="no-wrap" title="Modify at 2020/01/29">
+                                        January 29, 2020</relative-time>
                                 </div>
                             </div>
                         </div>
@@ -353,18 +343,16 @@ if (!doNotTrack) {
                                         <path fill-rule="evenodd"
                                             d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
                                     </svg>
-                                    <a href="https://mj-seok.com/posts/algo-countcell/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob">블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob</span>
+                                    <a href="https://mj-seok.com/posts/spring-react-2/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="Spring boot와 React.js의 만남 - 프론트엔드">Spring boot와 React.js의 만남 - 프론트엔드</span>
                                     </a>
                                 </div>
-                                블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
- Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
- N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
- 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.
+                                Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;@Controllerpublic class HomeController {@RequestMapping(value = &#34;/&#34;)public String index() {return &#34;index&#34;;}} @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &quot;index&quot; template return =&gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
+ &lt;!DOCTYPE html&gt;&lt;html xmlns:th=&#34;https://www.thymeleaf.org&#34;&gt;&lt;head lang=&#34;en&#34;&gt;&lt;meta charset=&#34;UTF-8&#34;/&gt;&lt;title&gt;ReactJS + Spring Data REST&lt;/title&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/main.
                                 <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-11"
-                                        class="no-wrap" title="Modify at 2020/01/11">
-                                        January 11, 2020</relative-time>
+                                    Updated <relative-time datetime="2020-01-23"
+                                        class="no-wrap" title="Modify at 2020/01/23">
+                                        January 23, 2020</relative-time>
                                 </div>
                             </div>
                         </div>

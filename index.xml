@@ -6,10 +6,74 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jan 2020 18:06:35 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2020 12:48:31 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>알고리즘 - 이진검색트리(Binary Search Tree)</title>
+      <link>https://mj-seok.com/posts/algo-binary-search-tree/</link>
+      <pubDate>Thu, 30 Jan 2020 12:48:31 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-binary-search-tree/</guid>
+      <description>알고리즘 - 이진검색트리(Binary Search Tree)  이진트리 순회하는 알고리즘 트리라는 자료구조 조직도, 가계도  Dynamic Set  저장하는 데이터 자체가 계층 구조가 아닌 일종의 컨테이너(집합) 여러 개의 키(key)를 저장 다음과 같은 연산들을 지원하는 자료구조 INSERT - 새로운 키의 삽입 SEARCH - 키 탐색 DELETE - 키의 삭제 예 : 심볼 테이블 called Dynamic Set Dictionary Search Structure  시간 복잡도  정렬 안 된 배열 검색 : 순차검색 O(n) 정렬 안 된 배열 삽입 : 맨 뒤 O(1) 배열 복사 이동 고려 O(n) 정렬 안 된 배열 삭제 : 검색 고려하지 않고 마지막 데이터와 교체 O(1) 정렬된 배열 검색 : 이진검색 O(logn) 정렬된 배열 삽입 : 다른 값 위치 shift O(n) 정렬된 배열 삭제 : 다른 값 위치 shift O(n) 정렬 안 된 연결 리스트 검색 : O(n) 정렬 안 된 연결 리스트 삽입 : 맨 앞 O(1) 정렬 안 된 연결 리스트 삭제 : 검색 고려하지 않고 마지막 데이터와 교체 O(1) 정렬된 연결 리스트 검색 : n / 2 바로 탐색 불가 O(n) 정렬된 연결 리스트 삽입 : O(n) 정렬된 연결 리스트 삭제 : O(1)  다양한 방법들  정렬된 혹은 정렬되지 않은 배열 혹은 연결 리스트를 사용할 경우 INSERT, SEARCH, DELETE 중 적어도 하나는 O(n) 이진탐색트리(Binary Search Tree), 레드-블랙 트리, AVL-트리 등의 트리에 기반한 구조들 Direct Address Table, 해쉬 테이블 등  검색트리  Dynamic set을 트리의 형태로 구현 일반적으로 SEARCH, INSERT, DELETE 연산이 트리의 높이(height)에 비례하는 시간복잡도를 가짐 이진검색트리(Binary Search Tree), 레드-블랙 트리(red-black tree), B-트리 등  이진검색트리 (BST)  이진 트리이면서 각 노드에 하나의 키를 저장 각 노드 v에 대해서 그 노드의 왼쪽 부트리(subtree)에 있는 키들은 key[v]보다 작거나 같고, 오른쪽 부트리에 있는 값은 크거나 같습니다.</description>
+    </item>
+    
+    <item>
+      <title>알고리즘 - 트리와 이진트리</title>
+      <link>https://mj-seok.com/posts/algo-tree/</link>
+      <pubDate>Thu, 30 Jan 2020 11:45:59 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-tree/</guid>
+      <description>알고리즘 - 트리와 이진트리  계층적인 구조를 표현 조직도 디렉토리와 서브디렉토리 구조 가계도  맨 위의 노드 : 루트(root)  트리는 노드(node)들과 노드들을 연결하는 링크(link)들로 구성됨 노드들을 연결하는 선을 &amp;ldquo;link&amp;rdquo;, &amp;ldquo;edge&amp;rdquo;, &amp;ldquo;branch&amp;quot;등으로 부름  부모-자식 관계  부모(parent) 노드 : animal 자식(child) 노드 : cat, fox, wolf  형제 관계  루트노드를 제외한 트리의 모든 노드들은 유일한 부모 노드를 가짐 부모가 동일한 노드들을 형제(sibling) 관계라고 부름  리프(leaf) 노드  리프노드가 아닌 노드들을 내부(internal)노드라고 부름 자식이 없는 노드들을 leaf노드라고 부름  조상 - 자손 관계  조상(ancestor) 노드 : animal 자손(descendant) 노드 : canine 부모 - 자식 관계를 확장한 것이 조상 - 자손 (ancestor - descendant) 관계입니다.</description>
+    </item>
+    
+    <item>
+      <title>[알고리즘] Java에서의 정렬</title>
+      <link>https://mj-seok.com/posts/algo-java-sort/</link>
+      <pubDate>Wed, 29 Jan 2020 12:26:07 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-java-sort/</guid>
+      <description>[알고리즘] Java에서의 정렬  Arrays클래스가 primitive타입 데이터를 위한 정렬 메서드를 제공  int[] data = new int[capacity]; // data[0]에서 data[capacity - 1]까지 데이터가 꽉 // 차있는 경우에는 다음과 같이 정렬합니다. Arrays.sort(data); // 배열에 꽉 차있지 않고 data[0]에서 data[size - 1]까지 // size개의 데이터만 있다면 다음과 같이 합니다. Arrays.sort(data, 0, size);  int 이외의 다른 primitive 타입 데이터(double, char 등)에 대해서도 제공  객체의 정렬 : 문자열 String [] fruits = new String[] { &amp;#34;Pineapple&amp;#34;, &amp;#34;Apple&amp;#34;, &amp;#34;Orange&amp;#34;, &amp;#34;Banana&amp;#34; }; Arrays.</description>
+    </item>
+    
+    <item>
+      <title>알고리즘 - Radix Sort</title>
+      <link>https://mj-seok.com/posts/algo-radix-sort/</link>
+      <pubDate>Wed, 29 Jan 2020 12:02:51 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-radix-sort/</guid>
+      <description>Radix Sort  n개의 d자리 정수들 가장 낮은 자리수부터 정렬  Stable Sort  동일한 데이터가 2개 이상 있다면 정렬 후에도 입력 순서가 출력 순서로 유지되야 합니다. Radix Sort 같은 경우는 반드시 Stable 해야 합니다.  RADIX-SORT(A, d) for i &amp;lt;- 1 to d do use a stable sort to sort array A on digit i  시간 복잡도 O(d(n+k)) 10진수 (k = 10) 알파벳 (k = 26)  정렬 알고리즘들  Bubble sort : O(n^2) Insertion sort : O(n^2) Selection sort : O(n^2) Quick Sort : worst O(n^2) and average O(nlog2n) Merge sort : O(nlog2n) Heap sort : O(nlog2n) Counting sort : O(n+k) Radix sort : O(d(n+k))  </description>
+    </item>
+    
+    <item>
+      <title>알고리즘 - 선형 시간 정렬</title>
+      <link>https://mj-seok.com/posts/algo-sorting-linear/</link>
+      <pubDate>Wed, 29 Jan 2020 10:44:39 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-sorting-linear/</guid>
+      <description>선형 시간 정렬 Counting Sort  n개의 정수를 정렬하세요. 단 모든 정수는 0에서 k 사이의 정수입니다. 길이 k인 배열에 각 정수의 개수를 count합니다.  int A[n]; // 정렬할 데이터 0 ~ k int C[k] = {0, }; for ( int i=1; i&amp;lt;=n; i++ ) C[A[i]]++; for ( int s=1, i=0; i&amp;lt;=k; i++ ) { for ( int j=0; j&amp;lt;C[i]; j++ ) { A[s++] = i; } } COUNTING-SORT(A, B, k) for i &amp;lt;- 0 to k do C[i] &amp;lt;- 0 for j &amp;lt;- 1 to length[A] do C[A[j]] &amp;lt;- C[A[j]] + 1 &amp;gt; C[i] now contains the number of elements equal to i.</description>
+    </item>
+    
+    <item>
+      <title>Spring boot와 React.js의 만남 - 프론트엔드</title>
+      <link>https://mj-seok.com/posts/spring-react-2/</link>
+      <pubDate>Thu, 23 Jan 2020 10:28:36 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/spring-react-2/</guid>
+      <description>Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;@Controllerpublic class HomeController {@RequestMapping(value = &amp;#34;/&amp;#34;)public String index() {return &amp;#34;index&amp;#34;;}} @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &amp;quot;index&amp;quot; template return =&amp;gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
+ &amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html xmlns:th=&amp;#34;https://www.thymeleaf.org&amp;#34;&amp;gt;&amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt;&amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt;&amp;lt;title&amp;gt;ReactJS + Spring Data REST&amp;lt;/title&amp;gt;&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;/main.</description>
+    </item>
+    
+    <item>
+      <title>탐욕 알고리즘 - Greedy Algorithm</title>
+      <link>https://mj-seok.com/posts/algo-greedy/</link>
+      <pubDate>Wed, 22 Jan 2020 22:39:30 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-greedy/</guid>
+      <description>탐욕 알고리즘 - Greedy Algorithm  현재 상황에서 가장 좋아 보이는 답을 선택하는 방법 각 부분에서 최적을 선택하면 전체에서도 최적이 될 것이라는 가정을 전제로 합니다. 선택은 항상 하위 문제에 대한 해답이 나오기 전에 선택됩니다.  탐욕 선택  하위 문제를 풀기 전에 선택을 합니다. 항상 하나의 문제만을 고려합니다.  동적 프로그래밍  하위 문제를 풀고 나서 선택을 합니다. 동시에 여러 개의 하위 문제를 고려합니다.  0-1 배낭 채우기 문제 (0-1 knapsack)  도둑이 상점에서 n개의 물건을 훔친다고 합니다.</description>
+    </item>
     
     <item>
       <title>Spring boot와 React.js의 만남 - 백엔드</title>
@@ -23,7 +87,7 @@
  Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
 2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
  Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
- package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.</description>
+ package com.mjseok.springreact;import java.util.Objects;import javax.persistence.Entity;import javax.persistence.GeneratedValue;import javax.persistence.Id;@Entitypublic class Employee {private @Id @GeneratedValue Long id;private String firstName;private String lastName;private String description;private Employee() {}public Employee(String firstName, String lastName, String description) {this.</description>
     </item>
     
     <item>
@@ -75,7 +139,7 @@
       <description>블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
  Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
  N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
- 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.</description>
+ 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면현재 픽셀이 image color가 아니라면 // base case0을 반환한다현재 픽셀이 image color라면먼저 현재 픽셀을 카운트한다 (count=1)현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.</description>
     </item>
     
     <item>
@@ -87,7 +151,7 @@
       <description>미로찾기 알고리즘 - Maze Algorithm Recursive Thinking
 현재 위치에서 출구까지 가는 경로가 있으려면
  현재 위치가 출구이거나 혹은 이웃한 셀들 중 하나에서 현재 위치를 지나지 않고 출구까지 가능 경로가 있거나  aa
-미로찾기(Decision Problem - return yes or no) boolean findPath(x, y) if (x, y) is the exit return true; else for each neighbouring cell (x`, y`) of (x, y) do if (x`, y`) is on the pathway if findPath(x`, y`) return true; return false;  인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.</description>
+미로찾기(Decision Problem - return yes or no) boolean findPath(x, y)if (x, y) is the exitreturn true;elsefor each neighbouring cell (x`, y`) of (x, y) doif (x`, y`) is on the pathwayif findPath(x`, y`)return true;return false; 인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.</description>
     </item>
     
     <item>
@@ -107,7 +171,7 @@
       
       <guid>https://mj-seok.com/posts/ecma-javascript/</guid>
       <description>Javascript와 ECMAScript - 알아보기 ECMAScript 와 JavaScript JavaScript https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
- 복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.  기본 작성 형태 // HTML 요소 중 p태그를 선택 const para = document.querySelector(&amp;#39;p&amp;#39;); para.addEventListener(&amp;#39;click&amp;#39;, updateName); function updateName() { //&amp;#39;Enter a new name&amp;#39;과 입력란 출력하여 입력받은 값을 name에 저장  let name = prompt(&amp;#39;Enter a new name&amp;#39;); // para(p태그)에 새로운 문자열 저장  para.</description>
+ 복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입니다.  기본 작성 형태 // HTML 요소 중 p태그를 선택const para = document.querySelector(&amp;#39;p&amp;#39;);para.addEventListener(&amp;#39;click&amp;#39;, updateName);function updateName() {//&amp;#39;Enter a new name&amp;#39;과 입력란 출력하여 입력받은 값을 name에 저장 let name = prompt(&amp;#39;Enter a new name&amp;#39;);// para(p태그)에 새로운 문자열 저장 para.</description>
     </item>
     
     <item>
@@ -117,7 +181,7 @@
       
       <guid>https://mj-seok.com/posts/python-for/</guid>
       <description>Python - for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
- array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)   행복 코딩
+ array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &amp;#34;Wed&amp;#34;:breakelse:print(day)for letter in &amp;#34;Nicolas&amp;#34;:print(letter)  행복 코딩
  </description>
     </item>
     
@@ -130,7 +194,7 @@
       <description>선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple) [ Reference ] : https://youtu.be/br7tS1t2SFE
  프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
 속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
-v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   </description>
+v = (5, 0) = [5][0]길이 : 5v = (3, 4) = [3][4]길이 : 5 (피타고라스 3^2 + 4^2 = 5^2)튜플 Tuple |R R^2실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1] R^n : n - dimensional real coordinate space   </description>
     </item>
     
     <item>
@@ -140,8 +204,8 @@ v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스
       
       <guid>https://mj-seok.com/posts/algo-designrecursion/</guid>
       <description>재귀 설계 - Design Recursion [ Reference ] : https://youtu.be/Vwfo_hrxuzg
- Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
- 순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) { for (int i=0; i&amp;lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
+ Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () {return base_case;} else {recursion();} 암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) {for (int i=0; i&amp;lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
     </item>
     
     <item>
@@ -154,7 +218,7 @@ v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스
   Hugo는 &amp;ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&amp;quot;라고 단언하는
 오픈소스 기반 정적 사이트(static site) 제작 툴입니다.   Hugo 설치 (Install Hugo) git Command Hugo Post  1. Hugo 설치 (Install Hugo)  https://gohugo.io/getting-started/quick-start/
  MacOS 기준 (for MacOS)
-Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo&#39;s version) hugo version Hugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstart Hugo 테마 추가하기 (Add a Theme) cd quickstart git init git submodule add https://github.</description>
+Hugo 설치 (Install Hugo) brew install hugoHugo 버전 확인 (check Hugo&#39;s version) hugo versionHugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstartHugo 테마 추가하기 (Add a Theme) cd quickstartgit initgit submodule add https://github.</description>
     </item>
     
     <item>
@@ -163,8 +227,8 @@ Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo&#39;
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
       <guid>https://mj-seok.com/posts/go-first/</guid>
-      <description>고로 작성해봐요 - Write in Go 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
+      <description>고로 작성해봐요 - Write in Go 안녕, 고 (Hello, Go) package mainimport &amp;#34;fmt&amp;#34;func main() {fmt.Println(&amp;#34;Hello, Go&amp;#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;math/rand&amp;#34;)func main() {fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
@@ -174,7 +238,7 @@ Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get co
       
       <guid>https://mj-seok.com/posts/sql-postgresql/</guid>
       <description>PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
-install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  </description>
+install Command brew install postgresqlServer start pg_ctl -D /usr/local/var/postgres startServer stop pg_ctl -D /usr/local/var/postgres stopstatus check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39;pg_ctl status </description>
     </item>
     
     <item>
@@ -184,7 +248,7 @@ install Command brew install postgresql Server start pg_ctl -D /usr/local/var/po
       
       <guid>https://mj-seok.com/posts/python-pyenv/</guid>
       <description>Python 가상환경 - pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
- 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version   행복 개발
+ 설치 % brew update% brew install pyenv환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc% echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc% echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrcPython 원하는 버전 설치 % pyenv install [version_name]% pyenv global [version_name]% python --version  행복 개발
  </description>
     </item>
     
@@ -197,7 +261,7 @@ install Command brew install postgresql Server start pg_ctl -D /usr/local/var/po
       <description>재귀적 생각 - Recursive Thinking [ Reference ] : https://youtu.be/tuzf1yLPgRI
 절차적 언어 ? Procedure Language : 어떤 일을 하는 절차
 프로그래밍에서의 관점  객체 지향 : 객체들 간의 상호작용 Recursion : 순환적인 관점  Recursion은 수학함수 계산에만 유용한가  수학함수뿐 아니라 다른 많은 문제들을 recursion으로 해결할 수 있습니다.  문자열의 길이 계산 :: pesudo code
-if the string is empty return 0; else return 1 plus the length of the string that excludes the first character;  순환적인 문자열 길이 계산 알고리즘  :: length.</description>
+if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.</description>
     </item>
     
     <item>
@@ -218,7 +282,7 @@ if the string is empty return 0; else return 1 plus the length of the string tha
       
       <guid>https://mj-seok.com/posts/typescript/</guid>
       <description>타입스크립트 기초 - TypeScript Basic [Reference] : https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
-Install npm install -g typescript  node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.  Compile tsc helloworld.ts  컴파일 명령어는 tsc 입니다.  greeter.ts function greeter(person) { return &amp;#34;Hello, &amp;#34; + person; } let user = &amp;#34;Jane User&amp;#34;; // document.body.textContext = greeter(user); console.log(greeter(user));  가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍습니다.  터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo;, &amp;ldquo;node greeter.</description>
+Install npm install -g typescript node.js가 설치되어 있는 환경에서 typescript를 npm 패키지 매니저로 전역(-g) 설치합니다.  Compile tsc helloworld.ts 컴파일 명령어는 tsc 입니다.  greeter.ts function greeter(person) {return &amp;#34;Hello, &amp;#34; + person;}let user = &amp;#34;Jane User&amp;#34;;// document.body.textContext = greeter(user);console.log(greeter(user)); 가장 기본적인 방법으로 함수에 인자 넣어 콘솔에 로그를 찍습니다.  터미널 환경에서 &amp;ldquo;tsc greeter.ts&amp;rdquo;, &amp;ldquo;node greeter.</description>
     </item>
     
     <item>
@@ -227,7 +291,7 @@ Install npm install -g typescript  node.js가 설치되어 있는 환경에서 t
       <pubDate>Wed, 18 Dec 2019 21:33:23 +0900</pubDate>
       
       <guid>https://mj-seok.com/about/</guid>
-      <description>const Introduce = () =&amp;gt; { return { name: &amp;#34;Jose Seok&amp;#34;, job: &amp;#34;Front-end Developer&amp;#34;, focus: [&amp;#34;ECMAScript&amp;#34;, &amp;#34;React.js&amp;#34;, &amp;#34;Node.js&amp;#34;, &amp;#34;Algorithm&amp;#34;] }; }   행복 프로그래밍
+      <description>const Introduce = () =&amp;gt; {return {name: &amp;#34;Jose Seok&amp;#34;,job: &amp;#34;Front-end Developer&amp;#34;,focus: [&amp;#34;ECMAScript&amp;#34;, &amp;#34;React.js&amp;#34;, &amp;#34;Node.js&amp;#34;, &amp;#34;Algorithm&amp;#34;]};}  행복 프로그래밍
  </description>
     </item>
     

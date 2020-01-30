@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>알고리즘 - 트리와 이진트리 - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/posts/algo-tree/">알고리즘 - 트리와 이진트리</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-01-30" class="no-wrap"
+                                    title="Created at 2020/01/30">
+                                    2020-01-30</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-01-30" class="no-wrap"
+                                    title="Modifyed  at 2020/01/30">
+                                    2020-01-30</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                1580 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="----">알고리즘 - 트리와 이진트리</h1>
+<ul>
+<li>계층적인 구조를 표현</li>
+<li>조직도</li>
+<li>디렉토리와 서브디렉토리 구조</li>
+<li>가계도</li>
+</ul>
+<h2 id="----root">맨 위의 노드 : 루트(root)</h2>
+<ul>
+<li>트리는 노드(node)들과 노드들을 연결하는 링크(link)들로 구성됨</li>
+<li>노드들을 연결하는 선을 &ldquo;link&rdquo;, &ldquo;edge&rdquo;, &ldquo;branch&quot;등으로 부름</li>
+</ul>
+<h2 id="--">부모-자식 관계</h2>
+<ul>
+<li>부모(parent) 노드 : animal</li>
+<li>자식(child) 노드 : cat, fox, wolf</li>
+</ul>
+<h2 id="-">형제 관계</h2>
+<ul>
+<li>루트노드를 제외한 트리의 모든 노드들은 유일한 부모 노드를 가짐</li>
+<li>부모가 동일한 노드들을 형제(sibling) 관계라고 부름</li>
+</ul>
+<h2 id="leaf-">리프(leaf) 노드</h2>
+<ul>
+<li>리프노드가 아닌 노드들을 내부(internal)노드라고 부름</li>
+<li>자식이 없는 노드들을 leaf노드라고 부름</li>
+</ul>
+<h2 id="-----1">조상 - 자손 관계</h2>
+<ul>
+<li>조상(ancestor) 노드 : animal</li>
+<li>자손(descendant) 노드 : canine</li>
+<li>부모 - 자식 관계를 확장한 것이 조상 - 자손 (ancestor - descendant) 관계입니다.</li>
+</ul>
+<h2 id="--subtree">부트리 : Subtree</h2>
+<ul>
+<li>트리에서 어떤 한 노드와 그 노드의 자손들로 이루어진 트리를 부트리(subtree)라고 부릅니다.</li>
+</ul>
+<h2 id="heading">레벨</h2>
+<ul>
+<li>루트 : 레벨1</li>
+<li>루트의 자식 : 레벨2</li>
+<li>손자 : 레벨3</li>
+</ul>
+<h2 id="heading-1">높이</h2>
+<ul>
+<li>트리의 높이(height) : 3</li>
+</ul>
+<h2 id="---1">트리의 기본적인 성질</h2>
+<ul>
+<li>노드가 N개인 트리의 링크의 개수는 N - 1개입니다.</li>
+<li>노드가 N개인 트리는 항상 N-1개의 링크(link)를 가집니다.</li>
+<li>트리에서 루트에서 어떤 노드로 가는 경로는 유일합니다.</li>
+<li>또한 임의의 두 노드간의 경로도 유일합니다.</li>
+<li>(같은 노드를 두 번 이상 방문하지 않는 경우)</li>
+</ul>
+<h2 id="--binary-tree">이진 트리 (binary tree)</h2>
+<ul>
+<li>이진 트리에서 각 노드는 최대 2개의 자식을 가집니다.</li>
+<li>각각의 자식 노드는 자신이 부모의 왼쪽 자식인지 오른쪽 자식인지가 지정됩니다.</li>
+<li>자식이 한 명인 경우에도 그렇습니다.</li>
+</ul>
+<h2 id="-----expression-tree">이진 트리 응용의 예 : Expression Tree</h2>
+<ul>
+<li>(x + y) * ((a + b) / c)</li>
+<li>이 수식을 계산할 때 이진 트리를 응용할 수 있습니다.</li>
+</ul>
+<h2 id="-----huffman-code">이진 트리 응용의 예 : Huffman Code</h2>
+<ul>
+<li>데이터 압축하는 기본적인 알고리즘</li>
+<li>텍스트 파일을 구성하는 알파벳 a-z 적절하게 인코딩</li>
+<li>최종적으로 파일의 길이가 최소화되도록 하는 알고리즘</li>
+</ul>
+<h2 id="full-and-complete-binary-trees">Full and Complete Binary Trees</h2>
+<ul>
+<li>full binary tree : 모든 레벨의 노드가 꽉 차있는 트리</li>
+<li>Complete binary tree : 마지막 레벨 오른쪽 에서부터 거꾸로 연속되게 비어있어도 괜찮은 트리(heap 조건)</li>
+<li>높이가 h인 full binary tree는 2^h - 1 개의 노드를 가집니다.</li>
+<li>노드가 N개인 full 혹은 complete 이진 트리의 높이는 O(logN)입니다.</li>
+</ul>
+<h2 id="--1">이진트리의 표현</h2>
+<ul>
+<li>연결구조(Linked Structure) 표현</li>
+<li>각 노드에 하나의 데이터 필드와 왼쪽 자식(left), 오른쪽 자식(right),</li>
+<li>그리고 부모노드(p)의 주소를 저장</li>
+<li>부모노드의 주소는 반드시 필요한 경우가 아니면 보통 생략</li>
+<li>노드 객체 (data, left, right, 필요에 따라 parent)</li>
+<li>루트 노드의 주소는 따로 보관합니다.</li>
+</ul>
+<h2 id="--traversal">이진트리의 순회 (traversal)</h2>
+<ul>
+<li>순회 : 이진 트리의 모든 노드를 방문하는 일</li>
+<li>중순위(inorder) 순회</li>
+<li>선순위(preorder) 순회</li>
+<li>후순위(postorder) 순회</li>
+<li>레벨오더(level-order) 순회</li>
+</ul>
+<h2 id="-inorder---">이진트리의 Inorder - 순회</h2>
+<ul>
+<li>
+<ol>
+<li>먼저 T(L)(서브트리)을 inorder로 순회하고,</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>r(루트)을 순회하고,</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>T(R)을 inorder로 순회</li>
+</ol>
+</li>
+<li>이진트리를 루트노드 r</li>
+<li>왼쪽 부트리 T(L)</li>
+<li>오른쪽 부트리 T(R)로 나누어 생각</li>
+</ul>
+<h2 id="--2">수도 코드</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-t" data-lang="t">INORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span>WALK(x)
+    <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NULL(NIL)
+        <span style="color:#66d9ef">then</span> INORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span>WALK(left[x])
+            <span style="color:#66d9ef">print</span> key[x](node x의 데이터)
+            INORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span>WALK(right[x])
+            (노드 x를 루트로 하는 오른쪽 서브트리에 리커젼)
+</code></pre></div><ul>
+<li>x를 루트로 하는 트리를 inorder 순회</li>
+<li>시간복잡도 O(n)</li>
+</ul>
+<h2 id="postorder-preorder-">Postorder와 Preorder 순회</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">PREORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(x)
+    if x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NIL
+    then    print key[x]
+            PREORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(left[x])
+            PREORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(right[x])
+
+POSTORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(x)
+    if x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NIL
+    then    POSTORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(left[x])
+            POSTORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(right[x])
+            print key[x]
+</code></pre></div><ul>
+<li>루트, 루트의 왼쪽 서브트리, 루트의 오른쪽 서브트리</li>
+</ul>
+<h2 id="expression-trees">Expression Trees</h2>
+<ul>
+<li>Expression 트리를 inorder 순회하면 다음과 같이 출력됨:</li>
+<li>x + y * a + b / c</li>
+<li>각 부트리를 순회할 때 시작과 종료시에 괄호를 추가하면 다음과 같이 올바른 수식이 출력됨:</li>
+<li>(x + y) * ((a + b) / c)</li>
+<li>Postorder 순회하면 후위표기식이 출력됨:</li>
+<li>x y + a b + c / *</li>
+</ul>
+<h2 id="level-order-">Level-Order 순회</h2>
+<ul>
+<li>레벨 순으로 방문, 동일 레벨에서는 왼쪽에서 오른쪽 순서로</li>
+<li>큐(queue)를 이용하여 구현</li>
+<li>큐에 루트를 넣고 꺼냅니다.</li>
+<li>자식 노드를 방문하고 왼쪽부터 큐에 집어넣습니다.</li>
+<li>반복</li>
+</ul>
+<h2 id="--3">수도 코드</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">LEVEL<span style="color:#f92672">-</span>ORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">TRAVERSAL</span>()
+    visit the root;
+    Q <span style="color:#f92672">&lt;-</span> root;  <span style="color:#f92672">/</span><span style="color:#f92672">/</span> Q is a queue
+    while Q is not empty do
+        V <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">dequeue</span>(Q);
+        visit children of v;
+        enqueue children of v into Q;
+    end.
+end.
+</code></pre></div><ul>
+<li>루트 노드 방문</li>
+<li>루트 노드 큐에 넣습니다.</li>
+<li>큐가 빌 때 까지</li>
+<li>큐에서 하나를 꺼냅니다.</li>
+<li>큐에서 꺼낸 노드의 자식 노드를 방문합니다.</li>
+<li>그 자식 노드들을 다시 큐에 넣습니다.</li>
+<li>반복</li>
+</ul>
+</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>

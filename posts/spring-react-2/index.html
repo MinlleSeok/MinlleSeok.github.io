@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Spring boot와 React.js의 만남 - 프론트엔드 - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/posts/spring-react-2/">Spring boot와 React.js의 만남 - 프론트엔드</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-01-23" class="no-wrap"
+                                    title="Created at 2020/01/23">
+                                    2020-01-23</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-01-23" class="no-wrap"
+                                    title="Modifyed  at 2020/01/23">
+                                    2020-01-23</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                1544 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="spring-boot-reactjs----">Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드</h1>
+<h2 id="1-ui-controller-spring-mvc-controller">1단계 UI Controller를 만들어봅시다.(Spring MVC Controller)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.mjseok.springreact<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.springframework.stereotype.Controller<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.web.bind.annotation.RequestMapping<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Controller</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeController</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">index</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;index&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>@Controller : Spring MVC Controller인 class에 마크합니다.</li>
+<li>@RequestMapping : <code>index()</code> 메소드에 <code>/</code> route를 도와줍니다.</li>
+<li><code>&quot;index&quot;</code> template return =&gt; 뷰 리졸버가 <code>src/main/resources/templates/index.html</code> 를 매핑합니다.</li>
+</ul>
+<h2 id="2-html--">2단계 HTML 템플릿 만들기</h2>
+<blockquote>
+<p>src/main/resources/templates/index.html</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns:th</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.thymeleaf.org&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>/&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;ReactJS + Spring Data REST&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/main.css&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;react&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;built/bundle.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><ul>
+<li>css 는 <code>src/main/resources/static</code> 에 넣으면 됩니다.</li>
+<li>React.js의 public폴더에 있는 index.html과 매우 닮은 형태입니다.</li>
+<li>bundle된 javascript 를 불러와 react id인 div에 표현합니다.</li>
+</ul>
+<h2 id="3---">3단계 자바스크립트 모듈 불러오기</h2>
+<p><code>pom.xml</code>을 수정해줍니다.</p>
+<blockquote>
+<p>pom.xml</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;plugin</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;groupId</span><span style="color:#f92672">&gt;</span>com.github.eirslett<span style="color:#f92672">&lt;/groupId&gt;</span>
+	<span style="color:#f92672">&lt;artifactId</span><span style="color:#f92672">&gt;</span>frontend-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+	<span style="color:#f92672">&lt;version</span><span style="color:#f92672">&gt;</span>1.6<span style="color:#f92672">&lt;/version&gt;</span>
+	<span style="color:#f92672">&lt;configuration</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;installDirectory</span><span style="color:#f92672">&gt;</span>target<span style="color:#f92672">&lt;/installDirectory&gt;</span>
+	<span style="color:#f92672">&lt;/configuration&gt;</span>
+	<span style="color:#f92672">&lt;executions</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;execution</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;id</span><span style="color:#f92672">&gt;</span>install node and npm<span style="color:#f92672">&lt;/id&gt;</span>
+			<span style="color:#f92672">&lt;goals</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;goal</span><span style="color:#f92672">&gt;</span>install-node-and-npm<span style="color:#f92672">&lt;/goal&gt;</span>
+			<span style="color:#f92672">&lt;/goals&gt;</span>
+			<span style="color:#f92672">&lt;configuration</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;nodeVersion</span><span style="color:#f92672">&gt;</span>v10.11.0<span style="color:#f92672">&lt;/nodeVersion&gt;</span>
+				<span style="color:#f92672">&lt;npmVersion</span><span style="color:#f92672">&gt;</span>6.4.1<span style="color:#f92672">&lt;/npmVersion&gt;</span>
+			<span style="color:#f92672">&lt;/configuration&gt;</span>
+		<span style="color:#f92672">&lt;/execution&gt;</span>
+		<span style="color:#f92672">&lt;execution</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;id</span><span style="color:#f92672">&gt;</span>npm install<span style="color:#f92672">&lt;/id&gt;</span>
+			<span style="color:#f92672">&lt;goals</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;goal</span><span style="color:#f92672">&gt;</span>npm<span style="color:#f92672">&lt;/goal&gt;</span>
+			<span style="color:#f92672">&lt;/goals&gt;</span>
+			<span style="color:#f92672">&lt;configuration</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;arguments</span><span style="color:#f92672">&gt;</span>install<span style="color:#f92672">&lt;/arguments&gt;</span>
+			<span style="color:#f92672">&lt;/configuration&gt;</span>
+		<span style="color:#f92672">&lt;/execution&gt;</span>
+		<span style="color:#f92672">&lt;execution</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;id</span><span style="color:#f92672">&gt;</span>webpack build<span style="color:#f92672">&lt;/id&gt;</span>
+			<span style="color:#f92672">&lt;goals</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;goal</span><span style="color:#f92672">&gt;</span>webpack<span style="color:#f92672">&lt;/goal&gt;</span>
+			<span style="color:#f92672">&lt;/goals&gt;</span>
+		<span style="color:#f92672">&lt;/execution&gt;</span>
+	<span style="color:#f92672">&lt;/executions&gt;</span>
+<span style="color:#f92672">&lt;/plugin&gt;</span>
+</code></pre></div><ul>
+<li>frontend-maven-plugin이 사용되었습니다.</li>
+<li><code>install-node-and-npm</code> : node.js 와 npm 을 target폴더에 설치합니다.</li>
+<li><code>npm</code> : arguments에 정의된 install =&gt; npm install 을 실행합니다.</li>
+<li><code>webpack</code> : webpack 빌드(javascript compile) 작업을 실행합니다.</li>
+</ul>
+<p>npm 설정을 미리 작성합니다.</p>
+<blockquote>
+<p>package.json</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;spring-react&#34;</span>,
+    <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.1.0&#34;</span>,
+    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Demo of ReactJS + Spring Data REST&#34;</span>,
+    <span style="color:#f92672">&#34;repository&#34;</span>: {
+        <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;git&#34;</span>,
+        <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;git@github.com:MinlleSeok/spring-react.git&#34;</span>
+    },
+    <span style="color:#f92672">&#34;keywords&#34;</span>: [
+        <span style="color:#e6db74">&#34;rest&#34;</span>,
+        <span style="color:#e6db74">&#34;hateoas&#34;</span>,
+        <span style="color:#e6db74">&#34;spring&#34;</span>,
+        <span style="color:#e6db74">&#34;data&#34;</span>,
+        <span style="color:#e6db74">&#34;react&#34;</span>
+    ],
+    <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;Jose Seok&#34;</span>,
+    <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;Apache-2.0&#34;</span>,
+    <span style="color:#f92672">&#34;bugs&#34;</span>: {
+        <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://github.com/MinlleSeok/spring-react/issues&#34;</span>
+    },
+    <span style="color:#f92672">&#34;homepage&#34;</span>: <span style="color:#e6db74">&#34;https://github.com/MinlleSeok/spring-react&#34;</span>,
+    <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+    },
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+        <span style="color:#f92672">&#34;watch&#34;</span>: <span style="color:#e6db74">&#34;webpack --watch -d&#34;</span>
+    },
+    <span style="color:#f92672">&#34;devDependencies&#34;</span>: {
+    }
+}
+</code></pre></div><p>컴퓨터에 전역으로 node.js 와 npm이 설치되어있다면
+최신버젼을 아래의 명령어로 설치할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i react react-dom rest
+npm i -D @babel/core @babel/preset-env @babel/preset-react babel-loader webpack webpack-cli
+</code></pre></div><ul>
+<li>react.js : React.js toolkit</li>
+<li>rest.js : REST 호출에 사용되는 CujoJS toolkit</li>
+<li>webpack : 자바스크립트 컴포넌트를 단일 번들로 컴파일하는 toolkit</li>
+<li>babel : ES6을 사용하여 작성한 코드를 ES5로 컴파일해줍니다.(브라우저 호환성)</li>
+</ul>
+<p>이제 webpack 설정이 필요합니다.</p>
+<blockquote>
+<p>webpack.config.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./src/main/js/app.js&#39;</span>,
+    <span style="color:#a6e22e">devtool</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;sourcemaps&#39;</span>,
+    <span style="color:#a6e22e">cache</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;development&#39;</span>,
+    <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">__dirname</span>,
+        <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./src/main/resources/static/built/bundle.js&#39;</span>
+    },
+    <span style="color:#a6e22e">module</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">rules</span><span style="color:#f92672">:</span> [
+            {
+                <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;.&#39;</span>),
+                <span style="color:#a6e22e">exclude</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/(node_modules)/</span>,
+                <span style="color:#a6e22e">use</span><span style="color:#f92672">:</span> [{
+                    <span style="color:#a6e22e">loader</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;babel-loader&#39;</span>,
+                    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">presets</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;@babel/preset-env&#34;</span>, <span style="color:#e6db74">&#34;@babel/preset-react&#34;</span>]
+                    }
+                }]
+            }
+        ]
+    }
+};
+</code></pre></div><ul>
+<li><code>entry point</code> : 시작점 정의 (app.js == public staic void main())</li>
+<li>sourcemaps를 만들어서 디버깅할 때 사용합니다.</li>
+<li>모든 컴파일된 내용은 bundle.js에 담겨지게 됩니다. (jar == bundle.js)</li>
+<li>babel 엔진에 연결해서 브라우저 호환성을 맞춥니다.</li>
+<li><code>npm run-script watch</code> : webpack을 watch 모드로 실행합니다.</li>
+</ul>
+<h2 id="4--app-">4단계 메인 app 작성하기</h2>
+<blockquote>
+<p>src/main/js/app.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ReactDOM</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-dom&#39;</span>;
+<span style="color:#75715e">// import client from &#39;./client&#39;;
+</span><span style="color:#75715e"></span>
+</code></pre></div><ul>
+<li>React와 ReactDOM은 앱을 빌드하는데 사용되는 Facebook이 제공한 라이브러리입니다.</li>
+<li>client는 rest.js가 HAL, URI 템플릿을 지원하도록 설정하는 코드입니다.</li>
+</ul>
+<blockquote>
+<p>src/main/js/client.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rest</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">defaultRequest</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest/interceptor/defaultRequest&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest/interceptor/mime&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">uriTemplateInterceptor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./api/uriTemplateInterceptor&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorCode</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest/interceptor/errorCode&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">baseRegistry</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest/mime/registry&#39;</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">registry</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">baseRegistry</span>.<span style="color:#a6e22e">child</span>();
+
+<span style="color:#a6e22e">registry</span>.<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#39;text/uri-list&#39;</span>, <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./api/uriListConverter&#39;</span>));
+<span style="color:#a6e22e">registry</span>.<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#39;application/hal+json&#39;</span>, <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest/mime/type/application/hal&#39;</span>));
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rest</span>
+                 .<span style="color:#a6e22e">wrap</span>(<span style="color:#a6e22e">mime</span>, { <span style="color:#a6e22e">registry</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">registry</span> })
+                 .<span style="color:#a6e22e">wrap</span>(<span style="color:#a6e22e">uriTemplateInterceptor</span>)
+                 .<span style="color:#a6e22e">wrap</span>(<span style="color:#a6e22e">errorCode</span>)
+                 .<span style="color:#a6e22e">wrap</span>(<span style="color:#a6e22e">defaultRequest</span>, { <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> { <span style="color:#e6db74">&#39;Accept&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/hal+json&#39;</span> }});
+</code></pre></div><blockquote>
+<p>src/main/js/api/uriListConverter.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">define</span>(<span style="color:#66d9ef">function</span>() {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+    <span style="color:#75715e">/* Convert a single or array of resources into &#34;URI1\nURI2\nURI3...&#34; */</span>
+    <span style="color:#66d9ef">return</span> {
+        <span style="color:#a6e22e">read</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">str</span> <span style="color:#75715e">/*, opts */</span>) {
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">str</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;\n&#39;</span>);
+        },
+        <span style="color:#a6e22e">write</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">obj</span> <span style="color:#75715e">/*, opts */</span>) {
+            <span style="color:#75715e">// If this is an Array, extract the self URI and then join using a newline
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">obj</span> <span style="color:#66d9ef">instanceof</span> Array) {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">resource</span> =&gt; <span style="color:#a6e22e">resource</span>.<span style="color:#a6e22e">_links</span>.<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">href</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;\n&#39;</span>);
+            } <span style="color:#66d9ef">else</span> {    <span style="color:#75715e">// otherwise, just return the self URI
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">_links</span>.<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">href</span>;
+            }
+        }
+    };
+});
+</code></pre></div><blockquote>
+<p>src/main/js/api/uriTemplateInterceptor.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">define</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">require</span>) {
+    <span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">interceptor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;rest/interceptor&#39;</span>);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">interceptor</span>({
+        <span style="color:#a6e22e">request</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">request</span> <span style="color:#75715e">/*, config, meta */</span>) {
+            <span style="color:#75715e">/*
+</span><span style="color:#75715e">                If the URI is a URI Template per RFC 6570
+</span><span style="color:#75715e">                (https://tools.ietf.org/html/rfc6570),
+</span><span style="color:#75715e">                trim out the template part
+</span><span style="color:#75715e">            */</span>
+           <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;{&#39;</span>) <span style="color:#f92672">===</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+               <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">request</span>;
+           } <span style="color:#66d9ef">else</span> {
+               <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">request</span>.<span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;{&#39;</span>)[<span style="color:#ae81ff">0</span>];
+               <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">request</span>;
+           }
+        }
+    });
+});
+</code></pre></div><blockquote>
+<p>src/main/js/app.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ReactDOM</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react-dom&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">client</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./client&#39;</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">App</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+        <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">employees</span><span style="color:#f92672">:</span> [] };
+    }
+
+    <span style="color:#a6e22e">componentDidMount</span>() {
+        <span style="color:#a6e22e">client</span>({ <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/api/employees&#39;</span>} )
+        .<span style="color:#a6e22e">done</span>(<span style="color:#a6e22e">response</span> =&gt; {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">employees</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">entity</span>.<span style="color:#a6e22e">_embedded</span>.<span style="color:#a6e22e">employees</span> });
+        });
+    }
+
+    <span style="color:#a6e22e">render</span>() {
+        <span style="color:#66d9ef">return</span> (
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">EmployeeList</span> <span style="color:#a6e22e">employees</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">employees</span>} <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+        )
+    }
+}
+</code></pre></div><ul>
+<li><code>class Foo extends React.Component{...}</code> : React Component</li>
+<li><code>componentDidMount</code> : 리액트 렌더 후에 호출되는 API</li>
+<li><code>render</code> : 화면에 컴포넌트를 그리는 API</li>
+<li>React에서 첫글자 대문자로 컴포넌트 이름을 규정합니다.</li>
+</ul>
+<h3 id="state--propsproperties">State 와 Props(Properties)</h3>
+<ul>
+<li>State(상태)는 자체적으로 처리하는 데이터이자 변화 가능합니다.</li>
+<li>Props(속성)은 고정된 값이자 컴포넌트만들 때 지정하는 값입니다.</li>
+</ul>
+<h2 id="5---">5단계 하위 컴포넌트 만들기</h2>
+<ul>
+<li>상태 업데이트 후 값을 표현할 하위 컴포넌트를 작성합니다.</li>
+</ul>
+<blockquote>
+<p>src/main/js/app.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// end::app[]
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// tag::employee-list[]
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EmployeeList</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span>{
+	<span style="color:#a6e22e">render</span>() {
+		<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">employees</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">employees</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">employee</span> =&gt;
+			<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Employee</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">employee</span>.<span style="color:#a6e22e">_links</span>.<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">href</span>} <span style="color:#a6e22e">employee</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">employee</span>}<span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>
+		);
+		<span style="color:#66d9ef">return</span> (
+			<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">table</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">tbody</span><span style="color:#f92672">&gt;</span>
+					<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">tr</span><span style="color:#f92672">&gt;</span>
+						<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">th</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">First</span> <span style="color:#a6e22e">Name</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+						<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">th</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Last</span> <span style="color:#a6e22e">Name</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+						<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">th</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Description</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">h</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+					<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+					{<span style="color:#a6e22e">employees</span>}
+				<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+			<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">b</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+		)
+	}
+}
+<span style="color:#75715e">// end::employee-list[]
+</span></code></pre></div><ul>
+<li><code>javascript.map()</code> : 컴포넌트 요소 배열로 반환합니다.</li>
+<li><code>&lt;ComponentName prop1={...} prop2={...} /&gt;</code></li>
+<li><code>map()</code>안의 값에 <code>key={...}</code>속성은 고유 값이 필요합니다.</li>
+</ul>
+<blockquote>
+<p>src/main/js/app.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// tag::employee[]
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Employee</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span>{
+	<span style="color:#a6e22e">render</span>() {
+		<span style="color:#66d9ef">return</span> (
+			<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">tr</span><span style="color:#f92672">&gt;</span>
+				<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">td</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">employee</span>.<span style="color:#a6e22e">firstName</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+				<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">td</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">employee</span>.<span style="color:#a6e22e">lastName</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+				<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">td</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">employee</span>.<span style="color:#a6e22e">description</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+			<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">&gt;</span><span style="color:#960050;background-color:#1e0010"></span>
+		)
+	}
+}
+<span style="color:#75715e">// end::employee[]
+</span></code></pre></div><ul>
+<li>props로 받은 속성을 출력하는 컴포넌트입니다.</li>
+<li>컴포넌트를 작게 분리시킬수록 향후 기능적으로 빌드업할 수 있습니다.</li>
+</ul>
+<blockquote>
+<p>src/main/js/app.js</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// tag::render[]
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+	<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">App</span> <span style="color:#f92672">/</span><span style="color:#f92672">&gt;</span>,
+	document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;react&#39;</span>)
+)
+<span style="color:#75715e">// end::render[]
+</span></code></pre></div><ul>
+<li><code>render()</code> : 리액트 컴포넌트와 컴포넌트를 삽입할 HTML DOM node</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash mvnw spring-boot:run
+</code></pre></div><p><a href="http://localhost:8080">http://localhost:8080</a></p>
+<ul>
+<li>이제 기본 백엔드와 프론트엔드를 구성했습니다!</li>
+</ul>
+</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
