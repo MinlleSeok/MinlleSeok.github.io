@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.61.0" />
+	<meta name="generator" content="Hugo 0.63.2" />
     <meta charset="utf-8">
     <link crossorigin="anonymous" media="all"
         rel="stylesheet"
@@ -196,7 +196,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    26
+                    30
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -212,6 +212,102 @@ if (!doNotTrack) {
                 </h2>
 
                 <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
+                    
+                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                        <div
+                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
+                            <div class="pinned-item-list-item-content" name="pinned-post">
+                                <div class="d-flex width-full flex-items-center position-relative">
+                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
+                                        version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
+                                    </svg>
+                                    <a href="https://mj-seok.com/posts/algo-bfs/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - 그래프 순회 (Graph Traversal)">알고리즘 - 그래프 순회 (Graph Traversal)</span>
+                                    </a>
+                                </div>
+                                알고리즘 - 그래프 순회 (Graph Traversal)  순회(traversal) 그래프의 모든 노드들을 방문하는 일 대표적 두 가지 방법 BFS (Breadth-First Search, 너비우선순회) DFS (Depth-First Search, 깊이우선순회)  너비우선순회 (BFS)  BFS 알고리즘은 다음 순서로 노드들을 방문 L(0) = {s}, 여기서 s는 출발 노드 L(1) = L(0)의 모든 이웃 노드들 L(2) = L(1)의 이웃들 중 L(0)에 속하지 않은 노드들 &hellip; L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들 동심원 형태  큐를 이용한 너비우선순회  s = 1 체크는 이미 방문된 노드라는 표시   check the start node;    insert the start node into the queue;    while the queue is not empty do remove a node v from queue; for each unchecked neighbour w of v do check and insert w into the queue; 너비우선순회 BFS(G, s)	// 그래프 G와 출발 노드 s Q &lt;- empty queue; Enqueue(Q, s); while Q =/ empty do u &lt;- Dequeue(Q) for each v adjacent to u do if v is unvisited then mark v as visited; Enqueue(Q, v); end.
+                                <div class="f6 text-gray mt-2">
+                                    Updated <relative-time datetime="2020-02-11"
+                                        class="no-wrap" title="Modify at 2020/02/11">
+                                        February 11, 2020</relative-time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                        <div
+                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
+                            <div class="pinned-item-list-item-content" name="pinned-post">
+                                <div class="d-flex width-full flex-items-center position-relative">
+                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
+                                        version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
+                                    </svg>
+                                    <a href="https://mj-seok.com/posts/algo-graph/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="Algo Graph">Algo Graph</span>
+                                    </a>
+                                </div>
+                                알고리즘 - 그래프 알고리즘  개념과 표현  그래프 (Graph)  (무방향) 그래프 G = (V, E) // 두 개의 집합에 의해서 정의되는 구조 V : 노드(node) 혹은 정점(vertex) // 정점의 집합 E : 노드쌍을 연결하는 에지(edge) 혹은 링크(link) // 정점과 정점을 연결하는 에지들의 집합 개체(object)들 간의 이진관계를 표현 n = |V|, m = |E|  V = {1, 2, 3, 4, 5, 6, 7, 8} E = {(1, 2), (1, 3), (2, 3), &hellip;, (7, 8)} n = 8 (정점의 개수) m = 11 (에지의 개수)    방향 그래프와 가중치 그래프  방향그래프(Directed Graph) G = (V, E)  에지 (u, v)는 u로부터 v로의 방향을 가짐   가중치(weighted) 그래프  에지마다 가중치(weight)가 지정    다중 엣지 와 셀프 엣지  다중 엣지 : 엣지 집합, 집합이기 때문에 중복 값이 들어가면 안 됩니다.
+                                <div class="f6 text-gray mt-2">
+                                    Updated <relative-time datetime="2020-02-09"
+                                        class="no-wrap" title="Modify at 2020/02/09">
+                                        February 9, 2020</relative-time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                        <div
+                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
+                            <div class="pinned-item-list-item-content" name="pinned-post">
+                                <div class="d-flex width-full flex-items-center position-relative">
+                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
+                                        version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
+                                    </svg>
+                                    <a href="https://mj-seok.com/posts/algo-hashing/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - 해싱">알고리즘 - 해싱</span>
+                                    </a>
+                                </div>
+                                알고리즘 - 해싱 Hashing  해쉬 테이블은 dynamic set을 구현하는 효과적인 방법의 하나 적절한 가정하에서 평균 탐색, 삽입, 삭제시간 O(1) 보통 최악의 경우 O(n)  Hash Table  해쉬 함수(hash function) h를 사용하여 키 k를 T[h(k)]에 저장  h : U -&gt; {0, 1, &hellip;, m - 1}, U : 양의 정수들의 집합 여기서 m은 테이블의 크기, U는 모든 가능한 키들의 집합   키 k가 h(k)로 해슁되었다고 말함. 해쉬테이블은 일반적으로 하나의 배열 즉 각 키에 대한 해쉬함수값을 그 키를 저장할 배열 인덱스로 사용  index = h(k: a key) h(X) = x % m 0 .
+                                <div class="f6 text-gray mt-2">
+                                    Updated <relative-time datetime="2020-02-05"
+                                        class="no-wrap" title="Modify at 2020/02/05">
+                                        February 5, 2020</relative-time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                        <div
+                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
+                            <div class="pinned-item-list-item-content" name="pinned-post">
+                                <div class="d-flex width-full flex-items-center position-relative">
+                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
+                                        version="1.1" width="12" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
+                                    </svg>
+                                    <a href="https://mj-seok.com/posts/algo-rb/" class="text-bold flex-auto min-width-0 ">
+                                        <span class="repo js-pinnable-item" title="알고리즘 - 레드 블랙 트리">알고리즘 - 레드 블랙 트리</span>
+                                    </a>
+                                </div>
+                                알고리즘 - 레드 블랙 트리  이진탐색트리의 일종 균형잡힌 트리 : 높이가 O(log(2)n) SEARCH, INSERT, DELETE 연산을 최악의 경우에도 O(log(2)n) 시간에 지원  레드-블랙 트리  각 노드는 하나의 키(key), 왼쪽자식(left), 오른쪽 자식(right), 그리고 부모노드(p)의 주소를 저장 자식노드가 존재하지 않을 경우 NIL 노드라고 부르는 특수한 노드가 있다고 가정 따라서 모든 리프노드는 NIL노드 루트의 부모도 NIL노드라고 가정 노드들은 내부노드와 NIL노드로 분류  레드-블랙 트리: 정의  다음의 조건을 만족하는 이진탐색트리 : 각 노드는 red 혹은 black이고, 루트노드는 black이고, 모든 리프노드(즉, NIL노드)는 black이고, red노드의 자식들은 전부 black이고(즉, red노드는 연속되어 등장하지 않고), 모든 노드에 대해서 그 노드로부터 자손인 리프노드에 이르는 모든 경로에는 동일한 개수의 black노드가 존재합니다.
+                                <div class="f6 text-gray mt-2">
+                                    Updated <relative-time datetime="2020-02-04"
+                                        class="no-wrap" title="Modify at 2020/02/04">
+                                        February 4, 2020</relative-time>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                     
                     <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
                         <div
@@ -256,103 +352,6 @@ if (!doNotTrack) {
                                     Updated <relative-time datetime="2020-01-30"
                                         class="no-wrap" title="Modify at 2020/01/30">
                                         January 30, 2020</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://mj-seok.com/posts/algo-java-sort/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="[알고리즘] Java에서의 정렬">[알고리즘] Java에서의 정렬</span>
-                                    </a>
-                                </div>
-                                [알고리즘] Java에서의 정렬  Arrays클래스가 primitive타입 데이터를 위한 정렬 메서드를 제공  int[] data = new int[capacity]; // data[0]에서 data[capacity - 1]까지 데이터가 꽉 // 차있는 경우에는 다음과 같이 정렬합니다. Arrays.sort(data); // 배열에 꽉 차있지 않고 data[0]에서 data[size - 1]까지 // size개의 데이터만 있다면 다음과 같이 합니다. Arrays.sort(data, 0, size);  int 이외의 다른 primitive 타입 데이터(double, char 등)에 대해서도 제공  객체의 정렬 : 문자열 String [] fruits = new String[] { &#34;Pineapple&#34;, &#34;Apple&#34;, &#34;Orange&#34;, &#34;Banana&#34; }; Arrays.
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-29"
-                                        class="no-wrap" title="Modify at 2020/01/29">
-                                        January 29, 2020</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://mj-seok.com/posts/algo-radix-sort/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="알고리즘 - Radix Sort">알고리즘 - Radix Sort</span>
-                                    </a>
-                                </div>
-                                Radix Sort  n개의 d자리 정수들 가장 낮은 자리수부터 정렬  Stable Sort  동일한 데이터가 2개 이상 있다면 정렬 후에도 입력 순서가 출력 순서로 유지되야 합니다. Radix Sort 같은 경우는 반드시 Stable 해야 합니다.  RADIX-SORT(A, d) for i &lt;- 1 to d do use a stable sort to sort array A on digit i  시간 복잡도 O(d(n+k)) 10진수 (k = 10) 알파벳 (k = 26)  정렬 알고리즘들  Bubble sort : O(n^2) Insertion sort : O(n^2) Selection sort : O(n^2) Quick Sort : worst O(n^2) and average O(nlog2n) Merge sort : O(nlog2n) Heap sort : O(nlog2n) Counting sort : O(n+k) Radix sort : O(d(n+k))  
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-29"
-                                        class="no-wrap" title="Modify at 2020/01/29">
-                                        January 29, 2020</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://mj-seok.com/posts/algo-sorting-linear/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="알고리즘 - 선형 시간 정렬">알고리즘 - 선형 시간 정렬</span>
-                                    </a>
-                                </div>
-                                선형 시간 정렬 Counting Sort  n개의 정수를 정렬하세요. 단 모든 정수는 0에서 k 사이의 정수입니다. 길이 k인 배열에 각 정수의 개수를 count합니다.  int A[n]; // 정렬할 데이터 0 ~ k int C[k] = {0, }; for ( int i=1; i&lt;=n; i++ ) C[A[i]]++; for ( int s=1, i=0; i&lt;=k; i++ ) { for ( int j=0; j&lt;C[i]; j++ ) { A[s++] = i; } } COUNTING-SORT(A, B, k) for i &lt;- 0 to k do C[i] &lt;- 0 for j &lt;- 1 to length[A] do C[A[j]] &lt;- C[A[j]] + 1 &gt; C[i] now contains the number of elements equal to i.
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-29"
-                                        class="no-wrap" title="Modify at 2020/01/29">
-                                        January 29, 2020</relative-time>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
-                    <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
-                        <div
-                            class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source  sortable-button-item">
-                            <div class="pinned-item-list-item-content" name="pinned-post">
-                                <div class="d-flex width-full flex-items-center position-relative">
-                                    <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16"
-                                        version="1.1" width="12" height="16" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z" />
-                                    </svg>
-                                    <a href="https://mj-seok.com/posts/spring-react-2/" class="text-bold flex-auto min-width-0 ">
-                                        <span class="repo js-pinnable-item" title="Spring boot와 React.js의 만남 - 프론트엔드">Spring boot와 React.js의 만남 - 프론트엔드</span>
-                                    </a>
-                                </div>
-                                Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;@Controllerpublic class HomeController {@RequestMapping(value = &#34;/&#34;)public String index() {return &#34;index&#34;;}} @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &quot;index&quot; template return =&gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
- &lt;!DOCTYPE html&gt;&lt;html xmlns:th=&#34;https://www.thymeleaf.org&#34;&gt;&lt;head lang=&#34;en&#34;&gt;&lt;meta charset=&#34;UTF-8&#34;/&gt;&lt;title&gt;ReactJS + Spring Data REST&lt;/title&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/main.
-                                <div class="f6 text-gray mt-2">
-                                    Updated <relative-time datetime="2020-01-23"
-                                        class="no-wrap" title="Modify at 2020/01/23">
-                                        January 23, 2020</relative-time>
                                 </div>
                             </div>
                         </div>

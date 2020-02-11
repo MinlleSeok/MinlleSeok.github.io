@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>알고리즘 - Radix Sort - Happiness Development</title>
+    <title>알고리즘 - 그래프 순회 (Graph Traversal) - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/posts/algo-radix-sort/">알고리즘 - Radix Sort</a></strong>
+                                    href="https://mj-seok.com/posts/algo-bfs/">알고리즘 - 그래프 순회 (Graph Traversal)</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2020-01-29" class="no-wrap"
-                                    title="Created at 2020/01/29">
-                                    2020-01-29</time-ago>
+                                Created <time-ago datetime="2020-02-11" class="no-wrap"
+                                    title="Created at 2020/02/11">
+                                    2020-02-11</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2020-01-29" class="no-wrap"
-                                    title="Modifyed  at 2020/01/29">
-                                    2020-01-29</time-ago>
+                                Modifyed <time-ago datetime="2020-02-11" class="no-wrap"
+                                    title="Modifyed  at 2020/02/11">
+                                    2020-02-11</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,43 +122,129 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                160 Words
+                                1043 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="radix-sort">Radix Sort</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---그래프-순회-graph-traversal">알고리즘 - 그래프 순회 (Graph Traversal)</h1>
 <ul>
-<li>n개의 d자리 정수들</li>
-<li>가장 낮은 자리수부터 정렬</li>
+<li>순회(traversal)</li>
+<li>그래프의 모든 노드들을 방문하는 일</li>
+<li>대표적 두 가지 방법</li>
+<li>BFS (Breadth-First Search, 너비우선순회)</li>
+<li>DFS (Depth-First Search, 깊이우선순회)</li>
 </ul>
-<h2 id="stable-sort">Stable Sort</h2>
+<h2 id="너비우선순회-bfs">너비우선순회 (BFS)</h2>
 <ul>
-<li>동일한 데이터가 2개 이상 있다면</li>
-<li>정렬 후에도 입력 순서가 출력 순서로 유지되야 합니다.</li>
-<li>Radix Sort 같은 경우는 반드시 Stable 해야 합니다.</li>
+<li>BFS 알고리즘은 다음 순서로 노드들을 방문</li>
+<li>L(0) = {s}, 여기서 s는 출발 노드</li>
+<li>L(1) = L(0)의 모든 이웃 노드들</li>
+<li>L(2) = L(1)의 이웃들 중 L(0)에 속하지 않은 노드들</li>
+<li>&hellip;</li>
+<li>L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들</li>
+<li>동심원 형태</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-t" data-lang="t">RADIX<span style="color:#f92672">-</span>SORT(A, d)
-<span style="color:#66d9ef">for</span> i <span style="color:#f92672">&lt;</span><span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> to d
-    <span style="color:#66d9ef">do</span> <span style="color:#66d9ef">use</span> a stable sort to sort array A on digit i
-</code></pre></div><ul>
-<li>시간 복잡도 O(d(n+k))</li>
-<li>10진수 (k = 10)</li>
-<li>알파벳 (k = 26)</li>
-</ul>
-<h2 id="정렬-알고리즘들">정렬 알고리즘들</h2>
+<h2 id="큐를-이용한-너비우선순회">큐를 이용한 너비우선순회</h2>
 <ul>
-<li>Bubble sort : O(n^2)</li>
-<li>Insertion sort : O(n^2)</li>
-<li>Selection sort : O(n^2)</li>
-<li>Quick Sort : worst O(n^2) and average O(nlog2n)</li>
-<li>Merge sort : O(nlog2n)</li>
-<li>Heap sort : O(nlog2n)</li>
-<li>Counting sort : O(n+k)</li>
-<li>Radix sort : O(d(n+k))</li>
+<li>s = 1</li>
+<li>체크는 이미 방문된 노드라는 표시</li>
+<li>
+<ol>
+<li>check the start node;</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>insert the start node into the queue;</li>
+</ol>
+</li>
 </ul>
-</article>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">while the queue is not empty do
+	remove a node v from queue;
+	for each unchecked neighbour w of v do
+		check and insert w into the queue;
+</code></pre></div><h2 id="너비우선순회">너비우선순회</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">BFS</span>(G, s)	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 그래프 G와 출발 노드 s
+	Q <span style="color:#f92672">&lt;-</span> empty queue;
+	<span style="color:#a6e22e">Enqueue</span>(Q, s);
+	while Q <span style="color:#f92672">=</span><span style="color:#f92672">/</span> empty do
+		u <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">Dequeue</span>(Q)
+		for each v adjacent to u do
+			if v is unvisited then
+				mark v as visited;
+				<span style="color:#a6e22e">Enqueue</span>(Q, v);
+			end.
+		end.
+	end.
+</code></pre></div><h2 id="bfs와-최단경로">BFS와 최단경로</h2>
+<p>s에서 L(i)에 속한 노드까지의 최단 경로의 길이는 i입니다.
+여기서 경로의 길이는 경로에 속한 에지의 개수를 의미합니다.
+BFS를 하면서 각 노드에 대해서 최단 경로의 길이를 구할 수 있습니다.</p>
+<h2 id="bfs와-최단경로-1">BFS와 최단경로</h2>
+<p>입력 : 방향 혹은 무방향 그래프 G = (V, E), 그리고 출발 노드 S &lt; V
+출력 : 모든 노드 v에 대해서
+d[v] = s로부터 v까지의 최단 경로의 길이(에지의 개수)
+t[v] = s로부터 v까지의 최단경로상에서 v의 직전 노드(predecessor)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">BFS</span>(G, s)
+	Q <span style="color:#f92672">&lt;-</span> empty queue;
+d[s] <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>;	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> distance from s to s is <span style="color:#ae81ff">0</span>
+t[s] <span style="color:#f92672">&lt;-</span> null;	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> no predecessor of s
+<span style="color:#a6e22e">Enqueue</span>(Q, s);
+while Q <span style="color:#f92672">=</span><span style="color:#f92672">/</span> empty do
+	u <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">Dequeue</span>(Q)
+	for each v adjacent to u do
+		if v is unvisited then
+			mark v as visited;
+			d[v] <span style="color:#f92672">&lt;-</span> d[u] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> distance to v
+			t[v] <span style="color:#f92672">&lt;-</span> u;	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> u is the predecessor of v
+			<span style="color:#a6e22e">Enqueue</span>(Q, v);
+	end.
+end.	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">O</span>(n <span style="color:#f92672">+</span> m) with adjacent list
+</code></pre></div><h2 id="시간복잡도">시간복잡도</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">BFS</span>(G, s)
+	Q <span style="color:#f92672">&lt;-</span> empty queue;
+	for each node u do
+		d[u] <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">-1</span>;
+		t[u] <span style="color:#f92672">&lt;-</span> null;
+	end.
+	d[s] <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">0</span>; t[s] <span style="color:#f92672">&lt;-</span> null;
+	<span style="color:#a6e22e">Enqueue</span>(Q, s);
+	while Q <span style="color:#f92672">=</span><span style="color:#f92672">/</span> empty do	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> while문을 한 번 돌 때마다 큐에서 하나를 꺼내므로 while문은 최대 n번 돕니다.
+		u <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">Dequeue</span>(Q)
+		for each v adjacent to u do	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 인접리스트로 구현할 경우 for문은 각 노드 v에 대해서 <span style="color:#a6e22e">degree</span>(v)번 돕니다.
+			<span style="color:#a6e22e">if </span>(d[v] <span style="color:#f92672">==</span> <span style="color:#ae81ff">-1</span>) then
+				d[v] <span style="color:#f92672">&lt;-</span> d[u] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+				t[v] <span style="color:#f92672">&lt;-</span> u;
+				<span style="color:#a6e22e">Enqueue</span>(Q, v);	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> unchecked 노드만 queue에 들어갈 수 있으므로 어떤 노드도 큐에 두번 들어가지는 않는다.
+		end.
+	end.
+</code></pre></div><p>인접리스트로 구현할 경우 시간복잡도는 degree(v) = 2m 이므로 O(n + m)</p>
+<h2 id="bfs-트리">BFS 트리</h2>
+<p>각 노드 v와 t[v]를 연결하는 에지들로 구성된 트리
+BFS 트리에서 s에서 v까지의 경로는 s에서 v까지 가는 최단경로
+어떤 에지도 2개의 layer를 건너가지 않습니다.
+(동일 레이어의 노드를 연결하거나, 혹은 1개의 layer를 건너갑니다.)</p>
+<h2 id="너비우선순회--최단-경로-출력하기">너비우선순회 : 최단 경로 출력하기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">PRINT<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(G, s, v)	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 출발점 s에서 노드 v까지의 경로 출력하기
+	if v <span style="color:#f92672">=</span> s then
+		print s;
+	else if t[v] <span style="color:#f92672">=</span> null then
+		print “no path from s to v exists”;
+	else
+		PRINT<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(G, s, t[v]);
+		print v;
+</code></pre></div><h2 id="너비우선순회-bfs-1">너비우선순회 (BFS)</h2>
+<p>그래프가 disconnected이거나 혹은 방향 그래프라면 BFS에 의해서
+모든 노드가 방문되지 않을 수도 있음
+BFS를 반복하여 모든 노드 방문</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">BFS<span style="color:#f92672">-</span><span style="color:#a6e22e">ALL</span>(G)
+{
+	while there exists unvisited node v
+		<span style="color:#a6e22e">BFS</span>(G, v);
+}
+</code></pre></div></article>
                         </div>
                     </div>
                 </div>

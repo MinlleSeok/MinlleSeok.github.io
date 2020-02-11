@@ -128,8 +128,8 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="----write-in-go">고로 작성해봐요 - Write in Go</h1>
-<h2 id="--hello-go">안녕, 고 (Hello, Go)</h2>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="고로-작성해봐요---write-in-go">고로 작성해봐요 - Write in Go</h1>
+<h2 id="안녕-고-hello-go">안녕, 고 (Hello, Go)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
@@ -137,11 +137,11 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
 	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello, Go&#34;</span>)
 }
-</code></pre></div><h3 id="go---install-go-language">Go 언어 설치 (Install Go Language)</h3>
+</code></pre></div><h3 id="go-언어-설치-install-go-language">Go 언어 설치 (Install Go Language)</h3>
 <p><a href="https://golang.org/">https://golang.org/</a></p>
-<h3 id="go---go-tour---after-installing-go-tour-code">Go 설치 후 go tour 시작 코드 (After installing, go tour code)</h3>
+<h3 id="go-설치-후-go-tour-시작-코드-after-installing-go-tour-code">Go 설치 후 go tour 시작 코드 (After installing, go tour code)</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% go get code.google.com/p/go-tour/gotour
-</code></pre></div><h2 id="-packages">패키지 (Packages)</h2>
+</code></pre></div><h2 id="패키지-packages">패키지 (Packages)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
@@ -159,7 +159,7 @@ if (!doNotTrack) {
 <li>패키지 이름은 디렉토리 경로의 마지막 이름을 사용하는 것이 규칙! (the package name is the same as the last element of the import path!)</li>
 <li>import (&ldquo;math/rand&rdquo;) =&gt; rand.func()</li>
 </ul>
-<h2 id="-import">불러오기 (import)</h2>
+<h2 id="불러오기-import">불러오기 (import)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> (
@@ -176,7 +176,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;math&#34;</span>
-</code></pre></div><h2 id="-export">내보내기 (Export)</h2>
+</code></pre></div><h2 id="내보내기-export">내보내기 (Export)</h2>
 <ul>
 <li>패키지를 import 하면 외부로 export 한 것들에 접근할 수 있습니다. (When importing a package, you can refer only to its exported name.)</li>
 <li>Go 에서는 첫 문자가 대문자로 시작하면 그 패키지를 사용하는 곳에서 접근할 수 있는exported name이  됩니다. (In Go, a name is exported if it begins with a capital letter.)</li>
@@ -192,7 +192,7 @@ if (!doNotTrack) {
 	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">math</span>.<span style="color:#a6e22e">Pi</span>)
 	<span style="color:#75715e">// Error : fmt.Println(math.pi)
 </span><span style="color:#75715e"></span>}
-</code></pre></div><h2 id="-function">함수 (Function)</h2>
+</code></pre></div><h2 id="함수-function">함수 (Function)</h2>
 <ul>
 <li>함수는 매개변수를 가질 수 있습니다. (A function can take zero or more arguments.)</li>
 </ul>
@@ -218,7 +218,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">y</span>
 }
-</code></pre></div><h2 id="---multiple-results">여러 개의 결과 (Multiple results)</h2>
+</code></pre></div><h2 id="여러-개의-결과-multiple-results">여러 개의 결과 (Multiple results)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>

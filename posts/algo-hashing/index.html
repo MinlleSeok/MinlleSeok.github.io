@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>알고리즘 - 해싱 - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/posts/algo-hashing/">알고리즘 - 해싱</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-02-05" class="no-wrap"
+                                    title="Created at 2020/02/05">
+                                    2020-02-05</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-02-05" class="no-wrap"
+                                    title="Modifyed  at 2020/02/05">
+                                    2020-02-05</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                2304 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---해싱-hashing">알고리즘 - 해싱 Hashing</h1>
+<ul>
+<li>해쉬 테이블은 dynamic set을 구현하는 효과적인 방법의 하나</li>
+<li>적절한 가정하에서 평균 탐색, 삽입, 삭제시간 O(1)</li>
+<li>보통 최악의 경우 O(n)</li>
+</ul>
+<h2 id="hash-table">Hash Table</h2>
+<ul>
+<li>해쉬 함수(hash function) h를 사용하여 키 k를 T[h(k)]에 저장
+<ul>
+<li>h : U -&gt; {0, 1, &hellip;, m - 1},</li>
+<li>U : 양의 정수들의 집합</li>
+<li>여기서 m은 테이블의 크기, U는 모든 가능한 키들의 집합</li>
+</ul>
+</li>
+<li>키 k가 h(k)로 해슁되었다고 말함.</li>
+<li>해쉬테이블은 일반적으로 하나의 배열</li>
+<li>즉 각 키에 대한 해쉬함수값을 그 키를 저장할 배열 인덱스로 사용</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">index <span style="color:#f92672">=</span> <span style="color:#a6e22e">h</span>(k<span style="color:#f92672">:</span> a key)
+
+<span style="color:#a6e22e">h</span>(X) <span style="color:#f92672">=</span> x % m
+<span style="color:#ae81ff">0</span> <span style="color:#66d9ef">...</span> m <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+검색 시간 <span style="color:#f92672">:</span> 해쉬 함수를 계산하는데 걸리는 시간
+</code></pre></div><h2 id="해쉬-함수의-예">해쉬 함수의 예</h2>
+<ul>
+<li>모든 키들을 자연수라고 가정. (어떤 데이터든지 자연수로 해석하는 것이 가능)
+<ul>
+<li>예 : 문자열</li>
+<li>ASCII 코드 : C=67, L=76, R=82, S=83.</li>
+<li>문자열 CLRS는 <code>(67 * 128^3) + (76 * 128^2) + (82 * 128^1) + (83 * 128^0) = 141,764,947</code></li>
+</ul>
+</li>
+<li>해쉬 함수의 간단한 예 :
+<ul>
+<li><code>h(k) = k % m</code>, 즉 key를 하나의 자연수로 해석한 후</li>
+<li>테이블의 크기 m으로 나눈 나머지</li>
+<li>항상 0 ~ m - 1 사이의 정수가 됨</li>
+</ul>
+</li>
+</ul>
+<h2 id="충돌-collision">충돌 (Collision)</h2>
+<ul>
+<li>두 개 이상의 키가 동일한 위치로 해슁되는 경우</li>
+<li>즉, 서로 다른 두 키 k1과 k2에 대해서 h(k1) = h(k2)인 상황</li>
+<li>일반적으로 |U|&raquo;m이므로 항상 발생 가능(즉 단사함수가 아님)</li>
+<li>만약 |K| &gt; m라면 당연히 발생, 여기서 K는 실제로 저장된 키들의 집합</li>
+<li>충돌이 발생할 경우 대처 방법이 필요</li>
+<li>대표적인 두 가지 충돌 해결 방법 : chaining과 open addressing</li>
+</ul>
+<h2 id="chaining에-의한-충돌-해결">Chaining에 의한 충돌 해결</h2>
+<ul>
+<li>동일한 장소로 해슁된 모든 키들을 하나의 연결리스트(Linked List)로 저장</li>
+</ul>
+<h2 id="chaining에-의한-충돌-해결-1">Chaining에 의한 충돌 해결</h2>
+<ul>
+<li>키의 삽입(Insertion)
+<ul>
+<li>키 k를 리스트 T[h(k)]의 맨 앞에 삽입: 시간복잡도 O(1)</li>
+<li>중복된 키가 들어올 수 있고 중복 저장이 허용되지 않는다면 삽입시</li>
+<li>리스트를 검색해야 함. 따라서 시간복잡도는 리스트의 길이에 비례</li>
+</ul>
+</li>
+<li>키의 검색(Search)
+<ul>
+<li>리스트 리스트 T[h(k)]에서 순차검색</li>
+<li>시간복잡도는 키가 저장된 리스트의 길이에 비례</li>
+</ul>
+</li>
+<li>키의 삭제(Deletion)
+<ul>
+<li>리스트 T[h(k)]로 부터 키를 검색 후 삭제</li>
+<li>일단 키를 검색해서 찾은 후에는 O(1)시간에 삭제 가능</li>
+</ul>
+</li>
+</ul>
+<h2 id="chaining에-의한-충돌-해결-2">Chaining에 의한 충돌 해결</h2>
+<ul>
+<li>최악의 경우는 모든 키가 하나의 슬롯으로 해슁되는 경우</li>
+<li>길이가 n인 하나의 연결리스트가 만들어짐</li>
+<li>따라서 최악의 경우 탐색시간은 O(n) + 해쉬함수 계산시간</li>
+<li>평균 시간복잡도는 키들이 여러 슬롯에 얼마나 잘 분배되느냐에 의해서 결정</li>
+</ul>
+<h2 id="suha-simple-uniform-hashing-assumption">SUHA (Simple Uniform Hashing Assumption)</h2>
+<ul>
+<li>각각의 키가 모든 슬롯들에 균등한 확률로(equally likely) 독립적으로
+<ul>
+<li>(independently) 해슁된다는 가정</li>
+<li>성능분석을 위해서 주로 하는 가정임</li>
+<li>hash함수는 deterministic하므로 현실에서는 불가능</li>
+</ul>
+</li>
+<li>Load factor a = n / m :
+<ul>
+<li>n : 테이블에 저장될 키의 개수.</li>
+<li>m : 해쉬테이블의 크기, 즉 연결리스트의 개수</li>
+<li>각 슬롯에 저장된 키의 평균 개수</li>
+</ul>
+</li>
+<li>연결리스트 T[j]의 길이를 n(j)라고 하면 E[n(j)] = a</li>
+<li>만약 n = O(m)이면 평균검색시간은 O(1)</li>
+</ul>
+<h2 id="open-addressing에-의한-충돌-해결">Open Addressing에 의한 충돌 해결</h2>
+<ul>
+<li>모든 키를 해쉬 테이블 자체에 저장</li>
+<li>테이블의 각 칸(slot)에는 1개의 키만 저장</li>
+<li>충돌 해결 기법
+<ul>
+<li>Linear probing</li>
+<li>Quadratic probing</li>
+<li>Double hashing</li>
+</ul>
+</li>
+</ul>
+<h2 id="open-addressing---linear-probing">Open Addressing - Linear Probing</h2>
+<ul>
+<li>h(k), h(k) + 1, h(k) + 2, &hellip; 순서로 검사하여 처음으로 빈 슬롯에 저장</li>
+<li>테이블의 끝에 도달하면 다시 처음으로 circular하게 돌아감</li>
+</ul>
+<h2 id="다른-방법들">다른 방법들</h2>
+<ul>
+<li>Cluster : key들이 뭉쳐있는 현상</li>
+<li>Linear Probing의 단점
+<ul>
+<li>Primary Cluster : 키에 의해서 채워진 연속된 슬롯들을 의미</li>
+<li>이런 Cluster가 생성되면 이 Cluster는 점점 더 커지는 경향이 생김</li>
+</ul>
+</li>
+<li>Quadratic probing
+<ul>
+<li>충돌 발생시 h(k), h(k) + 1^2, h(k) + 2^2, h(k) + 3^2, &hellip; 순서로 시도</li>
+</ul>
+</li>
+<li>Double hashing
+<ul>
+<li>서로 다른 두 해쉬 함수 h1과 h2를 이용하여</li>
+<li>h(k, i) = (h1(k) + i * h2(k)) mod m</li>
+</ul>
+</li>
+</ul>
+<h2 id="좋은-해쉬-함수란">좋은 해쉬 함수란?</h2>
+<ul>
+<li>현실에서는 키들이 랜덤하지 않음</li>
+<li>만약 키들의 통계적 분포에 대해 알고 있다면 이를 이용해서 해쉬 함수를 고안하는 것이 가능하겠지만 현실적으로 어려움</li>
+<li>키들이 어떤 특정한(가시적인) 패턴을 가지더라도 해쉬함수값이 불규칙적이 되도록 하는게 바람직
+<ul>
+<li>해쉬함수값이 키의 특정 부분에 의해서만 결정되지 않아야</li>
+</ul>
+</li>
+</ul>
+<h2 id="해쉬-함수">해쉬 함수</h2>
+<ul>
+<li>Division 기법
+<ul>
+<li>h(k) = k mod m</li>
+<li>예 : m = 20 and k = 91 =&gt; h(k) = 11</li>
+<li>장점 : 한번의 mod연산으로 계싼. 따라서 빠름.</li>
+<li>단점 : 어떤 m값에 대해서는 해쉬 함수값이 키값의 특정 부분에 의해서 결정 되는 경우가 있음.</li>
+<li>가령 m = 2^p 이면 키의 하위 p비트가 해쉬 함수값이 됨.</li>
+</ul>
+</li>
+<li>Multiplication 기법
+<ul>
+<li>0에서 1사이의 상수 A를 선택 : 0 &lt; A &lt; 1</li>
+<li>kA의 소수부분만을 택합니다.</li>
+<li>소수 부분에 m을 곱한 후 소수점 아래를 버립니다.</li>
+<li>예 : m = 8, word size = w = 5, k = 21</li>
+<li>A = 13 / 32 를 선택</li>
+<li>kA = 21 * 13 / 32 = 273 / 32 = 8 + 17 / 32</li>
+<li>m (kA mod 1) = 8 * 17 / 32 = 17 / 4 = 4. &hellip;</li>
+<li>h(21) = 4</li>
+</ul>
+</li>
+</ul>
+<h2 id="hash-code-in-java">Hash code in Java</h2>
+<ul>
+<li>Java의 Object 클래스는 hashCode() 메서드를 가짐.</li>
+<li>따라서 모든 클래스는 hashCode() 메서드를 상속받습니다.</li>
+<li>이 메서드는 하나의 32비트 정수를 반환합니다.</li>
+<li>만약 x.equals(y)이면 x.hashCode() == y.hashCode() 입니다.</li>
+<li>하지만 역은 성립하지 않습니다.</li>
+<li>Object 클래스의 hashCode() 메서드는 객체의 메모리 주소를 반환하는 것으로 알려져 있음</li>
+<li>(but it&rsquo;s implementation-dependent.)</li>
+<li>필요에 따라 각 클래스마다 이 메서드를 override하여 사용합니다.
+<ul>
+<li>예 : Integer 클래스는 정수값을 hashCode로 사용</li>
+</ul>
+</li>
+</ul>
+<h2 id="해쉬함수의-예--hashcode-for-strings-in-java">해쉬함수의 예 : hashCode() for Strings in Java</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">public final class String
+{
+    private final char[] s;
+    <span style="color:#66d9ef">...</span>
+
+    public int <span style="color:#a6e22e">hashCode</span>()
+    {
+        int hash <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+        <span style="color:#a6e22e">for </span>(int i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">length</span>(); i<span style="color:#f92672">+</span><span style="color:#f92672">+</span>)
+            hash <span style="color:#f92672">=</span> s[i] <span style="color:#f92672">+</span> (<span style="color:#ae81ff">31</span> <span style="color:#f92672">*</span> hash);
+        return hash;
+    }
+}
+</code></pre></div><ul>
+<li>h(s) = 31^(L - 1) * s(0) + &hellip; + 31^1 * s(L - 2) + 31^0 * s(L - 1)</li>
+</ul>
+<h2 id="사용자-정의-클래스의-예">사용자 정의 클래스의 예</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">public class Record
+{
+    private String name;
+    private int id;
+    private double value;
+
+    <span style="color:#66d9ef">...</span>
+
+    public int <span style="color:#a6e22e">hashCode</span>() {
+        int hash <span style="color:#f92672">=</span> <span style="color:#ae81ff">17</span>;  <span style="color:#f92672">/</span><span style="color:#f92672">/</span> nonzero constant
+        hash <span style="color:#f92672">=</span> <span style="color:#ae81ff">31</span> <span style="color:#f92672">*</span> hash <span style="color:#f92672">+</span> <span style="color:#a6e22e">name.hashCode</span>();
+        hash <span style="color:#f92672">=</span> <span style="color:#ae81ff">31</span> <span style="color:#f92672">*</span> hash <span style="color:#f92672">+</span> <span style="color:#a6e22e">Integer.valueOf</span>(id)<span style="color:#a6e22e">.hashCode</span>();
+        hash <span style="color:#f92672">=</span> <span style="color:#ae81ff">31</span> <span style="color:#f92672">*</span> hash <span style="color:#f92672">+</span> <span style="color:#a6e22e">Double.valueOf</span>(value)<span style="color:#a6e22e">.hashCode</span>();
+        return hash;
+    }
+}
+</code></pre></div><h2 id="hashcode와-hash-함수">hashCode와 hash 함수</h2>
+<ul>
+<li>Hash code : -2^31 에서 2^31 사이의 정수</li>
+<li>Hash 함수 : 0에서 M - 1까지의 정수 (배열 인덱스)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">private int <span style="color:#a6e22e">hash</span>(Key key)
+{
+    <span style="color:#a6e22e">return </span>(<span style="color:#a6e22e">key.hashCode</span>() <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">0x7fffffff</span>) % M;
+}
+</code></pre></div><h2 id="hashmap-in-java">HashMap in Java</h2>
+<ul>
+<li>4장에서 다룬 TreeMap 클래스와 유사한 인터페이스를 제공</li>
+<li>(둘 다 java.util.Map 인터페이스를 구현)</li>
+<li>내부적으로 하나의 배열을 해쉬 테이블로 사용</li>
+<li>해쉬 함수는 24페이지의 것과 유사함</li>
+<li>chaining으로 충돌 해결</li>
+<li>load factor를 지정할 수 있음 (0~1 사이의 실수)</li>
+<li>저장된 키의 개수가 load factor를 초과하면 더 큰 배열을 할당하고</li>
+<li>저장된 키들을 재비치 (re-hashing)</li>
+</ul>
+<h2 id="hashset-in-java">HashSet in Java</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">HashSet<span style="color:#f92672">&lt;</span>MyKey<span style="color:#f92672">&gt;</span> set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">&lt;</span>MyKey<span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>MyKey<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>set<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>theKey<span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+
+<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
+
+<span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> set<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+set<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>theKey<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+Iterator<span style="color:#f92672">&lt;</span>MyKey<span style="color:#f92672">&gt;</span> it <span style="color:#f92672">=</span> set<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>it<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    MyKey key <span style="color:#f92672">=</span> it<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>key<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>aKey<span style="color:#f92672">)</span><span style="color:#f92672">)</span>
+        it<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="unordered_set-in-c">unordered_set in C++</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;unordered_set&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">#</span><span style="color:#75715e">include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span> ()
+{
+    <span style="color:#75715e">// initialize set
+</span><span style="color:#75715e"></span>    std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>unordered_set<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>string<span style="color:#f92672">&gt;</span> s;
+    s.insert(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">red</span><span style="color:#e6db74">&#34;</span>);
+    s.insert(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">green</span><span style="color:#e6db74">&#34;</span>);
+    s.insert(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">blue</span><span style="color:#e6db74">&#34;</span>);
+    s.erase(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">green</span><span style="color:#e6db74">&#34;</span>);
+
+    <span style="color:#75715e">// search for membership
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (s.find(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">red</span><span style="color:#e6db74">&#34;</span>) <span style="color:#f92672">!</span><span style="color:#f92672">=</span> s.end())
+        std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>cout <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">found red</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> std<span style="color:#f92672">:</span><span style="color:#f92672">:</span>endl;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
