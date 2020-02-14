@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>Tags - Happiness Development</title>
+    <title>DAG(Directed Acyclic Graph) - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -80,146 +80,153 @@ if (!doNotTrack) {
 </div>
 
   
-<div class="application-main " data-commit-hovercards-enabled>
-    <main id="js-pjax-container" data-pjax-container>
-        <div class="container-xl clearfix px-3 mt-4">
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
 
-            <div class="h-card col-lg-3 col-md-4 col-12 float-md-left pr-md-3 pr-xl-6" itemscope
-    itemtype="http://schema.org/Person">
-    <div class="user-profile-sticky-bar js-user-profile-sticky-bar">
-    </div>
-    <div class="clearfix mb-2">
-        <div class="float-left col-3 col-md-12 pr-3 pr-md-0">
-            
-            <a itemprop="image" class="u-photo d-block position-relative" aria-hidden="true"
-                href="https://mj-seok.com/images/avatar.png">
-                <img alt="" width="260" height="260"
-                    class="avatar width-full height-full rounded-2" src="https://mj-seok.com/images/avatar.png" />
-            </a>
-            
-        </div>
-        <div class="float-left col-9 col-md-12 pl-2 pl-md-0">
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/posts/algo-dag/">DAG(Directed Acyclic Graph)</a></strong>
 
-            <div class="vcard-names-container pt-1 pt-md-3 pb-1 pb-md-3 js-sticky js-user-profile-sticky-fields">
-                <h1 class="vcard-names">
-                    <span class="p-name vcard-fullname d-block overflow-hidden"
-                        itemprop="name">Jose Seok</span>
-                    <span class="p-nickname vcard-username d-block"
-                        itemprop="additionalName">MinlleSeok</span>
-                </h1>
-            </div>
-
-            
-            <div class="user-profile-following-container js-user-profile-following-toggle mb-3">
-                <span class="user-following-container js-toggler-container js-social-container">
-                    <span class="follow">
-                        <input type="button" style="max-width: 100%" value="Follow"
-                            class="btn btn-block top-0 js-sticky js-user-profile-follow-button mb-2  js-toggler-target"
-                            title="Follow" onclick="window.location.href = 'https://github.com/MinlleSeok'" />
-                    </span>
-                    <span class="unfollow">
-                        <input type="button" style="max-width: 100%" value="Unfollow"
-                            class="btn btn-block top-0 js-sticky js-user-profile-follow-button mb-2  js-toggler-target"
-                            title="Unfollow" onclick="window.location.href = 'https://github.com/MinlleSeok'" />
-                    </span>
-                </span>
-            </div>
-            
-
-            <div class="d-none d-md-block">
-                <div class="js-profile-editable-area">
-                    <div class="p-note user-profile-bio js-user-profile-bio">
-                        <div>Happiness Development</div>
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-02-14" class="no-wrap"
+                                    title="Created at 2020/02/14">
+                                    2020-02-14</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-02-14" class="no-wrap"
+                                    title="Modifyed  at 2020/02/14">
+                                    2020-02-14</time-ago>
+                            </div>
+                        </h1>
                     </div>
-                    <ul class="vcard-details mb-3">
+                </div>
 
-                        
-                        <li itemprop="email" aria-label="Email: jxn1024@icloud.com"
-                            class="vcard-detail pt-1 css-truncate css-truncate-target"><svg class="octicon octicon-mail"
-                                viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z" />
-                            </svg>
-                            <a class="u-email " href="mailto:my@mj-seok.com">my@mj-seok.com</a>
-                        </li>
-                        
 
-                        <li itemprop="url" data-test-selector="profile-website-url"
-                            class="vcard-detail pt-1 css-truncate css-truncate-target"><svg class="octicon octicon-link"
-                                viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-                                </path>
-                            </svg>
-                            
-                            <a rel="nofollow me" href="https://mj-seok.com">https://mj-seok.com</a>
-                            
-                        </li>
-                    </ul>
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                483 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="dagdirected-acyclic-graph">DAG(Directed Acyclic Graph)</h1>
+<ul>
+<li>방향 사이클(directed cycle)이 없는 방향 그래프.</li>
+<li>예: 작업들의 우선순위</li>
+</ul>
+<h2 id="위상정렬topological-ordering">위상정렬(topological ordering)</h2>
+<ul>
+<li>DAG에서 노드들의 순서화 v(1), v(2), v(3), &hellip; v(n),</li>
+<li>단, 모든 에지(v(i), v(j))에 대해서 i &lt; j가 되도록.</li>
+<li>일반적으로 답이 유일하지 않습니다.</li>
+</ul>
+<h2 id="위상정렬-알고리즘-1">위상정렬 알고리즘 1</h2>
+<ul>
+<li>
+<p>들어오는 edge : incoming edge</p>
+</li>
+<li>
+<p>그 갯수 : indegree</p>
+</li>
+<li>
+<p>나가는 edge : outgoing edge</p>
+</li>
+<li>
+<p>그 갯수 : outdegree</p>
+</li>
+<li>
+<ol>
+<li>indegree가 0인 노드를 찾습니다.(선행작업 없음)</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li></li>
+</ol>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">topologicalSort1</span>(G)
+{
+    for <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n {
+        진입간선이 없는 임의의 정점 u를 선택합니다;
+        A[i] <span style="color:#f92672">&lt;-</span> u;
+        정점 u와 u의 진출간선을 모두 제거합니다;    
+    }
+    <span style="color:#f92672">&gt;</span> 배열 A[1...n]에는 정점들을 위상정렬되어 있습니다.
+}
+</code></pre></div><ul>
+<li>수행시간 : O(n + m)</li>
+<li>indegree가 0인 노드가 존재하지 않다면?</li>
+<li>알고리즘의 시간복잡도나 이런것들을 고려하지 않고</li>
+<li>고수준 설명이 되어있습니다.</li>
+<li>각 노드의 indegree를 먼저 계산해야 합니다.</li>
+<li>어떻게 구현할 것인가?</li>
+</ul>
+<h2 id="위상정렬-알고리즘-2">위상정렬 알고리즘 2</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">topologicalSort2</span>(G)
+{
+    for each v <span style="color:#f92672">&lt;</span> V
+        visited[v] <span style="color:#f92672">&lt;-</span> NO;
+    make an empty linked list R;
+    for each v <span style="color:#f92672">&lt;</span> V  <span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#f92672">&gt;</span> 정점의 순서는 상관없음
+        <span style="color:#a6e22e">if </span>(visited[v] <span style="color:#f92672">=</span> NO) then
+            DFS<span style="color:#f92672">-</span><span style="color:#a6e22e">TS</span>(v, R);
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">DFS<span style="color:#f92672">-</span><span style="color:#a6e22e">TS</span>(v, R)
+{
+    visited[v] <span style="color:#f92672">&lt;-</span> YES;
+    for each x adjacent to v do
+        <span style="color:#a6e22e">if </span>(visited[x] <span style="color:#f92672">=</span> NO) then
+            DFS<span style="color:#f92672">-</span><span style="color:#a6e22e">TS</span>(x, R);
+    add v at the front of the linked list R;
+}
+</code></pre></div><ul>
+<li>알고리즘이 끝나면 연결 리스트 R에는 정점들이 위상정렬된 순서로 매달려 있다.</li>
+<li>수행시간 : O(n + m)</li>
+</ul>
+</article>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="border-top py-3 clearfix hide-sm hide-md">
-                <h2 class="mb-1 h4">Organizations</h2>
-
-                
-                <a class="avatar-group-item" data-hovercard-type="organization"
-                    href="https://github.com/MinlleSeok">
-                    <img src="https://mj-seok.com/images/github.png" class="avatar" width="35" height="35">
-                </a>
-                
-                
-                <a class="avatar-group-item" data-hovercard-type="organization"
-                                             href="https://mj-seok.com/posts/index.xml">
-                    <img src="https://mj-seok.com/images/rss.png" class="avatar" width="38" height="38">
-                </a>
-            </div>
-
-            <div data-test-selector="profile-sponsorships">
-            </div>
-        </div>
+        </main>
     </div>
 </div>
 
-
-            
-
-
-
-<div class="col-lg-9 col-md-8 col-12 float-md-left pl-md-2">
-    <div class="UnderlineNav width-full user-profile-nav top-0 is-placeholder"
-        style="visibility: hidden; display: none; height: 56px;"></div>
-    <div class="UnderlineNav width-full user-profile-nav js-sticky top-0"
-        style="position: static; top: 0px; left: 330.5px; width: 911.5px;">
-        <nav class="UnderlineNav-body" data-pjax aria-label="User profile">
-            <a aria-current="page" class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/">
-                Overview
-            </a>
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://mj-seok.com/posts/">
-                Posts
-                <span class="Counter hide-lg hide-md hide-sm">
-                    33
-                </span>
-            </a>
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
-                About
-            </a>
-        </nav>
-    </div>
-
-    <div class="position-relative">
-        <div id="user-repositories-list">
-            <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
-                
-            </ul>
-            
-        </div>
-    </div>
-</div>
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
 
 
-    </main>
-</div>
 
   <div class="footer container-lg width-full p-responsive" role="contentinfo">
     <div
