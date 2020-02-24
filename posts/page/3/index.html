@@ -198,7 +198,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    38
+                    39
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -210,6 +210,32 @@ if (!doNotTrack) {
     <div class="position-relative">
         <div id="user-repositories-list">
             <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/posts/spring-react/">Spring boot와 React.js의 만남 - 백엔드</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            Spring boot(백엔드)와 React.js(프론트엔드)의 만남 [ Reference ] : https://spring.io/guides/tutorials/react-and-spring-data-rest/
+[ Spring Initializr ] : https://start.spring.io/
+1단계 Spring Initializr 아래의 Dependencies 를 추가해서 Generate 합니다.
+ Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
+2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
+ Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
+ package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-01-22" class="no-wrap"
+                                title="Modifyd at 2020/01/22">
+                                January 22, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
                 
                 <li class="col-12 d-flex width-full py-4 border-bottom public fork">
                     <div class="col-12 col-lg-12 d-inline-block">
@@ -395,29 +421,6 @@ if (!doNotTrack) {
                             Python - for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
  array, list, tuple, string 의 시퀀스를 출력  days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &#34;Wed&#34;: break else: print(day) for letter in &#34;Nicolas&#34;: print(letter)   행복 코딩
  
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-01" class="no-wrap"
-                                title="Modifyd at 2020/01/08">
-                                January 1, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/posts/math-linearalgebra/">선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple)</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple) [ Reference ] : https://youtu.be/br7tS1t2SFE
- 프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
-속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
-v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   
                         </div>
 
                         <div class="f6 text-gray mt-2">

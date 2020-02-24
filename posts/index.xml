@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2020 13:48:33 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 13:59:28 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MST 알고리즘 - Prim의 알고리즘</title>
+      <link>https://mj-seok.com/posts/algo-prim/</link>
+      <pubDate>Mon, 24 Feb 2020 13:59:28 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/algo-prim/</guid>
+      <description>MST 알고리즘 - Prim의 알고리즘  임의의 노드를 출발노드로 선택 출발 노드를 포함하는 트리를 점점 키워 감. 매 단계에서 이미 트리에 포함된 노드와 포함되지 않은 노드를 연결하는 에지들 중 가장 가중치가 작은 에지를 선택   A = zero safe |A| = n - 1
+ 왜 MST가 찾아지는가?  Prim의 알고리즘의 임의의 한 단계를 생각해보자. A를 현재까지 알고리즘이 선택한 에지의 집합이라고 하고, A를 포함하는 MST가 존재한다고 가정하자. 출발 노드에 이미 연결된 노드와 그렇지 않은 노드를 연결하는 에지들 중 lightest edge  가중치가 최소인 에지 찾기  V(A) : 이미 트리에 포함된 노드들 V(A) 에 아직 속하지 않은 각 노드 v에 대해서 다음과 같은 값을 유지  key(v) : 이미 V(A) 에 속한 노드와 자신을 연결하는 에지들 중 가중치가 최소인 에지 (u, v)의 가중치 ㅠ(v) : 그 에지 (u, v)의 끝점 u   가중치가 최소인 에지를 찾는 대신 key값이 최소인 노드를 찾습니다.</description>
+    </item>
     
     <item>
       <title>Elastic Search</title>

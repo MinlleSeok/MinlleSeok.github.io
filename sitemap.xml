@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/posts/es-1/</loc>
-    <lastmod>2020-02-19T13:48:33+09:00</lastmod>
+    <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-02-24T13:59:28+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-02-19T13:48:33+09:00</lastmod>
+    <loc>https://mj-seok.com/posts/algo-prim/</loc>
+    <lastmod>2020-02-24T13:59:28+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mj-seok.com/posts/</loc>
+    <lastmod>2020-02-24T13:59:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/posts/es-1/</loc>
     <lastmod>2020-02-19T13:48:33+09:00</lastmod>
   </url>
   
