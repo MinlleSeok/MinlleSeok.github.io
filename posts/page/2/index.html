@@ -198,7 +198,7 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="https://mj-seok.com/posts/">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
-                    39
+                    40
                 </span>
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/about/">
@@ -210,6 +210,26 @@ if (!doNotTrack) {
     <div class="position-relative">
         <div id="user-repositories-list">
             <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/posts/algo-bfs/">알고리즘 - 그래프 순회 (Graph Traversal)</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘 - 그래프 순회 (Graph Traversal)  순회(traversal) 그래프의 모든 노드들을 방문하는 일 대표적 두 가지 방법 BFS (Breadth-First Search, 너비우선순회) DFS (Depth-First Search, 깊이우선순회)  너비우선순회 (BFS)  BFS 알고리즘은 다음 순서로 노드들을 방문 L(0) = {s}, 여기서 s는 출발 노드 L(1) = L(0)의 모든 이웃 노드들 L(2) = L(1)의 이웃들 중 L(0)에 속하지 않은 노드들 &hellip; L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들 동심원 형태  큐를 이용한 너비우선순회  s = 1 체크는 이미 방문된 노드라는 표시   check the start node;    insert the start node into the queue;    while the queue is not empty do remove a node v from queue; for each unchecked neighbour w of v do check and insert w into the queue; 너비우선순회 BFS(G, s)	// 그래프 G와 출발 노드 s Q &lt;- empty queue; Enqueue(Q, s); while Q =/ empty do u &lt;- Dequeue(Q) for each v adjacent to u do if v is unvisited then mark v as visited; Enqueue(Q, v); end.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-02-11" class="no-wrap"
+                                title="Modifyd at 2020/02/11">
+                                February 11, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
                 
                 <li class="col-12 d-flex width-full py-4 border-bottom public fork">
                     <div class="col-12 col-lg-12 d-inline-block">
@@ -388,26 +408,6 @@ if (!doNotTrack) {
                             Updated <relative-time datetime="2020-01-23" class="no-wrap"
                                 title="Modifyd at 2020/01/23">
                                 January 23, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/posts/algo-greedy/">탐욕 알고리즘 - Greedy Algorithm</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            탐욕 알고리즘 - Greedy Algorithm  현재 상황에서 가장 좋아 보이는 답을 선택하는 방법 각 부분에서 최적을 선택하면 전체에서도 최적이 될 것이라는 가정을 전제로 합니다. 선택은 항상 하위 문제에 대한 해답이 나오기 전에 선택됩니다.  탐욕 선택  하위 문제를 풀기 전에 선택을 합니다. 항상 하나의 문제만을 고려합니다.  동적 프로그래밍  하위 문제를 풀고 나서 선택을 합니다. 동시에 여러 개의 하위 문제를 고려합니다.  0-1 배낭 채우기 문제 (0-1 knapsack)  도둑이 상점에서 n개의 물건을 훔친다고 합니다.
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-22" class="no-wrap"
-                                title="Modifyd at 2020/01/22">
-                                January 22, 2020</relative-time>
                         </div>
                     </div>
                 </li>
