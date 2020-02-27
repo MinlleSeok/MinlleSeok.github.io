@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>알고리즘 - 레드 블랙 트리 - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/algorithm/algo-rb/">알고리즘 - 레드 블랙 트리</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-02-04" class="no-wrap"
+                                    title="Created at 2020/02/04">
+                                    2020-02-04</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-02-04" class="no-wrap"
+                                    title="Modifyed  at 2020/02/04">
+                                    2020-02-04</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                2306 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---레드-블랙-트리">알고리즘 - 레드 블랙 트리</h1>
+<ul>
+<li>이진탐색트리의 일종</li>
+<li>균형잡힌 트리 : 높이가 O(log(2)n)</li>
+<li>SEARCH, INSERT, DELETE 연산을 최악의 경우에도 O(log(2)n) 시간에 지원</li>
+</ul>
+<h2 id="레드-블랙-트리">레드-블랙 트리</h2>
+<ul>
+<li>각 노드는 하나의 키(key), 왼쪽자식(left), 오른쪽 자식(right), 그리고 부모노드(p)의 주소를 저장</li>
+<li>자식노드가 존재하지 않을 경우 NIL 노드라고 부르는 특수한 노드가 있다고 가정</li>
+<li>따라서 모든 리프노드는 NIL노드</li>
+<li>루트의 부모도 NIL노드라고 가정</li>
+<li>노드들은 내부노드와 NIL노드로 분류</li>
+</ul>
+<h2 id="레드-블랙-트리-정의">레드-블랙 트리: 정의</h2>
+<ul>
+<li>다음의 조건을 만족하는 이진탐색트리 :</li>
+<li>각 노드는 red 혹은 black이고,</li>
+<li>루트노드는 black이고,</li>
+<li>모든 리프노드(즉, NIL노드)는 black이고,</li>
+<li>red노드의 자식들은 전부 black이고(즉, red노드는 연속되어 등장하지 않고),</li>
+<li>모든 노드에 대해서 그 노드로부터 자손인 리프노드에 이르는 모든 경로에는 동일한 개수의 black노드가 존재합니다.</li>
+</ul>
+<h2 id="레드-블랙-트리의-높이">레드-블랙 트리의 높이</h2>
+<ul>
+<li>노드 x의 높이 h(x)는 자신으로부터 리프노드까지의 가장 긴 경로에 포함된 에지의 개수입니다.</li>
+<li>노드 x의 블랙-높이 bh(x)는 x로부터 리프노드까지의 경로상의 블랙노드의 개수입니다. (노드 x 자신은 불포함)</li>
+<li>높이가 h인 노드의 블랙-높이는 bh &gt;= h / 2 입니다.</li>
+<li>조건4에 의해 레드노드는 연속될 수 없으므로 당연</li>
+<li>노드 x를 루트로 하는 임의의 부트리는 적어도 2^bh(x) - 1개의 내부노드를 포함합니다.(수학적귀납법)</li>
+<li>n개의 내부노드를 가지는 레드블랙트리의 높이는 2log(2)(n + 1)이하입니다.</li>
+<li>n &gt;= 2^bh - 1 &gt;= 2^h/2 - 1 이므로, 여기서 bh와 h는 각각 루트 노드의 블랙-높이와 높이입니다.</li>
+</ul>
+<h2 id="left-and-right-rotation">Left and Right Rotation</h2>
+<ul>
+<li>시간복잡도 O(1)</li>
+<li>이진탐색트리의 특성을 유지</li>
+</ul>
+<h2 id="left-rotation">Left Rotation</h2>
+<ul>
+<li>y = right<input checked="" disabled="" type="checkbox">=/ NIL 이라고 가정</li>
+<li>루트노드의 부모도 NIL이라고 가정</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">LEFT<span style="color:#f92672">-</span><span style="color:#a6e22e">ROTATE</span>(T, x)
+    y <span style="color:#f92672">&lt;-</span> right[x]   <span style="color:#f92672">/</span><span style="color:#f92672">/</span> Set y.
+    right[x] <span style="color:#f92672">&lt;-</span> left[y] <span style="color:#f92672">/</span><span style="color:#f92672">/</span> Turn y<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">s left subtree into x&#39;</span>s right subtree.
+    p[left[y]] <span style="color:#f92672">&lt;-</span> x
+    p[y] <span style="color:#f92672">&lt;-</span> p[x]    <span style="color:#f92672">/</span><span style="color:#f92672">/</span> Link x<span style="color:#e6db74">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">p</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">r</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">y</span><span style="color:#960050;background-color:#1e0010">.</span>
+    if p[x] <span style="color:#f92672">==</span> nil[T]
+        then root[T] <span style="color:#f92672">&lt;-</span> y
+        else if x <span style="color:#f92672">==</span> left[p[x]]
+                then left[p[x]] <span style="color:#f92672">&lt;-</span> y
+                else right[p[x]] <span style="color:#f92672">&lt;-</span> y
+    left[y] <span style="color:#f92672">&lt;-</span> x
+    p[x] <span style="color:#f92672">&lt;-</span> y
+</code></pre></div><h2 id="insert">INSERT</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">RB<span style="color:#f92672">-</span><span style="color:#a6e22e">INSERT</span>(T, z)
+    y <span style="color:#f92672">&lt;-</span> nil[T]
+    x <span style="color:#f92672">&lt;-</span> root[T]
+    while x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> nil[T]
+        do y <span style="color:#f92672">&lt;-</span> x
+            if key[z] <span style="color:#f92672">&lt;</span> key[x]
+                then x <span style="color:#f92672">&lt;-</span> left[x]
+                else x <span style="color:#f92672">&lt;-</span> right[x]
+    p[z] <span style="color:#f92672">&lt;-</span> y
+    if y <span style="color:#f92672">==</span> nil[T]
+        then root[T] <span style="color:#f92672">&lt;-</span> z
+        else if key[z] <span style="color:#f92672">&lt;</span> key[y]
+            then left[y] <span style="color:#f92672">&lt;-</span> z
+            else right[y] <span style="color:#f92672">&lt;-</span> z
+    left[z] <span style="color:#f92672">&lt;-</span> nil[T]
+    right[z] <span style="color:#f92672">&lt;-</span> nil[T]
+    color[z] <span style="color:#f92672">&lt;-</span> RED
+    RB<span style="color:#f92672">-</span>INSERT<span style="color:#f92672">-</span><span style="color:#a6e22e">FIXUP</span>(T, z)
+</code></pre></div><ul>
+<li>보통의 BST에서처럼 노드를 INSERT합니다.</li>
+<li>새로운 노드 z를 red노드로 합니다.</li>
+<li>RB-INSERT-FIXUP을 호출합니다.</li>
+</ul>
+<h2 id="rb-insert-fixup">RB-INSERT-FIXUP</h2>
+<ul>
+<li>위반될 가능성이 있는 조건들</li>
+<li>
+<ol>
+<li>OK.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>만약 z가 루트노드라면 위반, 아니라면 OK.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>OK.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>z의 부모 p[z]가 red이면 위반.</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>OK.</li>
+</ol>
+</li>
+</ul>
+<h2 id="rb-insert_fixup-2">RB-INSERT_FIXUP 2</h2>
+<ul>
+<li>Loop Invariant:</li>
+<li>z는 red노드</li>
+<li>오직 하나의 위반만이 존재합니다:</li>
+<li>조건2 : z가 루트노드이면서 red이거나, 또는</li>
+<li>조건4 : z와 그 부모 p[z]가 둘 다 red이거나</li>
+<li>종료조건:</li>
+<li>부모노드 p[z]가 black이 되면 종료합니다.</li>
+<li>조건2가 위반일 경우 z를 블랙으로 바꿔주고 종료합니다.</li>
+</ul>
+<h2 id="경우-1-z의-삼촌이-red">경우 1: z의 삼촌이 red</h2>
+<ul>
+<li>조건 2와 4 이외의 조건들은 여전히 OK면서 z가 두칸 위로 올라감</li>
+</ul>
+<h2 id="경우-2와-3-z의-삼촌이-black">경우 2와 3: z의 삼촌이 black</h2>
+<ul>
+<li>경우2 : z가 오른쪽 자식인 경우</li>
+<li>p[z]에 대해서 left-rotation한 후 원래 p[z]를 z로</li>
+<li>경우 3으로</li>
+<li>경우 3 : z가 왼쪽 자식인 경우</li>
+<li>p[z]를 black, p[p[z]]를 red로 바꿈</li>
+<li>p[p[z]]에 대해서 right-rotation</li>
+</ul>
+<h2 id="경우-4-5-6">경우 4, 5, 6</h2>
+<ul>
+<li>경우 1, 2, 3은 p[z]가 p[p[z]]의 왼쪽 자식인 경우들</li>
+<li>경우 4, 5, 6은 p[z]가 p[p[z]]의 오른쪽 자식인 경우</li>
+<li>경우 1, 2, 3과 대칭적이므로 생략</li>
+</ul>
+<h2 id="rb-insert-fixup-1">RB-INSERT-FIXUP</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">RB<span style="color:#f92672">-</span>INSERT<span style="color:#f92672">-</span><span style="color:#a6e22e">FIXUP</span>(T, z)
+    while color[p[z]] <span style="color:#f92672">==</span> RED
+        do if p[z] <span style="color:#f92672">==</span> left[p[p[z]]]
+            then y <span style="color:#f92672">&lt;-</span> right[p[p[z]]]
+                if color[y] <span style="color:#f92672">==</span> RED
+                    then color[p[z]] <span style="color:#f92672">&lt;-</span> BLACK
+                        color[y] <span style="color:#f92672">&lt;-</span> BLACK
+                        color[p[p[z]]] <span style="color:#f92672">&lt;-</span> RED
+                        z <span style="color:#f92672">&lt;-</span> p[p[z]]
+                else if z <span style="color:#f92672">==</span> right[p[z]]
+                    then z <span style="color:#f92672">&lt;-</span> p[z]
+                        LEFT<span style="color:#f92672">-</span><span style="color:#a6e22e">ROTATE</span>(T, z)
+                    color[p[z]] <span style="color:#f92672">&lt;-</span> BLACK
+                    color[p[p[z]]] <span style="color:#f92672">&lt;-</span> RED
+                    RIGHT<span style="color:#f92672">-</span><span style="color:#a6e22e">ROTATE</span>(T, p[p[z]])
+                <span style="color:#a6e22e">else </span>(same as then clause
+                        with <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">right&#34;</span> and <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">left&#34;</span> exchanged)
+    color[root[T]] <span style="color:#f92672">&lt;-</span> BLACK
+</code></pre></div><h2 id="insert의-시간복잡도">INSERT의 시간복잡도</h2>
+<ul>
+<li>BST에서의 INSERT: O(log(2)n)</li>
+<li>RB-INSERT-FIXUP</li>
+<li>경우1에 해당할 경우 z가 2레벨 상승</li>
+<li>경우 2, 3에 해당할 경우 O(1)</li>
+<li>따라서 트리의 높이에 비례하는 시간</li>
+<li>즉, INSERT의 시간복잡도는 O(log(2)n)</li>
+</ul>
+<h2 id="delete">DELETE</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">RB<span style="color:#f92672">-</span><span style="color:#a6e22e">DELETE</span>(T, z)
+    if left[z] <span style="color:#f92672">==</span> nil[T] or right[z] <span style="color:#f92672">==</span> nil[T]
+        then y <span style="color:#f92672">&lt;-</span> z
+        else y <span style="color:#f92672">&lt;-</span> TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">SUCCESSOR</span>(z)
+    if left[y] <span style="color:#f92672">=</span><span style="color:#f92672">/</span> nil[T]
+        then x <span style="color:#f92672">&lt;-</span> left[y]
+        else x <span style="color:#f92672">&lt;-</span> right[y]
+    p[x] <span style="color:#f92672">&lt;-</span> p[y]
+    if p[y] <span style="color:#f92672">==</span> nil[T]
+        then root[T] <span style="color:#f92672">&lt;-</span> x
+        else if y <span style="color:#f92672">==</span> left[p[y]]
+                then left[p[y]] <span style="color:#f92672">&lt;-</span> x
+                else right[p[y]] <span style="color:#f92672">&lt;-</span> x
+    if y <span style="color:#f92672">=</span><span style="color:#f92672">/</span> z
+        then key[z] <span style="color:#f92672">&lt;-</span> key[y]
+            copy y<span style="color:#e6db74">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">z</span>
+    if color[y] <span style="color:#f92672">==</span> BLACK
+        then RB<span style="color:#f92672">-</span>DELETE<span style="color:#f92672">-</span><span style="color:#a6e22e">FIXUP</span>(T, x)
+    return y
+</code></pre></div><ul>
+<li>보통의 BST에서처럼 DELETE합니다.</li>
+<li>실제로 삭제된 노드 y가 red였으면 종료.</li>
+<li>y가 black이었을 경우 RB-DELETE-FIXUP을 호출합니다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="rb-delete-fixupt-x">RB-DELETE-FIXUP(T, x)</h2>
+<ul>
+<li>
+<ol>
+<li>OK.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>y가 루트였고 x가 red인 경우 위반</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>OK.</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>p[y]와 x가 모두 red일 경우 위반</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>원래 y를 포함했던 모든 경로는 이제 black노드가 하나 부족</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>노드 x에 &ldquo;extra black&quot;을 부여해서 일단 조건5를 만족</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>노드 x는 &ldquo;double black&rdquo; 혹은 &ldquo;red &amp; black&rdquo;</li>
+</ol>
+</li>
+</ul>
+<h2 id="rb-delete-fixupt-x-2">RB-DELETE-FIXUP(T, x) 2</h2>
+<ul>
+<li>아이디어 :</li>
+<li>extra black을 트리의 위쪽으로 올려보냄</li>
+<li>x가 red&amp;black상태가 되면 그냥 black노드로 만들고 끝냄</li>
+<li>x가 루트가 되면 그냥 extra black을 제거</li>
+<li>Loop Invariant</li>
+<li>x는 루트가 아닌 double-black노드</li>
+<li>w는 x의 형제노드</li>
+<li>w는 NIL 노드가 될 수 없음 (아니면 x의 부모에 대해 조건5가 위반)</li>
+</ul>
+<h2 id="경우-1--w가-red인-경우">경우 1 : w가 red인 경우</h2>
+<ul>
+<li>w의 자식들은 black</li>
+<li>w를 black으로, p<input checked="" disabled="" type="checkbox">를 red로</li>
+<li>p<input checked="" disabled="" type="checkbox">에 대해서 left-rotation 적용</li>
+<li>x의 새로운 형제노드는 원래 w의 자식노드, 따라서 black노드</li>
+<li>경우 2, 3, 혹은 4에 해당</li>
+</ul>
+<h2 id="경우-2--w는-black-w의-자식들도-black">경우 2 : w는 black, w의 자식들도 black</h2>
+<ul>
+<li>x의 extra-black을 뺏고, w를 red로 바꿈.</li>
+<li>p<input checked="" disabled="" type="checkbox">에게 뺏은 extra-black을 줍니다.</li>
+<li>p<input checked="" disabled="" type="checkbox">를 새로운 x로 해서 계속.</li>
+<li>만약 경우 1에서 이 경우에 도달했다면 p<input checked="" disabled="" type="checkbox">는 red였고, 따라서 새로운 x는 red&amp;black이 되어서 종료</li>
+</ul>
+<h2 id="경우-3--w는-black-w의-왼쪽-자식이-red">경우 3 : w는 black, w의 왼쪽 자식이 red</h2>
+<ul>
+<li>w를 red로, w의 왼 자식을 black으로</li>
+<li>w에 대해서 right-rotation 적용</li>
+<li>x의 새로운 형제 w는 오른 자식이 red: 경우 4에 해당</li>
+</ul>
+<h2 id="경우-4--w는-black-w의-오른쪽-자식이-red">경우 4 : w는 black, w의 오른쪽 자식이 red</h2>
+<ul>
+<li>w의 색을 현재 p<input checked="" disabled="" type="checkbox">의 색으로 (unknown color)</li>
+<li>p<input checked="" disabled="" type="checkbox">를 black으로, w의 오른 자식을 black으로</li>
+<li>p<input checked="" disabled="" type="checkbox">에 대해서 left-rotation 적용</li>
+<li>x의 extra-black을 제거하고 종료</li>
+</ul>
+<h2 id="수도-코드">수도 코드</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">RB<span style="color:#f92672">-</span>DELETE<span style="color:#f92672">-</span><span style="color:#a6e22e">FIXUP</span>(T, x)
+	while x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> root[T] and color[x] <span style="color:#f92672">==</span> BLACK
+		do if x <span style="color:#f92672">==</span> left[p[x]]
+			then w <span style="color:#f92672">&lt;-</span> right[p[x]]
+				if color[w] <span style="color:#f92672">==</span> RED
+					then color[w] <span style="color:#f92672">&lt;-</span> BLACK
+						color[p[x]] <span style="color:#f92672">&lt;-</span> RED
+						LEFT<span style="color:#f92672">-</span><span style="color:#a6e22e">ROTATE</span>(T, p[x])
+						w <span style="color:#f92672">&lt;-</span> right[p[x]]
+				if color[left[w]] <span style="color:#f92672">==</span> BLACK and color[right[w]] <span style="color:#f92672">==</span> BLACK
+					then color[w] <span style="color:#f92672">&lt;-</span> RED
+						x <span style="color:#f92672">&lt;-</span> p[x]
+				else if color[right[w]] <span style="color:#f92672">==</span> BLACK
+					then color[left[w]] <span style="color:#f92672">&lt;-</span> BLACK
+						color[w] <span style="color:#f92672">&lt;-</span> RED
+						RIGHT<span style="color:#f92672">-</span><span style="color:#a6e22e">ROTATE</span>(T, w)
+						w <span style="color:#f92672">&lt;-</span> right[p[x]]
+					color[w] <span style="color:#f92672">&lt;-</span> color[p[x]]
+					color[p[x]] <span style="color:#f92672">&lt;-</span> BLACK
+					color[right[w]] <span style="color:#f92672">&lt;-</span> BLACK
+					LEFT<span style="color:#f92672">-</span><span style="color:#a6e22e">ROTATE</span>(T, p[x])
+					x <span style="color:#f92672">&lt;-</span> root[T]
+				<span style="color:#a6e22e">else	</span>(same as then clause with “right” and “left” exchanged)
+	color[x] <span style="color:#f92672">&lt;-</span> BLACK
+</code></pre></div><h2 id="경우-5-6-7-8">경우 5, 6, 7, 8</h2>
+<ul>
+<li>경우 1, 2, 3, 4는 x가 왼쪽 자식인 경우</li>
+<li>경우 5, 6, 7, 8은 대칭 구조</li>
+<li>경우 5, 6, 7, 8은 x가 p<input checked="" disabled="" type="checkbox">의 오른쪽 자식인 경우</li>
+</ul>
+<h2 id="시간복잡도">시간복잡도</h2>
+<ul>
+<li>BST에서의 DELETE : O(log(2)n)</li>
+<li>RB-DELETE-FIXUP : O(log(2)n)</li>
+</ul>
+</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>

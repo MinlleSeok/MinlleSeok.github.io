@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cs on Happiness Development</title>
+    <link>https://mj-seok.com/categories/cs/</link>
+    <description>Recent content in cs on Happiness Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2020 13:24:19 +0900</lastBuildDate>
+    
+	<atom:link href="https://mj-seok.com/categories/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>소프트웨어 프로세스 모델 - SW Process Model</title>
+      <link>https://mj-seok.com/cs/sw-process/</link>
+      <pubDate>Thu, 27 Feb 2020 13:24:19 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/sw-process/</guid>
+      <description>소프트웨어 프로세스 모델 - SW Process Model  Process Model  1. Build-and-Fix Model  개발조직의 Process Model을 준수하지 않고, 요구사항 확인 후 바로 코딩으로 들어가는 경우  Ad-hoc Process Model   스펙이나 디자인이 없음   유지보수 시 결함 위치를 발견하기 어려운 모델 개발 시간 및 비용이 많이 듬    사용을 권하지 않으나 현재에도 많은 조직에서 활용 됨     Build First Version : 요구사항으로 First Version을 만듦 Modify until client is satisfied : Client 또는 Customer에게 보여주어 만족시킬 때까지 계속적으로 요구사항을 받아들임 Maintenance : Release한 후 유지보수 함 프로젝트 매니지먼트 관점에서 예측하기 어려운 모델    과연 어떤 행위를 다음에 해야 하는가?</description>
+    </item>
+    
+    <item>
+      <title>컴퓨터 과학 - Computer Science</title>
+      <link>https://mj-seok.com/cs/cs-1/</link>
+      <pubDate>Sat, 15 Feb 2020 18:40:43 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/cs-1/</guid>
+      <description>컴퓨터 과학 - Computer Science  2500년 전 주판 : 계산의 상태 기록 1600년 대 : 컴퓨터 직업에 대한 표현 1800년 대 : 컴퓨터 기계로 표현  계전기  릴레이, 수도꼭지같이 열었다 닫았다 합니다. 컴퓨터 버그 - 진기 기계씩 릴레이 기계에 붙어있는 벌레  열 이온 밸브(진공관)  다이오드 : 한쪽으로 호르는 전기 전자 기계식 컴퓨팅 -&amp;gt; 전자 컴퓨팅 ENIAC : 전자 컴퓨터 시작 트랜지스터 : 전류를 흐르게 하거나 멈추게 합니다.</description>
+    </item>
+    
+    <item>
+      <title>선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple)</title>
+      <link>https://mj-seok.com/cs/math-linearalgebra/</link>
+      <pubDate>Wed, 01 Jan 2020 17:22:01 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/math-linearalgebra/</guid>
+      <description>선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple) [ Reference ] : https://youtu.be/br7tS1t2SFE
+ 프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
+속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
+v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   </description>
+    </item>
+    
+  </channel>
+</rss>

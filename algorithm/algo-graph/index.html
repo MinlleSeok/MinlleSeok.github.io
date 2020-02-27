@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>알고리즘 - 그래프 알고리즘 - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/algorithm/algo-graph/">알고리즘 - 그래프 알고리즘</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-02-09" class="no-wrap"
+                                    title="Created at 2020/02/09">
+                                    2020-02-09</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-02-09" class="no-wrap"
+                                    title="Modifyed  at 2020/02/09">
+                                    2020-02-09</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                859 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---그래프-알고리즘">알고리즘 - 그래프 알고리즘</h1>
+<ul>
+<li>개념과 표현</li>
+</ul>
+<h2 id="그래프-graph">그래프 (Graph)</h2>
+<ul>
+<li>(무방향) 그래프 G = (V, E)    // 두 개의 집합에 의해서 정의되는 구조</li>
+<li>V : 노드(node) 혹은 정점(vertex)  // 정점의 집합</li>
+<li>E : 노드쌍을 연결하는 에지(edge) 혹은 링크(link)  // 정점과 정점을 연결하는 에지들의 집합</li>
+<li>개체(object)들 간의 이진관계를 표현</li>
+<li>n = |V|, m = |E|
+<ul>
+<li>V = {1, 2, 3, 4, 5, 6, 7, 8}</li>
+<li>E = {(1, 2), (1, 3), (2, 3), &hellip;, (7, 8)}</li>
+<li>n = 8 (정점의 개수)</li>
+<li>m = 11 (에지의 개수)</li>
+</ul>
+</li>
+</ul>
+<h2 id="방향-그래프와-가중치-그래프">방향 그래프와 가중치 그래프</h2>
+<ul>
+<li>방향그래프(Directed Graph) G = (V, E)
+<ul>
+<li>에지 (u, v)는 u로부터 v로의 방향을 가짐</li>
+</ul>
+</li>
+<li>가중치(weighted) 그래프
+<ul>
+<li>에지마다 가중치(weight)가 지정</li>
+</ul>
+</li>
+</ul>
+<h2 id="다중-엣지-와-셀프-엣지">다중 엣지 와 셀프 엣지</h2>
+<ul>
+<li>다중 엣지 : 엣지 집합, 집합이기 때문에 중복 값이 들어가면 안 됩니다.</li>
+<li>셀프 엣지 : 자기 자신을 가리키는 엣지</li>
+<li>보편적으로는 없다.</li>
+</ul>
+<h2 id="그래프의-표현">그래프의 표현</h2>
+<ul>
+<li>인접행렬(adjacency matrix)
+<ul>
+<li>n x n 행렬 A = (a(ij)), where a(ij) = 1 if (i, j) &lt; E, 0 otherwise</li>
+<li>저장 공간 : O(n^2)</li>
+<li>어떤 노드 v에 인접한 모든 노드 찾기 : O(n) 시간</li>
+<li>어떤 에지 (u, v)가 존재하는지 검사 : O(1) 시간</li>
+</ul>
+</li>
+<li>인접리스트 (adjacency list)
+<ul>
+<li>정점 집합을 표현하는 하나의 배열과</li>
+<li>각 정점마다 인접한 정점들의 연결 리스트</li>
+<li>노드 개수 : 2m(edge 개수)</li>
+<li>저장 공간 : O(n + m)
+<ul>
+<li>n(배열 길이) + 2m(노드 개수)</li>
+<li>최악의 경우의 수 = m * (m - 1) / 2</li>
+<li>최소 수 = 0</li>
+</ul>
+</li>
+<li>어떤 노드 v에 인접한 모든 노드 찾기 : O(degree(v)) 시간</li>
+<li>어떤 에지 (u, v)가 존재하는지 검사 : O(degree(u)) 시간</li>
+</ul>
+</li>
+</ul>
+<h2 id="방향그래프">방향그래프</h2>
+<ul>
+<li>인접행렬은 비대칭</li>
+<li>셀프엣지가 있을 수 있습니다.</li>
+<li>인접 리스트는 m개의 노드를 가짐(에지 하나당 하나의 노드)</li>
+</ul>
+<h2 id="가중치-그래프의-인접행렬-표현">가중치 그래프의 인접행렬 표현</h2>
+<ul>
+<li>에지의 존재를 나타내는 값으로 1 대신 에지의 가중치를 저장</li>
+<li>에지가 없을 떄 혹은 대각선 :
+<ul>
+<li>특별히 정해진 규칙은 없으며, 그래프와 가중치가 의미하는 바에 따라서</li>
+<li>예 : 가중치가 거리 혹은 비용을 의미하는 경우라면 에지가 없으면 ∞(무한), 대각선은 0.</li>
+<li>예 : 만약 가중치가 용량을 의미한다면 에지가 없을때 0, 대각선은 ∞(무한)</li>
+</ul>
+</li>
+</ul>
+<h2 id="경로와-연결성">경로와 연결성</h2>
+<ul>
+<li>무방향 그래프 G = (V, E)에서 노드 u와 노드 v를 연결하는 경로(path)가 존재할 때 v와 u는 서로 연결되어 있다고 말합니다.</li>
+<li>모든 노드 쌍들이 서로 연결된 그래프를 연결된(connected) 그래프라고 합니다.</li>
+<li>연결 요소 (connected component)</li>
+</ul>
+</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
