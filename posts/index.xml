@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 13:59:28 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 13:24:19 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>소프트웨어 프로세스 모델 - SW Process Model</title>
+      <link>https://mj-seok.com/posts/sw-process/</link>
+      <pubDate>Thu, 27 Feb 2020 13:24:19 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/posts/sw-process/</guid>
+      <description>소프트웨어 프로세스 모델 - SW Process Model  Process Model  1. Build-and-Fix Model  개발조직의 Process Model을 준수하지 않고, 요구사항 확인 후 바로 코딩으로 들어가는 경우  Ad-hoc Process Model   스펙이나 디자인이 없음   유지보수 시 결함 위치를 발견하기 어려운 모델 개발 시간 및 비용이 많이 듬    사용을 권하지 않으나 현재에도 많은 조직에서 활용 됨     Build First Version : 요구사항으로 First Version을 만듦 Modify until client is satisfied : Client 또는 Customer에게 보여주어 만족시킬 때까지 계속적으로 요구사항을 받아들임 Maintenance : Release한 후 유지보수 함 프로젝트 매니지먼트 관점에서 예측하기 어려운 모델    과연 어떤 행위를 다음에 해야 하는가?</description>
+    </item>
     
     <item>
       <title>MST 알고리즘 - Prim의 알고리즘</title>
