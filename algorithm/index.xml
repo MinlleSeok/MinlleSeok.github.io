@@ -6,10 +6,19 @@
     <description>Recent content in Algorithms on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 13:59:28 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 12:32:26 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>최단경로 알고리즘 - Shortest Path Problem</title>
+      <link>https://mj-seok.com/algorithm/spp/</link>
+      <pubDate>Fri, 28 Feb 2020 12:32:26 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/algorithm/spp/</guid>
+      <description>최단경로  가중치 (방향) 그래프 G=(V, E), 즉 모든 에지에 가중치가 있음 경로 p=(V(0), V(1), &amp;hellip;, V(k))의 길이는 경로상의 모든 에지의 가중치의 합 노드 u에서 v까지의 최단경로의 길이를 S(u, v)라고 표시하자.  최단경로문제의 유형  Single-source:  하나의 출발 노드 s로부터 다른 모든 노드까지의 최단 경로를 찾아라. 예 : Dijkstra의 알고리즘   Single-destination:  모든 노드로부터 하나의 목적지 노드까지의 최단 경로를 찾아라. single-source 문제와 동일   Single-pair:  주어진 하나의 출발 노드 s로 부터 하나의 목적지 노드 t까지의 최단 경로를 찾아라 최악의 경우 시간복잡도에서 single-source 문제보다 나은 알고리즘이 없음   All-pairs:  모든 노드 쌍에 대해서 최단 경로를 찾아라.</description>
+    </item>
     
     <item>
       <title>MST 알고리즘 - Prim의 알고리즘</title>

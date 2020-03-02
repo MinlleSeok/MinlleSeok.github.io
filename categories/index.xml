@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2020 13:24:19 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 13:39:56 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>database</title>
+      <link>https://mj-seok.com/categories/database/</link>
+      <pubDate>Fri, 28 Feb 2020 13:39:56 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/categories/database/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cs</title>
@@ -35,15 +44,6 @@
       <pubDate>Wed, 19 Feb 2020 13:48:33 +0900</pubDate>
       
       <guid>https://mj-seok.com/categories/tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>database</title>
-      <link>https://mj-seok.com/categories/database/</link>
-      <pubDate>Tue, 18 Feb 2020 12:52:19 +0900</pubDate>
-      
-      <guid>https://mj-seok.com/categories/database/</guid>
       <description></description>
     </item>
     
