@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>Python 가상환경 - pyenv 설치 - Happiness Development</title>
+    <title>압축 알고리즘 - 제 2단계 Huffman Tree - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/tech/python-pyenv/">Python 가상환경 - pyenv 설치</a></strong>
+                                    href="https://mj-seok.com/algorithm/compression2/">압축 알고리즘 - 제 2단계 Huffman Tree</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2019-12-23" class="no-wrap"
-                                    title="Created at 2019/12/23">
-                                    2019-12-23</time-ago>
+                                Created <time-ago datetime="2020-03-10" class="no-wrap"
+                                    title="Created at 2020/03/10">
+                                    2020-03-10</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2020-01-08" class="no-wrap"
-                                    title="Modifyed  at 2020/01/08">
-                                    2020-01-08</time-ago>
+                                Modifyed <time-ago datetime="2020-03-10" class="no-wrap"
+                                    title="Modifyed  at 2020/03/10">
+                                    2020-03-10</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,32 +122,81 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                96 Words
+                                533 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="python----pyenv-">Python 가상환경 - pyenv 설치</h1>
-<blockquote>
-<p>mac 기준, Homebrew를 사용해서 설치합니다.</p>
-</blockquote>
-<h2 id="heading">설치</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% brew update
-% brew install pyenv
-</code></pre></div><h2 id="heading-1">환경설정</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% echo <span style="color:#e6db74">&#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39;</span> &gt;&gt; ~/.zshrc
-% echo <span style="color:#e6db74">&#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.zshrc
-% echo -e <span style="color:#e6db74">&#39;if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval &#34;$(pyenv init -)&#34;\nfi&#39;</span> &gt;&gt; ~/.zshrc
-</code></pre></div><h2 id="python---">Python 원하는 버전 설치</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% pyenv install <span style="color:#f92672">[</span>version_name<span style="color:#f92672">]</span>
-% pyenv global <span style="color:#f92672">[</span>version_name<span style="color:#f92672">]</span>
-% python --version
-</code></pre></div><hr>
-<blockquote>
-<p>행복 개발</p>
-</blockquote>
-</article>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="huffman-coding">Huffman coding</h1>
+<ul>
+<li>Huffman coding 알고리즘은 트리들의 집합을 유지하면서</li>
+<li>매 단계에서 가장 frequency가 작은 두 트리를 찾아서</li>
+<li>두 트리를 하나로 합칩니다.</li>
+<li>이런 연산에 가장 적합한 자료구조는 최소 힙(minimum heap)입니다.</li>
+<li>즉, 힙에 저장된 각각의 원소들은 하나의 트리입니다. (노드가 아니라요)</li>
+</ul>
+<h2 id="-">최소 힙</h2>
+<ul>
+<li>크기가 5인 힙, 5개의 트리가 저장되어 있습니다.</li>
+<li>5개의 single node tree</li>
+<li>각 트리는 오직 하나의 노드로 구성됩니다.</li>
+</ul>
+<h2 id="class-run-">class Run 수정하기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Run</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span> symbol<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> runen<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> freq<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/* 트리의 노드로 사용하기 위해서 왼쪽 자식과 오른쪽 자식 노드 필드를 추가합니다. */</span>
+
+<span style="color:#75715e">/* 두 run의 크기 관계를 비교하는 compareTo 메서드를 overriding 하라. */</span>
+<span style="color:#75715e">/* 비교의 기준은 freq입니다. */</span>
+
+</code></pre></div><ul>
+<li>3장에서 작성했던 Heap 클래스를 가져와서 사용합니다.</li>
+<li>Generics로 수정하고, heapify, insert, extractMin 등의 함수들을</li>
+<li>min heap 에 맞게 수정합니다.</li>
+<li>C로 구현한 사람들은 별개의 모듈로 min heap을 구현합니다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HuffmanCoding</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> ArrayList<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> runs <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> Heap<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> heap<span style="color:#f92672">;</span> <span style="color:#75715e">/* minimum heap 입니다. */</span>
+    <span style="color:#66d9ef">private</span> Run theRoot <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span> <span style="color:#75715e">/* root of the Huffman tree */</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">createHuffmanTree</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        heap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Heap<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        <span style="color:#75715e">/* 1. Store all runs into the heap. */</span>
+        <span style="color:#75715e">/* 2. While the heap size &gt; 1 do */</span>
+        <span style="color:#75715e">/*      (1) perform extractMin two times  */</span>
+        <span style="color:#75715e">/*      (2) make a combined tree */</span>
+        <span style="color:#75715e">/*      (2) insert the combined tree into the heap. */</span>
+        <span style="color:#75715e">/* 3. Let theRoot be the root of the tree. */</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="huffman-tree-">Huffman Tree 출력해보기</h2>
+<ul>
+<li>class Run에 적절한 toString 메서드를 추가하여 트리를 출력해봅시다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printHuffmanTree</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    preOrderTraverse<span style="color:#f92672">(</span>theRoot<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preOrderTraverse</span><span style="color:#f92672">(</span>Run node<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> depth<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> depth<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;null&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        preOrderTraverse<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> depth <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        preOrderTraverse<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> depth <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></article>
                         </div>
                     </div>
                 </div>

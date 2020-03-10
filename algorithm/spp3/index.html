@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>Python 가상환경 - pyenv 설치 - Happiness Development</title>
+    <title>최단경로 알고리즘 - Shortest Path Problem 3 - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/tech/python-pyenv/">Python 가상환경 - pyenv 설치</a></strong>
+                                    href="https://mj-seok.com/algorithm/spp3/">최단경로 알고리즘 - Shortest Path Problem 3</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2019-12-23" class="no-wrap"
-                                    title="Created at 2019/12/23">
-                                    2019-12-23</time-ago>
+                                Created <time-ago datetime="2020-03-03" class="no-wrap"
+                                    title="Created at 2020/03/03">
+                                    2020-03-03</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2020-01-08" class="no-wrap"
-                                    title="Modifyed  at 2020/01/08">
-                                    2020-01-08</time-ago>
+                                Modifyed <time-ago datetime="2020-03-03" class="no-wrap"
+                                    title="Modifyed  at 2020/03/03">
+                                    2020-03-03</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,31 +122,91 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                96 Words
+                                537 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="python----pyenv-">Python 가상환경 - pyenv 설치</h1>
-<blockquote>
-<p>mac 기준, Homebrew를 사용해서 설치합니다.</p>
-</blockquote>
-<h2 id="heading">설치</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% brew update
-% brew install pyenv
-</code></pre></div><h2 id="heading-1">환경설정</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% echo <span style="color:#e6db74">&#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39;</span> &gt;&gt; ~/.zshrc
-% echo <span style="color:#e6db74">&#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.zshrc
-% echo -e <span style="color:#e6db74">&#39;if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval &#34;$(pyenv init -)&#34;\nfi&#39;</span> &gt;&gt; ~/.zshrc
-</code></pre></div><h2 id="python---">Python 원하는 버전 설치</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% pyenv install <span style="color:#f92672">[</span>version_name<span style="color:#f92672">]</span>
-% pyenv global <span style="color:#f92672">[</span>version_name<span style="color:#f92672">]</span>
-% python --version
-</code></pre></div><hr>
-<blockquote>
-<p>행복 개발</p>
-</blockquote>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="----shortest-path-problem-3">최단경로 알고리즘 - Shortest Path Problem 3</h1>
+<ul>
+<li>all to all 알고리즘</li>
+</ul>
+<h2 id="floyd-warshall-algorithm">Floyd-Warshall Algorithm</h2>
+<ul>
+<li>가중치 방향 그래프 G=(V, E), V={1, 2, &hellip;, n}</li>
+<li>모든 노드 쌍들간의 최단경로의 길이를 구함</li>
+<li>d^k[i, j]
+<ul>
+<li>중간에 노드집합 {1, 2, &hellip;, k}에 속한 노드들만 거쳐서
+노드 i에서 j까지 가는 최단경로의 길이</li>
+</ul>
+</li>
+<li>d^0[i, j] = {if (i, j) ∈ E =&gt; W(i, j), Infinity}</li>
+<li>d^k[i, j] = min{d^(k-1)[i, j], d^(k-1)[i, k] + d^(k-1)[k, j]}
+<ul>
+<li>중간정점들이 모두 {1, 2, &hellip;, k-1}에 속함</li>
+<li>중간정점들이 모두 {1, 2, &hellip;, k}에 속함</li>
+</ul>
+</li>
+<li>d^n[i, j] = S(i, j)</li>
+<li>중간에 노드집합 {1, 2, &hellip;, k}에 속한 노드들만 거쳐서 노드</li>
+<li>i에서 j까지 가는 최단경로는 두가지 경우가 있음:</li>
+<li>노드 k를 지나는 경우와 지나지 않는 경우</li>
+</ul>
+<h2 id="floyd-warshall-algorithm-1">Floyd-Warshall Algorithm</h2>
+<ul>
+<li>d^k[i, j] = min{d^(k-1)[i, j], d^(k-1)[i, k] + d^(k-1)[k, j]}</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">FloydWarshall</span>(G)
+{
+    for i <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+        for j <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+            d^0[i, j] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">W</span>(i, j);
+    for k <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n <span style="color:#f92672">/</span><span style="color:#f92672">/</span> 중간정점 집합 {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">...</span>, k}
+        for i <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+             for j <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+                d^k[i, j] <span style="color:#f92672">=</span> min{d<span style="color:#a6e22e">^</span>(k<span style="color:#ae81ff">-1</span>)[i, j], d<span style="color:#a6e22e">^</span>(k<span style="color:#ae81ff">-1</span>)[i, k] <span style="color:#f92672">+</span> d<span style="color:#a6e22e">^</span>(k<span style="color:#ae81ff">-1</span>)[k, j]};
+}
+</code></pre></div><ul>
+<li>시간복잡도 : O(n^3)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">FloydWarshall</span>(G)
+{
+    for i <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+        for j <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+            d[i, j] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">w</span>(i, j);
+    for k <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n <span style="color:#f92672">/</span><span style="color:#f92672">/</span> 중간정점 집합 {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">...</span>, k}
+        for i <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+             for j <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+                d[i, j] <span style="color:#f92672">=</span> min{d[i, j], d[i, k] <span style="color:#f92672">+</span> d[k, j]};
+}
+</code></pre></div><h2 id="-">경로 찾기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">FloydWarshall</span>(G)
+{
+    for i <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+        for j <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+            d[i, j] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">w</span>(i, j);
+            ㅠ[i, j] <span style="color:#f92672">&lt;-</span> NIL;
+    for k <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n <span style="color:#f92672">/</span><span style="color:#f92672">/</span> 중간정점 집합 {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">...</span>, k}
+        for i <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+             for j <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> to n
+                if d[i, j] <span style="color:#f92672">&gt;</span> d[i, k] <span style="color:#f92672">+</span> d[k, j] then
+                    d[i, j] <span style="color:#f92672">=</span> d[i, k] <span style="color:#f92672">+</span> d[k, j];
+                    ㅠ[i, j] <span style="color:#f92672">=</span> k;
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">Print<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(s, t, ㅠ)
+{
+    if ㅠ[s, t] <span style="color:#f92672">=</span> NIL then
+        return;
+    Print<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(s, ㅠ[s, t]);
+    <span style="color:#a6e22e">print</span>(ㅠ[s, t]);
+    Print<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(ㅠ[s, t], t);
+}
+</code></pre></div><ul>
+<li>s에서 t까지 가는 경로가 존재한다는 가정하에</li>
+<li>최단경로사이의 중간노드들 (s와 t자신은 제외)을 출력함</li>
+</ul>
 </article>
                         </div>
                     </div>

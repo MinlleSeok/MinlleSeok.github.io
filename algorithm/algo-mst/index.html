@@ -128,12 +128,12 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---최소비용-신장-트리mst">알고리즘 - 최소비용 신장 트리(MST)</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="-----mst">알고리즘 - 최소비용 신장 트리(MST)</h1>
 <ul>
 <li>입력 : n개의 도시, 도시와 도시를 연결하는 비용</li>
 <li>문제 : 최소의 비용으로 모든 도시들이 서로 연결되게 합니다.</li>
 </ul>
-<h2 id="최소비용-신장-트리-minimum-spanning-tree">최소비용 신장 트리 (Minimum Spanning Tree)</h2>
+<h2 id="---minimum-spanning-tree">최소비용 신장 트리 (Minimum Spanning Tree)</h2>
 <ul>
 <li>해가 유일하지는 않음</li>
 <li>무방향 가중치 그래프 G=(V,E)</li>
@@ -153,13 +153,13 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<h2 id="왜-트리라고-부르나">왜 트리라고 부르나?</h2>
+<h2 id="--">왜 트리라고 부르나?</h2>
 <ul>
 <li>싸이클이 없는 연결된(connected) 무방향 그래프를 트리라고 부릅니다.</li>
 <li>MST 문제의 답은 항상 트리가 됩니다. 왜?</li>
 <li>노드가 n개인 트리는 항상 n - 1개의 에지를 가집니다.</li>
 </ul>
-<h2 id="generic-mst-알고리즘">Generic MST 알고리즘</h2>
+<h2 id="generic-mst-">Generic MST 알고리즘</h2>
 <ul>
 <li>어떤 MST의 부분집합 A에 대해서 A U {(u, v)}도 역시 어떤 MST의 부분집합이 될 경우</li>
 <li>에지 (u, v)는 A에 대해서 안전하다(safe)고 합니다.</li>
@@ -189,38 +189,38 @@ if (!doNotTrack) {
         do find an <span style="color:#a6e22e">edge</span>(u, v) that is safe for A
             A <span style="color:#f92672">&lt;-</span> A U {(u, v)}
     return A
-</code></pre></div><h2 id="안전한-에지-찾기">안전한 에지 찾기</h2>
+</code></pre></div><h2 id="---1">안전한 에지 찾기</h2>
 <ul>
 <li>그래프의 정점들을 두 개의 집합 S와 V-S로 분할한 것을 컷(cut) (S, V-S)라고 부릅니다.</li>
 <li>에지 (u, v)에 대해서 u &lt; S이고, v &lt; V-S일 때 에지 (u, v)는 컷 (S, V-S)를 cross한다고 말합니다.</li>
 <li>에지들의 부분집합 A에 속한 어떤 에지도 컷 (S, V-S)를 cross하지 않을 때 컷 (S, V-S)는 A를 존중한다(respect)고 말합니다.</li>
 </ul>
-<h2 id="정리">정리</h2>
+<h2 id="heading">정리</h2>
 <ul>
 <li>A가 어떤 MST의 부분집합이고, (S, V-S)는 A를 존중하는 컷이라고 하자.</li>
 <li>이 컷을 cross하는 에지들 중 가장 가중치가 작은 에지 (u, v)는 A에 대해서 안전합니다.</li>
 </ul>
-<h2 id="kruskal-의-알고리즘">Kruskal 의 알고리즘</h2>
+<h2 id="kruskal--">Kruskal 의 알고리즘</h2>
 <ul>
 <li>에지들은 가중치의 오름차순으로 정렬합니다.</li>
 <li>에지들을 그 순서대로 하나씩 선택해갑니다. 단, 이미 선택된 에지들과 사이클(cycle)을 형성하면 선택하지 않습니다.</li>
 <li>n-1개의 에지가 선택되면 종료합니다.</li>
 </ul>
-<h2 id="왜-mst가-찾아지는가">왜 MST가 찾아지는가?</h2>
+<h2 id="-mst-">왜 MST가 찾아지는가?</h2>
 <ul>
 <li>Kruskal의 알고리즘의 임의의 한 단계를 생각해봅시다.</li>
 <li>A를 현재까지 알고리즘이 선택한 에지의 집합이라고 하고,</li>
 <li>A를 포함하는 MST가 존재한다고 가정합시다.</li>
 <li>cycle을 만들지 않는 lightest edge</li>
 </ul>
-<h2 id="사이클-검사">사이클 검사</h2>
+<h2 id="-">사이클 검사</h2>
 <ul>
 <li>초기 상태 : 선택된 에지 없음</li>
 <li>각각의 연결요소를 하나의 집합으로 표현</li>
 <li>{a} {b} {c} {d} {e} {f} {g} {h} {i}</li>
 <li>동일한 집합에 속해있다면(이미 연결된 노드) 사이클을 만들게 됩니다.</li>
 </ul>
-<h2 id="사이클-검사-과정">사이클 검사 과정</h2>
+<h2 id="---2">사이클 검사 과정</h2>
 <ul>
 <li>
 <ol>
@@ -244,7 +244,7 @@ if (!doNotTrack) {
 </ol>
 </li>
 </ul>
-<h2 id="kruskal의-알고리즘">Kruskal의 알고리즘</h2>
+<h2 id="kruskal-">Kruskal의 알고리즘</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">MST<span style="color:#f92672">-</span><span style="color:#a6e22e">KRUSKAL</span>(G, w)
     A <span style="color:#f92672">&lt;-</span> zero
     for each vertex v <span style="color:#f92672">&lt;</span> V[G]    <span style="color:#f92672">/</span><span style="color:#f92672">/</span> 각각의 노드들을 유일한 원소로 가지는 집합 생성
@@ -255,7 +255,7 @@ if (!doNotTrack) {
             then A <span style="color:#f92672">&lt;-</span> A U {(u, v)}
                 <span style="color:#a6e22e">UNION</span>(u, v) <span style="color:#f92672">/</span><span style="color:#f92672">/</span> u와 v가 속한 두 집합을 하나로 합침
     return A
-</code></pre></div><h2 id="서로소인-집합들의-표현">서로소인 집합들의 표현</h2>
+</code></pre></div><h2 id="---3">서로소인 집합들의 표현</h2>
 <ul>
 <li>각 집합을 하나의 트리로 표현</li>
 <li>예 : 2개의 집합</li>
@@ -263,7 +263,7 @@ if (!doNotTrack) {
 <li>공통의 원소가 없습니다.</li>
 <li>union - find</li>
 </ul>
-<h3 id="부가-설명">부가 설명</h3>
+<h3 id="--1">부가 설명</h3>
 <ul>
 <li>집합의 각 원소들이 트리의 노드가 됨, 누가 루트이고 누가 누구의 부모이든 상관없음.</li>
 <li>트리의 각 노드는 자식노드가 아닌 부모 노드의 주소를 가짐 (상향식 트리)</li>
@@ -271,7 +271,7 @@ if (!doNotTrack) {
 <li>모든 트리를 하나의 배열로 표현</li>
 <li>일차원 배열 : 각 키 인덱스에 부모의 위치(값)를 표현</li>
 </ul>
-<h2 id="find_setv">FIND_SET(v)</h2>
+<h2 id="find-setv">FIND_SET(v)</h2>
 <ul>
 <li>자신이 속한 트리의 루트를 찾음</li>
 </ul>
@@ -329,7 +329,7 @@ if (!doNotTrack) {
 <li>log*N = (log log log &hellip; logN) 몇번 취하면 1이 되는지 횟수</li>
 <li>거의 선형시간 알고리즘, 즉 한 번의 Find혹은 union이 거의 O(1)시간</li>
 </ul>
-<h2 id="kruskal의-알고리즘-1">Kruskal의 알고리즘</h2>
+<h2 id="kruskal--1">Kruskal의 알고리즘</h2>
 <ul>
 <li>시간복잡도</li>
 <li>Initialize A : O(1)</li>

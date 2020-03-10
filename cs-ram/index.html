@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>Python 가상환경 - pyenv 설치 - Happiness Development</title>
+    <title>레지스터와 RAM 과 중앙처리장치 CPU - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/tech/python-pyenv/">Python 가상환경 - pyenv 설치</a></strong>
+                                    href="https://mj-seok.com/cs-ram/">레지스터와 RAM 과 중앙처리장치 CPU</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2019-12-23" class="no-wrap"
-                                    title="Created at 2019/12/23">
-                                    2019-12-23</time-ago>
+                                Created <time-ago datetime="2020-03-02" class="no-wrap"
+                                    title="Created at 2020/03/02">
+                                    2020-03-02</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2020-01-08" class="no-wrap"
-                                    title="Modifyed  at 2020/01/08">
-                                    2020-01-08</time-ago>
+                                Modifyed <time-ago datetime="2020-03-02" class="no-wrap"
+                                    title="Modifyed  at 2020/03/02">
+                                    2020-03-02</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,31 +122,162 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                96 Words
+                                846 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="python----pyenv-">Python 가상환경 - pyenv 설치</h1>
-<blockquote>
-<p>mac 기준, Homebrew를 사용해서 설치합니다.</p>
-</blockquote>
-<h2 id="heading">설치</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% brew update
-% brew install pyenv
-</code></pre></div><h2 id="heading-1">환경설정</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% echo <span style="color:#e6db74">&#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39;</span> &gt;&gt; ~/.zshrc
-% echo <span style="color:#e6db74">&#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.zshrc
-% echo -e <span style="color:#e6db74">&#39;if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval &#34;$(pyenv init -)&#34;\nfi&#39;</span> &gt;&gt; ~/.zshrc
-</code></pre></div><h2 id="python---">Python 원하는 버전 설치</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">% pyenv install <span style="color:#f92672">[</span>version_name<span style="color:#f92672">]</span>
-% pyenv global <span style="color:#f92672">[</span>version_name<span style="color:#f92672">]</span>
-% python --version
-</code></pre></div><hr>
-<blockquote>
-<p>행복 개발</p>
-</blockquote>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="arithmetic-and-logic-unitalu">Arithmetic and Logic Unit(ALU)</h1>
+<ul>
+<li>이진수를 입력받아 계산</li>
+</ul>
+<h2 id="-ram">레지스터와 RAM</h2>
+<ul>
+<li>AND-OR LATCH</li>
+<li>GATED LATCH</li>
+<li>레지스터: 래치를 병렬로 사용하는 그룹</li>
+</ul>
+<h2 id="heading">멀티플렉서</h2>
+<ul>
+<li>행 담당</li>
+<li>열 담당</li>
+<li>선택</li>
+<li>SRAM(Static Random Access Memory)</li>
+</ul>
+<h2 id="central-process-unit-cpu">Central Process Unit (CPU)</h2>
+<ul>
+<li>MICRO-ARCHITECTURE</li>
+<li>RAM : 16공간 x 8bit</li>
+<li>Register : 8bit x 4개</li>
+<li>INSTRUCTION TABLE : id, opcode, address</li>
+</ul>
+<h2 id="-">레지스터 구성</h2>
+<ul>
+<li>Instruction Address Register</li>
+<li>Instruction Register</li>
+<li>Register A</li>
+<li>Register B</li>
+<li>Register C</li>
+<li>Register D</li>
+</ul>
+<h2 id="instruction-table">Instruction Table</h2>
+<ul>
+<li>Instruction / Description / 4-Bit Opcode / Address or Registers</li>
+<li>LOAD_A    / Read RAM location (register A) / 0010 / 4-bit RAM address</li>
+<li>LOAD_B    / Read RAM location (register B) / 0001 / 4-bit RAM address</li>
+<li>STORE_A   / Write (register A) RAM location / 0100 / 4-bit RAM address</li>
+<li>ADD       / Add two registers, store result / 1000 / 2-bit register ID, 2-bit register ID</li>
+</ul>
+<h3 id="fetch-phase--">FETCH PHASE (인출 단계)</h3>
+<ul>
+<li>Instruction Address Register -&gt; ADDRESS INPUT</li>
+<li>RAM -&gt; DATA -&gt; Instruction Register</li>
+</ul>
+<h2 id="decode-phase--">Decode Phase (해독 단계)</h2>
+<ul>
+<li>opcode 첫 4bit</li>
+<li>RAM 주소 뒤 4bit</li>
+<li>Instruction Register control unit</li>
+</ul>
+<h2 id="execute-phase--">Execute Phase (실행 단계)</h2>
+<ul>
+<li>Load_A : RAM의 write enable 켜기</li>
+<li>주소값 : RAM에서 위치에 DATA 값 확인</li>
+<li>Load_A : Register A의 write enable 활성화</li>
+<li>RAM Data : Register A에 저장</li>
+<li>instruction 완성, 모든 연결선 종료</li>
+<li>instruction address 레지스터 1증가</li>
+<li>execute phase 종료</li>
+<li>다음 instruction fetch 준비</li>
+</ul>
+<h2 id="control-unit">Control Unit</h2>
+<ul>
+<li>Fetch Phase
+<ul>
+<li>Inst. Addr. Register = 1</li>
+<li>RAM ADDRESS == 1</li>
+<li>RAM DATA = 00011111</li>
+</ul>
+</li>
+<li>Decode Phase
+<ul>
+<li>0001 == LOAD_B Instruction</li>
+<li>RAM data move into Register B</li>
+</ul>
+</li>
+<li>Execute Phase
+<ul>
+<li>Control Unit RAM 15번지(1111) read</li>
+<li>Register B, data 받을 수 있도록 설정</li>
+<li>Register B = 00001110(RAM Data)</li>
+</ul>
+</li>
+<li>Inst. Addr. Register += 1
+<ul>
+<li>하나의 사이클 완료</li>
+</ul>
+</li>
+<li>ADD 연산같은 경우 ALU를 통해 연산</li>
+</ul>
+<h2 id="clock">Clock</h2>
+<ul>
+<li>주기적으로 전기 신호를 보냄</li>
+<li>Clock Speed</li>
+<li>1초에 할 수 있는 시간</li>
+<li>Hz로 표기</li>
+<li>상황에 맞게 클럭 조절 : dynamic frequency scaling</li>
+<li>동적 주파수 스케일링</li>
+</ul>
+<h2 id="--1">새로운 명령어</h2>
+<ul>
+<li>SUB : 뺄셈 연산</li>
+<li>JUMP : 초기화 Inst. Addr. Register 값 변경</li>
+<li>JUMP_NEG : ALU의 음수 flag가 true일 때 작동</li>
+<li>HALT : 프로그램 중단(명령어와 데이터 구분)</li>
+</ul>
+<h2 id="instruction-length">Instruction Length</h2>
+<ul>
+<li>현대 CPU가 명령어 길이를 늘리거나</li>
+<li>Variable Length Instructions</li>
+<li>가변 길이 명령어를 갖습니다.</li>
+<li>Immediate Value : JUMP 명령어 바로 다음 값 읽기</li>
+</ul>
+<h2 id="cache-memory">Cache memory</h2>
+<ul>
+<li>Cache Hits : 캐쉬 메모리에 있을 경우</li>
+<li>Cache Miss : 캐쉬 메모리에 없을 때</li>
+<li>Dirty Bit : 캐쉬가 꽉 차있고, 새로운 메모리 블럭 요청시</li>
+<li>dirty하면 오래된 블록을 저장</li>
+</ul>
+<h2 id="pipelining">pipelining</h2>
+<ul>
+<li>parallelize 병렬처리</li>
+<li>이전의 값 (데이터 의존성) 고려</li>
+<li>out-of-order(비순차적) 실행</li>
+<li>거의 모든 프로세서 구현됨</li>
+</ul>
+<h2 id="conditional-jump-instrunctions">Conditional Jump Instrunctions</h2>
+<ul>
+<li>조건부 점프 명령어</li>
+<li>프로그램 실행 흐름을 바꿀 수 있습니다.</li>
+<li>이러한 명령어는 작업을 오래 지연시킬 수 있습니다.</li>
+<li>해결법으로, 갈림길(branch)에서 예측 실행(speculative execution)
+<ul>
+<li>이 추측을 바탕으로 파이프라인에 명령어를 채웁니다.</li>
+<li>추측이 틀리면, 파이프라인 플러시(모두 제거)합니다.</li>
+</ul>
+</li>
+<li>분기 예측(branch prediction) - 정교한 갈림길 추측 방법
+<ul>
+<li>90% 이상의 정확도</li>
+</ul>
+</li>
+</ul>
+<h2 id="superscalar-">Superscalar 프로세서</h2>
+<ul>
+<li>매 클럭 한 개 이상의 명령어 실행 가능한 프로세서</li>
+</ul>
 </article>
                         </div>
                     </div>
