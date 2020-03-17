@@ -6,10 +6,37 @@
     <description>Recent content in Categories on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2020 13:39:56 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 15:29:12 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript</title>
+      <link>https://mj-seok.com/categories/javascript/</link>
+      <pubDate>Fri, 13 Mar 2020 15:29:12 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://mj-seok.com/categories/algorithm/</link>
+      <pubDate>Thu, 12 Mar 2020 18:12:12 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/categories/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cs</title>
+      <link>https://mj-seok.com/categories/cs/</link>
+      <pubDate>Thu, 12 Mar 2020 13:07:06 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/categories/cs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>database</title>
@@ -21,38 +48,11 @@
     </item>
     
     <item>
-      <title>cs</title>
-      <link>https://mj-seok.com/categories/cs/</link>
-      <pubDate>Thu, 27 Feb 2020 13:24:19 +0900</pubDate>
-      
-      <guid>https://mj-seok.com/categories/cs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://mj-seok.com/categories/algorithm/</link>
-      <pubDate>Mon, 24 Feb 2020 13:59:28 +0900</pubDate>
-      
-      <guid>https://mj-seok.com/categories/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tech</title>
       <link>https://mj-seok.com/categories/tech/</link>
       <pubDate>Wed, 19 Feb 2020 13:48:33 +0900</pubDate>
       
       <guid>https://mj-seok.com/categories/tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://mj-seok.com/categories/javascript/</link>
-      <pubDate>Wed, 08 Jan 2020 18:46:45 +0900</pubDate>
-      
-      <guid>https://mj-seok.com/categories/javascript/</guid>
       <description></description>
     </item>
     

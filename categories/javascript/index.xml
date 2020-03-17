@@ -6,10 +6,44 @@
     <description>Recent content in javascript on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 18:46:45 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 15:29:12 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ECMAScript 6 - Arrow 함수</title>
+      <link>https://mj-seok.com/javascript/es6-arrow/</link>
+      <pubDate>Fri, 13 Mar 2020 15:29:12 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/javascript/es6-arrow/</guid>
+      <description>ECMAScript 6 - Arrow 함수  arrow의 사전적 의미는 &amp;ldquo;화살, 화살표(=&amp;gt;)&amp;ldquo;이며 의미보다 표기가 더 어울립니다. 영어 발음보다 화살표가 더 직관적이므로 이 책에서는 &amp;ldquo;화살표 함수&amp;quot;로 표기합니다.   (param) =&amp;gt; { 코드 };
+param =&amp;gt; { 코드 };
+() =&amp;gt; { 코드 };
+(param1, param2, , , , paramN) =&amp;gt; { 코드 };
+param =&amp;gt; ( { key: value });
+(param1, param2, &amp;hellip;rest) =&amp;gt; { 코드 };
+(param1, param2 = 123, , , paramN) =&amp;gt; { 코드 };</description>
+    </item>
+    
+    <item>
+      <title>ECMAScript 6 - var, let, const</title>
+      <link>https://mj-seok.com/javascript/es6/</link>
+      <pubDate>Fri, 13 Mar 2020 12:40:07 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/javascript/es6/</guid>
+      <description>ECMAScript 6 - var, let, const 1. var 키워드
+2. let 키워드
+3. 블록 스코프
+4. let과 this 키워드
+5. function
+6. try-catch
+7. switch-case
+8. 호이스팅
+9. for()
+10. const
+ 자바스크립트 코드 실행되려면  코드 컴파일 실행할 자바스크립트 엔진이 필요 ECMA 262 스펙   ES6  객체지향 언어의 장점을 적극적으로 도입 효율적인 메모리 사용에 중점   빌트인 오브젝트  엔진이 사전에 오브젝트로 생성한 것 사전 처리를 하지 않고 바로 사용할 수 있는 것 Function, Object, Array, Number, String 등의 오브젝트   object  첫 문자가 영문 소문자이고 빌트인 오브젝트로 생성한 오브젝트를 의미 첫 문자가 대문자인 Object는 {key: value} 형태를 의미   인스턴스  new 연산자와 생성자 함수로 인스턴스를 생성합니다.</description>
+    </item>
     
     <item>
       <title>ES6 - 적절한 꼬리 호출(Proper Tail Calls)</title>

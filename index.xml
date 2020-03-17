@@ -120,10 +120,10 @@ param =&amp;gt; ( { key: value });
     
     <item>
       <title>레지스터와 RAM 과 중앙처리장치 CPU</title>
-      <link>https://mj-seok.com/cs-ram/</link>
+      <link>https://mj-seok.com/cs/cs-ram/</link>
       <pubDate>Mon, 02 Mar 2020 15:59:54 +0900</pubDate>
       
-      <guid>https://mj-seok.com/cs-ram/</guid>
+      <guid>https://mj-seok.com/cs/cs-ram/</guid>
       <description>Arithmetic and Logic Unit(ALU)  이진수를 입력받아 계산  레지스터와 RAM  AND-OR LATCH GATED LATCH 레지스터: 래치를 병렬로 사용하는 그룹  멀티플렉서  행 담당 열 담당 선택 SRAM(Static Random Access Memory)  Central Process Unit (CPU)  MICRO-ARCHITECTURE RAM : 16공간 x 8bit Register : 8bit x 4개 INSTRUCTION TABLE : id, opcode, address  레지스터 구성  Instruction Address Register Instruction Register Register A Register B Register C Register D  Instruction Table  Instruction / Description / 4-Bit Opcode / Address or Registers LOAD_A / Read RAM location (register A) / 0010 / 4-bit RAM address LOAD_B / Read RAM location (register B) / 0001 / 4-bit RAM address STORE_A / Write (register A) RAM location / 0100 / 4-bit RAM address ADD / Add two registers, store result / 1000 / 2-bit register ID, 2-bit register ID  FETCH PHASE (인출 단계)  Instruction Address Register -&amp;gt; ADDRESS INPUT RAM -&amp;gt; DATA -&amp;gt; Instruction Register  Decode Phase (해독 단계)  opcode 첫 4bit RAM 주소 뒤 4bit Instruction Register control unit  Execute Phase (실행 단계)  Load_A : RAM의 write enable 켜기 주소값 : RAM에서 위치에 DATA 값 확인 Load_A : Register A의 write enable 활성화 RAM Data : Register A에 저장 instruction 완성, 모든 연결선 종료 instruction address 레지스터 1증가 execute phase 종료 다음 instruction fetch 준비  Control Unit  Fetch Phase  Inst.</description>
     </item>
     
@@ -134,6 +134,15 @@ param =&amp;gt; ( { key: value });
       
       <guid>https://mj-seok.com/cs/compiler/</guid>
       <description>컴파일러 과목  course output(CO) 언어번역기(컴파일러)의 필요성과 컴파일러 관련 이론을 습득합니다. 문법 이론과 오토마타 이론을 배웁니다. 어휘분석과 파싱 방법론을 습득합니다. 컴파일러 자동화 도구의 사용법을 배웁니다.  1장 컴파일러 개론    컴파일러와 인터프리터의 차이점을 설명할 수 있습니다.    JIT와 AOT 컴파일을 이해하고 그 필요성을 설명할 수 있습니다.    Preprocessor의 기능과 조건부 컴파일의 필요성을 이해하고, 설명할 수 있습니다.    컴파일러의 일반적인 구조와 주요 기능을 설명할 수 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>Develop Process</title>
+      <link>https://mj-seok.com/cs/develop-process/</link>
+      <pubDate>Mon, 02 Mar 2020 14:50:40 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/develop-process/</guid>
+      <description>주요 개발 프로세스  Incremental Model  Divide and conquer 장점 : Waterfall Lifecycle Model과 같은 방식의 한계 극복 value를 분해하여 높은 value의 functionality를 초기 단계에 Increment에 assign함 각 Increment / build 개발 비용 및 기간 예측    Icremental Model    Implement and test first build   핵심 기능을 first increment에 넣어 개발    Implement, integrate and test successive build until product is complete    Maintenance    Spiral Model  리스크가 많은 프로젝트를 개발하는 데 가장 적합한 모델 Risk-Driven Model  리스크의 결과에 따라서 여러 루프가 하나의 phase를 나타냄   PROTOTYPE은 하나의 옵션일 뿐!</description>
     </item>
     
     <item>
