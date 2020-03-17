@@ -199,35 +199,35 @@ if (!doNotTrack) {
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/algorithm/">
                 algorithm
                 <span class="Counter hide-lg hide-md hide-sm">
-                    25
+                    30
                 </span>
             </a>
             
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/cs/">
                 cs
                 <span class="Counter hide-lg hide-md hide-sm">
-                    25
+                    30
                 </span>
             </a>
             
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/database/">
                 database
                 <span class="Counter hide-lg hide-md hide-sm">
-                    25
+                    30
                 </span>
             </a>
             
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/javascript/">
                 javascript
                 <span class="Counter hide-lg hide-md hide-sm">
-                    25
+                    30
                 </span>
             </a>
             
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/tech/">
                 tech
                 <span class="Counter hide-lg hide-md hide-sm">
-                    25
+                    30
                 </span>
             </a>
             
@@ -240,6 +240,106 @@ if (!doNotTrack) {
     <div class="position-relative">
         <div id="user-repositories-list">
             <ul data-filterable-for="your-repos-filter" data-filterable-type="substring">
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/algorithm/algo-dfs/">알고리즘 - 깊이우선순회(DFS)</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘 - 깊이우선순회(DFS)  이진트리 순회 방법  in-order(dfs) pre-order(dfs) post-order(dfs) level-order(bfs)     출발점 s에서 시작합니다.    현재 노드를 visited로 mark하고 인접한 노드들 중 unvisited 노드가 존재하면 그 노드로 갑니다.    2번을 계속 반복합니다.    만약 unvisited인 이웃 노드가 존재하지 않는 동안 계속해서 직전 노드로 되돌아갑니다.    다시 2번을 반복합니다.    시작노드 s로 돌아오고 더 이상 갈 곳이 없으면 종료합니다.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-02-11" class="no-wrap"
+                                title="Modifyd at 2020/02/11">
+                                February 11, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/algorithm/algo-bfs/">알고리즘 - 그래프 순회 (Graph Traversal)</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘 - 그래프 순회 (Graph Traversal)  순회(traversal) 그래프의 모든 노드들을 방문하는 일 대표적 두 가지 방법 BFS (Breadth-First Search, 너비우선순회) DFS (Depth-First Search, 깊이우선순회)  너비우선순회 (BFS)  BFS 알고리즘은 다음 순서로 노드들을 방문 L(0) = {s}, 여기서 s는 출발 노드 L(1) = L(0)의 모든 이웃 노드들 L(2) = L(1)의 이웃들 중 L(0)에 속하지 않은 노드들 &hellip; L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들 동심원 형태  큐를 이용한 너비우선순회  s = 1 체크는 이미 방문된 노드라는 표시   check the start node;    insert the start node into the queue;    while the queue is not empty do remove a node v from queue; for each unchecked neighbour w of v do check and insert w into the queue; 너비우선순회 BFS(G, s)	// 그래프 G와 출발 노드 s Q &lt;- empty queue; Enqueue(Q, s); while Q =/ empty do u &lt;- Dequeue(Q) for each v adjacent to u do if v is unvisited then mark v as visited; Enqueue(Q, v); end.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-02-11" class="no-wrap"
+                                title="Modifyd at 2020/02/11">
+                                February 11, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/algorithm/algo-graph/">알고리즘 - 그래프 알고리즘</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘 - 그래프 알고리즘  개념과 표현  그래프 (Graph)  (무방향) 그래프 G = (V, E) // 두 개의 집합에 의해서 정의되는 구조 V : 노드(node) 혹은 정점(vertex) // 정점의 집합 E : 노드쌍을 연결하는 에지(edge) 혹은 링크(link) // 정점과 정점을 연결하는 에지들의 집합 개체(object)들 간의 이진관계를 표현 n = |V|, m = |E|  V = {1, 2, 3, 4, 5, 6, 7, 8} E = {(1, 2), (1, 3), (2, 3), &hellip;, (7, 8)} n = 8 (정점의 개수) m = 11 (에지의 개수)    방향 그래프와 가중치 그래프  방향그래프(Directed Graph) G = (V, E)  에지 (u, v)는 u로부터 v로의 방향을 가짐   가중치(weighted) 그래프  에지마다 가중치(weight)가 지정    다중 엣지 와 셀프 엣지  다중 엣지 : 엣지 집합, 집합이기 때문에 중복 값이 들어가면 안 됩니다.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-02-09" class="no-wrap"
+                                title="Modifyd at 2020/02/09">
+                                February 9, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/algorithm/algo-hashing/">알고리즘 - 해싱 Hashing</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘 - 해싱 Hashing  해쉬 테이블은 dynamic set을 구현하는 효과적인 방법의 하나 적절한 가정하에서 평균 탐색, 삽입, 삭제시간 O(1) 보통 최악의 경우 O(n)  Hash Table  해쉬 함수(hash function) h를 사용하여 키 k를 T[h(k)]에 저장  h : U -&gt; {0, 1, &hellip;, m - 1}, U : 양의 정수들의 집합 여기서 m은 테이블의 크기, U는 모든 가능한 키들의 집합   키 k가 h(k)로 해슁되었다고 말함. 해쉬테이블은 일반적으로 하나의 배열 즉 각 키에 대한 해쉬함수값을 그 키를 저장할 배열 인덱스로 사용  index = h(k: a key) h(X) = x % m 0 .
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-02-05" class="no-wrap"
+                                title="Modifyd at 2020/02/05">
+                                February 5, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
+                                <a href="https://mj-seok.com/algorithm/algo-rb/">알고리즘 - 레드 블랙 트리</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            알고리즘 - 레드 블랙 트리  이진탐색트리의 일종 균형잡힌 트리 : 높이가 O(log(2)n) SEARCH, INSERT, DELETE 연산을 최악의 경우에도 O(log(2)n) 시간에 지원  레드-블랙 트리  각 노드는 하나의 키(key), 왼쪽자식(left), 오른쪽 자식(right), 그리고 부모노드(p)의 주소를 저장 자식노드가 존재하지 않을 경우 NIL 노드라고 부르는 특수한 노드가 있다고 가정 따라서 모든 리프노드는 NIL노드 루트의 부모도 NIL노드라고 가정 노드들은 내부노드와 NIL노드로 분류  레드-블랙 트리: 정의  다음의 조건을 만족하는 이진탐색트리 : 각 노드는 red 혹은 black이고, 루트노드는 black이고, 모든 리프노드(즉, NIL노드)는 black이고, red노드의 자식들은 전부 black이고(즉, red노드는 연속되어 등장하지 않고), 모든 노드에 대해서 그 노드로부터 자손인 리프노드에 이르는 모든 경로에는 동일한 개수의 black노드가 존재합니다.
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-02-04" class="no-wrap"
+                                title="Modifyd at 2020/02/04">
+                                February 4, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
                 
                 <li class="col-12 d-flex width-full py-4 border-bottom public fork">
                     <div class="col-12 col-lg-12 d-inline-block">
@@ -337,110 +437,6 @@ if (!doNotTrack) {
                             Updated <relative-time datetime="2020-01-29" class="no-wrap"
                                 title="Modifyd at 2020/01/29">
                                 January 29, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/algorithm/algo-greedy/">탐욕 알고리즘 - Greedy Algorithm</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            탐욕 알고리즘 - Greedy Algorithm  현재 상황에서 가장 좋아 보이는 답을 선택하는 방법 각 부분에서 최적을 선택하면 전체에서도 최적이 될 것이라는 가정을 전제로 합니다. 선택은 항상 하위 문제에 대한 해답이 나오기 전에 선택됩니다.  탐욕 선택  하위 문제를 풀기 전에 선택을 합니다. 항상 하나의 문제만을 고려합니다.  동적 프로그래밍  하위 문제를 풀고 나서 선택을 합니다. 동시에 여러 개의 하위 문제를 고려합니다.  0-1 배낭 채우기 문제 (0-1 knapsack)  도둑이 상점에서 n개의 물건을 훔친다고 합니다.
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-22" class="no-wrap"
-                                title="Modifyd at 2020/01/22">
-                                January 22, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/algorithm/algo-sort/">정렬 알고리즘 - Sort Algorithm</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            정렬 알고리즘 - Sort Algorithm [ Reference ] : https://youtu.be/0dG7xTt5IfQ
- 정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  기본적인 정렬 알고리즘 선택 정렬 - Selection Sort  initial array = [29, 10, 14, 37, 13]; 가장 큰 값을 맨 마지막 값과 바꿉니다.
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-14" class="no-wrap"
-                                title="Modifyd at 2020/01/14">
-                                January 14, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/algorithm/algo-sort-2/">정렬 알고리즘 2 - Sort Algorithm</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            정렬 알고리즘 - Sort Algorithm [ Reference ] : https://youtu.be/0dG7xTt5IfQ
- 정렬이 가장 기본입니다.  간단하고, 느린 정렬 - Simple, Slow  Bubble sort Insertion sort Selection sort  빠른 정렬 - Fast  Quick sort Merge sort Heap sort  O(N) 근본적으로 다른 알고리즘  Radix sort  힙 정렬 - Heap Sort  힙, 바이너리 힙 이진 힙 자료구조 정렬 최악의 경우 시간복잡도 O(nlog(2)n) Sorts in place - 추가 배열 불필요 이진 힙(binary heap) 자료구조를 사용  Heap의 정의  complete binary tree이면서, heap property 만족  Full vs Complete Binary Trees   full binary tree: 모든 레벨에 노드들이 꽉 차있는 형태
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-14" class="no-wrap"
-                                title="Modifyd at 2020/01/14">
-                                January 14, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/algorithm/algo-powerset/">알고리즘 멱집합 구하기 - powerSet</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            멱집합 구하기 - powerSet private static char data[] = {&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;}; private static int n = data.length; private static boolean [] include = new boolean[n]; public static void powerSet(int k) { if (k==n) { for (int i=0; i&lt;n; i++) if (include[i]) System.out.print(data[i] + &#34; &#34;); System.out.println(); return; } include[k] = false; powerSet(k+1); include[k] = true; powerSet(k+1); } 
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-14" class="no-wrap"
-                                title="Modifyd at 2020/01/14">
-                                January 14, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/algorithm/algorithm-desc/">알고리즘의 기본 - Algorithm Basic</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            알고리즘의 기본 - Algorithm Basic [ Reference ] : https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz
-알고리즘이란 &lsquo;문제를 해결하는 절차'입니다  입력, 출력, 유한성, 명백성, 효과성을 만족해야 합니다. 분석을 통해 좋고 나쁨을 평가할 수 있습니다. 기초 프로그래밍과 자료구조를 공부한 이후에 배우면 좋습니다. 논리이며 수학이고, 실질적인 개발에 적용되는 기초적인 아이디어입니다.   점근적 분석법, 행렬? 버블정렬, 선택정렬 보다 퀵 정렬이 빠르게 수행됩니다.
- 알고리즘은 &lsquo;개발'의 전체 과정에 사용됩니다  실제 프로그램을 개발할 때 효율적인 알고리즘을 적용함으로써 원하는 결과를 도출해야 합니다.
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-12" class="no-wrap"
-                                title="Modifyd at 2020/01/12">
-                                January 12, 2020</relative-time>
                         </div>
                     </div>
                 </li>

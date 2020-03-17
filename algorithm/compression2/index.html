@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>압축 알고리즘 - 제 2단계 Huffman Tree - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/algorithm/compression2/">압축 알고리즘 - 제 2단계 Huffman Tree</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-03-10" class="no-wrap"
+                                    title="Created at 2020/03/10">
+                                    2020-03-10</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-03-10" class="no-wrap"
+                                    title="Modifyed  at 2020/03/10">
+                                    2020-03-10</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                1235 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="huffman-coding">Huffman coding</h1>
+<ul>
+<li>Huffman coding 알고리즘은 트리들의 집합을 유지하면서</li>
+<li>매 단계에서 가장 frequency가 작은 두 트리를 찾아서</li>
+<li>두 트리를 하나로 합칩니다.</li>
+<li>이런 연산에 가장 적합한 자료구조는 최소 힙(minimum heap)입니다.</li>
+<li>즉, 힙에 저장된 각각의 원소들은 하나의 트리입니다. (노드가 아니라요)</li>
+</ul>
+<h2 id="최소-힙">최소 힙</h2>
+<ul>
+<li>크기가 5인 힙, 5개의 트리가 저장되어 있습니다.</li>
+<li>5개의 single node tree</li>
+<li>각 트리는 오직 하나의 노드로 구성됩니다.</li>
+</ul>
+<h2 id="class-run-수정하기">class Run 수정하기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Run</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span> symbol<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> runen<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> freq<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">/* 트리의 노드로 사용하기 위해서 왼쪽 자식과 오른쪽 자식 노드 필드를 추가합니다. */</span>
+
+<span style="color:#75715e">/* 두 run의 크기 관계를 비교하는 compareTo 메서드를 overriding 하라. */</span>
+<span style="color:#75715e">/* 비교의 기준은 freq입니다. */</span>
+
+</code></pre></div><ul>
+<li>3장에서 작성했던 Heap 클래스를 가져와서 사용합니다.</li>
+<li>Generics로 수정하고, heapify, insert, extractMin 등의 함수들을</li>
+<li>min heap 에 맞게 수정합니다.</li>
+<li>C로 구현한 사람들은 별개의 모듈로 min heap을 구현합니다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HuffmanCoding</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> ArrayList<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> runs <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> Heap<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> heap<span style="color:#f92672">;</span> <span style="color:#75715e">/* minimum heap 입니다. */</span>
+    <span style="color:#66d9ef">private</span> Run theRoot <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span> <span style="color:#75715e">/* root of the Huffman tree */</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">createHuffmanTree</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        heap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Heap<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        <span style="color:#75715e">/* 1. Store all runs into the heap. */</span>
+        <span style="color:#75715e">/* 2. While the heap size &gt; 1 do */</span>
+        <span style="color:#75715e">/*      (1) perform extractMin two times  */</span>
+        <span style="color:#75715e">/*      (2) make a combined tree */</span>
+        <span style="color:#75715e">/*      (2) insert the combined tree into the heap. */</span>
+        <span style="color:#75715e">/* 3. Let theRoot be the root of the tree. */</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="huffman-tree-출력해보기">Huffman Tree 출력해보기</h2>
+<ul>
+<li>class Run에 적절한 toString 메서드를 추가하여 트리를 출력해봅시다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printHuffmanTree</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    preOrderTraverse<span style="color:#f92672">(</span>theRoot<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">preOrderTraverse</span><span style="color:#f92672">(</span>Run node<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> depth<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> depth<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>node <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;null&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        preOrderTraverse<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">,</span> depth <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        preOrderTraverse<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> depth <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="codeword-부여하기">Codeword 부여하기</h2>
+<ul>
+<li>Huffman 트리의 리프 노드에 위치한 run들에게 이진 codeword를 부여할 차례입니다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">assignCodeword<span style="color:#f92672">(</span>prefix<span style="color:#f92672">,</span> node<span style="color:#f92672">)</span>
+<span style="color:#66d9ef">if</span> node is a leaf
+    assign prefix to the node<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">else</span>
+    assignCodeword<span style="color:#f92672">(</span>prefix <span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">`</span>0<span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">,</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    assignCodeword<span style="color:#f92672">(</span>prefix <span style="color:#f92672">+</span> <span style="color:#960050;background-color:#1e0010">`</span>1<span style="color:#960050;background-color:#1e0010">`</span><span style="color:#f92672">,</span> node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</code></pre></div><ul>
+<li>임의의 길이의 이진수열</li>
+<li>여기서 prefix를 하나의 32비트 정수로 표현합니다.</li>
+<li>하지만 32비트 중에서 하위 몇 비트만이 실제 부여된 codeword입니다.</li>
+<li>따라서 codeword의 길이를 따로 유지해야 합니다.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Run</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span> symbol<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> runLen<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> freq<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">/* 트리의 노드로 사용하기 위해서 왼쪽 자식과 오른쪽 자식 노드 필드를 추가합니다. */</span>
+    
+    <span style="color:#75715e">/* 노드에 부여된 codeword를 저장하기 위한 필드들을 다음과 같이 추가합니다. */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> codeword<span style="color:#f92672">;</span>    <span style="color:#75715e">/* 부여된 codeword를 32비트 정수로 저장 */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> codewordLen<span style="color:#f92672">;</span> <span style="color:#75715e">/* 부여된 codeword의 길이. 즉 codeword의 하위 codewordLen비트가 실제 codeword */</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="java에서의-비트bit-연산">Java에서의 비트(bit) 연산</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 60<span style="color:#f92672">;</span> <span style="color:#75715e">/* 60 = 0011 1100 */</span>
+        <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 13<span style="color:#f92672">;</span> <span style="color:#75715e">/* 13 = 0000 1101 */</span>
+        <span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> a <span style="color:#f92672">&amp;</span> b<span style="color:#f92672">;</span>  <span style="color:#75715e">/* 12 = 0000 1100 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a &amp; b = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> a <span style="color:#f92672">|</span> b<span style="color:#f92672">;</span>  <span style="color:#75715e">/* 61 = 0011 1101 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a | b = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> a <span style="color:#f92672">^</span> b<span style="color:#f92672">;</span>  <span style="color:#75715e">/* 49 = 0011 0001 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a ^ b = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>a<span style="color:#f92672">;</span>  <span style="color:#75715e">/* -61 = 1100 0011 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;~a = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> a <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">;</span>  <span style="color:#75715e">/* 120 = 0111 1000 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a &lt;&lt; 1 = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>  <span style="color:#75715e">/* 121 = 0111 1001 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;(a &lt;&lt; 1) + 1 = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+
+        c <span style="color:#f92672">=</span> a <span style="color:#f92672">&lt;</span><span style="color:#f92672">&lt;</span> 2<span style="color:#f92672">;</span>  <span style="color:#75715e">/* 240 = 1111 0000 */</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a &lt;&lt; 2 = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="codeword-부여하기-1">codeword 부여하기</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">assignCodewords</span><span style="color:#f92672">(</span>Run p<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> codeword<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> length<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// assignCodewords(theRoot, 0, 0) 으로 호출합니다.
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 노드 p에 부여된 codeword
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 노드 p에 부여된 codeword의 길이
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span> <span style="color:#f92672">=</span><span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 리프노드일 때
+</span><span style="color:#75715e"></span>
+        p<span style="color:#f92672">.</span><span style="color:#a6e22e">codeword</span> <span style="color:#f92672">=</span> codeword<span style="color:#f92672">;</span>
+        p<span style="color:#f92672">.</span><span style="color:#a6e22e">codewordLen</span> <span style="color:#f92672">=</span> length<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+        assignCodewords<span style="color:#f92672">(</span>    <span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        assignCodewords<span style="color:#f92672">(</span>    <span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">// 왼쪽 자식노드에게는 codeword의 뒤에 0을 추가하고
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 오른쪽 자식에게는 1을 추가합니다.
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 길이는 1 증가합니다.
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="main과-compressfile-메서드">main과 compressFile 메서드</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HuffmanCoding</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">compressFile</span><span style="color:#f92672">(</span>RandomAccessFile fIn<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        collectRuns<span style="color:#f92672">(</span>fIn<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        createHuffmanTree<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        assignCodewords<span style="color:#f92672">(</span>theRoot<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String args<span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        HuffmanCoding app <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HuffmanCoding<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        RandomAccessFile fIn<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            fIn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RandomAccessFile<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sample.txt&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;r&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            app<span style="color:#f92672">.</span><span style="color:#a6e22e">compressFile</span><span style="color:#f92672">(</span>fIn<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            fIn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException io<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Cannot open &#34;</span> <span style="color:#f92672">+</span> fileName<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
