@@ -6,10 +6,35 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Mar 2020 11:23:27 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 08:58:55 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>애자일 방법론 - Agile Method</title>
+      <link>https://mj-seok.com/cs/agile/</link>
+      <pubDate>Fri, 20 Mar 2020 08:58:55 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/agile/</guid>
+      <description>애자일 방법론 - Agile Method 1. eXtreme Programming(XP)
+2. Scrum
+프로세스 선택 시 고려해야 될 특징(Characteristic)
+1. eXtreme Programming(XP)  소규모 ~ 중간규모 팀이 빠른 요구사항 변화에 반응하여 개발하는 경량 소프트웨어 개발 방법론 여러 practice를 적용하게 간단하게 개발할 수 있음.  12 Practices  The Planning Game : 개발자와 고객 간 role game, 어떻게 이 시스템을 사용할 것인가? Small Releases : 짧은 개발 Lifecycle 동안 어떻게 scope를 정하여 소프트웨어를 인계할 것인가?</description>
+    </item>
+    
+    <item>
+      <title>데이터 통신</title>
+      <link>https://mj-seok.com/cs/network/</link>
+      <pubDate>Thu, 19 Mar 2020 14:29:33 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/network/</guid>
+      <description>데이터 통신 1. 정의
+2. 정보통신의 발전
+3. 데이터 통신 시스템의 구성 요소
+4. 데이터 전송기술
+1. 정의  컴퓨터에 의한 정보처리기술과 데이터 전송 기술이 통합된 형태  데이터 통신 = 데이터 전송 + 데이터 처리    2. 정보통신의 발전  Morse(1844) : 전신, 전기통신의 시초 Bell(1876) : 전화 발명, 음성 통신 텔레타이프회선에 의한 데이터 통신(1940) ENIAC 개발(1946) EDSAC 개발(1950) UNIVAC-1 개발(1951) SAGE(1958) : Semi-Automatic Ground Environment  세계 최초의 데이터 통신, 반자동 방공 시스템(군사용)   SABRE(1961) : Semi-Automatic Business Research Environment  세계 최초의 상업용 데이터 통신 아메리칸 항공사의 좌석예약 및 회계 업무 시스템   CTSS(1963)  Compatible Time Sharing System 최초의 실험용 시분할 시스템   MULTICS  Multiplex of Information and Computing Service CTSS를 발전시킨 시스템   ARPA 네트워크(1968)  Advanced Research Project Agency 최초의 패킷 교환(Packet Switching) 시스템 인터넷의 효시   ALOHA 시스템(1968)  Addictive Links Online Hawaii Area 최초의 무선 패킷 교환망   SNA(1974)  System Network Architecture IBM이 발표한 컴퓨터 시스템을 이용한 통신망을 구축하는 통신망 구조   TELNET, TYNET(1975)  상업용 패킷 교환 데이터 통신 시스템   GE Mark -1  상업용 시분할 시스템    3.</description>
+    </item>
     
     <item>
       <title>유닉스 Unix</title>
@@ -21,6 +46,7 @@
 2. 유닉스의 구성요소
 3. 유닉스의 파일 시스템
 4. 디스크 블록 구조
+5. 유닉스 명령어
 1. 유닉스의 특징  대화형 시스템 다중사용자 시스템 다중 작업용 시스템 높은 이식성과 확장성 제공 계층적 트리 파일 시스템  2. 유닉스의 구성요소  커널 : 프로세스 관리, 메모리 관리, 파일 시스템 관리, 장치 관리 등 컴퓨터의 모든 자원을 초기화하고 제어하는 기능을 수행 함. 셸 : 사용자와 커널 사이의 중간자 역할을 담당하는 프로그램으로 사용자가 입력한 명령을 해석하여 커널에 넘겨줌.</description>
     </item>
     
