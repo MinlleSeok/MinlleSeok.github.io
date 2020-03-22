@@ -6,10 +6,28 @@
     <description>Recent content in Cs on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Mar 2020 08:58:55 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 11:32:46 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/cs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>텍스트 마이닝 - Text Mining</title>
+      <link>https://mj-seok.com/cs/text-mining/</link>
+      <pubDate>Sun, 22 Mar 2020 11:32:46 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/text-mining/</guid>
+      <description>텍스트 마이닝 - Text Mining 1. 필요 요구 사항
+2. 텍스트 마이닝 소개
+3. 텍스트 마이닝의 이해
+4. 텍스트 마이닝 기법 소개
+5. 텍스트 표현의 단위
+6. Character 단위 분석
+7. 단어 단위 텍스트 분석
+8. Zipf’s 법칙
+9. 구 단위 텍스트 분석
+1. 필요 요구 사항  자바는 프로그래밍 언어  자바로 쓰인 고급 프로그래밍 언어 자바와 기계 코드를 돌리기 위해 자바 컴파일러와 가상 머신을 사용함   Java JDK Eclipse yTextMiner  2.</description>
+    </item>
     
     <item>
       <title>애자일 방법론 - Agile Method</title>
