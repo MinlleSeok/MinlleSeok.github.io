@@ -6,10 +6,19 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2020 11:32:46 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 11:33:44 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>소프트웨어 품질 - Software Quality</title>
+      <link>https://mj-seok.com/cs/software-quality/</link>
+      <pubDate>Tue, 24 Mar 2020 11:33:44 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/software-quality/</guid>
+      <description>소프트웨어 품질 - Software Quality  품질 Quality 노력(수고) Effort 일정 Schedule   소프트웨어 품질 정의 품질 특성 품질 표준 품질 안전성 인증  소프트웨어 품질 정의  명백하게 또는 내포적으로 요구사항 및 기대사항을 부합한 정도  품질의 두 가지 형태  설계 품질(Quality of Design)  요구사항 포함(Encompasses requirements), 사양(specifications), 시스템 디자인(design of the system)   부합 품질 (Quality of Conformance)  An issue focused primarily on implementation 사양이나 설계가 얼만큼 부합하는지 측정     사용자 만족 User Satisfaction</description>
+    </item>
     
     <item>
       <title>텍스트 마이닝 - Text Mining</title>
