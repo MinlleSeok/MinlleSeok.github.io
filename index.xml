@@ -6,10 +6,19 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Mar 2020 11:33:44 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 22:28:44 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>품질 속성 - Quality Attributes</title>
+      <link>https://mj-seok.com/cs/quality-model/</link>
+      <pubDate>Thu, 26 Mar 2020 22:28:44 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/quality-model/</guid>
+      <description>품질 속성 - Quality Attributes 이전 소프트웨어 개발자들의 생각  소프트웨어 가장 중요한 요소 - 구조 ? 기능적 요구 만족  결합된 수요 Combined Demand  성능 Performance 유효성 Availability 수정 가능성 Modifiability 신뢰성 Reliability 구조가 아닌 다른 의미에서 만족할 수 있는 속성 품질 속성  품질 속성  비기능 요구사항 Non-functional Requirement 구조에 따라 비기능 요구사항들이 달라지는 경우  Sort Program 알고리즘을 사용할 때 알고리즘에 따라서 속도, Attribute이 달라지는 경우.</description>
+    </item>
     
     <item>
       <title>소프트웨어 품질 - Software Quality</title>
