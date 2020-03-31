@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://mj-seok.com/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>사무행정과 한글 - Happiness Development</title>
+    <title>데이터에 대한 결정 - Happiness Development</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -98,16 +98,16 @@ if (!doNotTrack) {
                                     href="https://mj-seok.com/">Jose Seok</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://mj-seok.com/tech/hangul/">사무행정과 한글</a></strong>
+                                    href="https://mj-seok.com/cs/ml/">데이터에 대한 결정</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2020-03-30" class="no-wrap"
-                                    title="Created at 2020/03/30">
-                                    2020-03-30</time-ago>
+                                Created <time-ago datetime="2020-03-31" class="no-wrap"
+                                    title="Created at 2020/03/31">
+                                    2020-03-31</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2020-03-30" class="no-wrap"
-                                    title="Modifyed  at 2020/03/30">
-                                    2020-03-30</time-ago>
+                                Modifyed <time-ago datetime="2020-03-31" class="no-wrap"
+                                    title="Modifyed  at 2020/03/31">
+                                    2020-03-31</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -122,92 +122,198 @@ if (!doNotTrack) {
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                547 Words
+                                855 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="행정이란">행정이란?</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="데이터에-대한-결정">데이터에 대한 결정</h1>
 <ul>
-<li>행정 : 광의와 협의</li>
-<li>정부, 기업이나 모든 조직은 목표를 달성하기 위해 관리를 합니다.</li>
-<li>광의 : Administration 관리</li>
-<li>협의 : Public</li>
-<li>NGO 공익</li>
-</ul>
-<h2 id="협의의-행정">협의의 행정</h2>
+<li>기계 학습의 본질
 <ul>
-<li>행정의 정의가 구체화 됩니다.</li>
-<li>기업이 아니라 정부가 하는 활동, 이익이 아니라 공익을 추구하는 활동</li>
-<li>행정은 경영과 다릅니다.</li>
-<li>공사 행정 이원론, 정치 행정 일원론</li>
+<li>데이터로부터 배울 수 있는 능력, 예측 및 결정을 내릴 수 있는 알고리즘</li>
 </ul>
-<h2 id="거버넌스governance">거버넌스(Governance)</h2>
+</li>
+<li>인공 지능을 목표하는 단계</li>
+</ul>
+<h2 id="분류">분류</h2>
 <ul>
-<li>거버넌스(Governance) : Govern(통치하다)에서 파생, 협치라는 의미</li>
-<li>Government : 통치</li>
-<li>정부 - 시장 - 시민사회</li>
-<li>신뢰, 네트워크, 투명성 중요하게 여겨지는 가치</li>
+<li>결정 과정 : 분류 classification</li>
+<li>알고리즘 : 분류자</li>
+<li>Feature : 특징화</li>
+<li>훈련 데이터(Training Data)와 분류된 데이터(Labeled Data)</li>
 </ul>
-<h2 id="사무-행정-업무-수행-계획">사무 행정 업무 수행 계획</h2>
+<h2 id="선점도-데이터-시각화">선점도 데이터 시각화</h2>
 <ul>
-<li>하는 일들에 대해 계획</li>
-<li>어떤 역할을 수행할 수 있을지</li>
-<li>예) 민원 응대를 어떻게 구체적으로 대응할 것인지</li>
-<li>추진하고 있는 방향성과 사업 계획</li>
-<li>단기간의 포부 장기간의 포부</li>
+<li>알고리즘의 목적 : 최적의 구분/분류를 찾는 것</li>
+<li>분할 추가</li>
+<li>의사 결정 경계 : Decision Boundary</li>
+<li>오차 행렬 : Confusion Matrix</li>
 </ul>
-<h2 id="한글-문서---문단-나누기와-줄-바꿈">한글 문서 - 문단 나누기와 줄 바꿈</h2>
+<h2 id="사용되는-알고리즘">사용되는 알고리즘</h2>
 <ul>
-<li>문단 나누기 : Enter 엔터</li>
-<li>줄 바꿈 : Shift 쉬프트 + Enter 엔터</li>
+<li>결정 트리 Decision Tree</li>
+<li>서포트 벡터 머신 (Support Vector Machines)</li>
 </ul>
-<h2 id="여러-기능">여러 기능</h2>
+<h2 id="머신-러닝-문제">머신 러닝 문제</h2>
 <ul>
-<li>눈금자</li>
-<li>10px - 2.54mm | 3.51mm</li>
+<li>HyperLane</li>
+<li>통계학 Statistics 기반</li>
 </ul>
-<h2 id="단축키">단축키</h2>
+<h2 id="인공-신경망-artificial-neural-networks">인공 신경망 Artificial Neural Networks</h2>
+<blockquote>
+<p>입력 레이어(Input Layer) - 숨겨진 레이어(Hidden Layer) - 출력 레이어(Output Layer)</p>
+</blockquote>
 <ul>
-<li>Alt + N : 새로 글쓰기 = 새글</li>
-<li>Alt + S : 저장</li>
-<li>Alt + O : 열기(불러오기)</li>
-<li>ALt + P : 인쇄</li>
-<li>Ctrl + C : 복사</li>
-<li>Ctrl + X : 잘라내기(오려두기)</li>
-<li>Ctrl + V : 붙이기</li>
-</ul>
-<h2 id="환경설정">환경설정</h2>
+<li>
+<ol>
+<li>특정 가중치를 곱합니다.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>입력 값을 합산 합니다.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>바이어스 적용 (고정된 값을 더하거나 뻅니다)</li>
+</ol>
 <ul>
-<li>백업 기능</li>
-<li>문서 작성자 기능</li>
-<li>문서 정보 - 문서 통계</li>
+<li>바이어스 및 입력 가중치는 초기 신경망이 만들어질 때 무작위 값으로 설정</li>
 </ul>
-<h2 id="쪽">쪽</h2>
+</li>
+<li>
+<ol start="4">
+<li>전달 함수(활성화 함수)</li>
+</ol>
 <ul>
-<li>쪽 - 원고지</li>
-<li>페이지 설정 : F7</li>
+<li>값을 변경하지 않고 전달하는 선형 전달 함수</li>
 </ul>
-<h2 id="공문서">공문서</h2>
+</li>
+</ul>
+<h2 id="deep-learning">Deep Learning</h2>
 <ul>
-<li>머리말, 꼬리말 : 0</li>
-<li>위쪽 : 30</li>
-<li>왼쪽 : 20</li>
-<li>오른쪽 : 15</li>
-<li>아래쪽 : 15</li>
-<li>글꼴의 크기 : 12</li>
-<li>글꼴 : 명조 계열, 바탕체</li>
+<li>숨겨진 레이어(Hidden Layer) 가 다중 계층일 경우</li>
 </ul>
-<h2 id="저장">저장</h2>
+<h2 id="약한-인공지능">약한 인공지능</h2>
 <ul>
-<li>입력과 출력</li>
-<li>주기억장치에 보관된 입력된 데이터를 영구보전할려고 보관(주기억장치 &gt; 보조기억장치)</li>
+<li>Weak AI</li>
+<li>Narrow AI</li>
+<li>특정 업무에만 지능적</li>
 </ul>
-<h2 id="문서">문서</h2>
+<h2 id="강한-인공지능">강한 인공지능</h2>
 <ul>
-<li>전달, 보존</li>
+<li>Strong AI</li>
+<li>Reinforcement Learning</li>
+<li>시행 착오를 통한 강화 학습</li>
 </ul>
+<h2 id="computer-vision">Computer Vision</h2>
+<ul>
+<li>색상 마커 추적 및 유사 알고리즘</li>
+</ul>
+<h2 id="patch">patch</h2>
+<ul>
+<li>커널/필터 (Kernel/Filter)
+<ul>
+<li>-1 0 1</li>
+<li>-1 0 1</li>
+<li>-1 0 1</li>
+</ul>
+</li>
+<li>픽셀 단위의 곱셈에 대한 값을 포함</li>
+<li>그 합은 중심 픽셀에 저장</li>
+<li>픽셀 패치에 커널을 적용하는 작업
+<ul>
+<li>회선 (convolution)</li>
+</ul>
+</li>
+<li>Prewitt Operators</li>
+<li>Viola-Jones Face Detection</li>
+</ul>
+<h2 id="합성곱-신경망-convolutional-neural-networks">합성곱 신경망 Convolutional Neural Networks</h2>
+<ul>
+<li>Biometric Data</li>
+</ul>
+<h2 id="자연어-처리">자연어 처리</h2>
+<ul>
+<li>컴퓨터과학 + 언어학</li>
+<li>Natural Language Processing</li>
+<li>간단한 문장으로 분해</li>
+</ul>
+<h2 id="단어-유형---품사-parts-of-speech">단어 유형 - 품사 (parts of speech)</h2>
+<ul>
+<li>명사 Nouns</li>
+<li>대명사 Pronouns</li>
+<li>관사 Articles</li>
+<li>동사 Verbs</li>
+<li>형용사 Adjectives</li>
+<li>부사 Adverbs</li>
+<li>전치사 Prepositions</li>
+<li>접속사 Conjunctions</li>
+<li>감탄사 Interjections</li>
+</ul>
+<h2 id="phrase-structure-rules">Phrase Structure Rules</h2>
+<ul>
+<li>[Sentence] -&gt; [Noun Phrase] [Verb Phrase]
+<ul>
+<li>영어의 문장은 명사 구 뒤에 동사 구가 오도록 구성됩니다.</li>
+</ul>
+</li>
+<li>[Noun Phrase] -&gt; [Article] [Noun]</li>
+<li>[Noun Phrase] -&gt; [Adjective] [Noun]
+<ul>
+<li>명사구는 the와 같은 관사나 형용사가 명사 앞에 올 수 있습니다.</li>
+</ul>
+</li>
+<li>[Noun Phrase] -&gt; [Noun]</li>
+<li>[Verb Phrase] -&gt; [Verb]</li>
+<li>[Verb Phrase] -&gt; [Verb] [Noun Phrase]</li>
+<li>[Verb Phrase] -&gt; [Verb] [Prepositional Phrase]</li>
+<li>[Verb Phrase] -&gt; [Verb] [Noun Phrase] [Prepositional Phrase]</li>
+<li>[Verb Phrase] -&gt; [Verb] [Noun Phrase] [Adverb]</li>
+<li>[Prepositional Phrase] -&gt; [Preposition] [Noun Phrase]</li>
+</ul>
+<h2 id="구문-분석-트리-parse-tree">구문 분석 트리 parse tree</h2>
+<ul>
+<li>문장이 어떻게 구성되어 있는지</li>
+</ul>
+<h3 id="knowledge-graph">Knowledge Graph</h3>
+<h3 id="dialog-system">Dialog System</h3>
+<h2 id="음성인식-speech-recognition">음성인식 Speech Recognition</h2>
+<ul>
+<li>Waveforms
+<ul>
+<li>음파가 발진할 때 마이크 내부 진동판의 변위 크기</li>
+<li>가로 축 - 시간</li>
+<li>세로 축 - 변위의 크기 또는 진폭</li>
+</ul>
+</li>
+<li>스펙트로그램 (Spectrogram)
+<ul>
+<li>가로 축 - 시간</li>
+<li>세로 축 - 주파수 크기</li>
+</ul>
+</li>
+<li>고속 푸리에 변환 알고리즘 (Fast Fourier Transform)
+<ul>
+<li>파형에서 주파수로 변환</li>
+</ul>
+</li>
+<li>시간의 경과에 따라 정보를 플로팅</li>
+<li>갈비뼈 모양 패턴 - 소리 영역의 공명
+<ul>
+<li>Formants</li>
+</ul>
+</li>
+</ul>
+<h2 id="모음-소리-주파수-집중대-조합">모음 소리 주파수 집중대 조합</h2>
+<ul>
+<li>Vowel Sounds And their Formant Frequency Combinations</li>
+<li>Phonemes 음소</li>
+</ul>
+<h2 id="음성-합성-speech-synthesis">음성 합성 Speech Synthesis</h2>
 </article>
                         </div>
                     </div>
