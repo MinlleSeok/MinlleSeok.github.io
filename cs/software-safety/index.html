@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet"
+        href="https://mj-seok.com/css/frameworks.css" />
+    <link crossorigin="anonymous" media="all"
+        rel="stylesheet" href="https://mj-seok.com/css/github.css" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>소프트웨어 안전 - Software Safety - Happiness Development</title>
+
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://mj-seok.com/images/favicon.ico">
+    <meta name="theme-color" content="#1e2327">
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154649876-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body class="env-production emoji-size-boost page-responsive page-profile">
+  <div class="position-relative js-header-wrapper ">
+    <span class="Progress progress-pjax-loader position-fixed width-full js-pjax-loader-bar">
+        <span class="progress-pjax-loader-bar top-0 left-0" style="width: 0%;"></span>
+    </span>
+    <header class="Header js-details-container Details flex-wrap flex-lg-nowrap p-responsive" role="banner">
+        <div class="Header-item d-none d-lg-flex">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div
+            class="Header-item Header-item--full flex-column flex-lg-row width-full flex-order-2 flex-lg-order-none mr-0 mr-lg-3 mt-3 mt-lg-0 Details-content--hidden">
+            <div class="header-search flex-self-stretch flex-lg-self-auto mr-0 mr-lg-3 mb-3 mb-lg-0 scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+                role="combobox" aria-owns="jump-to-results" aria-label="Search or jump to" aria-haspopup="listbox"
+                aria-expanded="false">
+                <div class="position-relative">
+                </div>
+            </div>
+        </div>
+        <div class="Header-item Header-item--full flex-justify-center d-lg-none position-relative" style="margin-right: auto;">
+            <a class="Header-link" href="https://mj-seok.com/" aria-label="Homepage"
+                data-ga-click="Header, go to dashboard, icon:logo">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+            </a>
+        </div>
+        <div class="Header-item position-relative mr-0 d-none d-lg-flex">
+            <details class="details-overlay details-reset">
+                <summary class="Header-link" aria-label="View profile and more"
+                    data-ga-click="Header, show menu, icon:avatar">
+                    
+                    <img alt="" class="avatar" src="https://mj-seok.com/images/avatar.png" height="20" width="20">
+                    
+                </summary>
+            </details>
+        </div>
+    </header>
+</div>
+
+<div id="start-of-content" class="show-on-focus"></div>
+<div id="js-flash-container">
+</div>
+
+  
+<div class="application-main " data-commit-hovercards-enabled="">
+    <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+        <main id="js-repo-pjax-container" data-pjax-container="">
+            <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav pt-0 pt-lg-4 ">
+                <div class="repohead-details-container clearfix container-lg p-responsive d-none d-lg-block">
+                    <div class="mb-3 d-flex">
+                        <h1 class="public css-truncate float-none flex-auto width-fit pl-0">
+                            <a class="avatar mr-1" href="https://mj-seok.com/about/">
+                            
+
+                                <img
+                                    src="https://mj-seok.com/images/avatar.png" width="26" height="26">
+                            
+                            </a>
+                            <span class="author"><a
+                                    href="https://mj-seok.com/">Jose Seok</a></span>
+                            <span class="path-divider">/</span>
+                            <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
+                                    href="https://mj-seok.com/cs/software-safety/">소프트웨어 안전 - Software Safety</a></strong>
+
+                            <div class="d-block text-small text-gray">
+                                Created <time-ago datetime="2020-04-01" class="no-wrap"
+                                    title="Created at 2020/04/01">
+                                    2020-04-01</time-ago>
+                                <span class="file-info-divider"></span>
+                                Modifyed <time-ago datetime="2020-04-01" class="no-wrap"
+                                    title="Modifyed  at 2020/04/01">
+                                    2020-04-01</time-ago>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="container-lg clearfix new-discussion-timeline experiment-repo-nav  p-responsive">
+                <div class="repository-content ">
+                    <div class="Box mt-3 position-relative">
+                        <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
+                            <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                                1025 Words
+                                
+                            </div>
+                        </div>
+
+                        <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="소프트웨어-안전">소프트웨어 안전</h1>
+<ul>
+<li>전자제어장치 ECU에 내장된 소프트웨어 결함</li>
+<li>KTX 사고 - 철도 제어 소프트웨어</li>
+<li>F4 팬텀 - 5% 기능 소프트웨어 제어</li>
+<li>F22 레프터 - 90% 이상의 기능이 소프트웨어에 의해서 제어</li>
+<li>원자력의 모든 제어 시설이 소프트웨어에 의해서 자동적으로 제어</li>
+</ul>
+<h2 id="정의">정의</h2>
+<ul>
+<li>아래의 것들을 보장하는 특징과 절차
+<ul>
+<li>Features and Procedure which ensure that</li>
+</ul>
+</li>
+<li>소프트웨어가 정상적, 비정상적인 환경 아래에서 예상대로 작동하는 것
+<ul>
+<li>A product performs predictably under normal and abnormal conditions</li>
+</ul>
+</li>
+<li>미리 계획하지 않은 사건 발생의 가능성 최소화 및 그 결과 통제와 방지
+<ul>
+<li>The likelihood of an unplanned event occurring is minimized and its consequences   		controlled and contained</li>
+</ul>
+</li>
+<li>고의든 무의지든 돌발적인 피해 혹은 사망 예방
+<ul>
+<li>Preventing accidental injury or death, whether intentional or unintentional</li>
+</ul>
+</li>
+</ul>
+<h2 id="기능적인-안전-functional-safety">기능적인 안전 Functional Safety</h2>
+<ul>
+<li>위험 Risk
+<ul>
+<li>개연성의 조합 및 예기치 않은 사건의 영향</li>
+<li>Combination of the probability and impact of an unexpected event</li>
+</ul>
+</li>
+<li>안전 Safety
+<ul>
+<li>물리적 침해의 받아들일 수 없는 위험에서의 자유 혹은 사람들의 건강에 대한 피해</li>
+<li>Freedom from unacceptable risk of physical injury or of damage to the health of people</li>
+</ul>
+</li>
+<li>기능적인 안전 Functional Safety
+<ul>
+<li>시스템에 의존하는 종합적인 안전 부분</li>
+<li>The part of the overall safety that depends on a system</li>
+<li>입력에 대응하여 정확하게 운영되는 장비</li>
+<li>Equipment operating correctly in response to its inputs</li>
+<li>위험해질 가능성이 있는 환경 발견</li>
+<li>The detection of a potentially dangerous condition resulting in the activation of a protective</li>
+</ul>
+</li>
+</ul>
+<h2 id="iec-61508">IEC 61508</h2>
+<ul>
+<li>IEC 61508
+<ul>
+<li>전기, 전자 및 Programmable 전자 시스템의 기능 안전</li>
+</ul>
+</li>
+<li>적용과 관계없이 전기, 전자 및 Programmable  전자 시스템의 기능 안전을 다루는 일반 안전 표준으로 간주
+<ul>
+<li>임베디드 시스템, 모든 전자 장비에 들어가 있는 소프트웨어 또는 하드웨어</li>
+</ul>
+</li>
+<li>제어 시스템의 기능 안전에 대한 주요 표준</li>
+<li>안전에 있어 안전 시스템의 요구사항을 규정하는 데 사용
+<ul>
+<li>제품을 만드는 데 개발 라이프사이클 동안 사용됨</li>
+</ul>
+</li>
+<li>기능적인 안전에 관련된 인증 표준</li>
+</ul>
+<h2 id="산업별-안전-표준-safety-standards">산업별 안전 표준 Safety Standards</h2>
+<ul>
+<li>AUTOMOTIVE : ISO 26262</li>
+<li>RAILWAY APPLICATION : EN 50128, EN 50123, EN 50129, IEC 62278, IEC 62279</li>
+<li>MACHINERY : ISO 13849, IEC 62061 : Safety of machinery</li>
+<li>PROCESS INDUSTRY : IEC 61511 : Functional safety - Safety
+<ul>
+<li>Instrumented system for the process industry</li>
+</ul>
+</li>
+<li>NUCLEAR : IEC 61513, IEC 60880</li>
+<li>MEDICAL
+<ul>
+<li>IEC 62304 : Medical device software</li>
+<li>IEC 60601 : Medical Electrical Equipment</li>
+</ul>
+</li>
+<li>OTHERS (AVIATION)
+<ul>
+<li>DO178B, 178C; 감항 인증 표준 airworthiness certification standard</li>
+</ul>
+</li>
+</ul>
+<h2 id="iec-61508-framework">IEC 61508 Framework</h2>
+<ul>
+<li>Part 0 : Functional Safety and IEC 61508</li>
+<li>Part 1 : General Requirements</li>
+<li>Part 2 : Requirements for Electrical / Electronic / Programmable Electronic Safety-related Systems</li>
+<li>Part 3 : Software Requirements</li>
+<li>Part 4 : Definitions and Abbreviations</li>
+<li>Part 5 : Examples of Methods for the Determination of Safety Integrity Levels(SILs)</li>
+<li>Part 6 : Guidelines on the Application of IEC 61508-2 and IEC 61508-3</li>
+<li>Part 7 : Overview of Measures and Techniques</li>
+</ul>
+<h2 id="overall-safety-lifecycle-for-eepe-systems">Overall Safety Lifecycle for E/E/PE systems</h2>
+<ul>
+<li>Concept</li>
+<li>Overall Scope Definition</li>
+<li>Hazard &amp; Risk Analysis
+<ul>
+<li>발생 확률에 대한 위험요소를 분석</li>
+</ul>
+</li>
+<li>Overall Safety Requirements</li>
+<li>Safety Requirements Allocation
+<ul>
+<li>하드웨어적 또는 소프트웨어적으로 구성</li>
+</ul>
+</li>
+<li>E/E/PES System Safety Requirements Specification</li>
+</ul>
+<h3 id="생명-주기">생명 주기</h3>
+<ul>
+<li>스펙에 따라 디자인 후 개선 및 향상</li>
+<li>안전 요구사항 Testing</li>
+<li>Validation</li>
+<li>제품 출시</li>
+</ul>
+<h3 id="소프트웨어-안전-생명-주기">소프트웨어 안전 생명 주기</h3>
+<ul>
+<li>소프트웨어 관련 안전 요구사항을 어떻게 스펙하는지</li>
+<li>스펙에 따라 어떻게 개발하는지</li>
+<li>개발 후 안전 관점에서 어떻게 테스팅 하는지</li>
+<li>테스팅 후 통합되어 제품으로 나가는 전체적이고 일반적인 과정</li>
+</ul>
+<h2 id="sils-safety-integrity-levels">SILs Safety Integrity Levels</h2>
+<ul>
+<li>주어진 모든 조건하에 있는 안전관련 시스템이 주어진 시간 내에 요구되는<br>
+안전기능을 만족스럽게 수행할 수 있는 확률로 정의</li>
+<li>SIL레벨 1 ~ SIL 레벨 4</li>
+<li>High demand rate
+<ul>
+<li>dangerous failures/hr</li>
+</ul>
+</li>
+<li>Low demand rate
+<ul>
+<li>Probability of failure on demand</li>
+</ul>
+</li>
+<li>자동차에 정의되는 안전 표준
+<ul>
+<li>ASIL (Auto Safety Integrity Levels)</li>
+<li>안전성을 보증하는 시스템을 만들 수 있음</li>
+</ul>
+</li>
+</ul>
+</article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div class="utterances"></div>
+<script src="https://utteranc.es/client.js"
+        repo="MinlleSeok/minlleseok.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+  <div class="footer container-lg width-full p-responsive" role="contentinfo">
+    <div
+        class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+            <li class="mr-3 mr-lg-0">© 2019. Theme by <a href="https://github.com/MeiK2333/github-style"><span>github-style</span></a></li>
+        </ul>
+
+        <a aria-label="Homepage" title="Happiness Development" class="footer-octicon d-none d-lg-block mx-lg-4"
+            href="https://mj-seok.com/">
+            <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                </path>
+            </svg>
+        </a>
+        <ul
+            class="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+        </ul>
+    </div>
+    <div class="d-flex flex-justify-center pb-6">
+        <span class="f6 text-gray-light"></span>
+    </div>
+</div>
+
+<script crossorigin="anonymous"
+    type="application/javascript" src="https://mj-seok.com/js/frameworks.js"></script>
+
+<script crossorigin="anonymous" async="async"
+    type="application/javascript" src="https://mj-seok.com/js/github-bootstrap.js"></script>
+<script>
+    let classs = ['pinned-item-desc', 'text-gray', 'text-small', 'd-block', 'mt-2', 'mb-3'];
+    const pinned_posts = document.getElementsByName('pinned-post');
+    for (let i = 0; i < pinned_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = pinned_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+    classs = [ 'd-inline-block', 'text-gray', 'mb-2', 'pr-4'];
+    const posts_posts = document.getElementsByName('posts-post');
+    for (let i = 0; i < posts_posts.length; i++) {
+        for (let j = 0; j < classs.length; j++) {
+            const ps = posts_posts[i].getElementsByTagName('p');
+            for (let k = 0; k < ps.length; k++) {
+                ps[k].classList.add(classs[j]);
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
