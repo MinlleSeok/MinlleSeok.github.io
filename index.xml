@@ -6,10 +6,19 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Apr 2020 14:50:53 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2020 12:39:18 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>위험 관리 - Risk Management</title>
+      <link>https://mj-seok.com/cs/risk-management/</link>
+      <pubDate>Sat, 04 Apr 2020 12:39:18 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/risk-management/</guid>
+      <description>위험관리 개요  위험관리  What? How?   위험 (Risk)  외부의 위협이 내부의 취약성을 이용하여 보유한 각종 자산에 피해를 입힐 수 있는 잠재적인 가능성 (국제보안표준 ISO17799의 위험에 대한 정의) 위협 (Threats)  자산에 손실을 초래할 수 있는, 원치 않는 사건의 잠재적 원인이나 행위자   취약성 (Vulnerability)  위협에 의한 정보 체계의 모든 정보 보안상의 허점 사용자에게 허용된 권한 이상의 동작이나 허용된 범위 이상의 정보 열람을 가능하게 하는 약점 포함 사용자 및 관리자의 부주의나 사회공학 기법에 의한 약점 포함   자산 (Assets)  조직이 보호해야 할 대상 정보, 하드웨어, 소프트웨어, 시설, 인력, 기업 이미지 등      사례 : 모건 스탠리의 위험 (911 테러)    위협 = 비행기 충돌    취약성 = 건물의 내구성    자산 = 건물, 증권 서비스 등   테러라는 위험 발생  위험 관리 (Risk Management)  조직의 자산에 대한 위험을 수용할 수 있는 수준으로 유지하기 위한 과정</description>
+    </item>
     
     <item>
       <title>정보보호 동향 Information Security</title>

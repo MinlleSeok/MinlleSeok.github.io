@@ -245,6 +245,26 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
+                                <a href="https://mj-seok.com/cs/risk-management/">위험 관리 - Risk Management</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            위험관리 개요  위험관리  What? How?   위험 (Risk)  외부의 위협이 내부의 취약성을 이용하여 보유한 각종 자산에 피해를 입힐 수 있는 잠재적인 가능성 (국제보안표준 ISO17799의 위험에 대한 정의) 위협 (Threats)  자산에 손실을 초래할 수 있는, 원치 않는 사건의 잠재적 원인이나 행위자   취약성 (Vulnerability)  위협에 의한 정보 체계의 모든 정보 보안상의 허점 사용자에게 허용된 권한 이상의 동작이나 허용된 범위 이상의 정보 열람을 가능하게 하는 약점 포함 사용자 및 관리자의 부주의나 사회공학 기법에 의한 약점 포함   자산 (Assets)  조직이 보호해야 할 대상 정보, 하드웨어, 소프트웨어, 시설, 인력, 기업 이미지 등      사례 : 모건 스탠리의 위험 (911 테러)    위협 = 비행기 충돌    취약성 = 건물의 내구성    자산 = 건물, 증권 서비스 등   테러라는 위험 발생  위험 관리 (Risk Management)  조직의 자산에 대한 위험을 수용할 수 있는 수준으로 유지하기 위한 과정
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-04-04" class="no-wrap"
+                                title="Modifyd at 2020/04/04">
+                                April 4, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
                                 <a href="https://mj-seok.com/cs/info-sec/">정보보호 동향 Information Security</a>
                             </h3>
                         </div>
@@ -436,27 +456,6 @@ if (!doNotTrack) {
 4. 디스크 블록 구조
 5. 유닉스 명령어
 1. 유닉스의 특징  대화형 시스템 다중사용자 시스템 다중 작업용 시스템 높은 이식성과 확장성 제공 계층적 트리 파일 시스템  2. 유닉스의 구성요소  커널 : 프로세스 관리, 메모리 관리, 파일 시스템 관리, 장치 관리 등 컴퓨터의 모든 자원을 초기화하고 제어하는 기능을 수행 함. 셸 : 사용자와 커널 사이의 중간자 역할을 담당하는 프로그램으로 사용자가 입력한 명령을 해석하여 커널에 넘겨줌.
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-03-19" class="no-wrap"
-                                title="Modifyd at 2020/03/19">
-                                March 19, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/cs/disk/">디스크 관리</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            1. 디스크 할당 방법
-1. 디스크 할당 방법  디스크의 빈 공간 관리  비트 벡터  빈 공간 리스트는 비트맵(bit map) 또는 비트벡터(bit vector)로서 구현 블록이 비어있으면 0, 블록이 할당되어 있으면 1   연결 리스트  모든 빈 디스크 블록들을 함꼐 연결 첫 번째 빈 블록 안에 다음의 빈 디스크 블록의 포인터를 갖고 있음.     연속 할당(Contiguous Allocation)  파일들이 디스크의 연속적인 주소들의 집합에 할당되는 방식 파일에 접근할 때 필요한 디스크 탐색의 횟수는 최소화될 수 있음 새로운 파일을 위해 빈 공간을 찾는 것은 어려움 전체 디스크 공간이 요구량을 만족하여도, 연속된 공간이 아니면 외부 단편화 발생 주기적인 압축이 필요   연결 할당 (Linked Allocation)  각 파일들이 디스크 블록들의 리스트에 연결 디스크 블록들은 디스크 전체에 분산 디렉터리는 파일의 첫 번째와 마지막 블록의 포인터를 가짐 외부 단편화 발생하지 않음 직접 액세스 기능을 지원할 수 없음 포인터를 위한 기억공간이 필요함   인덱스 할당  연결할당은 연속할당의 외부 단편화를 해결했으나 직접 액세스를 지원할 수 없고 블록들의 포인터가 디스크 전체에 분산되어 있음 인덱스 할당은 모든 포인터들을 하나의 장소, 즉 인덱스 블록으로 관리하여 직접 액세스를 지원함    
                         </div>
 
                         <div class="f6 text-gray mt-2">

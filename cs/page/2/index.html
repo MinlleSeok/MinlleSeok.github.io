@@ -245,6 +245,27 @@ if (!doNotTrack) {
                     <div class="col-12 col-lg-12 d-inline-block">
                         <div class="d-inline-block mb-1">
                             <h3>
+                                <a href="https://mj-seok.com/cs/disk/">디스크 관리</a>
+                            </h3>
+                        </div>
+
+                        <div name="posts-post">
+                            1. 디스크 할당 방법
+1. 디스크 할당 방법  디스크의 빈 공간 관리  비트 벡터  빈 공간 리스트는 비트맵(bit map) 또는 비트벡터(bit vector)로서 구현 블록이 비어있으면 0, 블록이 할당되어 있으면 1   연결 리스트  모든 빈 디스크 블록들을 함꼐 연결 첫 번째 빈 블록 안에 다음의 빈 디스크 블록의 포인터를 갖고 있음.     연속 할당(Contiguous Allocation)  파일들이 디스크의 연속적인 주소들의 집합에 할당되는 방식 파일에 접근할 때 필요한 디스크 탐색의 횟수는 최소화될 수 있음 새로운 파일을 위해 빈 공간을 찾는 것은 어려움 전체 디스크 공간이 요구량을 만족하여도, 연속된 공간이 아니면 외부 단편화 발생 주기적인 압축이 필요   연결 할당 (Linked Allocation)  각 파일들이 디스크 블록들의 리스트에 연결 디스크 블록들은 디스크 전체에 분산 디렉터리는 파일의 첫 번째와 마지막 블록의 포인터를 가짐 외부 단편화 발생하지 않음 직접 액세스 기능을 지원할 수 없음 포인터를 위한 기억공간이 필요함   인덱스 할당  연결할당은 연속할당의 외부 단편화를 해결했으나 직접 액세스를 지원할 수 없고 블록들의 포인터가 디스크 전체에 분산되어 있음 인덱스 할당은 모든 포인터들을 하나의 장소, 즉 인덱스 블록으로 관리하여 직접 액세스를 지원함    
+                        </div>
+
+                        <div class="f6 text-gray mt-2">
+                            Updated <relative-time datetime="2020-03-19" class="no-wrap"
+                                title="Modifyd at 2020/03/19">
+                                March 19, 2020</relative-time>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
+                    <div class="col-12 col-lg-12 d-inline-block">
+                        <div class="d-inline-block mb-1">
+                            <h3>
                                 <a href="https://mj-seok.com/cs/process/">입출력 처리 방식 - I/O Process Method</a>
                             </h3>
                         </div>
@@ -422,29 +443,6 @@ if (!doNotTrack) {
                     </div>
                 </li>
                 
-                <li class="col-12 d-flex width-full py-4 border-bottom public fork">
-                    <div class="col-12 col-lg-12 d-inline-block">
-                        <div class="d-inline-block mb-1">
-                            <h3>
-                                <a href="https://mj-seok.com/cs/math-linearalgebra/">선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple)</a>
-                            </h3>
-                        </div>
-
-                        <div name="posts-post">
-                            선형대수학(Linear Algebra) - 벡터(Vector) 와 튜플(Tuple) [ Reference ] : https://youtu.be/br7tS1t2SFE
- 프론트엔드의 다양한 애니메이션과 프로그래밍에서 다양하게 응용된다는 선형대수학! 벡터 공간, 벡터, 선형 변환, 행렬, 연립 선형 방정식등을 연구하는 대수학의 한 분야라고 합니다.  벡터 Vector  크기 magnitud 방향 direction  속도(speed) - 5mph (크기) : 스칼라(scalar)
-속력(velocity) - 동쪽 (east) 5mph (크기) : 벡터(vector)
-v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스 3^2 + 4^2 = 5^2) 튜플 Tuple |R R^2 실수좌표공간 Real Coordinate Space  실수값을 가지는 모든 2-튜플 튜플 : 순서가 정해진 리스트  R^3 : 3D real Coordinate space x = [0 0 0] b = [-1 5 2] c = [i(허수) 0 1]  R^n : n - dimensional real coordinate space   
-                        </div>
-
-                        <div class="f6 text-gray mt-2">
-                            Updated <relative-time datetime="2020-01-01" class="no-wrap"
-                                title="Modifyd at 2020/01/08">
-                                January 1, 2020</relative-time>
-                        </div>
-                    </div>
-                </li>
-                
             </ul>
             
             <div class="paginate-container">
@@ -454,7 +452,7 @@ v = (5, 0) = [5] [0] 길이 : 5 v = (3, 4) = [3] [4] 길이 : 5 (피타고라스
                         href="/cs/">Previous</a>
                     
                     
-                    <button class="btn btn-outline BtnGroup-item" disabled="disabled">Next</button>
+                    <a rel="nofollow" class="btn btn-outline BtnGroup-item" href="/cs/page/3/">Next</a>
                     
                 </div>
             </div>
