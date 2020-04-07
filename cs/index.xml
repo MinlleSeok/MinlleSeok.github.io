@@ -6,10 +6,39 @@
     <description>Recent content in Cs on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Apr 2020 11:58:10 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 17:26:44 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/cs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>컴퓨터 일반 요약</title>
+      <link>https://mj-seok.com/cs/summary/</link>
+      <pubDate>Tue, 07 Apr 2020 17:26:44 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/cs/summary/</guid>
+      <description>컴퓨터 일반 요약 1. 마이크로프로세서
+2. 클라우드서비스
+3. 시스템 종류
+4. 디지털 기술
+5. 저급 언어와 고급 언어
+6. 중앙처리장치 CPU
+7. 네트워크의 구조
+8. 유비쿼터스 컴퓨팅
+9. 교착상태 해결 방안
+10. 소프트웨어 종류
+11. 데이터베이스 관리 시스템
+12. 빅데이터
+13. 소프트웨어 개발 프로세스 모델
+14. 모바일 기기 운영체제
+15. 데이터 용량의 단위
+16. IPv4와 TCP
+17. 데이터베이스의 뷰(View)
+18. 소프트웨어 개발 생명주기
+19. 주기억장치와 보조기억장치
+20. 개인정보보호법
+21. 서비스 거부 공격 (DoS)</description>
+    </item>
     
     <item>
       <title>정보자산 식별과 평가분석 방안 - Information Assets</title>
