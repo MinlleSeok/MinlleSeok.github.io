@@ -6,10 +6,19 @@
     <description>Recent content on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Apr 2020 16:21:16 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2020 22:34:26 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Erwin</title>
+      <link>https://mj-seok.com/tech/erwin/</link>
+      <pubDate>Wed, 03 Jun 2020 22:34:26 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/tech/erwin/</guid>
+      <description>ERwin 공부  Model 탭 - Logical / Physical - IE 방식 표현  기본 Entities 생성  좌측 Entities - 우 클릭 후 New 우측 도구상자에서 엔티티 버튼(사각형)  Entity 설정  사각형 위쪽 - 타입의 이름 설정 Tab - Key Attribute Tab - Attribute Enter - Next Attribute  관계  엔티티와 엔티티 사이의 선으로 표현 Relationships - New  Parent Child Identifying Non Identifying    </description>
+    </item>
     
     <item>
       <title>컴퓨터 미래 - Computer Future</title>

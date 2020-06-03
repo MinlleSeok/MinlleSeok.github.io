@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/cs/</loc>
-    <lastmod>2020-04-08T16:21:16+09:00</lastmod>
+    <loc>https://mj-seok.com/tech/erwin/</loc>
+    <lastmod>2020-06-03T22:34:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-06-03T22:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/tech/</loc>
+    <lastmod>2020-06-03T22:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/cs/</loc>
     <lastmod>2020-04-08T16:21:16+09:00</lastmod>
   </url>
   
@@ -45,11 +55,6 @@
   <url>
     <loc>https://mj-seok.com/cs/ml/</loc>
     <lastmod>2020-03-31T21:52:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mj-seok.com/tech/</loc>
-    <lastmod>2020-03-30T21:27:15+09:00</lastmod>
   </url>
   
   <url>
