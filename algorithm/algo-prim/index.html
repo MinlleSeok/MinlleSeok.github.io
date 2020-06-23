@@ -128,7 +128,7 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="mst-알고리즘---prim의-알고리즘">MST 알고리즘 - Prim의 알고리즘</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="mst----prim-">MST 알고리즘 - Prim의 알고리즘</h1>
 <ul>
 <li>임의의 노드를 출발노드로 선택</li>
 <li>출발 노드를 포함하는 트리를 점점 키워 감.</li>
@@ -139,13 +139,13 @@ if (!doNotTrack) {
 safe
 |A| = n - 1</p>
 </blockquote>
-<h2 id="왜-mst가-찾아지는가">왜 MST가 찾아지는가?</h2>
+<h2 id="-mst-">왜 MST가 찾아지는가?</h2>
 <ul>
 <li>Prim의 알고리즘의 임의의 한 단계를 생각해보자.</li>
 <li>A를 현재까지 알고리즘이 선택한 에지의 집합이라고 하고, A를 포함하는 MST가 존재한다고 가정하자.</li>
 <li>출발 노드에 이미 연결된 노드와 그렇지 않은 노드를 연결하는 에지들 중 lightest edge</li>
 </ul>
-<h2 id="가중치가-최소인-에지-찾기">가중치가 최소인 에지 찾기</h2>
+<h2 id="---">가중치가 최소인 에지 찾기</h2>
 <ul>
 <li>V(A) : 이미 트리에 포함된 노드들</li>
 <li>V(A) 에 아직 속하지 않은 각 노드 v에 대해서 다음과 같은 값을 유지
@@ -181,7 +181,7 @@ safe
 </code></pre></div><ul>
 <li>시간복잡도 O(n^2)</li>
 </ul>
-<h2 id="key-값이-최소인-원소를-찾기">key 값이 최소인 원소를 찾기</h2>
+<h2 id="key----">key 값이 최소인 원소를 찾기</h2>
 <ul>
 <li>최소 우선순위 큐를 사용
 <ul>
@@ -203,7 +203,7 @@ safe
                     then ㅠ[v] <span style="color:#f92672">&lt;-</span> u
                         key[v] <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">w</span>(u, v)
                         <span style="color:#f92672">/</span><span style="color:#f92672">/</span> 우선순위큐에서 key값 decrease<span style="color:#f92672">:</span> <span style="color:#a6e22e">O</span>(logn)
-</code></pre></div><h2 id="prim의-알고리즘--시간복잡도">Prim의 알고리즘 : 시간복잡도</h2>
+</code></pre></div><h2 id="prim---">Prim의 알고리즘 : 시간복잡도</h2>
 <ul>
 <li>이진 힙(binary heap)을 사용하여 우선순위 큐를 구현한 경우</li>
 <li>while loop:

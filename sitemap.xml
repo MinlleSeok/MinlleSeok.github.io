@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mj-seok.com/database/</loc>
+    <lastmod>2020-06-23T23:56:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-06-04T23:08:55+09:00</lastmod>
+    <lastmod>2020-06-23T23:56:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/database/sql/</loc>
+    <lastmod>2020-06-23T23:56:00+09:00</lastmod>
   </url>
   
   <url>
@@ -204,11 +214,6 @@
   
   <url>
     <loc>https://mj-seok.com/categories/database/</loc>
-    <lastmod>2020-02-28T13:39:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mj-seok.com/database/</loc>
     <lastmod>2020-02-28T13:39:56+09:00</lastmod>
   </url>
   

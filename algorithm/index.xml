@@ -26,7 +26,7 @@
       <pubDate>Tue, 10 Mar 2020 13:27:05 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/compression2/</guid>
-      <description>Huffman coding  Huffman coding 알고리즘은 트리들의 집합을 유지하면서 매 단계에서 가장 frequency가 작은 두 트리를 찾아서 두 트리를 하나로 합칩니다. 이런 연산에 가장 적합한 자료구조는 최소 힙(minimum heap)입니다. 즉, 힙에 저장된 각각의 원소들은 하나의 트리입니다. (노드가 아니라요)  최소 힙  크기가 5인 힙, 5개의 트리가 저장되어 있습니다. 5개의 single node tree 각 트리는 오직 하나의 노드로 구성됩니다.  class Run 수정하기 class Run implements Comparable&amp;lt;Run&amp;gt; { public byte symbol; public int runen; public int freq; } /* 트리의 노드로 사용하기 위해서 왼쪽 자식과 오른쪽 자식 노드 필드를 추가합니다.</description>
+      <description>Huffman coding  Huffman coding 알고리즘은 트리들의 집합을 유지하면서 매 단계에서 가장 frequency가 작은 두 트리를 찾아서 두 트리를 하나로 합칩니다. 이런 연산에 가장 적합한 자료구조는 최소 힙(minimum heap)입니다. 즉, 힙에 저장된 각각의 원소들은 하나의 트리입니다. (노드가 아니라요)  최소 힙  크기가 5인 힙, 5개의 트리가 저장되어 있습니다. 5개의 single node tree 각 트리는 오직 하나의 노드로 구성됩니다.  class Run 수정하기 class Run implements Comparable&amp;lt;Run&amp;gt; {public byte symbol;public int runen;public int freq;}/* 트리의 노드로 사용하기 위해서 왼쪽 자식과 오른쪽 자식 노드 필드를 추가합니다.</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Wed, 04 Mar 2020 10:28:37 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/compression/</guid>
-      <description>압축 알고리즘 - Compression  Huffman Coding  Huffman Coding  가령 6개의 문자 a, b, c, d, e, f 로 이루어진 파일이 있다고 합니다. 문자의 총 개수는 100,000개이고 각 문자의 등장 횟수는 다음과 같습니다. 고정길이 코드를 사용하면 각각의 문자를 표현하기 위해서 3비트가 필요하며, 따라서 파일의 길이는 300,000비트가 됩니다. 테이블의 가변길이 코드를 사용하면 224,000바이트가 됩니다.  테이블    a b c d e f   Frequency(천단위) 45 13 12 16 9 5 Fixed-length code 000 110 010 011 100 101 Variable-length 0 101 100 111 1101 1100  Prefix code  어떤 codeword도 다른 codeword의 prefix가 되지 않는 코드 여기서 codeword란 하나의 문자에 부여된 이진코드를 말합니다.</description>
+      <description>압축 알고리즘 - Compression  Huffman Coding  Huffman Coding  가령 6개의 문자 a, b, c, d, e, f 로 이루어진 파일이 있다고 합니다. 문자의 총 개수는 100,000개이고 각 문자의 등장 횟수는 다음과 같습니다. 고정길이 코드를 사용하면 각각의 문자를 표현하기 위해서 3비트가 필요하며, 따라서 파일의 길이는 300,000비트가 됩니다. 테이블의 가변길이 코드를 사용하면 224,000바이트가 됩니다.  테이블    a b c d e f  Frequency(천단위) 45 13 12 16 9 5 Fixed-length code 000 110 010 011 100 101 Variable-length 0 101 100 111 1101 1100  Prefix code  어떤 codeword도 다른 codeword의 prefix가 되지 않는 코드 여기서 codeword란 하나의 문자에 부여된 이진코드를 말합니다.</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Tue, 03 Mar 2020 11:04:33 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/spp3/</guid>
-      <description>최단경로 알고리즘 - Shortest Path Problem 3  all to all 알고리즘  Floyd-Warshall Algorithm  가중치 방향 그래프 G=(V, E), V={1, 2, &amp;hellip;, n} 모든 노드 쌍들간의 최단경로의 길이를 구함 d^k[i, j]  중간에 노드집합 {1, 2, &amp;hellip;, k}에 속한 노드들만 거쳐서 노드 i에서 j까지 가는 최단경로의 길이   d^0[i, j] = {if (i, j) ∈ E =&amp;gt; W(i, j), Infinity} d^k[i, j] = min{d^(k-1)[i, j], d^(k-1)[i, k] + d^(k-1)[k, j]}  중간정점들이 모두 {1, 2, &amp;hellip;, k-1}에 속함 중간정점들이 모두 {1, 2, &amp;hellip;, k}에 속함   d^n[i, j] = S(i, j) 중간에 노드집합 {1, 2, &amp;hellip;, k}에 속한 노드들만 거쳐서 노드 i에서 j까지 가는 최단경로는 두가지 경우가 있음: 노드 k를 지나는 경우와 지나지 않는 경우  Floyd-Warshall Algorithm  d^k[i, j] = min{d^(k-1)[i, j], d^(k-1)[i, k] + d^(k-1)[k, j]}  FloydWarshall(G) { for i &amp;lt;- 1 to n for j &amp;lt;- 1 to n d^0[i, j] &amp;lt;- W(i, j); for k &amp;lt;- 1 to n // 중간정점 집합 {1, 2, .</description>
+      <description>최단경로 알고리즘 - Shortest Path Problem 3  all to all 알고리즘  Floyd-Warshall Algorithm  가중치 방향 그래프 G=(V, E), V={1, 2, &amp;hellip;, n} 모든 노드 쌍들간의 최단경로의 길이를 구함 d^k[i, j]  중간에 노드집합 {1, 2, &amp;hellip;, k}에 속한 노드들만 거쳐서 노드 i에서 j까지 가는 최단경로의 길이   d^0[i, j] = {if (i, j) ∈ E =&amp;gt; W(i, j), Infinity} d^k[i, j] = min{d^(k-1)[i, j], d^(k-1)[i, k] + d^(k-1)[k, j]}  중간정점들이 모두 {1, 2, &amp;hellip;, k-1}에 속함 중간정점들이 모두 {1, 2, &amp;hellip;, k}에 속함   d^n[i, j] = S(i, j) 중간에 노드집합 {1, 2, &amp;hellip;, k}에 속한 노드들만 거쳐서 노드 i에서 j까지 가는 최단경로는 두가지 경우가 있음: 노드 k를 지나는 경우와 지나지 않는 경우  Floyd-Warshall Algorithm  d^k[i, j] = min{d^(k-1)[i, j], d^(k-1)[i, k] + d^(k-1)[k, j]}  FloydWarshall(G){for i &amp;lt;- 1 to nfor j &amp;lt;- 1 to nd^0[i, j] &amp;lt;- W(i, j);for k &amp;lt;- 1 to n // 중간정점 집합 {1, 2, .</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Mon, 02 Mar 2020 10:41:18 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/spp2/</guid>
-      <description>최단경로 알고리즘 - Shortest Path Problem 2  벨만포드 알고리즘 모든 에지들에 대해서 릴렉스 하는 연산 최악의 경우 총 n - 1번  BELLMAN-FORD(G, w, s) INITIALIZE-SINGLE-SOURCE(G, s) for i &amp;lt;- 1 to |V[G]| - 1 do for each edge(u, v) ∈ E[G] do RELAX(u, v, w) for each edge(u, v) ∈ E[G] do if d[v] &amp;gt; d[u] + w(u, v) then return FALSE return TRUE  음수 사이클이 존재한다는 의미 시간복잡도 O(nm)  Dijkstra의 알고리즘  d[s] = 0 음수 가중치가 없다고 가정 s로부터의 최단경로의 길이를 이미 알아낸 노드들의 집합 s를 유지.</description>
+      <description>최단경로 알고리즘 - Shortest Path Problem 2  벨만포드 알고리즘 모든 에지들에 대해서 릴렉스 하는 연산 최악의 경우 총 n - 1번  BELLMAN-FORD(G, w, s)INITIALIZE-SINGLE-SOURCE(G, s)for i &amp;lt;- 1 to |V[G]| - 1do for each edge(u, v) ∈ E[G]do RELAX(u, v, w)for each edge(u, v) ∈ E[G]do if d[v] &amp;gt; d[u] + w(u, v)then return FALSEreturn TRUE 음수 사이클이 존재한다는 의미 시간복잡도 O(nm)  Dijkstra의 알고리즘  d[s] = 0 음수 가중치가 없다고 가정 s로부터의 최단경로의 길이를 이미 알아낸 노드들의 집합 s를 유지.</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@
       <pubDate>Mon, 17 Feb 2020 11:49:56 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-1/</guid>
-      <description>알고리즘 - 기초 정리  주어진 문제를 명확히 하는 것! 모든 경우의 수를 다 순차 검색하는 것이 기장 기본적이라고 생각할 수 있습니다.  정렬이 된 경우라면?  오름차순, 내림차순으로 정렬을 합니다.  const BinarySearch = 그리디(탐욕) 알고리즘 const GreedySearch = function (changes, won) { for (let i = 0; i &amp;lt; changes.length; i++) { } } 오울러 트레일  아무거나 먼저 시작하기 미리 보기 전략  const EulerTrail = if cycle 미로 찾기  백트래킹 오일러 서킷  가짜 코인  어떤 코인이 함량이 낮은가?</description>
+      <description>알고리즘 - 기초 정리  주어진 문제를 명확히 하는 것! 모든 경우의 수를 다 순차 검색하는 것이 기장 기본적이라고 생각할 수 있습니다.  정렬이 된 경우라면?  오름차순, 내림차순으로 정렬을 합니다.  const BinarySearch = 그리디(탐욕) 알고리즘 const GreedySearch = function (changes, won) {for (let i = 0; i &amp;lt; changes.length; i++) {}}오울러 트레일  아무거나 먼저 시작하기 미리 보기 전략  const EulerTrail =if cycle미로 찾기  백트래킹 오일러 서킷  가짜 코인  어떤 코인이 함량이 낮은가?</description>
     </item>
     
     <item>
@@ -121,7 +121,7 @@
       <pubDate>Tue, 11 Feb 2020 11:57:36 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-bfs/</guid>
-      <description>알고리즘 - 그래프 순회 (Graph Traversal)  순회(traversal) 그래프의 모든 노드들을 방문하는 일 대표적 두 가지 방법 BFS (Breadth-First Search, 너비우선순회) DFS (Depth-First Search, 깊이우선순회)  너비우선순회 (BFS)  BFS 알고리즘은 다음 순서로 노드들을 방문 L(0) = {s}, 여기서 s는 출발 노드 L(1) = L(0)의 모든 이웃 노드들 L(2) = L(1)의 이웃들 중 L(0)에 속하지 않은 노드들 &amp;hellip; L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들 동심원 형태  큐를 이용한 너비우선순회  s = 1 체크는 이미 방문된 노드라는 표시   check the start node;    insert the start node into the queue;    while the queue is not empty do remove a node v from queue; for each unchecked neighbour w of v do check and insert w into the queue; 너비우선순회 BFS(G, s)	// 그래프 G와 출발 노드 s Q &amp;lt;- empty queue; Enqueue(Q, s); while Q =/ empty do u &amp;lt;- Dequeue(Q) for each v adjacent to u do if v is unvisited then mark v as visited; Enqueue(Q, v); end.</description>
+      <description>알고리즘 - 그래프 순회 (Graph Traversal)  순회(traversal) 그래프의 모든 노드들을 방문하는 일 대표적 두 가지 방법 BFS (Breadth-First Search, 너비우선순회) DFS (Depth-First Search, 깊이우선순회)  너비우선순회 (BFS)  BFS 알고리즘은 다음 순서로 노드들을 방문 L(0) = {s}, 여기서 s는 출발 노드 L(1) = L(0)의 모든 이웃 노드들 L(2) = L(1)의 이웃들 중 L(0)에 속하지 않은 노드들 &amp;hellip; L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들 동심원 형태  큐를 이용한 너비우선순회  s = 1 체크는 이미 방문된 노드라는 표시   check the start node;    insert the start node into the queue;    while the queue is not empty doremove a node v from queue;for each unchecked neighbour w of v docheck and insert w into the queue;너비우선순회 BFS(G, s)	// 그래프 G와 출발 노드 sQ &amp;lt;- empty queue;Enqueue(Q, s);while Q =/ empty dou &amp;lt;- Dequeue(Q)for each v adjacent to u doif v is unvisited thenmark v as visited;Enqueue(Q, v);end.</description>
     </item>
     
     <item>
@@ -139,7 +139,7 @@
       <pubDate>Wed, 05 Feb 2020 11:09:52 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-hashing/</guid>
-      <description>알고리즘 - 해싱 Hashing  해쉬 테이블은 dynamic set을 구현하는 효과적인 방법의 하나 적절한 가정하에서 평균 탐색, 삽입, 삭제시간 O(1) 보통 최악의 경우 O(n)  Hash Table  해쉬 함수(hash function) h를 사용하여 키 k를 T[h(k)]에 저장  h : U -&amp;gt; {0, 1, &amp;hellip;, m - 1}, U : 양의 정수들의 집합 여기서 m은 테이블의 크기, U는 모든 가능한 키들의 집합   키 k가 h(k)로 해슁되었다고 말함. 해쉬테이블은 일반적으로 하나의 배열 즉 각 키에 대한 해쉬함수값을 그 키를 저장할 배열 인덱스로 사용  index = h(k: a key) h(X) = x % m 0 .</description>
+      <description>알고리즘 - 해싱 Hashing  해쉬 테이블은 dynamic set을 구현하는 효과적인 방법의 하나 적절한 가정하에서 평균 탐색, 삽입, 삭제시간 O(1) 보통 최악의 경우 O(n)  Hash Table  해쉬 함수(hash function) h를 사용하여 키 k를 T[h(k)]에 저장  h : U -&amp;gt; {0, 1, &amp;hellip;, m - 1}, U : 양의 정수들의 집합 여기서 m은 테이블의 크기, U는 모든 가능한 키들의 집합   키 k가 h(k)로 해슁되었다고 말함. 해쉬테이블은 일반적으로 하나의 배열 즉 각 키에 대한 해쉬함수값을 그 키를 저장할 배열 인덱스로 사용  index = h(k: a key)h(X) = x % m0 .</description>
     </item>
     
     <item>
@@ -175,7 +175,7 @@
       <pubDate>Wed, 29 Jan 2020 12:26:07 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-java-sort/</guid>
-      <description>[알고리즘] Java에서의 정렬  Arrays클래스가 primitive타입 데이터를 위한 정렬 메서드를 제공  int[] data = new int[capacity]; // data[0]에서 data[capacity - 1]까지 데이터가 꽉 // 차있는 경우에는 다음과 같이 정렬합니다. Arrays.sort(data); // 배열에 꽉 차있지 않고 data[0]에서 data[size - 1]까지 // size개의 데이터만 있다면 다음과 같이 합니다. Arrays.sort(data, 0, size);  int 이외의 다른 primitive 타입 데이터(double, char 등)에 대해서도 제공  객체의 정렬 : 문자열 String [] fruits = new String[] { &amp;#34;Pineapple&amp;#34;, &amp;#34;Apple&amp;#34;, &amp;#34;Orange&amp;#34;, &amp;#34;Banana&amp;#34; }; Arrays.</description>
+      <description>[알고리즘] Java에서의 정렬  Arrays클래스가 primitive타입 데이터를 위한 정렬 메서드를 제공  int[] data = new int[capacity];// data[0]에서 data[capacity - 1]까지 데이터가 꽉// 차있는 경우에는 다음과 같이 정렬합니다.Arrays.sort(data);// 배열에 꽉 차있지 않고 data[0]에서 data[size - 1]까지// size개의 데이터만 있다면 다음과 같이 합니다.Arrays.sort(data, 0, size); int 이외의 다른 primitive 타입 데이터(double, char 등)에 대해서도 제공  객체의 정렬 : 문자열 String [] fruits = new String[] { &amp;#34;Pineapple&amp;#34;, &amp;#34;Apple&amp;#34;, &amp;#34;Orange&amp;#34;, &amp;#34;Banana&amp;#34; };Arrays.</description>
     </item>
     
     <item>
@@ -184,7 +184,7 @@
       <pubDate>Wed, 29 Jan 2020 12:02:51 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-radix-sort/</guid>
-      <description>Radix Sort  n개의 d자리 정수들 가장 낮은 자리수부터 정렬  Stable Sort  동일한 데이터가 2개 이상 있다면 정렬 후에도 입력 순서가 출력 순서로 유지되야 합니다. Radix Sort 같은 경우는 반드시 Stable 해야 합니다.  RADIX-SORT(A, d) for i &amp;lt;- 1 to d do use a stable sort to sort array A on digit i  시간 복잡도 O(d(n+k)) 10진수 (k = 10) 알파벳 (k = 26)  정렬 알고리즘들  Bubble sort : O(n^2) Insertion sort : O(n^2) Selection sort : O(n^2) Quick Sort : worst O(n^2) and average O(nlog2n) Merge sort : O(nlog2n) Heap sort : O(nlog2n) Counting sort : O(n+k) Radix sort : O(d(n+k))  </description>
+      <description>Radix Sort  n개의 d자리 정수들 가장 낮은 자리수부터 정렬  Stable Sort  동일한 데이터가 2개 이상 있다면 정렬 후에도 입력 순서가 출력 순서로 유지되야 합니다. Radix Sort 같은 경우는 반드시 Stable 해야 합니다.  RADIX-SORT(A, d)for i &amp;lt;- 1 to ddo use a stable sort to sort array A on digit i 시간 복잡도 O(d(n+k)) 10진수 (k = 10) 알파벳 (k = 26)  정렬 알고리즘들  Bubble sort : O(n^2) Insertion sort : O(n^2) Selection sort : O(n^2) Quick Sort : worst O(n^2) and average O(nlog2n) Merge sort : O(nlog2n) Heap sort : O(nlog2n) Counting sort : O(n+k) Radix sort : O(d(n+k))  </description>
     </item>
     
     <item>
@@ -193,7 +193,7 @@
       <pubDate>Wed, 29 Jan 2020 10:44:39 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-sorting-linear/</guid>
-      <description>선형 시간 정렬 Counting Sort  n개의 정수를 정렬하세요. 단 모든 정수는 0에서 k 사이의 정수입니다. 길이 k인 배열에 각 정수의 개수를 count합니다.  int A[n]; // 정렬할 데이터 0 ~ k int C[k] = {0, }; for ( int i=1; i&amp;lt;=n; i++ ) C[A[i]]++; for ( int s=1, i=0; i&amp;lt;=k; i++ ) { for ( int j=0; j&amp;lt;C[i]; j++ ) { A[s++] = i; } } COUNTING-SORT(A, B, k) for i &amp;lt;- 0 to k do C[i] &amp;lt;- 0 for j &amp;lt;- 1 to length[A] do C[A[j]] &amp;lt;- C[A[j]] + 1 &amp;gt; C[i] now contains the number of elements equal to i.</description>
+      <description>선형 시간 정렬 Counting Sort  n개의 정수를 정렬하세요. 단 모든 정수는 0에서 k 사이의 정수입니다. 길이 k인 배열에 각 정수의 개수를 count합니다.  int A[n]; // 정렬할 데이터 0 ~ kint C[k] = {0, };for ( int i=1; i&amp;lt;=n; i++ )C[A[i]]++;for ( int s=1, i=0; i&amp;lt;=k; i++ ) {for ( int j=0; j&amp;lt;C[i]; j++ ) {A[s++] = i;}}COUNTING-SORT(A, B, k)for i &amp;lt;- 0 to kdo C[i] &amp;lt;- 0for j &amp;lt;- 1 to length[A]do C[A[j]] &amp;lt;- C[A[j]] + 1&amp;gt; C[i] now contains the number of elements equal to i.</description>
     </item>
     
     <item>
@@ -231,7 +231,7 @@
       <pubDate>Tue, 14 Jan 2020 10:16:47 +0900</pubDate>
       
       <guid>https://mj-seok.com/algorithm/algo-powerset/</guid>
-      <description>멱집합 구하기 - powerSet private static char data[] = {&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;, &amp;#39;e&amp;#39;}; private static int n = data.length; private static boolean [] include = new boolean[n]; public static void powerSet(int k) { if (k==n) { for (int i=0; i&amp;lt;n; i++) if (include[i]) System.out.print(data[i] + &amp;#34; &amp;#34;); System.out.println(); return; } include[k] = false; powerSet(k+1); include[k] = true; powerSet(k+1); } </description>
+      <description>멱집합 구하기 - powerSet private static char data[] = {&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;, &amp;#39;e&amp;#39;};private static int n = data.length;private static boolean [] include = new boolean[n];public static void powerSet(int k) {if (k==n) {for (int i=0; i&amp;lt;n; i++)if (include[i]) System.out.print(data[i] + &amp;#34; &amp;#34;);System.out.println();return;}include[k] = false;powerSet(k+1);include[k] = true;powerSet(k+1);}</description>
     </item>
     
     <item>
@@ -263,7 +263,7 @@
       <description>블롭 셀 카운팅 알고리즘 - Counting Cells in a Blob [ Reference ] : https://youtu.be/HHJFlVT1tBw
  Binary 이미지 각 픽셀은 background pixel이거나 image pixel Blob - 서로 연결된 image pixel들의 집합을 blob이라고 부름 상하좌우 및 대각방향으로도 연결된 것으로 간주  입력 :
  N x N 크기의 2차원 그리드(grid) 하나의 좌표 (x, y)  출력 :
- 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면 현재 픽셀이 image color가 아니라면 // base case 0을 반환한다 현재 픽셀이 image color라면 먼저 현재 픽셀을 카운트한다 (count=1) 현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.</description>
+ 픽셀 (x, y)가 포함된 blob의 크기 (x, y)가 어떤 blob에도 속하지 않는 경우에는 0  Recursive Thinking 현재 픽셀이 이 속한 blob의 크기를 카운트하려면현재 픽셀이 image color가 아니라면 // base case0을 반환한다현재 픽셀이 image color라면먼저 현재 픽셀을 카운트한다 (count=1)현재 픽셀이 중복 카운트되는 것을 방지하기 위해 다른 색으로 칠한다.</description>
     </item>
     
     <item>
@@ -275,7 +275,7 @@
       <description>미로찾기 알고리즘 - Maze Algorithm Recursive Thinking
 현재 위치에서 출구까지 가는 경로가 있으려면
  현재 위치가 출구이거나 혹은 이웃한 셀들 중 하나에서 현재 위치를 지나지 않고 출구까지 가능 경로가 있거나  aa
-미로찾기(Decision Problem - return yes or no) boolean findPath(x, y) if (x, y) is the exit return true; else for each neighbouring cell (x`, y`) of (x, y) do if (x`, y`) is on the pathway if findPath(x`, y`) return true; return false;  인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.</description>
+미로찾기(Decision Problem - return yes or no) boolean findPath(x, y)if (x, y) is the exitreturn true;elsefor each neighbouring cell (x`, y`) of (x, y) doif (x`, y`) is on the pathwayif findPath(x`, y`)return true;return false; 인접한 셀이 초기값과 무한 루프에 빠질 수 있습니다.</description>
     </item>
     
     <item>
@@ -285,8 +285,8 @@
       
       <guid>https://mj-seok.com/algorithm/algo-designrecursion/</guid>
       <description>재귀 설계 - Design Recursion [ Reference ] : https://youtu.be/Vwfo_hrxuzg
- Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () { return base_case; } else { recursion(); }  암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
- 순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) { for (int i=0; i&amp;lt;n; i++) if (data[i] == target) return i; return -1; }  data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
+ Recursion을 어떻게 짜야할까?  순환적 알고리즘 설계  적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함 (at least one base case) 모든 case는 결국 base case로 수렴해야 함  if () {return base_case;} else {recursion();} 암시적(implicit) 매개변수를 명시적(explicit) 매개변수로 바꾸어라.
+ 순차 탐색 (Sequential Search)  배열에 내가 원하는 특정한 값이 있는지 검사 데이터들이 정렬되있다면 이진 검색 정렬되어있지 않다면(순서 조건) 하나씩 순서대로 검사  int search(int [] data, int n, int target) {for (int i=0; i&amp;lt;n; i++)if (data[i] == target)return i;return -1;} data[0] ~ data[n-1] target을 검색하는 것 검색 구간의 시작 인덱스 0은 보통 생략합니다.</description>
     </item>
     
     <item>
@@ -298,7 +298,7 @@
       <description>재귀적 생각 - Recursive Thinking [ Reference ] : https://youtu.be/tuzf1yLPgRI
 절차적 언어 ? Procedure Language : 어떤 일을 하는 절차
 프로그래밍에서의 관점  객체 지향 : 객체들 간의 상호작용 Recursion : 순환적인 관점  Recursion은 수학함수 계산에만 유용한가  수학함수뿐 아니라 다른 많은 문제들을 recursion으로 해결할 수 있습니다.  문자열의 길이 계산 :: pesudo code
-if the string is empty return 0; else return 1 plus the length of the string that excludes the first character;  순환적인 문자열 길이 계산 알고리즘  :: length.</description>
+if the string is emptyreturn 0;elsereturn 1 plus the length of the string thatexcludes the first character; 순환적인 문자열 길이 계산 알고리즘  :: length.</description>
     </item>
     
   </channel>

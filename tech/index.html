@@ -196,38 +196,38 @@ if (!doNotTrack) {
                 Overview
             </a>
             
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/algorithm/">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/algorithm/">
                 algorithm
                 <span class="Counter hide-lg hide-md hide-sm">
                     30
                 </span>
             </a>
             
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/cs/">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/cs/">
                 cs
                 <span class="Counter hide-lg hide-md hide-sm">
-                    10
+                    30
                 </span>
             </a>
             
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/database/">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/database/">
                 database
                 <span class="Counter hide-lg hide-md hide-sm">
-                    5
+                    30
                 </span>
             </a>
             
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/javascript/">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/javascript/">
                 javascript
                 <span class="Counter hide-lg hide-md hide-sm">
-                    5
+                    30
                 </span>
             </a>
             
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="https://mj-seok.com/tech/">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="https://mj-seok.com/tech/">
                 tech
                 <span class="Counter hide-lg hide-md hide-sm">
-                    10
+                    30
                 </span>
             </a>
             
@@ -354,8 +354,8 @@ if (!doNotTrack) {
                         <div name="posts-post">
                             [Reference] : https://webpack.js.org/concepts/
 Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 모듈 번들러  핵심 개념  Entry (시작점) Output (출력) Loaders (로더) Plugins (플러그인) Mode (모드) Browser Compatibility (브라우저 호환성)  Entry  entry point : 내부 의존성 그래프가 빌드하기 시작하는 지점을 표기   webpack.config.js
- module.exports = { entry: &#39;./path/to/my/entry/file.js&#39; }; Output  output : 번들된 곳을 방출하는 위치   webpack.config.js
- const path = require(&#39;path&#39;); module.
+ module.exports = {entry: &#39;./path/to/my/entry/file.js&#39;};Output  output : 번들된 곳을 방출하는 위치   webpack.config.js
+ const path = require(&#39;path&#39;);module.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -375,8 +375,8 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
                         </div>
 
                         <div name="posts-post">
-                            Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.RequestMapping; @Controller public class HomeController { @RequestMapping(value = &#34;/&#34;) public String index() { return &#34;index&#34;; } }  @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &quot;index&quot; template return =&gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
- &lt;!DOCTYPE html&gt; &lt;html xmlns:th=&#34;https://www.thymeleaf.org&#34;&gt; &lt;head lang=&#34;en&#34;&gt; &lt;meta charset=&#34;UTF-8&#34;/&gt; &lt;title&gt;ReactJS + Spring Data REST&lt;/title&gt; &lt;link rel=&#34;stylesheet&#34; href=&#34;/main.
+                            Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;@Controllerpublic class HomeController {@RequestMapping(value = &#34;/&#34;)public String index() {return &#34;index&#34;;}} @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &quot;index&quot; template return =&gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
+ &lt;!DOCTYPE html&gt;&lt;html xmlns:th=&#34;https://www.thymeleaf.org&#34;&gt;&lt;head lang=&#34;en&#34;&gt;&lt;meta charset=&#34;UTF-8&#34;/&gt;&lt;title&gt;ReactJS + Spring Data REST&lt;/title&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/main.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -402,7 +402,7 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
  Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
 2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
  Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
- package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.
+ package com.mjseok.springreact;import java.util.Objects;import javax.persistence.Entity;import javax.persistence.GeneratedValue;import javax.persistence.Id;@Entitypublic class Employee {private @Id @GeneratedValue Long id;private String firstName;private String lastName;private String description;private Employee() {}public Employee(String firstName, String lastName, String description) {this.
                         </div>
 
                         <div class="f6 text-gray mt-2">
@@ -445,7 +445,7 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
 
                         <div name="posts-post">
                             Python - for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
- array, list, tuple, string 의 시퀀스를 출력  days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &#34;Wed&#34;: break else: print(day) for letter in &#34;Nicolas&#34;: print(letter)   행복 코딩
+ array, list, tuple, string 의 시퀀스를 출력  days = (&#34;Mon&#34;, &#34;Tue&#34;, &#34;Wed&#34;, &#34;Thu&#34;, &#34;Fri&#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &#34;Wed&#34;:breakelse:print(day)for letter in &#34;Nicolas&#34;:print(letter)  행복 코딩
  
                         </div>
 

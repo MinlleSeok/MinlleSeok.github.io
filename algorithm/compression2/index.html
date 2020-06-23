@@ -136,13 +136,13 @@ if (!doNotTrack) {
 <li>이런 연산에 가장 적합한 자료구조는 최소 힙(minimum heap)입니다.</li>
 <li>즉, 힙에 저장된 각각의 원소들은 하나의 트리입니다. (노드가 아니라요)</li>
 </ul>
-<h2 id="최소-힙">최소 힙</h2>
+<h2 id="-">최소 힙</h2>
 <ul>
 <li>크기가 5인 힙, 5개의 트리가 저장되어 있습니다.</li>
 <li>5개의 single node tree</li>
 <li>각 트리는 오직 하나의 노드로 구성됩니다.</li>
 </ul>
-<h2 id="class-run-수정하기">class Run 수정하기</h2>
+<h2 id="class-run-">class Run 수정하기</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Run</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>Run<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span> symbol<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> runen<span style="color:#f92672">;</span>
@@ -177,7 +177,7 @@ if (!doNotTrack) {
         <span style="color:#75715e">/* 3. Let theRoot be the root of the tree. */</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="huffman-tree-출력해보기">Huffman Tree 출력해보기</h2>
+</code></pre></div><h2 id="huffman-tree-">Huffman Tree 출력해보기</h2>
 <ul>
 <li>class Run에 적절한 toString 메서드를 추가하여 트리를 출력해봅시다.</li>
 </ul>
@@ -196,7 +196,7 @@ if (!doNotTrack) {
         preOrderTraverse<span style="color:#f92672">(</span>node<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">,</span> depth <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="codeword-부여하기">Codeword 부여하기</h2>
+</code></pre></div><h2 id="codeword-">Codeword 부여하기</h2>
 <ul>
 <li>Huffman 트리의 리프 노드에 위치한 run들에게 이진 codeword를 부여할 차례입니다.</li>
 </ul>
@@ -223,7 +223,7 @@ if (!doNotTrack) {
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> codeword<span style="color:#f92672">;</span>    <span style="color:#75715e">/* 부여된 codeword를 32비트 정수로 저장 */</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> codewordLen<span style="color:#f92672">;</span> <span style="color:#75715e">/* 부여된 codeword의 길이. 즉 codeword의 하위 codewordLen비트가 실제 codeword */</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="java에서의-비트bit-연산">Java에서의 비트(bit) 연산</h2>
+</code></pre></div><h2 id="java-bit-">Java에서의 비트(bit) 연산</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 60<span style="color:#f92672">;</span> <span style="color:#75715e">/* 60 = 0011 1100 */</span>
@@ -252,7 +252,7 @@ if (!doNotTrack) {
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a &lt;&lt; 2 = &#34;</span> <span style="color:#f92672">+</span> c<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="codeword-부여하기-1">codeword 부여하기</h2>
+</code></pre></div><h2 id="codeword--1">codeword 부여하기</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">assignCodewords</span><span style="color:#f92672">(</span>Run p<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> codeword<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> length<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// assignCodewords(theRoot, 0, 0) 으로 호출합니다.
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 노드 p에 부여된 codeword
@@ -272,7 +272,7 @@ if (!doNotTrack) {
 </span><span style="color:#75715e"></span>        <span style="color:#75715e">// 길이는 1 증가합니다.
 </span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="main과-compressfile-메서드">main과 compressFile 메서드</h2>
+</code></pre></div><h2 id="main-compressfile-">main과 compressFile 메서드</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HuffmanCoding</span> <span style="color:#f92672">{</span>
     <span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
 

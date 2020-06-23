@@ -128,7 +128,7 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---그래프-순회-graph-traversal">알고리즘 - 그래프 순회 (Graph Traversal)</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="-----graph-traversal">알고리즘 - 그래프 순회 (Graph Traversal)</h1>
 <ul>
 <li>순회(traversal)</li>
 <li>그래프의 모든 노드들을 방문하는 일</li>
@@ -136,7 +136,7 @@ if (!doNotTrack) {
 <li>BFS (Breadth-First Search, 너비우선순회)</li>
 <li>DFS (Depth-First Search, 깊이우선순회)</li>
 </ul>
-<h2 id="너비우선순회-bfs">너비우선순회 (BFS)</h2>
+<h2 id="-bfs">너비우선순회 (BFS)</h2>
 <ul>
 <li>BFS 알고리즘은 다음 순서로 노드들을 방문</li>
 <li>L(0) = {s}, 여기서 s는 출발 노드</li>
@@ -146,7 +146,7 @@ if (!doNotTrack) {
 <li>L(i) = L(i - 1)의 이웃들 중 L(i - 2)에 속하지 않는 노드들</li>
 <li>동심원 형태</li>
 </ul>
-<h2 id="큐를-이용한-너비우선순회">큐를 이용한 너비우선순회</h2>
+<h2 id="--">큐를 이용한 너비우선순회</h2>
 <ul>
 <li>s = 1</li>
 <li>체크는 이미 방문된 노드라는 표시</li>
@@ -165,7 +165,7 @@ if (!doNotTrack) {
 	remove a node v from queue;
 	for each unchecked neighbour w of v do
 		check and insert w into the queue;
-</code></pre></div><h2 id="너비우선순회">너비우선순회</h2>
+</code></pre></div><h2 id="heading">너비우선순회</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">BFS</span>(G, s)	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 그래프 G와 출발 노드 s
 	Q <span style="color:#f92672">&lt;-</span> empty queue;
 	<span style="color:#a6e22e">Enqueue</span>(Q, s);
@@ -178,11 +178,11 @@ if (!doNotTrack) {
 			end.
 		end.
 	end.
-</code></pre></div><h2 id="bfs와-최단경로">BFS와 최단경로</h2>
+</code></pre></div><h2 id="bfs-">BFS와 최단경로</h2>
 <p>s에서 L(i)에 속한 노드까지의 최단 경로의 길이는 i입니다.
 여기서 경로의 길이는 경로에 속한 에지의 개수를 의미합니다.
 BFS를 하면서 각 노드에 대해서 최단 경로의 길이를 구할 수 있습니다.</p>
-<h2 id="bfs와-최단경로-1">BFS와 최단경로</h2>
+<h2 id="bfs--1">BFS와 최단경로</h2>
 <p>입력 : 방향 혹은 무방향 그래프 G = (V, E), 그리고 출발 노드 S &lt; V
 출력 : 모든 노드 v에 대해서
 d[v] = s로부터 v까지의 최단 경로의 길이(에지의 개수)
@@ -202,7 +202,7 @@ while Q <span style="color:#f92672">=</span><span style="color:#f92672">/</span>
 			<span style="color:#a6e22e">Enqueue</span>(Q, v);
 	end.
 end.	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <span style="color:#a6e22e">O</span>(n <span style="color:#f92672">+</span> m) with adjacent list
-</code></pre></div><h2 id="시간복잡도">시간복잡도</h2>
+</code></pre></div><h2 id="heading-1">시간복잡도</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">BFS</span>(G, s)
 	Q <span style="color:#f92672">&lt;-</span> empty queue;
 	for each node u do
@@ -221,12 +221,12 @@ end.	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> <s
 		end.
 	end.
 </code></pre></div><p>인접리스트로 구현할 경우 시간복잡도는 degree(v) = 2m 이므로 O(n + m)</p>
-<h2 id="bfs-트리">BFS 트리</h2>
+<h2 id="bfs--2">BFS 트리</h2>
 <p>각 노드 v와 t[v]를 연결하는 에지들로 구성된 트리
 BFS 트리에서 s에서 v까지의 경로는 s에서 v까지 가는 최단경로
 어떤 에지도 2개의 layer를 건너가지 않습니다.
 (동일 레이어의 노드를 연결하거나, 혹은 1개의 layer를 건너갑니다.)</p>
-<h2 id="너비우선순회--최단-경로-출력하기">너비우선순회 : 최단 경로 출력하기</h2>
+<h2 id="----">너비우선순회 : 최단 경로 출력하기</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">PRINT<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(G, s, v)	<span style="color:#f92672">/</span><span style="color:#f92672">/</span> 출발점 s에서 노드 v까지의 경로 출력하기
 	if v <span style="color:#f92672">=</span> s then
 		print s;
@@ -235,7 +235,7 @@ BFS 트리에서 s에서 v까지의 경로는 s에서 v까지 가는 최단경�
 	else
 		PRINT<span style="color:#f92672">-</span><span style="color:#a6e22e">PATH</span>(G, s, t[v]);
 		print v;
-</code></pre></div><h2 id="너비우선순회-bfs-1">너비우선순회 (BFS)</h2>
+</code></pre></div><h2 id="-bfs-1">너비우선순회 (BFS)</h2>
 <p>그래프가 disconnected이거나 혹은 방향 그래프라면 BFS에 의해서
 모든 노드가 방문되지 않을 수도 있음
 BFS를 반복하여 모든 노드 방문</p>
