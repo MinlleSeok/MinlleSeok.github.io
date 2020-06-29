@@ -66,8 +66,8 @@
       <guid>https://mj-seok.com/tech/webpack-intro/</guid>
       <description>[Reference] : https://webpack.js.org/concepts/
 Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 모듈 번들러  핵심 개념  Entry (시작점) Output (출력) Loaders (로더) Plugins (플러그인) Mode (모드) Browser Compatibility (브라우저 호환성)  Entry  entry point : 내부 의존성 그래프가 빌드하기 시작하는 지점을 표기   webpack.config.js
- module.exports = {entry: &amp;#39;./path/to/my/entry/file.js&amp;#39;};Output  output : 번들된 곳을 방출하는 위치   webpack.config.js
- const path = require(&amp;#39;path&amp;#39;);module.</description>
+ module.exports = { entry: &amp;#39;./path/to/my/entry/file.js&amp;#39; }; Output  output : 번들된 곳을 방출하는 위치   webpack.config.js
+ const path = require(&amp;#39;path&amp;#39;); module.</description>
     </item>
     
     <item>
@@ -76,8 +76,8 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
       <pubDate>Thu, 23 Jan 2020 10:28:36 +0900</pubDate>
       
       <guid>https://mj-seok.com/tech/spring-react-2/</guid>
-      <description>Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;@Controllerpublic class HomeController {@RequestMapping(value = &amp;#34;/&amp;#34;)public String index() {return &amp;#34;index&amp;#34;;}} @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &amp;quot;index&amp;quot; template return =&amp;gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
- &amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html xmlns:th=&amp;#34;https://www.thymeleaf.org&amp;#34;&amp;gt;&amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt;&amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt;&amp;lt;title&amp;gt;ReactJS + Spring Data REST&amp;lt;/title&amp;gt;&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;/main.</description>
+      <description>Spring boot(백엔드)와 React.js(프론트엔드)의 만남 - 프론트엔드 1단계 UI Controller를 만들어봅시다.(Spring MVC Controller) package com.mjseok.springreact; import org.springframework.stereotype.Controller; import org.springframework.web.bind.annotation.RequestMapping; @Controller public class HomeController { @RequestMapping(value = &amp;#34;/&amp;#34;) public String index() { return &amp;#34;index&amp;#34;; } }  @Controller : Spring MVC Controller인 class에 마크합니다. @RequestMapping : index() 메소드에 / route를 도와줍니다. &amp;quot;index&amp;quot; template return =&amp;gt; 뷰 리졸버가 src/main/resources/templates/index.html 를 매핑합니다.  2단계 HTML 템플릿 만들기  src/main/resources/templates/index.html
+ &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html xmlns:th=&amp;#34;https://www.thymeleaf.org&amp;#34;&amp;gt; &amp;lt;head lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;ReactJS + Spring Data REST&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;/main.</description>
     </item>
     
     <item>
@@ -92,7 +92,7 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
  Rest Repositories Thymeleaf JPA H2  만들어진 스프링 프로젝트를 압축해제 합니다.
 2단계 첫 java 파일 IDE로 스프링프로젝트를 엽니다.
  Spring Data REST 를 사용하므로 간편하게 작업할 수 있습니다.  domain 선언  Employee.java
- package com.mjseok.springreact;import java.util.Objects;import javax.persistence.Entity;import javax.persistence.GeneratedValue;import javax.persistence.Id;@Entitypublic class Employee {private @Id @GeneratedValue Long id;private String firstName;private String lastName;private String description;private Employee() {}public Employee(String firstName, String lastName, String description) {this.</description>
+ package com.mjseok.springreact; import java.util.Objects; import javax.persistence.Entity; import javax.persistence.GeneratedValue; import javax.persistence.Id; @Entity public class Employee { private @Id @GeneratedValue Long id; private String firstName; private String lastName; private String description; private Employee() {} public Employee(String firstName, String lastName, String description) { this.</description>
     </item>
     
     <item>
@@ -113,7 +113,7 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
       
       <guid>https://mj-seok.com/tech/python-for/</guid>
       <description>Python - for in 문법 Reference : https://youtu.be/0wpYyDlAEIg
- array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;)for day in days:print(day)for day in [1, 2, 3, 4, 5]:print(day)for day in days:if day is &amp;#34;Wed&amp;#34;:breakelse:print(day)for letter in &amp;#34;Nicolas&amp;#34;:print(letter)  행복 코딩
+ array, list, tuple, string 의 시퀀스를 출력  days = (&amp;#34;Mon&amp;#34;, &amp;#34;Tue&amp;#34;, &amp;#34;Wed&amp;#34;, &amp;#34;Thu&amp;#34;, &amp;#34;Fri&amp;#34;) for day in days: print(day) for day in [1, 2, 3, 4, 5]: print(day) for day in days: if day is &amp;#34;Wed&amp;#34;: break else: print(day) for letter in &amp;#34;Nicolas&amp;#34;: print(letter)   행복 코딩
  </description>
     </item>
     
@@ -127,7 +127,7 @@ Webpack 개념  모던 자바스크립트 애플리케이션을 위한 정적 �
   Hugo는 &amp;ldquo;웹사이트를 만드는데 세계에서 가장 빠른 프레임워크&amp;quot;라고 단언하는
 오픈소스 기반 정적 사이트(static site) 제작 툴입니다.   Hugo 설치 (Install Hugo) git Command Hugo Post  1. Hugo 설치 (Install Hugo)  https://gohugo.io/getting-started/quick-start/
  MacOS 기준 (for MacOS)
-Hugo 설치 (Install Hugo) brew install hugoHugo 버전 확인 (check Hugo&#39;s version) hugo versionHugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstartHugo 테마 추가하기 (Add a Theme) cd quickstartgit initgit submodule add https://github.</description>
+Hugo 설치 (Install Hugo) brew install hugo Hugo 버전 확인 (check Hugo&amp;rsquo;s version) hugo version Hugo 사이트 만들기 (Create a new Hugo site) hugo new site quickstart Hugo 테마 추가하기 (Add a Theme) cd quickstart git init git submodule add https://github.</description>
     </item>
     
     <item>
@@ -136,8 +136,8 @@ Hugo 설치 (Install Hugo) brew install hugoHugo 버전 확인 (check Hugo&#39;
       <pubDate>Mon, 30 Dec 2019 22:27:58 +0900</pubDate>
       
       <guid>https://mj-seok.com/tech/go-first/</guid>
-      <description>고로 작성해봐요 - Write in Go 안녕, 고 (Hello, Go) package mainimport &amp;#34;fmt&amp;#34;func main() {fmt.Println(&amp;#34;Hello, Go&amp;#34;)}Go 언어 설치 (Install Go Language) https://golang.org/
-Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour패키지 (Packages) package mainimport (&amp;#34;fmt&amp;#34;&amp;#34;math/rand&amp;#34;)func main() {fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10))} 모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
+      <description>고로 작성해봐요 - Write in Go 안녕, 고 (Hello, Go) package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;Hello, Go&amp;#34;) } Go 언어 설치 (Install Go Language) https://golang.org/
+Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get code.google.com/p/go-tour/gotour 패키지 (Packages) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;math/rand&amp;#34; ) func main() { fmt.Println(&amp;#34;My favorite number is&amp;#34;, rand.Intn(10)) }  모든 Go 프로그램은 패키지로 구성 (Every Go Program is made up of packages) import () 형태로 패키지를 불러옵니다.</description>
     </item>
     
     <item>
@@ -147,7 +147,7 @@ Go 설치 후 go tour 시작 코드 (After installing, go tour code) % go get co
       
       <guid>https://mj-seok.com/tech/python-pyenv/</guid>
       <description>Python 가상환경 - pyenv 설치  mac 기준, Homebrew를 사용해서 설치합니다.
- 설치 % brew update% brew install pyenv환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc% echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc% echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrcPython 원하는 버전 설치 % pyenv install [version_name]% pyenv global [version_name]% python --version  행복 개발
+ 설치 % brew update % brew install pyenv 환경설정 % echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc % echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.zshrc Python 원하는 버전 설치 % pyenv install [version_name] % pyenv global [version_name] % python --version   행복 개발
  </description>
     </item>
     

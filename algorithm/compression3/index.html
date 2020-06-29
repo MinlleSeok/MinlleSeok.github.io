@@ -128,7 +128,7 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="-----2-huffman-tree">압축 알고리즘 - 제 2단계 Huffman Tree</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="압축-알고리즘---제-2단계-huffman-tree">압축 알고리즘 - 제 2단계 Huffman Tree</h1>
 <ul>
 <li>인코딩</li>
 <li>데이터 파일을 압축하기 위해서는 데이터 파일을 다시 시작부터 읽으면서</li>
@@ -171,7 +171,7 @@ if (!doNotTrack) {
     assignCodewords<span style="color:#f92672">(</span>theRoot<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
     storeRunsIntoArray<span style="color:#f92672">(</span>theRoot<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="run-">Run 검색하기</h2>
+</code></pre></div><h2 id="run-검색하기">Run 검색하기</h2>
 <ul>
 <li>symbol과 runLength가 주어질 때 배열 chars를 검색하여 해당하는</li>
 <li>run을 찾아 반환하는 메서드를 작성합니다.</li>
@@ -179,7 +179,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> Run <span style="color:#a6e22e">findRun</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span> symbol<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> length<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">/* 배열 chars에서 (symbol, length)에 해당하는 run을 찾아 반환합니다. */</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="-5--">제 5단계 인코딩 하기</h2>
+</code></pre></div><h2 id="제-5단계-인코딩-하기">제 5단계 인코딩 하기</h2>
 <ul>
 <li>인코딩
 <ul>
@@ -297,7 +297,7 @@ if (!doNotTrack) {
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="-6-">제 6단계 디코딩하기</h2>
+</code></pre></div><h2 id="제-6단계-디코딩하기">제 6단계 디코딩하기</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HuffmanDecoder</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String args<span style="color:#f92672">[</span><span style="color:#f92672">]</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         String fileName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>

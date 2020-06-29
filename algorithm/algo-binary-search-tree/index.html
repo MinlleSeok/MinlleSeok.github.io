@@ -128,7 +128,7 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="---binary-search-tree">알고리즘 - 이진검색트리(Binary Search Tree)</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---이진검색트리binary-search-tree">알고리즘 - 이진검색트리(Binary Search Tree)</h1>
 <ul>
 <li>이진트리 순회하는 알고리즘</li>
 <li>트리라는 자료구조</li>
@@ -148,7 +148,7 @@ if (!doNotTrack) {
 <li>Dictionary</li>
 <li>Search Structure</li>
 </ul>
-<h2 id="-">시간 복잡도</h2>
+<h2 id="시간-복잡도">시간 복잡도</h2>
 <ul>
 <li>정렬 안 된 배열 검색 : 순차검색 O(n)</li>
 <li>정렬 안 된 배열 삽입 : 맨 뒤 O(1) 배열 복사 이동 고려 O(n)</li>
@@ -163,7 +163,7 @@ if (!doNotTrack) {
 <li>정렬된 연결 리스트 삽입 : O(n)</li>
 <li>정렬된 연결 리스트 삭제 : O(1)</li>
 </ul>
-<h2 id="--1">다양한 방법들</h2>
+<h2 id="다양한-방법들">다양한 방법들</h2>
 <ul>
 <li>정렬된 혹은 정렬되지 않은 배열 혹은 연결 리스트를 사용할 경우</li>
 <li>INSERT, SEARCH, DELETE 중 적어도 하나는 O(n)</li>
@@ -171,13 +171,13 @@ if (!doNotTrack) {
 <li>트리에 기반한 구조들</li>
 <li>Direct Address Table, 해쉬 테이블 등</li>
 </ul>
-<h2 id="heading">검색트리</h2>
+<h2 id="검색트리">검색트리</h2>
 <ul>
 <li>Dynamic set을 트리의 형태로 구현</li>
 <li>일반적으로 SEARCH, INSERT, DELETE 연산이 트리의 높이(height)에 비례하는 시간복잡도를 가짐</li>
 <li>이진검색트리(Binary Search Tree), 레드-블랙 트리(red-black tree), B-트리 등</li>
 </ul>
-<h2 id="-bst">이진검색트리 (BST)</h2>
+<h2 id="이진검색트리-bst">이진검색트리 (BST)</h2>
 <ul>
 <li>이진 트리이면서</li>
 <li>각 노드에 하나의 키를 저장</li>
@@ -204,7 +204,7 @@ if (!doNotTrack) {
 </code></pre></div><ul>
 <li>skewed tree : 한쪽으로만 치우친 트리</li>
 </ul>
-<h2 id="heading-1">최소값</h2>
+<h2 id="최소값">최소값</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">MINIMUM</span>(x)
     while left[x] <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NIL
         do x <span style="color:#f92672">&lt;-</span> left[x]
@@ -213,7 +213,7 @@ if (!doNotTrack) {
 <li>최소값은 항상 가장 왼쪽 노드에 존재</li>
 <li>시간 복잡도 : O(n)</li>
 </ul>
-<h2 id="heading-2">최대값</h2>
+<h2 id="최대값">최대값</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">MAXIMUM</span>(x)
     while right[x] <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NIL
         do x <span style="color:#f92672">&lt;-</span> right[x]
@@ -255,7 +255,7 @@ if (!doNotTrack) {
 <li>이진 검색 트리의 삽입에서는 기존의 노드들은 전혀 건드리지 않습니다.</li>
 <li>y가 x의 한 칸 뒤 노드를 저장합니다.</li>
 </ul>
-<h2 id="--2">수도 코드</h2>
+<h2 id="수도-코드">수도 코드</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">INSERT</span>(T<span style="color:#f92672">:</span> Tree, z<span style="color:#f92672">:</span> insert할 노드)
     y <span style="color:#f92672">&lt;-</span> NIL
     x <span style="color:#f92672">&lt;-</span> root[T]
@@ -303,7 +303,7 @@ if (!doNotTrack) {
                 else right[p[y]] <span style="color:#f92672">&lt;-</span> x
     if y <span style="color:#f92672">=</span><span style="color:#f92672">/</span> z
     then key[z] <span style="color:#f92672">&lt;-</span> key[y]
-        copy y<span style="color:#e6db74">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">z</span><span style="color:#960050;background-color:#1e0010"></span>
+        copy y<span style="color:#e6db74">&#39;</span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">s</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010">l</span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">e</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">d</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">a</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">i</span><span style="color:#960050;background-color:#1e0010">n</span><span style="color:#960050;background-color:#1e0010">t</span><span style="color:#960050;background-color:#1e0010">o</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#960050;background-color:#1e0010">z</span>
     return y
 </code></pre></div><h2 id="bst">BST</h2>
 <ul>

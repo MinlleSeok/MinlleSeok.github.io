@@ -132,13 +132,13 @@ if (!doNotTrack) {
 <ul>
 <li>이진수를 입력받아 계산</li>
 </ul>
-<h2 id="-ram">레지스터와 RAM</h2>
+<h2 id="레지스터와-ram">레지스터와 RAM</h2>
 <ul>
 <li>AND-OR LATCH</li>
 <li>GATED LATCH</li>
 <li>레지스터: 래치를 병렬로 사용하는 그룹</li>
 </ul>
-<h2 id="heading">멀티플렉서</h2>
+<h2 id="멀티플렉서">멀티플렉서</h2>
 <ul>
 <li>행 담당</li>
 <li>열 담당</li>
@@ -152,7 +152,7 @@ if (!doNotTrack) {
 <li>Register : 8bit x 4개</li>
 <li>INSTRUCTION TABLE : id, opcode, address</li>
 </ul>
-<h2 id="-">레지스터 구성</h2>
+<h2 id="레지스터-구성">레지스터 구성</h2>
 <ul>
 <li>Instruction Address Register</li>
 <li>Instruction Register</li>
@@ -169,18 +169,18 @@ if (!doNotTrack) {
 <li>STORE_A   / Write (register A) RAM location / 0100 / 4-bit RAM address</li>
 <li>ADD       / Add two registers, store result / 1000 / 2-bit register ID, 2-bit register ID</li>
 </ul>
-<h3 id="fetch-phase--">FETCH PHASE (인출 단계)</h3>
+<h3 id="fetch-phase-인출-단계">FETCH PHASE (인출 단계)</h3>
 <ul>
 <li>Instruction Address Register -&gt; ADDRESS INPUT</li>
 <li>RAM -&gt; DATA -&gt; Instruction Register</li>
 </ul>
-<h2 id="decode-phase--">Decode Phase (해독 단계)</h2>
+<h2 id="decode-phase-해독-단계">Decode Phase (해독 단계)</h2>
 <ul>
 <li>opcode 첫 4bit</li>
 <li>RAM 주소 뒤 4bit</li>
 <li>Instruction Register control unit</li>
 </ul>
-<h2 id="execute-phase--">Execute Phase (실행 단계)</h2>
+<h2 id="execute-phase-실행-단계">Execute Phase (실행 단계)</h2>
 <ul>
 <li>Load_A : RAM의 write enable 켜기</li>
 <li>주소값 : RAM에서 위치에 DATA 값 확인</li>
@@ -229,7 +229,7 @@ if (!doNotTrack) {
 <li>상황에 맞게 클럭 조절 : dynamic frequency scaling</li>
 <li>동적 주파수 스케일링</li>
 </ul>
-<h2 id="--1">새로운 명령어</h2>
+<h2 id="새로운-명령어">새로운 명령어</h2>
 <ul>
 <li>SUB : 뺄셈 연산</li>
 <li>JUMP : 초기화 Inst. Addr. Register 값 변경</li>
@@ -274,7 +274,7 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
-<h2 id="superscalar-">Superscalar 프로세서</h2>
+<h2 id="superscalar-프로세서">Superscalar 프로세서</h2>
 <ul>
 <li>매 클럭 한 개 이상의 명령어 실행 가능한 프로세서</li>
 </ul>

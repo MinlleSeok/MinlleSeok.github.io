@@ -6,10 +6,19 @@
     <description>Recent content in Databases on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2020 23:56:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2020 23:12:47 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQL Case 표현</title>
+      <link>https://mj-seok.com/database/sql-case/</link>
+      <pubDate>Mon, 29 Jun 2020 23:12:47 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/database/sql-case/</guid>
+      <description>SQL Case 표현  Switch / Case 표현과 동일합니다. 첫번째로 맞는 조건의 결과값을 반환합니다. else 부분이 없고 맞는 조건이 없을 경우 NULL을 반환합니다.  CASE 문법 CASE WHEN condition1 THEN result1 WHEN condition2 THEN result2 WHEN conditionN THEN resultN ELSE result END; 예제 SELECT OrderID, Quantity, CASE WHEN Quantity &amp;gt; 30 THEN &amp;#39;The quantity is greater than 30&amp;#39; WHEN Quantity = 30 THEN &amp;#39;The quantity is 30&amp;#39; ELSE &amp;#39;The quantity is under 30&amp;#39; END AS QuantityText FROM OrderDetails; 예제 2 SELECT CustomerName, City, Country FROM Customers ORDER BY (CASE WHEN City IS NULL THEN Country ELSE City END); </description>
+    </item>
     
     <item>
       <title>SQL 공부</title>
@@ -54,7 +63,7 @@
       
       <guid>https://mj-seok.com/database/sql-postgresql/</guid>
       <description>PostgreSQL - 명령어 정리(Command) Install on Mac https://formulae.brew.sh/formula/postgresql
-install Command brew install postgresqlServer start pg_ctl -D /usr/local/var/postgres startServer stop pg_ctl -D /usr/local/var/postgres stopstatus check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39;pg_ctl status </description>
+install Command brew install postgresql Server start pg_ctl -D /usr/local/var/postgres start Server stop pg_ctl -D /usr/local/var/postgres stop status check export PGDATA=&amp;#39;/usr/local/var/postgres&amp;#39; pg_ctl status  </description>
     </item>
     
     <item>

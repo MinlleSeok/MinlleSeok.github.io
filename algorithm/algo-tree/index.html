@@ -128,54 +128,54 @@ if (!doNotTrack) {
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="----">알고리즘 - 트리와 이진트리</h1>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="알고리즘---트리와-이진트리">알고리즘 - 트리와 이진트리</h1>
 <ul>
 <li>계층적인 구조를 표현</li>
 <li>조직도</li>
 <li>디렉토리와 서브디렉토리 구조</li>
 <li>가계도</li>
 </ul>
-<h2 id="----root">맨 위의 노드 : 루트(root)</h2>
+<h2 id="맨-위의-노드--루트root">맨 위의 노드 : 루트(root)</h2>
 <ul>
 <li>트리는 노드(node)들과 노드들을 연결하는 링크(link)들로 구성됨</li>
 <li>노드들을 연결하는 선을 &ldquo;link&rdquo;, &ldquo;edge&rdquo;, &ldquo;branch&quot;등으로 부름</li>
 </ul>
-<h2 id="--">부모-자식 관계</h2>
+<h2 id="부모-자식-관계">부모-자식 관계</h2>
 <ul>
 <li>부모(parent) 노드 : animal</li>
 <li>자식(child) 노드 : cat, fox, wolf</li>
 </ul>
-<h2 id="-">형제 관계</h2>
+<h2 id="형제-관계">형제 관계</h2>
 <ul>
 <li>루트노드를 제외한 트리의 모든 노드들은 유일한 부모 노드를 가짐</li>
 <li>부모가 동일한 노드들을 형제(sibling) 관계라고 부름</li>
 </ul>
-<h2 id="leaf-">리프(leaf) 노드</h2>
+<h2 id="리프leaf-노드">리프(leaf) 노드</h2>
 <ul>
 <li>리프노드가 아닌 노드들을 내부(internal)노드라고 부름</li>
 <li>자식이 없는 노드들을 leaf노드라고 부름</li>
 </ul>
-<h2 id="-----1">조상 - 자손 관계</h2>
+<h2 id="조상---자손-관계">조상 - 자손 관계</h2>
 <ul>
 <li>조상(ancestor) 노드 : animal</li>
 <li>자손(descendant) 노드 : canine</li>
 <li>부모 - 자식 관계를 확장한 것이 조상 - 자손 (ancestor - descendant) 관계입니다.</li>
 </ul>
-<h2 id="--subtree">부트리 : Subtree</h2>
+<h2 id="부트리--subtree">부트리 : Subtree</h2>
 <ul>
 <li>트리에서 어떤 한 노드와 그 노드의 자손들로 이루어진 트리를 부트리(subtree)라고 부릅니다.</li>
 </ul>
-<h2 id="heading">레벨</h2>
+<h2 id="레벨">레벨</h2>
 <ul>
 <li>루트 : 레벨1</li>
 <li>루트의 자식 : 레벨2</li>
 <li>손자 : 레벨3</li>
 </ul>
-<h2 id="heading-1">높이</h2>
+<h2 id="높이">높이</h2>
 <ul>
 <li>트리의 높이(height) : 3</li>
 </ul>
-<h2 id="---1">트리의 기본적인 성질</h2>
+<h2 id="트리의-기본적인-성질">트리의 기본적인 성질</h2>
 <ul>
 <li>노드가 N개인 트리의 링크의 개수는 N - 1개입니다.</li>
 <li>노드가 N개인 트리는 항상 N-1개의 링크(link)를 가집니다.</li>
@@ -183,18 +183,18 @@ if (!doNotTrack) {
 <li>또한 임의의 두 노드간의 경로도 유일합니다.</li>
 <li>(같은 노드를 두 번 이상 방문하지 않는 경우)</li>
 </ul>
-<h2 id="--binary-tree">이진 트리 (binary tree)</h2>
+<h2 id="이진-트리-binary-tree">이진 트리 (binary tree)</h2>
 <ul>
 <li>이진 트리에서 각 노드는 최대 2개의 자식을 가집니다.</li>
 <li>각각의 자식 노드는 자신이 부모의 왼쪽 자식인지 오른쪽 자식인지가 지정됩니다.</li>
 <li>자식이 한 명인 경우에도 그렇습니다.</li>
 </ul>
-<h2 id="-----expression-tree">이진 트리 응용의 예 : Expression Tree</h2>
+<h2 id="이진-트리-응용의-예--expression-tree">이진 트리 응용의 예 : Expression Tree</h2>
 <ul>
 <li>(x + y) * ((a + b) / c)</li>
 <li>이 수식을 계산할 때 이진 트리를 응용할 수 있습니다.</li>
 </ul>
-<h2 id="-----huffman-code">이진 트리 응용의 예 : Huffman Code</h2>
+<h2 id="이진-트리-응용의-예--huffman-code">이진 트리 응용의 예 : Huffman Code</h2>
 <ul>
 <li>데이터 압축하는 기본적인 알고리즘</li>
 <li>텍스트 파일을 구성하는 알파벳 a-z 적절하게 인코딩</li>
@@ -207,7 +207,7 @@ if (!doNotTrack) {
 <li>높이가 h인 full binary tree는 2^h - 1 개의 노드를 가집니다.</li>
 <li>노드가 N개인 full 혹은 complete 이진 트리의 높이는 O(logN)입니다.</li>
 </ul>
-<h2 id="--1">이진트리의 표현</h2>
+<h2 id="이진트리의-표현">이진트리의 표현</h2>
 <ul>
 <li>연결구조(Linked Structure) 표현</li>
 <li>각 노드에 하나의 데이터 필드와 왼쪽 자식(left), 오른쪽 자식(right),</li>
@@ -216,7 +216,7 @@ if (!doNotTrack) {
 <li>노드 객체 (data, left, right, 필요에 따라 parent)</li>
 <li>루트 노드의 주소는 따로 보관합니다.</li>
 </ul>
-<h2 id="--traversal">이진트리의 순회 (traversal)</h2>
+<h2 id="이진트리의-순회-traversal">이진트리의 순회 (traversal)</h2>
 <ul>
 <li>순회 : 이진 트리의 모든 노드를 방문하는 일</li>
 <li>중순위(inorder) 순회</li>
@@ -224,7 +224,7 @@ if (!doNotTrack) {
 <li>후순위(postorder) 순회</li>
 <li>레벨오더(level-order) 순회</li>
 </ul>
-<h2 id="-inorder---">이진트리의 Inorder - 순회</h2>
+<h2 id="이진트리의-inorder---순회">이진트리의 Inorder - 순회</h2>
 <ul>
 <li>
 <ol>
@@ -245,7 +245,7 @@ if (!doNotTrack) {
 <li>왼쪽 부트리 T(L)</li>
 <li>오른쪽 부트리 T(R)로 나누어 생각</li>
 </ul>
-<h2 id="--2">수도 코드</h2>
+<h2 id="수도-코드">수도 코드</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-t" data-lang="t">INORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span>WALK(x)
     <span style="color:#66d9ef">if</span> x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NULL(NIL)
         <span style="color:#66d9ef">then</span> INORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span>WALK(left[x])
@@ -256,7 +256,7 @@ if (!doNotTrack) {
 <li>x를 루트로 하는 트리를 inorder 순회</li>
 <li>시간복잡도 O(n)</li>
 </ul>
-<h2 id="postorder-preorder-">Postorder와 Preorder 순회</h2>
+<h2 id="postorder와-preorder-순회">Postorder와 Preorder 순회</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">PREORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">WALK</span>(x)
     if x <span style="color:#f92672">=</span><span style="color:#f92672">/</span> NIL
     then    print key[x]
@@ -280,7 +280,7 @@ POSTORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</
 <li>Postorder 순회하면 후위표기식이 출력됨:</li>
 <li>x y + a b + c / *</li>
 </ul>
-<h2 id="level-order-">Level-Order 순회</h2>
+<h2 id="level-order-순회">Level-Order 순회</h2>
 <ul>
 <li>레벨 순으로 방문, 동일 레벨에서는 왼쪽에서 오른쪽 순서로</li>
 <li>큐(queue)를 이용하여 구현</li>
@@ -288,7 +288,7 @@ POSTORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</
 <li>자식 노드를 방문하고 왼쪽부터 큐에 집어넣습니다.</li>
 <li>반복</li>
 </ul>
-<h2 id="--3">수도 코드</h2>
+<h2 id="수도-코드-1">수도 코드</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">LEVEL<span style="color:#f92672">-</span>ORDER<span style="color:#f92672">-</span>TREE<span style="color:#f92672">-</span><span style="color:#a6e22e">TRAVERSAL</span>()
     visit the root;
     Q <span style="color:#f92672">&lt;-</span> root;  <span style="color:#f92672">/</span><span style="color:#f92672">/</span> Q is a queue

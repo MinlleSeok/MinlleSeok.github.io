@@ -133,13 +133,13 @@ if (!doNotTrack) {
 <li>방향 사이클(directed cycle)이 없는 방향 그래프.</li>
 <li>예: 작업들의 우선순위</li>
 </ul>
-<h2 id="topological-ordering">위상정렬(topological ordering)</h2>
+<h2 id="위상정렬topological-ordering">위상정렬(topological ordering)</h2>
 <ul>
 <li>DAG에서 노드들의 순서화 v(1), v(2), v(3), &hellip; v(n),</li>
 <li>단, 모든 에지(v(i), v(j))에 대해서 i &lt; j가 되도록.</li>
 <li>일반적으로 답이 유일하지 않습니다.</li>
 </ul>
-<h2 id="--1">위상정렬 알고리즘 1</h2>
+<h2 id="위상정렬-알고리즘-1">위상정렬 알고리즘 1</h2>
 <ul>
 <li>
 <p>들어오는 edge : incoming edge</p>
@@ -186,7 +186,7 @@ if (!doNotTrack) {
 <li>각 노드의 indegree를 먼저 계산해야 합니다.</li>
 <li>어떻게 구현할 것인가?</li>
 </ul>
-<h2 id="--2">위상정렬 알고리즘 2</h2>
+<h2 id="위상정렬-알고리즘-2">위상정렬 알고리즘 2</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">topologicalSort2</span>(G)
 {
     for each v <span style="color:#f92672">&lt;</span> V
