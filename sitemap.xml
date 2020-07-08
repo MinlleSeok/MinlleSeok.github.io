@@ -3,13 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mj-seok.com/database/</loc>
-    <lastmod>2020-06-29T23:12:47+09:00</lastmod>
+    <loc>https://mj-seok.com/</loc>
+    <lastmod>2020-07-08T22:05:31+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mj-seok.com/</loc>
-    <lastmod>2020-06-29T23:12:47+09:00</lastmod>
+    <loc>https://mj-seok.com/tech/</loc>
+    <lastmod>2020-07-08T22:05:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/tech/tensorflow/</loc>
+    <lastmod>2020-07-08T22:05:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/database/</loc>
+    <lastmod>2020-07-04T22:51:13+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mj-seok.com/database/model/</loc>
+    <lastmod>2020-07-04T22:51:13+09:00</lastmod>
   </url>
   
   <url>
@@ -24,11 +39,6 @@
   
   <url>
     <loc>https://mj-seok.com/tech/sqld/</loc>
-    <lastmod>2020-06-04T23:08:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mj-seok.com/tech/</loc>
     <lastmod>2020-06-04T23:08:55+09:00</lastmod>
   </url>
   

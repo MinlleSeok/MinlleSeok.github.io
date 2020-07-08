@@ -6,10 +6,19 @@
     <description>Recent content in Databases on Happiness Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Jun 2020 23:12:47 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2020 22:51:13 +0900</lastBuildDate>
     
 	<atom:link href="https://mj-seok.com/database/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SQL 전문가 가이드 - 데이터 모델의 이해</title>
+      <link>https://mj-seok.com/database/model/</link>
+      <pubDate>Sat, 04 Jul 2020 22:51:13 +0900</pubDate>
+      
+      <guid>https://mj-seok.com/database/model/</guid>
+      <description>SQL 전문가 가이드 - 데이터 모델의 이해  복잡한 현실세계를 일정한 표기법에 의해 표현하는 일 현실세계 추상화(모형화), 단순화, 명확화 모델(MODEL)  모델링에 대한 다양한 정의  Webster 사전  가설적 일정 양식에 맞춘 표현 어떤 것에 대한 예비표현으로, 그로부터 최종대상이 구축되도록 하는 계획으로서 기여하는 것   복잡한 &amp;lsquo;현실세계&#39;를 단순화시켜 표현하는 것 모델이란 사물 또는 사건에 관한 양상(Aspect)이나 관점(Perspective)을 연관된 사람이나 그룹을 위하여 명확하게 하는 것이다. 모델이란 현실 세계의 추상화된 반영이다.</description>
+    </item>
     
     <item>
       <title>SQL Case 표현</title>
